@@ -2,10 +2,10 @@
   <div class="flex-center position-ref full-height container-index">
     <div class="content">
       <div class="main-title">
-        {{ mainTitle }}
+        {{ myName }}
       </div>
       <div class="my-name">
-        {{ myName }}
+        {{ title }}
       </div>
     </div>
   </div>
@@ -15,8 +15,24 @@
 export default {
   data() {
     return {
-      mainTitle: 'Full Stack Web Developer',
-      myName: 'Jakub Gania'
+      myName: 'Jakub Gania',
+      title: 'Full Stack Web Developer'
+    }
+  },
+  head() {
+    return {
+      title: 'Jakub Gania - Full Stack Web Developer',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Jakub Gania - Full Stack Web Developer. Vue.js, Vuex, Vuetify, TypeScript, NUXT, HTML, CSS, Node.js, PHP, Laravel, Symfony, Nginx, Docker.'
+        },
+        {
+          name: 'keywords',
+          content: 'software, developer, it, programmer, coder, www, web, website, frontend, backend, full stack, software engineer'
+        }
+      ]
     }
   }
 }
