@@ -1,11 +1,5 @@
 <template>
   <v-layout>
-    
+    index page
   </v-layout>
 </template>
-
-<script>
-export default {
-
-}
-</script>
