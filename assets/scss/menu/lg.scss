@@ -1,0 +1,24 @@
+.container
+{
+  width: 100%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.links-section
+{
+  font-size: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  letter-spacing: 1px;
+}
+.link
+{
+  text-decoration: none;
+  color: black;
+
+  &:hover
+  {
+    color: blue;
+  }
+}

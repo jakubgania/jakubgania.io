@@ -1,13 +1,13 @@
 <template>
   <v-layout row wrap>
-    <div style="width: 100%;max-width:640px;margin-left:auto;margin-right:auto;">
+    <div class="container">
       <v-layout row wrap>
         <v-flex v-for="page in arrayOfAllPages" :key="page.id" lg12>
-          <div style="font-size: 14px;padding-top: 8px;padding-bottom: 8px;letter-spacing: 1px;">
-            <a v-if="page.path" :href="page.path" style="text-decoration: none;color: black;">
+          <div class="links-section">
+            <a v-if="page.path" :href="page.path" class="link">
               {{ page.title }}
             </a>
-            <a v-else :href="page.link" target="_blank" style="text-decoration: none;color: black;">
+            <a v-else :href="page.link" target="_blank" class="link">
               {{ page.title }}
             </a>
           </div>
@@ -47,7 +47,7 @@ export default {
           path: '/commands'
         },
         {
-          title: 'Inne',
+          title: 'Ciekawe strony',
           path: '/other-resources'
         },
         {
@@ -71,3 +71,7 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+  @import './assets/scss/menu/lg.scss';
+</style>
