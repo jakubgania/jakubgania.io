@@ -7,7 +7,7 @@
             img
           </v-flex>
           <v-flex lg8>
-            fullname
+            {{ fullname }}
           </v-flex>
         </v-layout>
         Information section
@@ -20,21 +20,21 @@
 export default {
   data() {
     return {
-      info: ''
+      fullname: 'Jakub Gania'
     }
   },
   head() {
     return {
-      title: '',
+      title: 'Jakub Gania - Full Stack Web Developer',
       meta: [
         {
-          hid: '',
-          name: '',
-          content: ''
+          hid: 'description',
+          name: 'description',
+          content: 'Jakub Gania - Full Stack Web Developer. Vue.js, Vuex, Vuetify, TypeScript, NUXT, HTML, CSS, Node.js, PHP, Laravel, Symfony, Nginx, Docker.'
         },
         {
-          name: '',
-          content: ''
+          name: 'keywords',
+          content: 'software, developer, it, programmer, coder, www, web, website, frontend, backend, full stack, software engineer'
         }
       ]
     }
