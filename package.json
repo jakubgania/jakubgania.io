@@ -4,6 +4,12 @@
   "description": "My personal website",
   "author": "Jakub Gania",
   "private": true,
+  "config": {
+    "nuxt": {
+      "host": "192.168.0.19",
+      "port": "4800"
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
