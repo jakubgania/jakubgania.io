@@ -32,10 +32,12 @@
 </template>
 
 <script>
+import profileImage from '../assets/images/profile.jpg';
+
 export default {
   data() {
     return {
-      profileImage: '',
+      profileImage,
       fullname: 'Jakub Gania',
       description1: 'Nazywam się Jakub Gania. Mieszkam we Wrocławiu. W 2018 roku uzyskałem tytuł inżyniera informatki z specjalizacją inżyniera systemów informatycznych. Specjalizuję sie w technologiach webowych. Cały czas się uczę i poszerzam swoją wiedzę w różnych obszarach powiązanych z programowaniem. Moje projekty udostępniam na platformie GitHub. Rozwijam się w kierunku Full Stack Web Developer.',
       description2: 'Prywatnie interesują mnie nowe technologie, startupy, rozwój osobisty i bardzo lubię fotografować.'
