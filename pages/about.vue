@@ -25,6 +25,11 @@
               {{ description2 }}
             </div>
           </v-flex>
+          <v-flex lg12 style="padding-top: 20px;">
+            <div class="description">
+              {{ description3 }}
+            </div>
+          </v-flex>
         </v-layout>
       </div>
     </div>
@@ -39,8 +44,9 @@ export default {
     return {
       profileImage,
       fullname: 'Jakub Gania',
-      description1: 'Nazywam się Jakub Gania. Mieszkam we Wrocławiu. W 2018 roku uzyskałem tytuł inżyniera informatki z specjalizacją inżyniera systemów informatycznych. Specjalizuję sie w technologiach webowych. Cały czas się uczę i poszerzam swoją wiedzę w różnych obszarach powiązanych z programowaniem. Moje projekty udostępniam na platformie GitHub. Rozwijam się w kierunku Full Stack Web Developer.',
-      description2: 'Prywatnie interesują mnie nowe technologie, startupy, rozwój osobisty i bardzo lubię fotografować.'
+      description1: 'Nazywam się Jakub Gania. Mieszkam we Wrocławiu. W 2018 roku uzyskałem tytuł inżyniera informatki z specjalizacją inżyniera systemów informatycznych. Specjalizuję sie w technologiach webowych. Obecnie pracuję jako Full Stack Web Developer. Cały czas się uczę i poszerzam swoją wiedzę w różnych obszarach powiązanych z programowaniem. Moje projekty udostępniam na platformie GitHub.',
+      description2: 'Programowanie fascynuje mnie ze względu na nieskończone możliwości.',
+      description3: 'Prywatnie interesują mnie nowe technologie, startupy, rozwój osobisty i bardzo lubię fotografować. Chodzę na wiele meetupów.'
     }
   },
   computed: {
