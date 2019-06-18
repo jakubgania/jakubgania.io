@@ -2,7 +2,7 @@
     <v-app>
         <v-content>
             <toolbar-header-component @switchNavigationDrawer="switchNavigationDrawer"/>
-            <v-container fluid style="padding: 0px;">
+            <v-container fluid style="padding: 0px;margin-top:64px;">
                 <nuxt />
             </v-container>
         </v-content>
