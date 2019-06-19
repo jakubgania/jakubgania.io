@@ -39,6 +39,10 @@ export default {
           path: '/contact'
         },
         {
+          title: 'Posty',
+          path: '/posts'
+        },
+        {
           title: 'Shortcuts',
           path: '/shortcuts'
         },
