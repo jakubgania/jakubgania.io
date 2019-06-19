@@ -29,8 +29,16 @@ export default {
 
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/markdownit'
   ],
+
+  markdownit: {
+    injected: true,
+    use: [
+      ['markdown-it-meta'],
+    ]
+  },
   
   axios: {
     // See https://github.com/nuxt-community/axios-module#options

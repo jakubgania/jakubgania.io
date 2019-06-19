@@ -4,9 +4,9 @@
       <v-layout row wrap>
         <v-flex v-for="project in model.projects" :key="project.id" lg12>
           <div class="links-section">
-            <nuxt-link :to="'/projects/' + project.path" class="link">
+            <a :href="'/projects/' + project.path" class="link">
               {{ project.title }}
-            </nuxt-link>
+            </a>
           </div>
         </v-flex>
       </v-layout>

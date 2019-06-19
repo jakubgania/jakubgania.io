@@ -20,8 +20,12 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/markdownit": "^1.2.5",
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
+    "front-matter": "^3.0.2",
+    "markdown-it": "^8.4.2",
+    "markdown-it-meta": "0.0.1",
     "nuxt": "^2.4.0",
     "vue-loader": "^15.7.0",
     "vuetify": "^1.5.5",
