@@ -1,7 +1,9 @@
 <template>
   <v-row class="content-container">
     <v-col v-for="item in links" :key="item.id" lg="12">
-      {{ item.title }}
+      <nuxt-link :to="item.path">
+        {{ item.title }}
+      </nuxt-link>
     </v-col>
   </v-row>
 </template>
@@ -14,6 +16,22 @@ export default {
         {
           title: 'O mnie',
           path: '/about'
+        },
+        {
+          title: 'Strona główna',
+          path: '/'
+        },
+        {
+          title: 'Zdjęcia',
+          path: '/images'
+        },
+        {
+          title: 'Projekty',
+          path: '/projects'
+        },
+        {
+          title: 'Skróty',
+          path: '/shortcuts'
         }
       ]
     }
