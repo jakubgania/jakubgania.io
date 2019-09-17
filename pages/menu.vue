@@ -1,8 +1,15 @@
 <template>
-  <v-row class="content-container">
-    <v-col v-for="item in links" :key="item.id" lg="12">
-      <nuxt-link :to="item.path">
-        {{ item.title }}
+  <v-row class="content-container" no-gutters>
+    <v-col lg="12" style="padding: 0;">
+      <div class="page-title">
+        Menu
+      </div>
+    </v-col>
+    <v-col lg="12" v-for="item in links" :key="item.id" class="link-section">
+      <nuxt-link :to="item.path" class="link">
+        <div class="link-text">
+          {{ item.title }}
+        </div>
       </nuxt-link>
     </v-col>
   </v-row>
@@ -14,12 +21,12 @@ export default {
     return {
       links: [
         {
-          title: 'O mnie',
-          path: '/about'
-        },
-        {
           title: 'Strona główna',
           path: '/'
+        },
+        {
+          title: 'O mnie',
+          path: '/about'
         },
         {
           title: 'Zdjęcia',
@@ -30,8 +37,12 @@ export default {
           path: '/projects'
         },
         {
-          title: 'Skróty',
+          title: 'Skróty klawiaturowe',
           path: '/shortcuts'
+        },
+        {
+          title: 'Zasoby',
+          path: '/resources'
         }
       ]
     }
@@ -43,7 +54,24 @@ export default {
 .content-container {
   max-width: 800px;
   width: 100%;
-  background-color: azure;
   margin: auto;
+}
+.page-title {
+  font-size: 40px;
+  border-bottom: 2px solid black;
+  margin-top: 80px;
+  font-weight: 800;
+}
+.link {
+  text-decoration: none;
+}
+.link-text {
+  color: black;
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding: 12px;
+}
+.link-section:hover {
+  background-color: #e6e6e6;
 }
 </style>
