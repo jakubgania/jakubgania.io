@@ -50,7 +50,9 @@
               </a>
             </div>
             <div class="contact-button-section">
-              contact button
+              <v-btn text small color="blue-grey darken-1">
+                kontakt
+              </v-btn>
             </div>
           </div>
         </div>
@@ -130,7 +132,7 @@ export default {
 .full-name {
   font-size: 60px;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 .description {
   font-size: 14px;
