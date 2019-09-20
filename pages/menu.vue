@@ -30,7 +30,7 @@ export default {
         },
         {
           title: 'Zdjęcia',
-          path: '/images'
+          path: '/gallery'
         },
         {
           title: 'Projekty',
