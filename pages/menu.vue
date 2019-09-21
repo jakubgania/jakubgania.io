@@ -46,9 +46,13 @@ export default {
   color: black;
   letter-spacing: 2px;
   font-size: 12px;
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .link-section:hover {
   background-color: #e6e6e6;
+  letter-spacing: 4px;
+  padding-left: 12px;
+  transition: padding-left 0.2s ease;
 }
 </style>
