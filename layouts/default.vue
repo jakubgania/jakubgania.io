@@ -1,7 +1,15 @@
 <template>
   <v-app>
     <v-content style="padding-top: 0;">
-      <toolbar-header-component />
+      <navigation-drawer-component
+        :drawer="drawer"
+        @switchNavigationDrawer="switchNavigationDrawer"
+        @updateNavigationDrawerValue="updateNavigationDrawerValue"
+      />
+
+      <toolbar-header-component
+        @switchNavigationDrawer="switchNavigationDrawer"
+      />
 
       <v-container fluid style="padding: 0;">
         <nuxt />
@@ -12,14 +20,24 @@
 
 <script>
 import ToolbarHeaderComponent from '../components/toolbar-header'
+import NavigationDrawerComponent from '../components/navigation-drawer'
 
 export default {
   components: {
-    'toolbar-header-component': ToolbarHeaderComponent
+    'toolbar-header-component': ToolbarHeaderComponent,
+    'navigation-drawer-component': NavigationDrawerComponent
   },
   data() {
     return {
-      //
+      drawer: false
+    }
+  },
+  methods: {
+    switchNavigationDrawer() {
+      this.drawer = !this.drawer
+    },
+    updateNavigationDrawerValue(value) {
+      this.drawer = value
     }
   }
 }

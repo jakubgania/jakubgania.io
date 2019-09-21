@@ -9,6 +9,10 @@
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer />
+      <v-app-bar-nav-icon
+        class="nav-icon"
+        @click.native="$emit('switchNavigationDrawer')"
+      />
     </v-app-bar>
   </div>
 </template>
@@ -32,5 +36,9 @@ export default {
   font-family: 'Audiowide', cursive;
   color: black;
   font-size: 24px;
+}
+.nav-icon {
+  color: black;
+  /* font-size: 44px; */
 }
 </style>
