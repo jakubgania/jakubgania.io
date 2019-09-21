@@ -5,7 +5,7 @@
         Menu
       </div>
     </v-col>
-    <v-col lg="12" v-for="item in links" :key="item.id" class="link-section">
+    <v-col lg="12" v-for="item in items" :key="item.id" class="link-section">
       <nuxt-link :to="item.path" class="link">
         <div class="link-text">
           {{ item.title }}
@@ -16,35 +16,12 @@
 </template>
 
 <script>
+import menuItems from '../json/menu.json'
+
 export default {
   data() {
     return {
-      links: [
-        {
-          title: 'Strona główna',
-          path: '/'
-        },
-        {
-          title: 'O mnie',
-          path: '/about'
-        },
-        {
-          title: 'Zdjęcia',
-          path: '/gallery'
-        },
-        {
-          title: 'Projekty',
-          path: '/projects'
-        },
-        {
-          title: 'Skróty klawiaturowe',
-          path: '/shortcuts'
-        },
-        {
-          title: 'Zasoby',
-          path: '/resources'
-        }
-      ]
+      items: menuItems.menu
     }
   }
 }

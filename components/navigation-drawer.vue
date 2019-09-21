@@ -15,7 +15,7 @@
     <v-list dense nav>
       <v-list-item v-for="item in items" :key="item.title" :to="item.path">
         <v-list-item-icon>
-          <v-icon>{{ item.icon }}</v-icon>
+          <v-icon>mdi-chevron-right</v-icon>
         </v-list-item-icon>
 
         <v-list-item-content>
@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import menuItems from '../json/menu.json'
+
 export default {
   props: {
     drawer: {
@@ -36,13 +38,7 @@ export default {
   },
   data() {
     return {
-      items: [
-        {
-          title: 'Strona główna',
-          path: '/',
-          icon: 'mdi-chevron-right'
-        }
-      ]
+      items: menuItems.menu
     }
   },
   computed: {

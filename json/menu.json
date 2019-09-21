@@ -1,0 +1,32 @@
+{
+  "menu": [
+    {
+      "title": "Strona główna",
+      "path": "/"
+    },
+    {
+      "title": "O mnie",
+      "path": "/about"
+    },
+    {
+      "title": "Zdjęcia",
+      "path": "/gallery"
+    },
+    {
+      "title": "Projekty",
+      "path": "/projects"
+    },
+    {
+      "title": "Skróty klawiaturowe",
+      "path": "/shortcuts"
+    },
+    {
+      "title": "Zasoby",
+      "path": "/resources"
+    },
+    {
+      "title": "Next section",
+      "path": "/"
+    }
+  ]
+}
