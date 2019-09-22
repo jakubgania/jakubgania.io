@@ -77,6 +77,22 @@ export default {
         linkedin: 'https://pl.linkedin.com/in/jakubgania'
       }
     }
+  },
+  head() {
+    return {
+      title: 'Jakub Gania Software - O mnie',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'O mnie'
+        },
+        {
+          name: 'keywords',
+          content: 'O mnie'
+        }
+      ]
+    }
   }
 }
 </script>
