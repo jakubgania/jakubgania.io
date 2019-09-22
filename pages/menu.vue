@@ -5,7 +5,7 @@
         Menu
       </div>
     </v-col>
-    <v-col lg="12" v-for="item in items" :key="item.id" class="link-section">
+    <v-col v-for="item in items" :key="item.id" lg="12" class="link-section">
       <nuxt-link :to="item.path" class="link">
         <div class="link-text">
           {{ item.title }}
