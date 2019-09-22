@@ -1,13 +1,21 @@
 <template>
   <v-row class="container-index">
     <div class="content-section">
-      <div class="company-name">
-        Jakub Gania Software
-      </div>
-      <div class="link-section">
-        <nuxt-link to="/menu" class="link">
-          menu
-        </nuxt-link>
+      <div
+        data-aos="zoom-in"
+        data-aos-dealy="200"
+        data-aos-duration="1200"
+        data-aos-once="true"
+        class="section"
+      >
+        <div class="company-name">
+          Jakub Gania Software
+        </div>
+        <div class="link-section">
+          <nuxt-link to="/menu" class="link">
+            menu
+          </nuxt-link>
+        </div>
       </div>
     </div>
   </v-row>
@@ -25,27 +33,31 @@
   background-size: cover;
   width: 100%;
   height: 100%;
-  opacity: 0.2;
+  opacity: 0.1;
 }
 .content-container {
   max-width: 800px;
   width: 100%;
 }
 .content-section {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
   z-index: 10;
   padding: 14px;
 }
+.section {
+  border-top: 2px solid #0066ff;
+  border-bottom: 2px solid #0066ff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 .company-name {
   font-family: 'Audiowide', cursive;
-  font-size: 40px;
-  border-bottom: 2px solid #f2f2f2;
+  font-size: 60px;
   text-align: center;
 }
 .link-section {
@@ -54,8 +66,8 @@
 }
 .link {
   text-decoration: none;
-  color: #999999;
-  letter-spacing: 2px;
+  color: black;
+  letter-spacing: 8px;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
