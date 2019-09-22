@@ -31,13 +31,13 @@ export default {
       copyrightText: 'Jakub Gania Software &copy; 2018 - 2019'
     }
   },
+  mounted() {
+    this.displayFooter()
+  },
   methods: {
     displayFooter() {
       return this.$route.name !== 'index'
     }
-  },
-  mounted() {
-    this.displayFooter()
   }
 }
 </script>
