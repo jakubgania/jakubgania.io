@@ -34,11 +34,10 @@ export default {
 .link-title {
   text-decoration: none;
   font-family: 'Audiowide', cursive;
-  color: black;
+  color: #000;
   font-size: 24px;
 }
 .nav-icon {
-  color: black;
-  /* font-size: 44px; */
+  color: #000;
 }
 </style>
