@@ -21,6 +21,28 @@
   </v-row>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      subpageTitle: 'Jakub Gania Software'
+    }
+  },
+  head() {
+    return {
+      title: this.subpageTitle,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'content'
+        }
+      ]
+    }
+  }
+}
+</script>
+
 <style scoped>
 .container-index::after {
   content: '';
