@@ -19,13 +19,13 @@
 
 <script>
 export default {
+  mounted() {
+    this.displayHeader()
+  },
   methods: {
     displayHeader() {
       return this.$route.name !== 'index'
     }
-  },
-  mounted() {
-    this.displayHeader()
   }
 }
 </script>
