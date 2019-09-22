@@ -23,6 +23,22 @@ export default {
     return {
       items: menuItems.menu
     }
+  },
+  head() {
+    return {
+      title: 'Jakub Gania Software - Menu',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Menu'
+        },
+        {
+          name: 'keywords',
+          content: 'menu'
+        }
+      ]
+    }
   }
 }
 </script>
