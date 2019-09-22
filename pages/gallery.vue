@@ -50,6 +50,22 @@ export default {
     return {
       dialog: false
     }
+  },
+  head() {
+    return {
+      title: 'Jakub Gania Software - Galeria',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Galeria'
+        },
+        {
+          name: 'keywords',
+          content: 'Galeria'
+        }
+      ]
+    }
   }
 }
 </script>
