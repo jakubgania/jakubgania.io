@@ -8,7 +8,12 @@
     width="300"
   >
     <div class="close-icon-section">
-      <v-btn large icon class="close-icon-button">
+      <v-btn
+        large
+        icon
+        class="close-icon-button"
+        @click.native="$emit('switchNavigationDrawer')"
+      >
         <v-icon>mdi-close</v-icon>
       </v-btn>
     </div>
