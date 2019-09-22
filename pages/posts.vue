@@ -7,9 +7,9 @@
     </v-col>
     <template v-if="posts.length">
       <v-col
-        lg="12"
         v-for="(item, index) in posts"
         :key="item.id"
+        lg="12"
         class="post-link-item"
       >
         <a :href="item.url" class="post-link">
