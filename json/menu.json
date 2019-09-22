@@ -25,8 +25,8 @@
       "path": "/resources"
     },
     {
-      "title": "Next section",
-      "path": "/"
+      "title": "Posty",
+      "path": "/posts"
     }
   ]
 }
