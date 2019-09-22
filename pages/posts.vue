@@ -5,26 +5,35 @@
         Posty
       </div>
     </v-col>
-    <v-col
-      lg="12"
-      v-for="(item, index) in posts"
-      :key="item.id"
-      class="post-link-item"
-    >
-      <a href="" class="post-link">
-        <div class="post-main-title">
-          <div>
-            {{ posts.length - index + '.' }}
+    <template v-if="posts.length">
+      <v-col
+        lg="12"
+        v-for="(item, index) in posts"
+        :key="item.id"
+        class="post-link-item"
+      >
+        <a :href="item.url" class="post-link">
+          <div class="post-main-title">
+            <div>
+              {{ posts.length - index + '.' }}
+            </div>
+            <div class="post-title">
+              {{ item.title }}
+            </div>
           </div>
-          <div class="post-title">
-            {{ item.title }}
+          <div class="creation-date">
+            {{ item.creationDate }}
           </div>
-        </div>
-        <div class="creation-date">
-          {{ item.creationDate }}
-        </div>
-      </a>
-    </v-col>
+        </a>
+      </v-col>
+    </template>
+    <template v-else>
+      <v-col lg="12">
+        <v-alert dense type="info">
+          Brak postów
+        </v-alert>
+      </v-col>
+    </template>
   </v-row>
 </template>
 
@@ -33,31 +42,6 @@ export default {
   data() {
     return {
       posts: [
-        {
-          title: 'Example post title',
-          url: '/posts/232214',
-          creationDate: ' 14:06 22/09/2019'
-        },
-        {
-          title: 'Example post title',
-          url: '/posts/232214',
-          creationDate: ' 14:06 22/09/2019'
-        },
-        {
-          title: 'Example post title',
-          url: '/posts/232214',
-          creationDate: ' 14:06 22/09/2019'
-        },
-        {
-          title: 'Example post title',
-          url: '/posts/232214',
-          creationDate: ' 14:06 22/09/2019'
-        },
-        {
-          title: 'Example post title',
-          url: '/posts/232214',
-          creationDate: ' 14:06 22/09/2019'
-        },
         {
           title: 'Example post title',
           url: '/posts/232214',
@@ -102,11 +86,10 @@ export default {
   padding-left: 10px;
 }
 .creation-date {
-  text-align: right;
+  text-align: left;
   font-size: 12px;
   letter-spacing: 1px;
   color: #8c8c8c;
   padding-top: 4px;
-  /* border-top: 1px solid #f2f2f2; */
 }
 </style>
