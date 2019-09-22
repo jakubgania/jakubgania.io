@@ -101,7 +101,6 @@ export default {
 .content-container {
   width: 1200px;
   margin: auto;
-  /* background-color: red; */
   position: relative;
   z-index: 0;
 }
@@ -119,13 +118,8 @@ export default {
 }
 .profile-image {
   max-width: 80%;
-  background-color: blue;
   position: relative;
   z-index: 0;
-}
-.poi {
-  position: relative;
-  /* z-index: 0; */
 }
 .xmd {
   transform: translateX(-48%) rotate(90deg);
@@ -164,6 +158,6 @@ export default {
   text-decoration: none;
 }
 .icon:hover {
-  color: black;
+  color: #000;
 }
 </style>
