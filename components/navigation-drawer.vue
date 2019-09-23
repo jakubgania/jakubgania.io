@@ -18,15 +18,26 @@
       </v-btn>
     </div>
     <v-list dense nav>
-      <v-list-item v-for="item in items" :key="item.title" :to="item.path">
-        <v-list-item-icon>
-          <v-icon>mdi-chevron-right</v-icon>
-        </v-list-item-icon>
+      <template v-for="item in items">
+        <v-list-item v-if="item.path" :key="item.title" :to="item.path">
+          <v-list-item-icon>
+            <v-icon>mdi-chevron-right</v-icon>
+          </v-list-item-icon>
 
-        <v-list-item-content>
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item v-if="item.url" :key="item.title" :href="item.url">
+          <v-list-item-icon>
+            <v-icon>mdi-chevron-right</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </template>
     </v-list>
   </v-navigation-drawer>
 </template>
