@@ -6,11 +6,20 @@
       </div>
     </v-col>
     <v-col v-for="item in items" :key="item.id" lg="12" class="link-section">
-      <nuxt-link :to="item.path" class="link">
-        <div class="link-text">
-          {{ item.title }}
-        </div>
-      </nuxt-link>
+      <template v-if="item.path">
+        <nuxt-link :to="item.path" class="link">
+          <div class="link-text">
+            {{ item.title }}
+          </div>
+        </nuxt-link>
+      </template>
+      <template v-if="item.url">
+        <a :href="item.url" target="_blank" class="link">
+          <div class="link-text">
+            {{ item.title }}
+          </div>
+        </a>
+      </template>
     </v-col>
   </v-row>
 </template>

@@ -31,6 +31,14 @@
     {
       "title": "Kontakt",
       "path": "/contact"
+    },
+    {
+      "title": "Github",
+      "url": "https://github.com/jakubgania"
+    },
+    {
+      "title": "Linkedin",
+      "url": "https://www.linkedin.com/in/jakubgania"
     }
   ]
 }
