@@ -33,6 +33,10 @@
       "path": "/contact"
     },
     {
+      "title": "Komeny i polecenia",
+      "path": "/commands"
+    },
+    {
       "title": "Github",
       "url": "https://github.com/jakubgania"
     },
