@@ -49,6 +49,22 @@ export default {
         }
       ]
     }
+  },
+  head() {
+    return {
+      title: 'Jakub Gania Software - Posty',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Posty'
+        },
+        {
+          name: 'keywords',
+          content: 'Posty'
+        }
+      ]
+    }
   }
 }
 </script>
