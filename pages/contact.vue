@@ -1,10 +1,7 @@
 <template>
   <v-row class="content-container">
-    <v-col lg="12" style="padding: 0;">
-      <div class="page-title">
-        Kontakt
-      </div>
-    </v-col>
+    <subpage-title-section-component :title="title" />
+
     <v-col lg="12">
       <div class="email">
         contact@jakubgania.io
@@ -14,7 +11,17 @@
 </template>
 
 <script>
+import SubpageTitleSection from '../components/subpage-title-section'
+
 export default {
+  components: {
+    'subpage-title-section-component': SubpageTitleSection
+  },
+  data() {
+    return {
+      title: 'Kontakt'
+    }
+  },
   head() {
     return {
       title: 'Jakub Gania Software - Kontakt',
@@ -39,12 +46,6 @@ export default {
   max-width: 800px;
   width: 100%;
   margin: auto;
-}
-.page-title {
-  font-size: 40px;
-  border-bottom: 2px solid black;
-  margin-top: 80px;
-  font-weight: 800;
 }
 .email {
   padding-top: 80px;
