@@ -13,6 +13,27 @@
   </v-row>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: 'Jakub Gania Software - Kontakt',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Kontakt'
+        },
+        {
+          name: 'keywords',
+          content: 'Kontakt'
+        }
+      ]
+    }
+  }
+}
+</script>
+
 <style scoped>
 .content-container {
   max-width: 800px;
@@ -24,7 +45,6 @@
   border-bottom: 2px solid black;
   margin-top: 80px;
   font-weight: 800;
-  /* letter-spacing: 2px; */
 }
 .email {
   padding-top: 80px;
