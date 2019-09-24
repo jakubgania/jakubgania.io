@@ -1,10 +1,7 @@
-import axios from 'axios'
+import Vue from 'vue'
+import Vuex from 'vuex'
+import AxiosDefaultUrl from './axios-set-base-url'
 
-const baseUrlProduction = 'https://api.jakubgania.io'
-const baseUrlDevelopment = 'http://localhost/5000'
+AxiosDefaultUrl.setBaseUrl()
 
-if (process.env.NODE_ENV === 'production') {
-  axios.defaults.baseURL = baseUrlProduction
-} else {
-  axios.defaults.baseURL = baseUrlDevelopment
-}
+Vue.use(Vuex)
