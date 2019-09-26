@@ -1,10 +1,7 @@
 <template>
   <v-row class="content-container">
-    <v-col lg="12" style="padding: 0;">
-      <div class="page-title">
-        Galeria
-      </div>
-    </v-col>
+    <subpage-title-section-component :title="title" />
+
     <v-col lg="12" style="padding: 0;">
       <div>
         description
@@ -45,9 +42,15 @@
 </template>
 
 <script>
+import SubpageTitleSection from '../components/subpage-title-section'
+
 export default {
+  components: {
+    'subpage-title-section-component': SubpageTitleSection
+  },
   data() {
     return {
+      title: 'Galeria',
       dialog: false
     }
   },
