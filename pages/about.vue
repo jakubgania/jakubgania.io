@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import profileImage from '../assets/profile.jpg'
+import profileImage from '../assets/images/profile.jpg'
 
 export default {
   data() {

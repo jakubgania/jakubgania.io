@@ -50,7 +50,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../assets/background-index.jpg);
+  background-image: url(../assets/images/background-index.jpg);
   background-position: center;
   background-size: cover;
   width: 100%;
