@@ -57,8 +57,16 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/markdownit'
   ],
+
+  markdownit: {
+    injected: true,
+    use: [
+      ['markdown-it-meta'],
+    ]
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
