@@ -51,10 +51,4 @@ export default {
   width: 100%;
   margin: auto;
 }
-.page-title {
-  font-size: 40px;
-  border-bottom: 2px solid black;
-  margin-top: 80px;
-  font-weight: 800;
-}
 </style>
