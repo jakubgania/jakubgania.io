@@ -1,15 +1,21 @@
 <template>
   <v-row class="content-container">
-    <v-col lg="12" style="padding: 0;">
-      <div class="page-title">
-        Zasoby
-      </div>
-    </v-col>
+    <subpage-title-section-component :title="title" />
   </v-row>
 </template>
 
 <script>
+import SubpageTitleSection from '../components/subpage-title-section'
+
 export default {
+  components: {
+    'subpage-title-section-component': SubpageTitleSection
+  },
+  data() {
+    return {
+      title: 'Zasoby'
+    }
+  },
   head() {
     return {
       title: 'Jakub Gania Software - Zasoby',
