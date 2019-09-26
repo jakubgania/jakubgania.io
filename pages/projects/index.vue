@@ -1,10 +1,7 @@
 <template>
   <v-row class="content-container">
-    <v-col lg="12" style="padding: 0;">
-      <div class="page-title">
-        {{ pageTitle }}
-      </div>
-    </v-col>
+    <subpage-title-section-component :title="title" />
+
     <v-col v-if="description" lg="12" style="padding: 0;">
       <div>
         {{ description }}
@@ -17,10 +14,15 @@
 </template>
 
 <script>
+import SubpageTitleSection from '../../components/subpage-title-section'
+
 export default {
+  components: {
+    'subpage-title-section-component': SubpageTitleSection
+  },
   data() {
     return {
-      pageTitle: 'Projekty',
+      title: 'Projekty',
       description: 'page description'
     }
   },
@@ -48,11 +50,5 @@ export default {
   max-width: 800px;
   width: 100%;
   margin: auto;
-}
-.page-title {
-  font-size: 40px;
-  border-bottom: 2px solid black;
-  margin-top: 80px;
-  font-weight: 800;
 }
 </style>
