@@ -1,11 +1,11 @@
 <template>
   <v-row class="content-container" no-gutters>
-    <v-col lg="12" style="padding: 0;">
+    <v-col cols="12" style="padding: 0;">
       <div class="page-title">
         Menu
       </div>
     </v-col>
-    <v-col v-for="item in items" :key="item.id" lg="12" class="link-section">
+    <v-col v-for="item in items" :key="item.id" cols="12" class="link-section">
       <template v-if="item.path">
         <nuxt-link :to="item.path" class="link">
           <div class="link-text">
@@ -79,5 +79,12 @@ export default {
   letter-spacing: 4px;
   padding-left: 12px;
   transition: padding-left 0.2s ease;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 </style>
