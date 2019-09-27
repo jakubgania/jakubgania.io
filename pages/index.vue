@@ -97,4 +97,14 @@ export default {
 .link:hover {
   color: #0066ff;
 }
+
+@media only screen and (max-width: 600px) {
+  .section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .company-name {
+    font-size: 40px;
+  }
+}
 </style>
