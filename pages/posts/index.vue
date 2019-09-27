@@ -6,7 +6,9 @@
       <v-col
         v-for="(item, index) in posts"
         :key="item.id"
+        cols="12"
         lg="12"
+        xs="12"
         class="post-link-item"
       >
         <a :href="item.url" class="post-link">
