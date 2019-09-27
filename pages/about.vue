@@ -1,8 +1,10 @@
 <template>
   <v-row class="content-container">
     <v-col
+      cols="12"
       lg="12"
-      class="exmp"
+      xs="12"
+      class="title-text"
       data-aos="fade-down"
       data-aos-dealy="400"
       data-aos-duration="1200"
@@ -10,9 +12,11 @@
     >
       {{ aboutText }}
     </v-col>
-    <v-row style="margin-top: -200px;">
+    <v-row class="section-bottom-title">
       <v-col
+        cols="12"
         lg="6"
+        xs="12"
         class="image-section"
         data-aos="fade-right"
         data-aos-dealy="800"
@@ -22,7 +26,10 @@
         <img :src="profileImage" alt="" class="profile-image" />
       </v-col>
       <v-col
+        cols="12"
         lg="6"
+        xs="12"
+        class="information-section"
         data-aos="fade-up"
         data-aos-dealy="1200"
         data-aos-duration="1200"
@@ -32,7 +39,7 @@
           <div class="full-name">
             {{ fullname }}
           </div>
-          <div class="xmd">
+          <div class="vertical-section">
             <span>
               {{ aboutText }}
             </span>
@@ -104,7 +111,10 @@ export default {
   position: relative;
   z-index: 0;
 }
-.exmp {
+.section-bottom-title {
+  margin-top: -200px;
+}
+.title-text {
   text-align: center;
   position: relative;
   z-index: -10;
@@ -121,7 +131,7 @@ export default {
   position: relative;
   z-index: 0;
 }
-.xmd {
+.vertical-section {
   transform: translateX(-48%) rotate(90deg);
   max-width: 220px;
   width: 100%;
@@ -134,7 +144,7 @@ export default {
   position: absolute;
   top: 200px;
 }
-.xmd span {
+.vertical-section span {
   background-color: #fafafa;
   padding: 0 10px;
   text-transform: uppercase;
@@ -159,5 +169,29 @@ export default {
 }
 .icon:hover {
   color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .title-text {
+    font-size: 100px;
+    margin-top: 60px;
+  }
+  .section-bottom-title {
+    margin-top: -90px;
+  }
+  .profile-image {
+    max-width: 100%;
+  }
+  .full-name {
+    font-size: 40px;
+  }
+  .vertical-section {
+    top: 170px;
+  }
 }
 </style>
