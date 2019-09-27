@@ -40,4 +40,10 @@ export default {
 .nav-icon {
   color: #000;
 }
+
+@media only screen and (max-width: 600px) {
+  .link-title {
+    font-size: 12px;
+  }
+}
 </style>
