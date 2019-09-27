@@ -1,5 +1,5 @@
 <template>
-  <v-col lg="12" style="padding: 0;">
+  <v-col cols="12" lg="12" xs="12" style="padding: 0;">
     <div class="page-title">
       {{ title }}
     </div>
