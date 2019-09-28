@@ -122,4 +122,11 @@ export default {
   color: #8c8c8c;
   padding-top: 4px;
 }
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 </style>

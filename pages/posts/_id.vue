@@ -15,8 +15,6 @@
 
 <script>
 import axios from 'axios'
-// import markdown from 'markdown-it'
-// import meta from 'markdown-it-meta'
 import frontmatter from 'front-matter'
 import SubpageTitleSection from '../../components/subpage-title-section'
 
@@ -32,7 +30,6 @@ export default {
   },
   async asyncData({ params }) {
     try {
-      // const { data } = await axios.get(`/posts/${params.id}.md`)
       const { data } = await axios.get(`http://127.0.0.1:8000/${params.id}.md`)
       const frontmatterData = frontmatter(data)
 
