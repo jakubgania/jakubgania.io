@@ -18,9 +18,9 @@
 
     <footer-component />
 
-    <no-ssr>
+    <client-only>
       <portal-rules-alert-component />
-    </no-ssr>
+    </client-only>
   </v-app>
 </template>
 
