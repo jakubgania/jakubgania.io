@@ -48,24 +48,9 @@ export default {
       title: 'Posty',
       posts: [
         {
-          title: 'Example post title',
-          url: '/posts/4',
-          creationDate: ' 14:06 22/09/2019'
-        },
-        {
-          title: 'Example post title',
-          url: '/posts/3',
-          creationDate: ' 14:06 22/09/2019'
-        },
-        {
-          title: 'Example post title',
-          url: '/posts/2',
-          creationDate: ' 14:06 22/09/2019'
-        },
-        {
-          title: 'Example post title',
+          title: 'Start',
           url: '/posts/1',
-          creationDate: ' 14:06 22/09/2019'
+          creationDate: ' 14:06 29/09/2019'
         }
       ]
     }

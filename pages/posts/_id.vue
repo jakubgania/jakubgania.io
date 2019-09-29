@@ -3,8 +3,8 @@
     <template v-if="!error">
       <subpage-title-section-component :title="attributes.title" />
 
-      <v-col lg="12" style="padding: 0;">
-        <div v-html="$md.render(model)"></div>
+      <v-col lg="12" style="padding: 0; padding-top: 40px;">
+        <div v-html="$md.render(model)" style="letter-spacing: 0.5px;"></div>
       </v-col>
     </template>
     <template v-else>
