@@ -8,7 +8,16 @@
       </v-col>
     </template>
     <template v-else>
-      <div style="margin-top: 80px;">fetch error</div>
+      <v-col lg="12">
+        <div class="error-message">
+          {{ errorMessage }}
+        </div>
+        <div>
+          <nuxt-link to="/posts" class="link">
+            Zobacz inne posty
+          </nuxt-link>
+        </div>
+      </v-col>
     </template>
   </v-row>
 </template>
@@ -25,12 +34,17 @@ export default {
   data() {
     return {
       title: '',
-      error: false
+      error: false,
+      ht: 'Jakub Gania Software - Post - ',
+      errorMessage: 'Wystąpił błąd pobierania lub taki post nie istnieje'
     }
   },
   async asyncData({ params }) {
     try {
-      const { data } = await axios.get(`http://127.0.0.1:8000/${params.id}.md`)
+      const { data } = await axios.get(
+        `https://api.jakubgania.io/posts/${params.id}.md`
+      )
+
       const frontmatterData = frontmatter(data)
 
       return {
@@ -40,13 +54,18 @@ export default {
     } catch (error) {
       return {
         model: 'Taki post nie istnieje',
-        error: true
+        error: true,
+        attributes: {
+          title: '',
+          description: '',
+          keywords: ''
+        }
       }
     }
   },
   head() {
     return {
-      title: 'Jakub Gania Software - Post - ' + this.attributes.title,
+      title: this.ht + this.attributes.title,
       meta: [
         {
           hid: 'description',
@@ -68,5 +87,17 @@ export default {
   max-width: 800px;
   width: 100%;
   margin: auto;
+}
+.link {
+  text-decoration: none;
+  color: #b3b3b3;
+}
+.link:hover {
+  color: #000;
+}
+.error-message {
+  margin-top: 80px;
+  color: red;
+  font-weight: 800;
 }
 </style>
