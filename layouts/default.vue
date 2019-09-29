@@ -17,6 +17,10 @@
     </v-content>
 
     <footer-component />
+
+    <no-ssr>
+      <portal-rules-alert-component />
+    </no-ssr>
   </v-app>
 </template>
 
@@ -24,12 +28,14 @@
 import ToolbarHeaderComponent from '../components/toolbar-header'
 import NavigationDrawerComponent from '../components/navigation-drawer'
 import FooterComponent from '../components/footer'
+import PortalRulesAlertComponent from '../components/portal-rules-alert'
 
 export default {
   components: {
     'toolbar-header-component': ToolbarHeaderComponent,
     'navigation-drawer-component': NavigationDrawerComponent,
-    'footer-component': FooterComponent
+    'footer-component': FooterComponent,
+    'portal-rules-alert-component': PortalRulesAlertComponent
   },
   data() {
     return {
