@@ -4,7 +4,7 @@
 
     <v-col lg="12">
       <div class="email">
-        contact@jakubgania.io
+        {{ email }}
       </div>
     </v-col>
   </v-row>
@@ -19,7 +19,8 @@ export default {
   },
   data() {
     return {
-      title: 'Kontakt'
+      title: 'Kontakt',
+      email: 'contact@jakubgania.io'
     }
   },
   head() {
