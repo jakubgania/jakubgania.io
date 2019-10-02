@@ -106,6 +106,7 @@ export default {
   padding-top: 20px;
   padding-bottom: 20px;
   letter-spacing: 2px;
+  border-top: 1px solid #d9d9d9;
 }
 .link-resource {
   color: #1a8cff;
