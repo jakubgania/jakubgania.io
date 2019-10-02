@@ -54,6 +54,13 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: 'Audiowide';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Audiowide Regular'), local('Audiowide-Regular'),
+    url(../assets/Audiowide-Regular.ttf) format('truetype');
+}
 .app-content-container {
   min-height: 100vh;
 }
