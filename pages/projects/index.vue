@@ -2,28 +2,24 @@
   <v-row class="content-container">
     <subpage-title-section-component :title="title" />
 
-    <v-col v-if="description" lg="12" style="padding: 0;">
-      <div>
-        {{ description }}
-      </div>
-    </v-col>
-    <v-col lg="12">
-      list of projects
-    </v-col>
+    <subpage-description-section-component :description="description" />
   </v-row>
 </template>
 
 <script>
 import SubpageTitleSection from '../../components/subpage-title-section'
+import SubpageDescriptionSection from '../../components/subpage-description-section'
 
 export default {
   components: {
-    'subpage-title-section-component': SubpageTitleSection
+    'subpage-title-section-component': SubpageTitleSection,
+    'subpage-description-section-component': SubpageDescriptionSection
   },
   data() {
     return {
       title: 'Projekty',
-      description: 'page description'
+      description:
+        'Lista moich projektów z odnośnikami do szczegółowych opisów. Obecnie strona w przygotowaniu.'
     }
   },
   head() {
