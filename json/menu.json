@@ -38,10 +38,12 @@
     },
     {
       "title": "Github",
+      "name": "/github",
       "url": "https://github.com/jakubgania"
     },
     {
       "title": "Linkedin",
+      "name": "/linkedin",
       "url": "https://www.linkedin.com/in/jakubgania"
     }
   ]
