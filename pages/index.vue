@@ -13,7 +13,7 @@
         </div>
         <div class="link-section">
           <nuxt-link to="/menu" class="link">
-            menu
+            {{ linkText }}
           </nuxt-link>
         </div>
       </div>
@@ -25,7 +25,8 @@
 export default {
   data() {
     return {
-      subpageTitle: 'Jakub Gania Software'
+      subpageTitle: 'Jakub Gania Software',
+      linkText: '{ menu }'
     }
   },
   head() {
@@ -90,9 +91,9 @@ export default {
   text-decoration: none;
   color: black;
   letter-spacing: 8px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 .link:hover {
   color: #0066ff;
