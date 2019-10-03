@@ -2,11 +2,8 @@
   <v-row class="content-container">
     <subpage-title-section-component :title="title" />
 
-    <v-col lg="12" style="padding: 0;">
-      <div>
-        description
-      </div>
-    </v-col>
+    <subpage-description-section-component :description="description" />
+
     <v-col cols="12" style="margin-top: 60px;">
       <v-row>
         <v-col v-for="n in 12" :key="n" cols="4" style="padding: 1px;">
@@ -19,9 +16,9 @@
         </v-col>
       </v-row>
     </v-col>
-    <v-col cols="12">
+    <!-- <v-col cols="12">
       paging button
-    </v-col>
+    </v-col> -->
 
     <v-dialog
       v-model="dialog"
@@ -43,14 +40,18 @@
 
 <script>
 import SubpageTitleSection from '../components/subpage-title-section'
+import SubpageDescriptionSection from '../components/subpage-description-section'
 
 export default {
   components: {
-    'subpage-title-section-component': SubpageTitleSection
+    'subpage-title-section-component': SubpageTitleSection,
+    'subpage-description-section-component': SubpageDescriptionSection
   },
   data() {
     return {
       title: 'Galeria',
+      description:
+        'W galerii będę czasami  umieszczał jakieś zdjęcia lub grafiki. Obecnie ta sekcja jest jeszcze niegotowa dlatego wyświetla zdjęcia zastępcze.',
       dialog: false
     }
   },
