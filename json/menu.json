@@ -9,16 +9,12 @@
       "path": "/about"
     },
     {
-      "title": "Zdjęcia",
-      "path": "/gallery"
-    },
-    {
       "title": "Projekty",
       "path": "/projects"
     },
     {
-      "title": "Skróty klawiaturowe",
-      "path": "/shortcuts"
+      "title": "Kontakt",
+      "path": "/contact"
     },
     {
       "title": "Zasoby",
@@ -29,12 +25,16 @@
       "path": "/posts"
     },
     {
-      "title": "Kontakt",
-      "path": "/contact"
-    },
-    {
       "title": "Komeny i polecenia",
       "path": "/commands"
+    },
+    {
+      "title": "Skróty klawiaturowe",
+      "path": "/shortcuts"
+    },
+    {
+      "title": "Zdjęcia",
+      "path": "/gallery"
     },
     {
       "title": "Github",
