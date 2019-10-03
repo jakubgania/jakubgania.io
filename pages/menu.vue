@@ -94,7 +94,7 @@ export default {
   },
   data() {
     return {
-      title: 'Menu',
+      title: '{ menu }',
       items: menuItems.menu
     }
   },
