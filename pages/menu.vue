@@ -1,10 +1,7 @@
 <template>
   <v-row class="content-container" no-gutters>
-    <v-col cols="12" style="padding: 0;">
-      <div class="page-title">
-        Menu
-      </div>
-    </v-col>
+    <subpage-title-section-component :title="title" />
+
     <v-col v-for="item in items" :key="item.id" cols="12" class="link-section">
       <template v-if="item.path">
         <nuxt-link :to="item.path" class="link">
@@ -25,11 +22,16 @@
 </template>
 
 <script>
+import SubpageTitleSection from '../components/subpage-title-section'
 import menuItems from '../json/menu.json'
 
 export default {
+  components: {
+    'subpage-title-section-component': SubpageTitleSection
+  },
   data() {
     return {
+      title: 'Menu',
       items: menuItems.menu
     }
   },
