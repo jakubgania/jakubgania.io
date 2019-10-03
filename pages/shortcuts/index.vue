@@ -2,28 +2,24 @@
   <v-row class="content-container">
     <subpage-title-section-component :title="title" />
 
-    <v-col v-if="description" lg="12" style="padding: 0;">
-      <div>
-        {{ description }}
-      </div>
-    </v-col>
-    <v-col lg="12">
-      list of subpages
-    </v-col>
+    <subpage-description-section-component :description="description" />
   </v-row>
 </template>
 
 <script>
 import SubpageTitleSection from '../../components/subpage-title-section'
+import SubpageDescriptionSection from '../../components/subpage-description-section'
 
 export default {
   components: {
-    'subpage-title-section-component': SubpageTitleSection
+    'subpage-title-section-component': SubpageTitleSection,
+    'subpage-description-section-component': SubpageDescriptionSection
   },
   data() {
     return {
       title: 'Skróty klawiaturowe',
-      description: 'page description'
+      description:
+        'Lista programów i systemów do których są skróty klawiaturowe w formie wypisanej listy lub odnośników. Skórty klawiaturowe są bardzo pomocne i przydatne, ponieważ przyspieszają pracę i pozwalają zminimalizować odrywanie rąk od klawiatury. Dlatego uważam, że powinno się je opanować w danym programie/systemie do perfekcji.'
     }
   },
   head() {
