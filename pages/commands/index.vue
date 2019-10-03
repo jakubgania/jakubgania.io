@@ -2,22 +2,24 @@
   <v-row class="content-container">
     <subpage-title-section-component :title="title" />
 
-    <v-col lg="12">
-      Strona w przygotowaniu
-    </v-col>
+    <subpage-description-section-component :description="description" />
   </v-row>
 </template>
 
 <script>
 import SubpageTitleSection from '../../components/subpage-title-section'
+import SubpageDescriptionSection from '../../components/subpage-description-section'
 
 export default {
   components: {
-    'subpage-title-section-component': SubpageTitleSection
+    'subpage-title-section-component': SubpageTitleSection,
+    'subpage-description-section-component': SubpageDescriptionSection
   },
   data() {
     return {
-      title: 'Komeny i polecenia'
+      title: 'Komeny i polecenia',
+      description:
+        'Na tej stronie będzie lista programów z odnośnikami do opisów komend i poleceń jakie można zastosować w danym programie.'
     }
   },
   head() {
