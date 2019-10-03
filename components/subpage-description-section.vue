@@ -19,9 +19,10 @@ export default {
 
 <style lang="scss" scoped>
 .page-description {
-  font-size: 20px;
-  margin-top: 10px;
-  font-weight: 800;
-  border-bottom: 2px solid #000;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 </style>

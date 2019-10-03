@@ -2,7 +2,9 @@
   <v-row class="content-container">
     <subpage-title-section-component :title="title" />
 
-    <v-row>
+    <subpage-description-section-component :description="description" />
+
+    <v-row no-gutters>
       <v-col lg="12" class="title-category">
         Kategorie
       </v-col>
@@ -49,15 +51,19 @@
 
 <script>
 import SubpageTitleSection from '../components/subpage-title-section'
+import SubpageDescriptionSection from '../components/subpage-description-section'
 import linksData from '../json/resources-items.json'
 
 export default {
   components: {
-    'subpage-title-section-component': SubpageTitleSection
+    'subpage-title-section-component': SubpageTitleSection,
+    'subpage-description-section-component': SubpageDescriptionSection
   },
   data() {
     return {
       title: 'Zasoby',
+      description:
+        'Na tej stronie zebrane są różne linki do takich stron jak portale technologiczne, blogi, kanały na Youtube, dokumentacje projektów technologicznych. Obecnie materiały są podzielone z grubsza na kategorie ale strona będzie pod tym względem na pewno ciągle modyfikowana. Cały czas znaujduję różne ciekawe artykłu i  ta lista będzie aktualizowana żeby zebrać to wszystko centralnie w jednym miejscu.',
       linksData: linksData.resources_items
     }
   },
@@ -89,12 +95,14 @@ export default {
 .title-category {
   font-size: 20px;
   font-weight: 800;
-  padding-bottom: 24px;
+  margin-bottom: 14px;
   letter-spacing: 2px;
 }
 .listing-link {
   color: #1a8cff;
   letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 8px;
 
   &:hover {
     color: #ff6b00;
@@ -105,15 +113,22 @@ export default {
   font-weight: 800;
   padding-top: 20px;
   padding-bottom: 20px;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   border-top: 1px solid #d9d9d9;
 }
 .link-resource {
   color: #1a8cff;
   text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 
   &:hover {
     color: #01aca7;
   }
+}
+.resource-description {
+  font-size: 14px;
+  padding-top: 4px;
+  letter-spacing: 1px;
 }
 </style>
