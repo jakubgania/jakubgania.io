@@ -2,9 +2,13 @@
   <v-row class="content-container">
     <subpage-title-section-component :title="title" />
 
+    <subpage-description-section-component :description="description" />
+
     <v-col lg="12">
       <div class="email">
-        {{ email }}
+        <a :href="`mailto:${email}`" class="email-link">
+          {{ email }}
+        </a>
       </div>
     </v-col>
   </v-row>
@@ -12,14 +16,17 @@
 
 <script>
 import SubpageTitleSection from '../components/subpage-title-section'
+import SubpageDescriptionSection from '../components/subpage-description-section'
 
 export default {
   components: {
-    'subpage-title-section-component': SubpageTitleSection
+    'subpage-title-section-component': SubpageTitleSection,
+    'subpage-description-section-component': SubpageDescriptionSection
   },
   data() {
     return {
       title: 'Kontakt',
+      description: 'E-mail do kontaktu.',
       email: 'contact@jakubgania.io'
     }
   },
@@ -53,6 +60,14 @@ export default {
   text-align: center;
   color: black;
   letter-spacing: 2px;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 300;
+}
+.email-link {
+  text-decoration: none;
+  color: black;
+}
+.email-link:hover {
+  color: #999999;
 }
 </style>
