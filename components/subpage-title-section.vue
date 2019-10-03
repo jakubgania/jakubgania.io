@@ -20,7 +20,7 @@ export default {
 <style lang="scss" scoped>
 .page-title {
   font-size: 40px;
-  margin-top: 80px;
+  margin-top: 120px;
   font-weight: 800;
   border-bottom: 2px solid #000;
 }
