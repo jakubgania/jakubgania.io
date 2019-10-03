@@ -2,6 +2,8 @@
   <v-row class="content-container">
     <subpage-title-section-component :title="title" />
 
+    <subpage-description-section-component :description="description" />
+
     <template v-if="posts.length">
       <v-col
         v-for="(item, index) in posts"
@@ -38,14 +40,18 @@
 
 <script>
 import SubpageTitleSection from '../../components/subpage-title-section'
+import SubpageDescriptionSection from '../../components/subpage-description-section'
 
 export default {
   components: {
-    'subpage-title-section-component': SubpageTitleSection
+    'subpage-title-section-component': SubpageTitleSection,
+    'subpage-description-section-component': SubpageDescriptionSection
   },
   data() {
     return {
       title: 'Posty',
+      description:
+        'Na tej stronie będzie lista postów/wpisów. Obecnie jest tutaj testowo jeden odnośnik. Funkcjonalność nie działa jeszcze w płeni stabilnie i wymaga dopracowania dlatego system postów może działać jeszcze niepoprawnie.',
       posts: [
         {
           title: 'Start',
