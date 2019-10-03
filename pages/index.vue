@@ -9,11 +9,15 @@
         class="section"
       >
         <div class="company-name">
-          Jakub Gania Software
+          {{ subpageTitle }}
         </div>
         <div class="link-section">
           <nuxt-link to="/menu" class="link">
-            {{ linkText }}
+            <span style="color: #ff0000;">this</span>
+            <span style="color: #000000;">.</span>
+            <span style="color: #0066ff;">showMenu</span>
+            <span style="color: #cc33ff;">()</span>
+            <span>;</span>
           </nuxt-link>
         </div>
       </div>
@@ -25,8 +29,7 @@
 export default {
   data() {
     return {
-      subpageTitle: 'Jakub Gania Software',
-      linkText: '{ menu }'
+      subpageTitle: 'Jakub Gania Software'
     }
   },
   head() {
@@ -89,14 +92,13 @@ export default {
 }
 .link {
   text-decoration: none;
-  color: black;
-  letter-spacing: 8px;
+  color: #000;
+  letter-spacing: 1px;
   font-size: 14px;
   font-weight: bold;
-  text-transform: lowercase;
 }
 .link:hover {
-  color: #0066ff;
+  opacity: 0.7;
 }
 
 @media only screen and (max-width: 600px) {
