@@ -1,23 +1,32 @@
 <template>
-  <v-row class="content-container" no-gutters>
-    <subpage-title-section-component :title="title" />
+  <v-row>
+    <div class="top-image" />
 
-    <v-col v-for="item in items" :key="item.id" cols="12" class="link-section">
-      <template v-if="item.path">
-        <nuxt-link :to="item.path" class="link">
-          <div class="link-text">
-            {{ item.title }}
-          </div>
-        </nuxt-link>
-      </template>
-      <template v-if="item.url">
-        <a :href="item.url" target="_blank" class="link">
-          <div class="link-text">
-            {{ item.title }}
-          </div>
-        </a>
-      </template>
-    </v-col>
+    <v-row class="content-container" no-gutters>
+      <subpage-title-section-component :title="title" />
+
+      <v-col
+        v-for="item in items"
+        :key="item.id"
+        cols="12"
+        class="link-section"
+      >
+        <template v-if="item.path">
+          <nuxt-link :to="item.path" class="link">
+            <div class="link-text">
+              {{ item.title }}
+            </div>
+          </nuxt-link>
+        </template>
+        <template v-if="item.url">
+          <a :href="item.url" target="_blank" class="link">
+            <div class="link-text">
+              {{ item.title }}
+            </div>
+          </a>
+        </template>
+      </v-col>
+    </v-row>
   </v-row>
 </template>
 
@@ -58,7 +67,9 @@ export default {
 .content-container {
   max-width: 800px;
   width: 100%;
+  height: 600px;
   margin: auto;
+  margin-bottom: 100px;
 }
 .page-title {
   font-size: 40px;
@@ -81,6 +92,17 @@ export default {
   letter-spacing: 4px;
   padding-left: 12px;
   transition: padding-left 0.2s ease;
+}
+.top-image {
+  width: 100%;
+  height: 30vw;
+  max-height: 940px;
+  min-height: 200px;
+  background-image: url('../assets/images/background2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin: 30px; */
 }
 
 @media only screen and (max-width: 600px) {
