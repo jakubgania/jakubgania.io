@@ -18,7 +18,7 @@
       </v-col>
 
       <v-col v-for="item in linksData" :key="item.id" lg="12">
-        <div class="link-section-title" :id="item.section_id">
+        <div :id="item.section_id" class="link-section-title">
           {{ item.section_name }}
         </div>
 
