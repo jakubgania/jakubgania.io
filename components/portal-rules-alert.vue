@@ -5,7 +5,9 @@
         class="subtitle-1 font-weight-black grey lighten-2"
         primary-title
       >
-        {{ title }}
+        {{ title }} &nbsp;&nbsp; <span style="color: #f2f2f2">!important;</span>
+        <div class="flex-grow-1" />
+        <v-icon @click="accept()">mdi-close</v-icon>
       </v-card-title>
 
       <v-card-text style="padding-top: 15px;letter-spacing: 1px;">
