@@ -1,6 +1,6 @@
 <template>
   <v-row v-if="displayFooter()" class="footer-container">
-    <v-col cols="12" xs="2" lg="6">
+    <v-col sm="2" lg="6" cols="4">
       <a :href="links.github.url" target="_blank" class="link">
         {{ links.github.title }}
       </a>
@@ -8,7 +8,7 @@
         {{ links.linkedin.title }}
       </a>
     </v-col>
-    <v-col cols="12" lg="8" xs="8" style="text-align: right;">
+    <v-col sm="10" lg="6" cols="8" style="text-align: right;">
       <div v-html="copyrightText" />
     </v-col>
   </v-row>
