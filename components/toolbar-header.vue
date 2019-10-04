@@ -1,6 +1,6 @@
 <template>
   <div v-if="displayHeader()">
-    <v-app-bar absolute app clipped-left flat>
+    <v-app-bar app clipped-left flat fixed>
       <v-toolbar-title>
         <nuxt-link to="/" class="link-title">
           <div>
