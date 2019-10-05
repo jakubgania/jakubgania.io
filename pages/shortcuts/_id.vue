@@ -1,11 +1,8 @@
 <template>
   <v-row class="content-container">
     <template v-if="!error">
-      <v-col lg="12" style="padding: 0;">
-        <div class="page-title">
-          {{ pageTitle + ' ' + id }}
-        </div>
-      </v-col>
+      <subpage-title-section-component :title="title + name" />
+
       <v-col v-for="item in data" :key="item.id" lg="12">
         <div>
           {{ item.shortcut }}
@@ -20,11 +17,15 @@
 
 <script>
 import axios from 'axios'
+import SubpageTitleSection from '../../components/subpage-title-section'
 
 export default {
+  components: {
+    'subpage-title-section-component': SubpageTitleSection
+  },
   data() {
     return {
-      pageTitle: 'Skrt',
+      title: 'Skróty klawiaturowe - ',
       error: false
     }
   },
@@ -36,10 +37,11 @@ export default {
     // )
 
     return axios
-      .get(`http://127.0.0.1:3000/shortcuts/${params.id}.json`)
+      .get(`http://192.168.0.16:4000/shortcuts/${params.id}.json`)
       .then((res) => {
         return {
           id: params.id,
+          name: res.data.name,
           data: res.data.items
         }
       })
@@ -59,11 +61,5 @@ export default {
   max-width: 800px;
   width: 100%;
   margin: auto;
-}
-.page-title {
-  font-size: 40px;
-  border-bottom: 2px solid black;
-  margin-top: 80px;
-  font-weight: 800;
 }
 </style>
