@@ -37,7 +37,7 @@ export default {
     // )
 
     return axios
-      .get(`http://192.168.0.16:4000/shortcuts/${params.id}.json`)
+      .get(`https://jakubgania.io/shortcuts/${params.id}.json`)
       .then((res) => {
         return {
           id: params.id,
