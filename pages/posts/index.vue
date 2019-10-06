@@ -13,7 +13,7 @@
         xs="12"
         class="post-link-item"
       >
-        <a :href="item.url" class="post-link">
+        <nuxt-link :to="item.url" class="post-link">
           <div class="post-main-title">
             <div>
               {{ posts.length - index + '.' }}
@@ -25,7 +25,7 @@
           <div class="creation-date">
             {{ item.creationDate }}
           </div>
-        </a>
+        </nuxt-link>
       </v-col>
     </template>
     <template v-else>

@@ -30,14 +30,8 @@ export default {
     }
   },
   asyncData({ params, error }) {
-    // import shortcuts from `../json/shortcuts/${params.id}.json`
-
-    // const { data } = await axios.get(
-    //   'http://localhost:3000/json/shortcuts/chrome.json'
-    // )
-
     return axios
-      .get(`https://development.jakubgania.io/shortcuts/${params.id}.json`)
+      .get(`https://jakubgania.io/shortcuts/${params.id}.json`)
       .then((res) => {
         return {
           id: params.id,
@@ -50,8 +44,6 @@ export default {
           error: true
         }
       })
-
-    // return { shortcuts: data }
   }
 }
 </script>
