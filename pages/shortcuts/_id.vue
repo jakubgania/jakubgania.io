@@ -37,7 +37,7 @@ export default {
     // )
 
     return axios
-      .get(`https://jakubgania.io/shortcuts/${params.id}.json`)
+      .get(`https://development.jakubgania.io/shortcuts/${params.id}.json`)
       .then((res) => {
         return {
           id: params.id,
