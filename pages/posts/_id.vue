@@ -4,7 +4,7 @@
       <subpage-title-section-component :title="attributes.title" />
 
       <v-col lg="12" style="padding: 0; padding-top: 40px;">
-        <div style="letter-spacing: 0.5px;" v-html="$md.render(model)"></div>
+        <div class="post" v-html="$md.render(model)"></div>
       </v-col>
     </template>
     <template v-else>
@@ -99,5 +99,12 @@ export default {
   margin-top: 80px;
   color: red;
   font-weight: 800;
+}
+.post {
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  font-size: 16.8px;
+  /* background-color: white; */
 }
 </style>

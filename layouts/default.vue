@@ -58,8 +58,15 @@ export default {
   font-family: 'Audiowide';
   font-style: normal;
   font-weight: 400;
-  src: local('Audiowide Regular'), local('Audiowide-Regular'),
-    url(../assets/Audiowide-Regular.ttf) format('truetype');
+  src: local('Audiowide Regular'),
+    url(../assets/fonts/audiowide/Audiowide-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Light'),
+    url(../assets/fonts/nunito/Nunito-Light.ttf) format('truetype');
 }
 .app-content-container {
   min-height: 100vh;
