@@ -1,6 +1,6 @@
 <template>
   <v-col cols="12" lg="12" xs="12" style="padding: 0;">
-    <div class="page-title">
+    <div class="page-title" :style="{ 'margin-top': marginTop + 'px' }">
       {{ title }}
     </div>
   </v-col>
@@ -12,6 +12,10 @@ export default {
     title: {
       type: String,
       default: ''
+    },
+    marginTop: {
+      type: Number,
+      default: 120
     }
   }
 }
@@ -20,7 +24,6 @@ export default {
 <style lang="scss" scoped>
 .page-title {
   font-size: 40px;
-  margin-top: 120px;
   font-weight: 800;
   border-bottom: 2px solid #000;
 }

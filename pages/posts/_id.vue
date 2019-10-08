@@ -2,7 +2,10 @@
   <v-row class="content-container">
     <template v-if="!error">
       <div class="post-content">
-        <subpage-title-section-component :title="attributes.title" />
+        <subpage-title-section-component
+          :title="attributes.title"
+          :marginTop="marginTop"
+        />
 
         <div class="post" v-html="$md.render(model)"></div>
       </div>
@@ -42,7 +45,8 @@ export default {
       title: '',
       error: false,
       ht: 'Jakub Gania Software - Post - ',
-      errorMessage: 'Wystąpił błąd pobierania lub taki post nie istnieje'
+      errorMessage: 'Wystąpił błąd pobierania lub taki post nie istnieje',
+      marginTop: 0
     }
   },
   async asyncData({ params }) {
@@ -90,7 +94,7 @@ export default {
 
 <style scoped>
 .content-container {
-  max-width: 1100px;
+  max-width: 1000px;
   width: 100%;
   margin: auto;
   margin-top: 120px;
@@ -108,7 +112,7 @@ export default {
   font-weight: 800;
 }
 .post-content {
-  max-width: 700px;
+  max-width: 600px;
   background-color: red;
   padding: 0;
 }
@@ -117,13 +121,14 @@ export default {
   letter-spacing: 0.5px;
   line-height: 1.8;
   font-size: 16.8px;
+  padding-top: 20px;
 }
 .sidebar {
   max-width: 400px;
   width: 100%;
 }
 div.other-posts {
-  top: 100px;
+  top: 60px;
   position: sticky;
   height: auto;
   background-color: orange;
