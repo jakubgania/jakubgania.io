@@ -11,8 +11,22 @@
       </div>
 
       <div class="sidebar">
-        <div class="other-posts">
-          Inne posty
+        <div class="sidebar-menu">
+          <div class="sidebar-title">
+            ostatnie posty
+          </div>
+          <div class="sidebar-section">
+            brak
+          </div>
+          <div class="sidebar-section">
+            <div v-for="item in social" :key="item.id">
+              <a :href="item.url" class="social-link">
+                <div class="social-link-text">
+                  {{ item.title }}
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </template>
@@ -46,7 +60,17 @@ export default {
       error: false,
       ht: 'Jakub Gania Software - Post - ',
       errorMessage: 'Wystąpił błąd pobierania lub taki post nie istnieje',
-      marginTop: 0
+      marginTop: 0,
+      social: [
+        {
+          title: 'github',
+          url: 'https://github.com/jakubgania'
+        },
+        {
+          title: 'linkedin',
+          url: 'https://linkedin.com/in/jakubgania/'
+        }
+      ]
     }
   },
   async asyncData({ params }) {
@@ -94,7 +118,7 @@ export default {
 
 <style scoped>
 .content-container {
-  max-width: 1000px;
+  max-width: 1020px;
   width: 100%;
   margin: auto;
   margin-top: 120px;
@@ -113,7 +137,6 @@ export default {
 }
 .post-content {
   max-width: 600px;
-  background-color: red;
   padding: 0;
 }
 .post {
@@ -126,11 +149,42 @@ export default {
 .sidebar {
   max-width: 400px;
   width: 100%;
+  font-family: 'Nunito', sans-serif;
 }
-div.other-posts {
+div.sidebar-menu {
   top: 60px;
   position: sticky;
   height: auto;
-  background-color: orange;
+  margin-left: 40px;
+  margin-top: 60px;
+}
+.social-link {
+  text-decoration: none;
+}
+.social-link-text {
+  width: 100%;
+  letter-spacing: 1px;
+  color: black;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.social-link-text:hover {
+  color: #0066ff;
+  padding-left: 12px;
+  background-color: #e6e6e6;
+  transition: padding-left 0.2s ease;
+}
+.sidebar-title {
+  border-top: 2px solid black;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.sidebar-section {
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 </style>

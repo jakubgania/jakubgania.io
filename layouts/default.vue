@@ -71,6 +71,13 @@ export default {
 @font-face {
   font-family: 'Nunito';
   font-style: normal;
+  font-weight: 700;
+  src: local('Nunito Bold'),
+    url(../assets/fonts/nunito/Nunito-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
   font-weight: 900;
   src: local('Nunito Black'),
     url(../assets/fonts/nunito/Nunito-Black.ttf) format('truetype');
