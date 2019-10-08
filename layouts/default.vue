@@ -65,8 +65,15 @@ export default {
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
-  src: local('Nunito Light'),
-    url(../assets/fonts/nunito/Nunito-Light.ttf) format('truetype');
+  src: local('Nunito Regular'),
+    url(../assets/fonts/nunito/Nunito-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Nunito Black'),
+    url(../assets/fonts/nunito/Nunito-Black.ttf) format('truetype');
 }
 .app-content-container {
   min-height: 100vh;
