@@ -1,11 +1,17 @@
 <template>
   <v-row class="content-container">
     <template v-if="!error">
-      <subpage-title-section-component :title="attributes.title" />
+      <div class="post-content">
+        <subpage-title-section-component :title="attributes.title" />
 
-      <v-col lg="12" style="padding: 0; padding-top: 40px;">
         <div class="post" v-html="$md.render(model)"></div>
-      </v-col>
+      </div>
+
+      <div class="sidebar">
+        <div class="other-posts">
+          Inne posty
+        </div>
+      </div>
     </template>
     <template v-else>
       <v-col lg="12">
@@ -84,9 +90,10 @@ export default {
 
 <style scoped>
 .content-container {
-  max-width: 800px;
+  max-width: 1100px;
   width: 100%;
   margin: auto;
+  margin-top: 120px;
 }
 .link {
   text-decoration: none;
@@ -100,11 +107,25 @@ export default {
   color: red;
   font-weight: 800;
 }
+.post-content {
+  max-width: 700px;
+  background-color: red;
+  padding: 0;
+}
 .post {
   font-family: 'Nunito', sans-serif;
   letter-spacing: 0.5px;
   line-height: 1.8;
   font-size: 16.8px;
-  /* background-color: white; */
+}
+.sidebar {
+  max-width: 400px;
+  width: 100%;
+}
+div.other-posts {
+  top: 100px;
+  position: sticky;
+  height: auto;
+  background-color: orange;
 }
 </style>
