@@ -5,6 +5,7 @@
         <subpage-title-section-component
           :title="attributes.title"
           :marginTop="marginTop"
+          :fontSize="28"
         />
 
         <div class="post" v-html="$md.render(model)"></div>
@@ -20,7 +21,7 @@
           </div>
           <div class="sidebar-section">
             <div v-for="item in social" :key="item.id">
-              <a :href="item.url" class="social-link">
+              <a :href="item.url" class="social-link" target="_blank">
                 <div class="social-link-text">
                   {{ item.title }}
                 </div>
@@ -156,7 +157,7 @@ div.sidebar-menu {
   position: sticky;
   height: auto;
   margin-left: 40px;
-  margin-top: 60px;
+  margin-top: 42px;
 }
 .social-link {
   text-decoration: none;
