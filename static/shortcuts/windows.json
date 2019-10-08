@@ -1,0 +1,38 @@
+{
+  "name": "Windows",
+  "items": [
+    {
+      "shortcut": "Ctrl + X",
+      "description": "Cut the selected item."
+    },
+    {
+      "shortcut": "Ctrl + C (or Ctrl + Insert)",
+      "description": "Copy the selected item."
+    },
+    {
+      "shortcut": "Ctrl + V (or Shift + Insert)",
+      "description": "Paste the selected item." 
+    },
+    {
+      "shortcut": "Ctrl + Z",
+      "description": "Undo an action."
+    },
+    {
+      "shortcut": "Alt + Tab",
+      "description": "Switch between open apps."
+    },
+    {
+      "shortcut": "Alt + F4",
+      "description": "Close the active item, or exit the active app."
+    },
+    {
+      "shortcut": "",
+      "description": ""
+    },
+    {
+      "icon": true,
+      "shortcut": "first",
+      "description": "asdasd"
+    }
+  ]
+}

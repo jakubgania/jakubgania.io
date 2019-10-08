@@ -1,6 +1,10 @@
 {
   "data": [
     {
+      "title": "Windows",
+      "path": "/windows"
+    },
+    {
       "title": "Chrome",
       "path": "/chrome"
     },

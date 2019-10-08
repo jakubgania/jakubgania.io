@@ -1,16 +1,23 @@
 <template>
   <v-row class="content-container">
     <template v-if="!error">
-      <subpage-title-section-component :title="title + name" />
+      <subpage-title-section-component :title="title + name" :fontSize="28" />
 
-      <v-col v-for="item in data" :key="item.id" lg="12">
-        <div>
-          {{ item.shortcut }}
+      <v-col v-for="item in data" :key="item.id" lg="12" style="padding: 0;">
+        <div class="shortcut-item-section">
+          <div class="shortcut-keys">
+            <v-icon v-if="item.icon">mdi-windows</v-icon> {{ item.shortcut }}
+          </div>
+          <div class="shortcut-description">
+            {{ item.description }}
+          </div>
         </div>
       </v-col>
     </template>
     <template v-else>
-      <div style="margin-top: 80px;">fetch error</div>
+      <div style="margin-top: 80px;">
+        fetch error
+      </div>
     </template>
   </v-row>
 </template>
@@ -31,7 +38,7 @@ export default {
   },
   asyncData({ params, error }) {
     return axios
-      .get(`https://jakubgania.io/shortcuts/${params.id}.json`)
+      .get(`http://192.168.0.16:4000/shortcuts/${params.id}.json`)
       .then((res) => {
         return {
           id: params.id,
@@ -53,5 +60,17 @@ export default {
   max-width: 800px;
   width: 100%;
   margin: auto;
+}
+.shortcut-item-section {
+  display: flex;
+  margin-top: 14px;
+}
+.shortcut-keys {
+  width: 40%;
+  background-color: orange;
+}
+.shortcut-description {
+  width: 60%;
+  background-color: azure;
 }
 </style>

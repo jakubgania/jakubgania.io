@@ -2,7 +2,16 @@
   "name": "Chrome DevTools",
   "items": [
     {
-      "shortcut": "chrome dev tools"
+      "shortcut": "chrome dev tools pp",
+      "description": "example description example description example description example description"
+    },
+    {
+      "shortcut": "chrome dev tools pp",
+      "description": "example description example description example description example description"
+    },
+    {
+      "shortcut": "chrome dev tools pp",
+      "description": "example description example description example description example description"
     }
   ]
 }
