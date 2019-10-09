@@ -26,6 +26,24 @@
       "description": "Close the active item, or exit the active app."
     },
     {
+      "icon": true,
+      "shortcut": "+ L",
+      "description": "Lock your PC."
+    },
+    {
+      "icon": true,
+      "shortcut": "+ D",
+      "description": "Dispaly and hide the desktop."
+    },
+    {
+      "shortcut": "F2",
+      "description": "Rename the selected item."
+    },
+    {
+      "shortcut": "F3",
+      "description": "Search for a file or folder in File Explorer."
+    },
+    {
       "shortcut": "",
       "description": ""
     },
