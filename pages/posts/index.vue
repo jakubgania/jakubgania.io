@@ -56,7 +56,12 @@ export default {
         {
           title: 'Start',
           url: '/posts/1',
-          creationDate: ' 14:06 29/09/2019'
+          creationDate: '23:58 29/09/2019'
+        },
+        {
+          title: 'Ciągłe zmiany',
+          url: '/posts/2',
+          creationDate: '23:08 10/10/2019'
         }
       ]
     }
