@@ -38,7 +38,7 @@ export default {
   },
   asyncData({ params, error }) {
     return axios
-      .get(`http://192.168.0.16:4000/shortcuts/${params.id}.json`)
+      .get(`/shortcuts/${params.id}.json`)
       .then((res) => {
         return {
           id: params.id,
