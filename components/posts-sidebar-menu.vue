@@ -58,7 +58,7 @@ div.sidebar-menu {
 .social-link-text {
   width: 100%;
   letter-spacing: 1px;
-  color: black;
+  color: #000;
   padding-top: 4px;
   padding-bottom: 4px;
 }
@@ -69,7 +69,7 @@ div.sidebar-menu {
   transition: padding-left 0.2s ease;
 }
 .sidebar-title {
-  border-top: 2px solid black;
+  border-top: 2px solid #000;
   padding-top: 20px;
   padding-bottom: 10px;
   text-transform: uppercase;

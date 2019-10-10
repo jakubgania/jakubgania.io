@@ -60,17 +60,23 @@ export default {
   max-width: 800px;
   width: 100%;
   margin: auto;
+  margin-bottom: 80px;
 }
 .shortcut-item-section {
   display: flex;
-  margin-top: 14px;
+  margin-top: 16px;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.shortcut-item-section:hover {
+  background-color: #f0f0f5;
 }
 .shortcut-keys {
-  width: 40%;
-  background-color: orange;
+  width: 30%;
+  font-weight: 600;
 }
 .shortcut-description {
-  width: 60%;
-  background-color: azure;
+  width: 70%;
 }
 </style>

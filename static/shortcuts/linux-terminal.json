@@ -1,0 +1,125 @@
+{
+  "name": "Linux terminal",
+  "items": [
+    {
+      "shortcut": "Ctrl + C",
+      "description": "Interrupt (kill) the current foreground process running in in the terminal. This sends the SIGINT signal to the process, which is technically just a request—most processes will honor it, but some may ignore it."
+    },
+    {
+      "shortcut": "Ctrl + Z",
+      "description": "Suspend the current foreground process running in bash. This sends the SIGTSTP signal to the process. To return the process to the foreground later, use the fg process_name command."
+    },
+    {
+      "shortcut": "Ctrl + D",
+      "description": "Close the bash shell. This sends an EOF (End-of-file) marker to bash, and bash exits when it receives this marker. This is similar to running the exit command."
+    },
+    {
+      "shortcut": "Ctrl + L",
+      "description": "Clear the screen. This is similar to running the “clear” command."
+    },
+    {
+      "shortcut": "Ctrl + S",
+      "description": "Stop all output to the screen. This is particularly useful when running commands with a lot of long, verbose output, but you don’t want to stop the command itself with Ctrl+C."
+    },
+    {
+      "shortcut": "Ctrl + Q",
+      "description": "Resume output to the screen after stopping it with Ctrl+S."
+    },
+    {
+      "shortcut": "Tab",
+      "description": "Automaticly complete the file, direcotry or commnad."
+    },
+    {
+      "shortcut": "Alt + U",
+      "description": "Capitalize every character - uppercase."
+    },
+    {
+      "shortcut": "Alt + L",
+      "description": "Uncapitalize every character from the cursor to the end of the current word, converting the characters to lower case."
+    },
+    {
+      "shortcut": "Alt + C",
+      "description": "Capitalize every character from the cursor to the end of the current word, converting the characters to upper case."
+    },
+    {
+      "shortcut": "Ctrl + W",
+      "description": "Cut the word before the cursor, adding it to the clipboard."
+    },
+    {
+      "shortcut": "Ctrl + K",
+      "description": "Cut the part of the line after the cursor, adding it to the clipboard."
+    },
+    {
+      "shortcut": "Ctrl + U",
+      "description": "Cut the part of the line before the cursor, adding it to the clipboard."
+    },
+    {
+      "shortcut": "Ctrl + Y",
+      "description": "Paste the last thing you cut from the clipboard. The y here stands for `yank`."
+    },
+    {
+      "shortcut": "Ctrl + T",
+      "description": "Swap the last two characters before the cursor with each other. You can use this to quickly fix typos when you type two characters in the wrong order."
+    },
+    {
+      "shortcut": "Alt + T",
+      "description": "Swap the current word with the previous word."
+    },
+    {
+      "shortcut": "Ctrl + H or Backspace",
+      "description": "Delete the character before the cursor."
+    },
+    {
+      "shortcut": "Alt + D",
+      "description": "Delete all characters after the cursor on the current line."
+    },
+    {
+      "shortcut": "Ctrl + D or Delete",
+      "description": "Delete the character under the cursor."
+    },
+    {
+      "shortcut": "Ctrl + XX",
+      "description": "Move between the beginning of the line and the current position of the cursor. This allows you to press Ctrl+XX to return to the start of the line, change something, and then press Ctrl+XX to go back to your original cursor position. To use this shortcut, hold the Ctrl key and tap the X key twice."
+    },
+    {
+      "shortcut": "Ctrl + F",
+      "description": "Go right (forward) one character."
+    },
+    {
+      "shortcut": "Alt + F",
+      "description": "Go right (forward) one the word."
+    },
+    {
+      "shortcut": "Ctrl + B",
+      "description": "Go left (back) one character."
+    },
+    {
+      "shortcut": "Alt + B",
+      "description": "Go left (back) one word."
+    },
+    {
+      "shortcut": "Ctrl + E or End",
+      "description": "Go to the end of the line."
+    },
+    {
+      "shortcut": "Ctrl + A or Home",
+      "description": "Go to the beginning of the line."
+    },
+    {
+      "shortcut": "Shift + Ctrl + T",
+      "description": "Open new tab in terminal."
+    },
+    {
+      "shortcut": "Shift + Ctrl + N",
+      "description": "Open new terminal."
+    },
+    {
+      "shortcut": "Shift + Ctrl + W",
+      "description": "Close termianl."
+    },
+    {
+      "shortcut": "Ctrl + _",
+      "description": "Undo your last key press. You can repeat this to undo multiple times."
+    }
+  ]
+}

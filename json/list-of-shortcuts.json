@@ -23,6 +23,10 @@
     {
       "title": "Postman",
       "path": "/postman"
+    },
+    {
+      "title": "Linux terminal",
+      "path": "/linux-terminal"
     }
   ]
 }
