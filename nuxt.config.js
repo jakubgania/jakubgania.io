@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import sitemapRoutes from './store/sitemap-routes'
 
 export default {
   mode: 'universal',
@@ -80,8 +81,18 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://jakubgania.io',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: false,
+    routes: sitemapRoutes
+  },
 
   markdownit: {
     injected: true,

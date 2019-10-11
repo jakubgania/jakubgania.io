@@ -1,0 +1,3 @@
+User-agent: Googlebot
+
+Sitemap: https://jakubgania.io/sitemap.xml
