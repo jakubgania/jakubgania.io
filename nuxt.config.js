@@ -96,7 +96,6 @@ export default {
     hostname: 'https://jakubgania.io',
     cacheTime: 1000 * 60 * 15,
     gzip: true,
-    generate: false,
     routes: sitemapRoutes
   },
 
