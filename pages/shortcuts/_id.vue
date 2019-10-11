@@ -66,17 +66,18 @@ export default {
   display: flex;
   margin-top: 16px;
   letter-spacing: 1px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 .shortcut-item-section:hover {
   background-color: #f0f0f5;
 }
 .shortcut-keys {
-  width: 30%;
+  width: 40%;
   font-weight: 600;
 }
 .shortcut-description {
-  width: 70%;
+  width: 60%;
+  padding-left: 10px;
 }
 </style>
