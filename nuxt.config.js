@@ -37,27 +37,31 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      },
+      {
+        name: 'google-site-verification',
+        content: 'pCgwKh6Bl0udfAQC8PP37yLs6Rs26hwU19gmuDgpnZs'
       }
     ],
     link: [
       {
         rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'
       }
-      // {
-      //   rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Audiowide&display=swap'
-      // }
     ]
   },
+
   /*
    ** Customize the progress-bar color
    */
   loading: { color: '#fff' },
+
   /*
    ** Global CSS
    */
   css: [
     'aos/dist/aos.css'
   ],
+
   /*
    ** Plugins to load before mounting the App
    */
@@ -65,6 +69,7 @@ export default {
     { src:"~/plugins/aos", ssr: false },
     { src: '~plugins/ga.js', ssr: false }
   ],
+
   /*
    ** Nuxt.js dev-modules
    */
@@ -73,6 +78,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify'
   ],
+
   /*
    ** Nuxt.js modules
    */
@@ -100,11 +106,13 @@ export default {
       ['markdown-it-meta'],
     ]
   },
+
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
@@ -126,6 +134,7 @@ export default {
       }
     }
   },
+
   /*
    ** Build configuration
    */
