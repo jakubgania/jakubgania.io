@@ -6,7 +6,7 @@
 
     <template v-if="posts.length">
       <v-col
-        v-for="(item, index) in posts"
+        v-for="(item, index) in posts.reverse()"
         :key="item.id"
         cols="12"
         lg="12"
@@ -77,7 +77,7 @@ export default {
         },
         {
           name: 'keywords',
-          content: 'Posty'
+          content: 'posty, wpisy, notatki, blog'
         }
       ]
     }
@@ -104,8 +104,8 @@ export default {
 }
 .post-main-title {
   font-size: 20px;
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-weight: 600;
+  letter-spacing: 2px;
   display: flex;
 }
 .post-title {
