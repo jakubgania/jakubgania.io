@@ -1,12 +1,12 @@
 <template>
   <v-row class="content-container">
-    <subpage-title-section-component :title="title" />
+    <subpage-title-section-component :title="title + ' - ' + posts.length" />
 
     <subpage-description-section-component :description="description" />
 
     <template v-if="posts.length">
       <v-col
-        v-for="(item, index) in posts.reverse()"
+        v-for="item in posts.reverse()"
         :key="item.id"
         cols="12"
         lg="12"
@@ -15,9 +15,6 @@
       >
         <nuxt-link :to="item.url" class="post-link">
           <div class="post-main-title">
-            <div>
-              {{ posts.length - index + '.' }}
-            </div>
             <div class="post-title">
               {{ item.title }}
             </div>
@@ -95,18 +92,20 @@ export default {
   background-color: white;
   margin-top: 10px;
 }
-.post-link-item:hover {
-  background-color: #c1f0f0;
-}
 .post-link {
   text-decoration: none;
   color: black;
 }
 .post-main-title {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 400;
   letter-spacing: 2px;
   display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.post-main-title:hover {
+  color: #3399ff;
 }
 .post-title {
   padding-left: 10px;
@@ -117,6 +116,7 @@ export default {
   letter-spacing: 1px;
   color: #8c8c8c;
   padding-top: 4px;
+  padding-left: 10px;
 }
 
 @media only screen and (max-width: 600px) {
