@@ -1,5 +1,7 @@
 # jakubgania.io
 
+>  Project preview - [jakubgania.io](https://jakubgania.io)
+
 > my new personal website
 
 > implementation of the new structure
