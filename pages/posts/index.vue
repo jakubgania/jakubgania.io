@@ -1,6 +1,10 @@
 <template>
   <v-row class="content-container">
-    <subpage-title-section-component :title="title + ' - ' + posts.length" />
+    <subpage-title-section-component
+      :title="title + ' - ' + posts.length"
+      :marginTop="titleMarginTop.marginTop"
+      :fontSize="titleMarginTop.fontSize"
+    />
 
     <subpage-description-section-component :description="description" />
 
@@ -61,6 +65,16 @@ export default {
           creationDate: '23:08 10/10/2019'
         }
       ]
+    }
+  },
+  computed: {
+    titleMarginTop() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return { marginTop: 30, fontSize: 22 }
+        default:
+          return { marginTop: 120, fontSize: 28 }
+      }
     }
   },
   head() {

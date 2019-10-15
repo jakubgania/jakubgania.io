@@ -4,8 +4,8 @@
       <div class="post-content">
         <subpage-title-section-component
           :title="attributes.title"
-          :marginTop="marginTop"
-          :fontSize="28"
+          :marginTop="titleMarginTop.marginTop"
+          :fontSize="titleMarginTop.fontSize"
         />
 
         <div class="post" v-html="$md.render(model)"></div>
@@ -46,6 +46,16 @@ export default {
       pageTitle: 'Jakub Gania Software',
       errorMessage: 'Wystąpił błąd pobierania lub taki post nie istnieje',
       marginTop: 0
+    }
+  },
+  computed: {
+    titleMarginTop() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return { marginTop: 30, fontSize: 22 }
+        default:
+          return { marginTop: 120, fontSize: 28 }
+      }
     }
   },
   async asyncData({ params }) {
