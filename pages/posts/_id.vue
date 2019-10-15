@@ -43,7 +43,7 @@ export default {
     return {
       title: '',
       error: false,
-      ht: 'Jakub Gania Software - Post - ',
+      pageTitle: 'Jakub Gania Software',
       errorMessage: 'Wystąpił błąd pobierania lub taki post nie istnieje',
       marginTop: 0
     }
@@ -74,7 +74,7 @@ export default {
   },
   head() {
     return {
-      title: this.ht + this.attributes.title,
+      title: this.attributes.title + ' - ' + this.pageTitle,
       meta: [
         {
           hid: 'description',
