@@ -2,6 +2,16 @@ import colors from 'vuetify/es5/util/colors'
 import sitemapRoutes from './store/sitemap-routes'
 
 export default {
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'index',
+        path: '',
+        component: resolve(__dirname, 'pages/index/index.vue')
+      })
+    }
+  },
+
   mode: 'universal',
 
   manifest: {
