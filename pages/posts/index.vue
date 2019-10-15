@@ -103,12 +103,12 @@ export default {
   margin: auto;
 }
 .post-link-item {
-  background-color: white;
+  background-color: #fff;
   margin-top: 10px;
 }
 .post-link {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 .post-main-title {
   font-size: 22px;
@@ -137,6 +137,17 @@ export default {
   .content-container {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .post-main-title {
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .post-title {
+    padding-left: 0px;
+  }
+  .creation-date {
+    padding-left: 0px;
   }
 }
 </style>
