@@ -1,7 +1,11 @@
 <template>
   <v-row class="content-container">
     <template v-if="!error">
-      <subpage-title-section-component :title="title + name" :fontSize="28" />
+      <subpage-title-section-component
+        :title="title + name"
+        :marginTop="titleMarginTop.marginTop"
+        :fontSize="titleMarginTop.fontSize"
+      />
 
       <div class="shortcuts-list">
         <v-col v-for="item in data" :key="item.id" lg="12" style="padding: 0;">
@@ -36,6 +40,16 @@ export default {
     return {
       title: 'Skróty klawiaturowe - ',
       error: false
+    }
+  },
+  computed: {
+    titleMarginTop() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return { marginTop: 30, fontSize: 22 }
+        default:
+          return { marginTop: 120, fontSize: 28 }
+      }
     }
   },
   asyncData({ params, error }) {
@@ -86,5 +100,15 @@ export default {
 .shortcut-description {
   width: 60%;
   padding-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .shortcut-item-section {
+    font-size: 12px;
+  }
 }
 </style>
