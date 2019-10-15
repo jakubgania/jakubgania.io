@@ -1,6 +1,10 @@
 <template>
   <v-row class="content-container">
-    <subpage-title-section-component :title="title" />
+    <subpage-title-section-component
+      :title="title"
+      :marginTop="titleMarginTop.marginTop"
+      :fontSize="titleMarginTop.fontSize"
+    />
 
     <subpage-description-section-component :description="description" />
 
@@ -37,6 +41,16 @@ export default {
       description:
         'Lista programów i systemów zebranych w jednym miejscu do których są skróty klawiaturowe w formie wypisanej listy lub odnośników. Skórty klawiaturowe są bardzo pomocne i przydatne, ponieważ przyspieszają pracę i pozwalają zminimalizować odrywanie rąk od klawiatury. Dlatego uważam, że powinno się je opanować w danym programie/systemie do perfekcji.',
       shortcuts: shortcutsListItems.data
+    }
+  },
+  computed: {
+    titleMarginTop() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return { marginTop: 30, fontSize: 22 }
+        default:
+          return { marginTop: 120, fontSize: 28 }
+      }
     }
   },
   head() {
@@ -81,10 +95,11 @@ export default {
   font-size: 14px;
   color: black;
 }
-/* .link:hover {
-  
-} */
-.dfg {
-  /*  */
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 }
 </style>
