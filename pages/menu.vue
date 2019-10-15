@@ -3,7 +3,11 @@
     <div class="top-image" />
 
     <v-row class="content-container" no-gutters>
-      <subpage-title-section-component :title="title" />
+      <subpage-title-section-component
+        :title="title"
+        :marginTop="titleMarginTop.marginTop"
+        :fontSize="titleMarginTop.fontSize"
+      />
 
       <v-col cols="12" style="margin-top: 20px;letter-spacing: 2px;">
         <span style="color: #4d4dff;font-weight: 600;">
@@ -118,6 +122,17 @@ export default {
     return {
       title: '{ menu }',
       items: menuItems.menu
+    }
+  },
+  computed: {
+    titleMarginTop() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          // return 30
+          return { marginTop: 30, fontSize: 30 }
+        default:
+          return 120
+      }
     }
   },
   head() {
