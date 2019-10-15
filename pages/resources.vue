@@ -1,6 +1,10 @@
 <template>
   <v-row class="content-container">
-    <subpage-title-section-component :title="title" />
+    <subpage-title-section-component
+      :title="title"
+      :marginTop="titleMarginTop.marginTop"
+      :fontSize="titleMarginTop.fontSize"
+    />
 
     <subpage-description-section-component :description="description" />
 
@@ -9,7 +13,7 @@
         Kategorie
       </v-col>
 
-      <v-col v-for="item in linksData" :key="item.id" lg="12">
+      <v-col v-for="item in linksData" :key="item.id" lg="12" cols="12">
         <a :href="'#' + item.section_id" style="text-decoration: none;">
           <div class="listing-link">
             {{ item.section_name }}
@@ -17,7 +21,7 @@
         </a>
       </v-col>
 
-      <v-col v-for="item in linksData" :key="item.id" lg="12">
+      <v-col v-for="item in linksData" :key="item.id" lg="12" cols="12">
         <div :id="item.section_id" class="link-section-title">
           {{ item.section_name }}
         </div>
@@ -27,6 +31,8 @@
             v-for="(resource, index) in item.resource_addresses"
             :key="resource.id"
             lg="12"
+            cols="12"
+            class="link-item"
           >
             <div class="">
               <a :href="resource.url" target="_blank" class="link-resource">
@@ -65,6 +71,16 @@ export default {
       description:
         'Na tej stronie zebrane są różne linki do takich stron jak portale technologiczne, blogi, kanały na Youtube, dokumentacje projektów technologicznych. Obecnie materiały są podzielone z grubsza na kategorie ale strona będzie pod tym względem na pewno ciągle modyfikowana. Cały czas znaujduję różne ciekawe artykłu i  ta lista będzie aktualizowana żeby zebrać to wszystko centralnie w jednym miejscu.',
       linksData: linksData.resources_items
+    }
+  },
+  computed: {
+    titleMarginTop() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return { marginTop: 30, fontSize: 22 }
+        default:
+          return { marginTop: 120, fontSize: 28 }
+      }
     }
   },
   head() {
@@ -130,5 +146,21 @@ export default {
   font-size: 14px;
   padding-top: 4px;
   letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .link-section-title {
+    font-size: 18px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .link-item {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
 }
 </style>
