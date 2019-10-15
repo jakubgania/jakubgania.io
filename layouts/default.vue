@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-content class="app-content-container" style="padding-top: 0;">
+    <v-content class="app-content-container">
       <navigation-drawer-component
         :drawer="drawer"
         @switchNavigationDrawer="switchNavigationDrawer"
@@ -11,7 +11,7 @@
         @switchNavigationDrawer="switchNavigationDrawer"
       />
 
-      <v-container fluid style="padding: 0;">
+      <v-container fluid class="container-nuxt">
         <nuxt />
       </v-container>
     </v-content>
@@ -84,5 +84,14 @@ export default {
 }
 .app-content-container {
   min-height: 100vh;
+  padding-top: 0;
+}
+.container-nuxt {
+  padding: 0;
+}
+@media only screen and (max-width: 600px) {
+  .container-nuxt {
+    padding: unset;
+  }
 }
 </style>

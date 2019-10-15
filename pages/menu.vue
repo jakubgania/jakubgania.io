@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row style="width: 100%;">
     <div class="top-image" />
 
     <v-row class="content-container" no-gutters>
@@ -151,7 +151,7 @@ export default {
   text-decoration: none;
 }
 .link-text {
-  color: black;
+  color: #000;
   letter-spacing: 2px;
   font-size: 12px;
   padding-top: 2px;
@@ -184,8 +184,8 @@ export default {
 
 @media only screen and (max-width: 600px) {
   .content-container {
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 18px;
+    margin-bottom: 20px;
   }
 }
 </style>
