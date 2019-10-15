@@ -7,7 +7,7 @@
       <div class="sidebar-section">
         brak
       </div>
-      <div class="sidebar-section">
+      <div v-if="$vuetify.breakpoint.name !== 'xs'" class="sidebar-section">
         <div v-for="item in social" :key="item.id">
           <a :href="item.url" class="social-link" target="_blank">
             <div class="social-link-text">
@@ -80,5 +80,14 @@ div.sidebar-menu {
 .sidebar-section {
   padding-top: 10px;
   padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+  }
+  div.sidebar-menu {
+    margin-left: auto;
+  }
 }
 </style>
