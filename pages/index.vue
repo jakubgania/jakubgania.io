@@ -13,10 +13,18 @@
         </div>
         <div class="link-section">
           <nuxt-link to="/menu" class="link">
-            <span style="color: #ff0000;">this</span>
-            <span style="color: #000000;">.</span>
-            <span style="color: #0066ff;">showMenu</span>
-            <span style="color: #cc33ff;">()</span>
+            <span style="color: #ff0000;">
+              this
+            </span>
+            <span style="color: #000000;">
+              .
+            </span>
+            <span style="color: #0066ff;">
+              showMenu
+            </span>
+            <span style="color: #cc33ff;">
+              ()
+            </span>
             <span>;</span>
           </nuxt-link>
         </div>
@@ -29,7 +37,13 @@
 export default {
   data() {
     return {
-      subpageTitle: 'Jakub Gania Software'
+      subpageTitle: 'Jakub Gania Software',
+      head: {
+        description:
+          'Jakub Gania Software - Full Stack Web Developer. Vue.js, Vuex, Vuetify, TypeScript, NUXT, HTML, CSS, Node.js, PHP, Laravel, Symfony, Nginx, Docker.',
+        keywords:
+          'software, developer, it, programmer, coder, www, web, website, frontend, backend, full stack, software engineer, fullstack web developer ,vue.js, vuex, vuetify, typescript, nuxt.js, html, css, node.js, php, laravel, symfony, nginx, apache, server, blog, docker, github'
+      }
     }
   },
   head() {
@@ -39,7 +53,11 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'content'
+          content: this.head.description
+        },
+        {
+          name: 'keywords',
+          content: this.head.keywords
         }
       ]
     }
