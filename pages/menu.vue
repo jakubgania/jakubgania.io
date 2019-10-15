@@ -162,15 +162,8 @@ export default {
 }
 .link-section:hover {
   background-color: #e6e6e6;
-  // letter-spacing: 4px;
   padding-left: 12px;
   transition: padding-left 0.2s ease;
-
-  // &.link-x {
-  //   letter-spacing: 4px;
-  //   padding-left: 12px;
-  //   transition: padding-left 0.2s ease;
-  // }
 }
 .comma {
   color: #6699ff;
@@ -187,7 +180,6 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* margin: 30px; */
 }
 
 @media only screen and (max-width: 600px) {
