@@ -54,7 +54,7 @@ export default {
         case 'xs':
           return { marginTop: 30, fontSize: 22 }
         default:
-          return { marginTop: 120, fontSize: 28 }
+          return { marginTop: 0, fontSize: 28 }
       }
     }
   },
