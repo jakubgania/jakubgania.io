@@ -7,6 +7,8 @@
         :fontSize="titleMarginTop.fontSize"
       />
 
+      <subpage-description-section-component :description="description" />
+
       <div class="shortcuts-list">
         <v-col v-for="item in data" :key="item.id" lg="12" style="padding: 0;">
           <div class="shortcut-item-section">
@@ -31,10 +33,12 @@
 <script>
 import axios from 'axios'
 import SubpageTitleSection from '../../components/subpage-title-section'
+import SubpageDescriptionSection from '../../components/subpage-description-section'
 
 export default {
   components: {
-    'subpage-title-section-component': SubpageTitleSection
+    'subpage-title-section-component': SubpageTitleSection,
+    'subpage-description-section-component': SubpageDescriptionSection
   },
   data() {
     return {
@@ -55,11 +59,12 @@ export default {
   },
   asyncData({ params, error }) {
     return axios
-      .get(`/shortcuts/${params.id}.json`)
+      .get(`https://jakubgania.io/media/data/${params.id}.json`)
       .then((res) => {
         return {
           id: params.id,
           name: res.data.name,
+          description: res.data.description,
           data: res.data.items
         }
       })
