@@ -38,6 +38,7 @@ export default {
   },
   data() {
     return {
+      pageTitle: 'Jakub Gania Software',
       title: 'Skróty klawiaturowe - ',
       error: false
     }
@@ -67,6 +68,11 @@ export default {
           error: true
         }
       })
+  },
+  head() {
+    return {
+      title: this.pageTitle + ' - Skróty klawiaturowe - ' + this.name
+    }
   }
 }
 </script>
