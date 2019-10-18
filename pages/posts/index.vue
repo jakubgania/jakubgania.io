@@ -10,7 +10,7 @@
 
     <template v-if="posts.length">
       <v-col
-        v-for="item in posts.reverse()"
+        v-for="item in posts"
         :key="item.id"
         cols="12"
         lg="12"
@@ -55,14 +55,14 @@ export default {
         'Na tej stronie będzie lista postów/wpisów. Obecnie jest tutaj testowo jeden odnośnik. Funkcjonalność nie działa jeszcze w płeni stabilnie i wymaga dopracowania dlatego system postów może działać jeszcze niepoprawnie.',
       posts: [
         {
-          title: 'Start',
-          url: '/posts/1',
-          creationDate: '23:58 29/09/2019'
-        },
-        {
           title: 'Ciągłe zmiany',
           url: '/posts/2',
           creationDate: '23:08 10/10/2019'
+        },
+        {
+          title: 'Start',
+          url: '/posts/1',
+          creationDate: '23:58 29/09/2019'
         }
       ]
     }
