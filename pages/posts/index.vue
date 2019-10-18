@@ -56,12 +56,12 @@ export default {
       posts: [
         {
           title: 'Ciągłe zmiany',
-          url: '/posts/2',
+          url: '/posts/10-10-2019-ciagle-zmiany',
           creationDate: '23:08 10/10/2019'
         },
         {
           title: 'Start',
-          url: '/posts/1',
+          url: '/posts/29-09-2019-start',
           creationDate: '23:58 29/09/2019'
         }
       ]
