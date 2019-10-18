@@ -1,6 +1,10 @@
 <template>
   <v-app>
     <v-content class="app-content-container">
+      <client-only>
+        <portal-rules-alert-component />
+      </client-only>
+
       <navigation-drawer-component
         :drawer="drawer"
         @switchNavigationDrawer="switchNavigationDrawer"
@@ -17,10 +21,6 @@
     </v-content>
 
     <footer-component />
-
-    <client-only>
-      <portal-rules-alert-component />
-    </client-only>
   </v-app>
 </template>
 

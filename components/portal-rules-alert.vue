@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="dialog" width="400" class="rules-dialog" persistent>
+  <v-dialog v-model="alertDialog" width="400" class="rules-dialog" persistent>
     <v-card>
       <v-card-title
         class="subtitle-1 font-weight-black grey lighten-2"
@@ -33,7 +33,7 @@ import LocalStorage from './../services/local-storage.service.js'
 export default {
   data() {
     return {
-      dialog: true,
+      alertDialog: false,
       title: 'Polityka prywatności',
       message:
         'Klikając przycisk „Akceptuję” lub zamykając okno przez kliknięcie w znaczek X, zgadzasz się na poniższe warunki. Strona wykorzystuje pliki cookie oraz usługę Google Analytics jedynie w celach statystycznych do analizowania ruchu sieciowego. Wykorzystywany jest również mechanizm local storage do poprawnego działania aplikacji. ',
@@ -41,12 +41,21 @@ export default {
     }
   },
   created() {
-    this.dialog = this.localStorageObject.checkConfirmationRules()
+    if (this.getConfirm === true) {
+      this.alertDialog = true
+    }
   },
   methods: {
+    getConfirm() {
+      if (process.browser) {
+        return this.localStorageObject.checkConfirmationRules()
+      }
+    },
     accept() {
-      this.localStorageObject.setDataByKey('confirmation', true)
-      this.dialog = false
+      if (process.browser) {
+        this.localStorageObject.setDataByKey('confirmation', true)
+        this.alertDialog = false
+      }
     }
   }
 }
