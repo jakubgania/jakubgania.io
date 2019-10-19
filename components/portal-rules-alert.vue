@@ -41,7 +41,7 @@ export default {
     }
   },
   created() {
-    if (this.getConfirm === true) {
+    if (this.getConfirm() === true) {
       this.alertDialog = true
     }
   },
