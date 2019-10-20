@@ -6,7 +6,9 @@
 
 - implementation of the new structure
 
-- implementation of the new layout 
+- implementation of the new layout
+
+- implementation of blog based on markdown files
 
 - implementation of new functionalities
 
