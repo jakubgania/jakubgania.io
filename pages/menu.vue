@@ -5,8 +5,8 @@
     <v-row class="content-container" no-gutters>
       <subpage-title-section-component
         :title="title"
-        :marginTop="titleMarginTop.marginTop"
-        :fontSize="titleMarginTop.fontSize"
+        :margin-top="titleMarginTop.marginTop"
+        :font-size="titleMarginTop.fontSize"
       />
 
       <v-col cols="12" style="margin-top: 20px;letter-spacing: 2px;">
