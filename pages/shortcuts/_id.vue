@@ -3,8 +3,8 @@
     <template v-if="!error">
       <subpage-title-section-component
         :title="title + name"
-        :marginTop="titleMarginTop.marginTop"
-        :fontSize="titleMarginTop.fontSize"
+        :margin-top="titleMarginTop.marginTop"
+        :font-size="titleMarginTop.fontSize"
       />
 
       <subpage-description-section-component :description="description" />
