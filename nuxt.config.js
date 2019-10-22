@@ -5,7 +5,6 @@ export default {
   router: {
     extendRoutes (routes, resolve) {
       routes.push({
-        name: 'index',
         path: '',
         component: resolve(__dirname, 'pages/index/index.vue')
       })
@@ -69,7 +68,9 @@ export default {
    ** Global CSS
    */
   css: [
-    'aos/dist/aos.css'
+    'aos/dist/aos.css',
+    '~/node_modules/highlight.js/styles/atom-one-dark.css',
+    { src: '~/node_modules/highlight.js/styles/atom-one-dark.css', lang: 'css' }
   ],
 
   /*
@@ -112,7 +113,8 @@ export default {
   markdownit: {
     injected: true,
     use: [
-      ['markdown-it-meta'],
+      'markdown-it-meta',
+      'markdown-it-highlightjs'
     ]
   },
 

@@ -101,6 +101,19 @@ export default {
 }
 </script>
 
+<style>
+.v-application code {
+  background-color: #282c34;
+  color: #abb2bf;
+  display: block;
+  box-shadow: none;
+  white-space: unset;
+  border-radius: 0;
+  font-size: initial;
+  font-weight: initial;
+}
+</style>
+
 <style scoped>
 .content-container {
   max-width: 1020px;

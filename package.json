@@ -26,6 +26,7 @@
     "aos": "^2.3.4",
     "dotenv": "^8.1.0",
     "front-matter": "^3.0.2",
+    "markdown-it-highlightjs": "^3.0.0",
     "markdown-it-meta": "0.0.1",
     "nuxt": "^2.10.1"
   },
