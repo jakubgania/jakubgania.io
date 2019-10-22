@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     displayHeader() {
-      return this.$route.name !== 'index'
+      return this.$route.name !== 'home'
     }
   }
 }

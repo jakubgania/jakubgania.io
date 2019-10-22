@@ -5,6 +5,7 @@ export default {
   router: {
     extendRoutes (routes, resolve) {
       routes.push({
+        name: 'home',
         path: '',
         component: resolve(__dirname, 'pages/index/index.vue')
       })
