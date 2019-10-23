@@ -1,5 +1,5 @@
 <template>
-  <v-row style="width: 100%;">
+  <v-row style="width: 100%;margin: 0;">
     <div class="top-image" />
 
     <v-row class="content-container" no-gutters>

@@ -6,6 +6,7 @@
     right
     temporary
     width="320"
+    :class="{ 'dark-theme': darkTheme }"
   >
     <div class="close-icon-section">
       <v-btn
@@ -78,14 +79,27 @@
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+
+      <v-list-item style="margin-top: 0;">
+        <v-list-item-content style="padding-top: 0;">
+          <v-list-item-title class="non-list-element">
+            <dark-mode-switch-component />
+          </v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import menuItems from '../json/menu.json'
+import DarkModeSwitch from './dark-mode-switch.vue'
 
 export default {
+  components: {
+    'dark-mode-switch-component': DarkModeSwitch
+  },
   props: {
     drawer: {
       type: Boolean,
@@ -99,6 +113,7 @@ export default {
     }
   },
   computed: {
+    ...mapGetters('DarkMode', ['darkTheme']),
     showDrawerFlag: {
       get() {
         return this.drawer
@@ -136,5 +151,8 @@ export default {
 .non-list-element {
   letter-spacing: 2px;
   color: #8c8c8c;
+}
+.dark-theme {
+  background-color: #262626;
 }
 </style>

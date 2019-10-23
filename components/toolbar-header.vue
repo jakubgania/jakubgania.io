@@ -1,6 +1,6 @@
 <template>
   <div v-if="displayHeader()">
-    <v-app-bar app clipped-left flat fixed>
+    <v-app-bar app clipped-left flat fixed :class="{ 'dark-theme': darkTheme }">
       <v-toolbar-title>
         <nuxt-link to="/" class="link-title">
           <div>
@@ -18,7 +18,12 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme'])
+  },
   mounted() {
     this.displayHeader()
   },
@@ -39,6 +44,9 @@ export default {
 }
 .nav-icon {
   color: #000;
+}
+.dark-theme {
+  background-color: #262626;
 }
 
 @media only screen and (max-width: 600px) {

@@ -11,11 +11,20 @@
     <v-col sm="10" lg="6" cols="8" style="text-align: right;">
       <div v-html="copyrightText" />
     </v-col>
+
+    <v-col cols="12">
+      <dark-mode-switch-component />
+    </v-col>
   </v-row>
 </template>
 
 <script>
+import DarkModeSwitch from './dark-mode-switch.vue'
+
 export default {
+  components: {
+    'dark-mode-switch-component': DarkModeSwitch
+  },
   data() {
     return {
       links: {
@@ -50,7 +59,7 @@ export default {
   letter-spacing: 1px;
   border-top: 1px solid #000;
   margin: auto;
-  height: 80px;
+  /* height: 80px; */
   line-height: 80px;
   margin-bottom: 20px;
 }
