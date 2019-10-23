@@ -11,12 +11,19 @@
 
       <div class="shortcuts-list">
         <v-col v-for="item in data" :key="item.id" lg="12" style="padding: 0;">
-          <div class="shortcut-item-section">
+          <div class="title-section">
+            {{ item.sectionName }}
+          </div>
+          <div
+            v-for="xdf in item.data"
+            :key="xdf.id"
+            class="shortcut-item-section"
+          >
             <div class="shortcut-keys">
-              <v-icon v-if="item.icon">mdi-windows</v-icon> {{ item.shortcut }}
+              <v-icon v-if="xdf.icon">mdi-windows</v-icon> {{ xdf.shortcut }}
             </div>
             <div class="shortcut-description">
-              {{ item.description }}
+              {{ xdf.description }}
             </div>
           </div>
         </v-col>
@@ -89,10 +96,18 @@ export default {
   margin: auto;
   margin-bottom: 80px;
 }
+.title-section {
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-weight: 900;
+  border-bottom: 1px solid #d9d9d9;
+}
 .shortcuts-list {
   padding: 0;
   margin-top: 60px;
-  border-top: 1px solid #d9d9d9;
+  width: 100%;
 }
 .shortcut-item-section {
   display: flex;
