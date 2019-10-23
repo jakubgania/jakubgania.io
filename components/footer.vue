@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     displayFooter() {
-      return this.$route.name !== 'index'
+      return this.$route.name !== 'home'
     }
   }
 }
