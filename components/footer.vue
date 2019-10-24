@@ -2,7 +2,7 @@
   <v-row
     v-if="displayFooter()"
     class="footer-container"
-    :class="{ 'dark-theme-text': darkTheme }"
+    :class="{ 'footer-container-dark-theme': darkTheme }"
   >
     <v-col sm="2" lg="6" cols="4">
       <a
@@ -23,7 +23,7 @@
       </a>
     </v-col>
     <v-col sm="10" lg="6" cols="8" style="text-align: right;">
-      <div v-html="copyrightText" />
+      <div v-html="copyrightText" :class="{ 'dark-theme-text': darkTheme }" />
     </v-col>
 
     <v-col cols="12">
@@ -60,6 +60,8 @@ export default {
   },
   mounted() {
     this.displayFooter()
+
+    console.log(this.darkTheme)
   },
   methods: {
     displayFooter() {
@@ -89,5 +91,8 @@ export default {
 }
 .dark-theme-text {
   color: #fff;
+}
+.footer-container-dark-theme {
+  border-top: 1px solid #bfbfbf;
 }
 </style>

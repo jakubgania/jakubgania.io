@@ -15,7 +15,7 @@
         class="close-icon-button"
         @click.native="$emit('switchNavigationDrawer')"
       >
-        <v-icon>
+        <v-icon :class="{ 'close-icon-dark-theme': darkTheme }">
           mdi-close
         </v-icon>
       </v-btn>
@@ -41,7 +41,12 @@
               <span class="xdp">
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <span style="color: #005ce6;">echo:</span>
-                <span style="color: black;">{{ "'" + item.title + "'" }}</span>
+                <span
+                  class="title-page"
+                  :class="{ 'dark-theme-text': darkTheme }"
+                >
+                  {{ "'" + item.title + "'" }}
+                </span>
               </span>
               <span style="display: block;">
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -61,7 +66,12 @@
               <span class="echo-item">
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <span style="color: #005ce6;">echo:</span>
-                <span style="color: black;">{{ "'" + item.title + "'" }}</span>
+                <span
+                  class="title-page"
+                  :class="{ 'dark-theme-text': darkTheme }"
+                >
+                  {{ "'" + item.title + "'" }}
+                </span>
               </span>
               <span style="display: block;">
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -152,7 +162,16 @@ export default {
   letter-spacing: 2px;
   color: #8c8c8c;
 }
+.title-page {
+  color: #000;
+}
 .dark-theme {
   background-color: #262626;
+}
+.dark-theme-text {
+  color: #bfbfbf;
+}
+.close-icon-dark-theme {
+  color: #bfbfbf !important;
 }
 </style>

@@ -5,6 +5,7 @@
       lg="12"
       xs="12"
       class="title-text"
+      :class="{ 'title-text-dark-theme': darkTheme }"
       data-aos="fade-down"
       data-aos-dealy="400"
       data-aos-duration="1200"
@@ -36,7 +37,7 @@
         data-aos-once="true"
       >
         <div>
-          <div class="full-name">
+          <div class="full-name" :class="{ 'full-name-dark-theme': darkTheme }">
             {{ fullname }}
           </div>
           <div class="vertical-section">
@@ -45,15 +46,28 @@
             </span>
           </div>
           <div style="padding-left: 50px;">
-            <div class="description">
+            <div
+              class="description"
+              :class="{ 'description-dark-theme': darkTheme }"
+            >
               {{ description }}
             </div>
             <div class="icons-section">
               <a :href="link.github" target="_blank" class="icon-link">
-                <v-icon class="icon">mdi-github-circle</v-icon>
+                <v-icon
+                  class="icon"
+                  :class="{ 'icon-link-dark-theme': darkTheme }"
+                >
+                  mdi-github-circle
+                </v-icon>
               </a>
               <a :href="link.linkedin" target="_blank" class="icon-link">
-                <v-icon class="icon">mdi-linkedin</v-icon>
+                <v-icon
+                  class="icon"
+                  :class="{ 'icon-link-dark-theme': darkTheme }"
+                >
+                  mdi-linkedin
+                </v-icon>
               </a>
             </div>
             <div class="contact-button-section">
@@ -69,6 +83,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import profileImage from '../assets/images/profile.jpg'
 
 export default {
@@ -84,6 +99,9 @@ export default {
         linkedin: 'https://pl.linkedin.com/in/jakubgania'
       }
     }
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme'])
   },
   head() {
     return {
@@ -123,6 +141,9 @@ export default {
   letter-spacing: 10px;
   color: #f2f2f2;
 }
+.title-text-dark-theme {
+  color: #404040;
+}
 .image-section {
   text-align: center;
 }
@@ -154,9 +175,15 @@ export default {
   font-weight: 800;
   letter-spacing: 4px;
 }
+.full-name-dark-theme {
+  color: #fff;
+}
 .description {
   font-size: 14px;
   line-height: 1.8;
+}
+.description-dark-theme {
+  color: #fff;
 }
 .icons-section {
   margin-top: 20px;
