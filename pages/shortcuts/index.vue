@@ -2,8 +2,8 @@
   <v-row class="content-container">
     <subpage-title-section-component
       :title="title"
-      :marginTop="titleMarginTop.marginTop"
-      :fontSize="titleMarginTop.fontSize"
+      :margin-top="titleMarginTop.marginTop"
+      :font-size="titleMarginTop.fontSize"
     />
 
     <subpage-description-section-component :description="description" />

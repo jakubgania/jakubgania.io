@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app :class="{ 'dark-theme': darkTheme }">
     <v-content class="app-content-container">
       <client-only>
         <portal-rules-alert-component />
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import ToolbarHeaderComponent from '../components/toolbar-header'
 import NavigationDrawerComponent from '../components/navigation-drawer'
 import FooterComponent from '../components/footer'
@@ -41,6 +42,9 @@ export default {
     return {
       drawer: false
     }
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme'])
   },
   methods: {
     switchNavigationDrawer() {
@@ -88,6 +92,9 @@ export default {
 }
 .container-nuxt {
   padding: 0;
+}
+.dark-theme {
+  background-color: #1a1a1a;
 }
 @media only screen and (max-width: 600px) {
   .container-nuxt {

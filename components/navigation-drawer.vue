@@ -6,6 +6,7 @@
     right
     temporary
     width="320"
+    :class="{ 'dark-theme': darkTheme }"
   >
     <div class="close-icon-section">
       <v-btn
@@ -14,7 +15,7 @@
         class="close-icon-button"
         @click.native="$emit('switchNavigationDrawer')"
       >
-        <v-icon>
+        <v-icon :class="{ 'close-icon-dark-theme': darkTheme }">
           mdi-close
         </v-icon>
       </v-btn>
@@ -40,7 +41,12 @@
               <span class="xdp">
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <span style="color: #005ce6;">echo:</span>
-                <span style="color: black;">{{ "'" + item.title + "'" }}</span>
+                <span
+                  class="title-page"
+                  :class="{ 'dark-theme-text': darkTheme }"
+                >
+                  {{ "'" + item.title + "'" }}
+                </span>
               </span>
               <span style="display: block;">
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -60,7 +66,12 @@
               <span class="echo-item">
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <span style="color: #005ce6;">echo:</span>
-                <span style="color: black;">{{ "'" + item.title + "'" }}</span>
+                <span
+                  class="title-page"
+                  :class="{ 'dark-theme-text': darkTheme }"
+                >
+                  {{ "'" + item.title + "'" }}
+                </span>
               </span>
               <span style="display: block;">
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -78,14 +89,29 @@
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+
+      <template v-if="$store.state.showDarkModeSwitch">
+        <v-list-item style="margin-top: 0;">
+          <v-list-item-content style="padding-top: 0;">
+            <v-list-item-title class="non-list-element">
+              <dark-mode-switch-component />
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </template>
     </v-list>
   </v-navigation-drawer>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import menuItems from '../json/menu.json'
+import DarkModeSwitch from './dark-mode-switch.vue'
 
 export default {
+  components: {
+    'dark-mode-switch-component': DarkModeSwitch
+  },
   props: {
     drawer: {
       type: Boolean,
@@ -99,6 +125,7 @@ export default {
     }
   },
   computed: {
+    ...mapGetters('DarkMode', ['darkTheme']),
     showDrawerFlag: {
       get() {
         return this.drawer
@@ -136,5 +163,17 @@ export default {
 .non-list-element {
   letter-spacing: 2px;
   color: #8c8c8c;
+}
+.title-page {
+  color: #000;
+}
+.dark-theme {
+  background-color: #262626;
+}
+.dark-theme-text {
+  color: #bfbfbf;
+}
+.close-icon-dark-theme {
+  color: #bfbfbf !important;
 }
 </style>

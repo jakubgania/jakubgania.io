@@ -1,8 +1,12 @@
 <template>
   <div v-if="displayHeader()">
-    <v-app-bar app clipped-left flat fixed>
+    <v-app-bar app clipped-left flat fixed :class="{ 'dark-theme': darkTheme }">
       <v-toolbar-title>
-        <nuxt-link to="/" class="link-title">
+        <nuxt-link
+          to="/"
+          class="link-title"
+          :class="{ 'link-title-dark-theme': darkTheme }"
+        >
           <div>
             Jakub Gania Software
           </div>
@@ -11,6 +15,7 @@
       <v-spacer />
       <v-app-bar-nav-icon
         class="nav-icon"
+        :class="{ 'nav-icon-dark-theme': darkTheme }"
         @click.native="$emit('switchNavigationDrawer')"
       />
     </v-app-bar>
@@ -18,7 +23,12 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme'])
+  },
   mounted() {
     this.displayHeader()
   },
@@ -39,6 +49,15 @@ export default {
 }
 .nav-icon {
   color: #000;
+}
+.nav-icon-dark-theme {
+  color: #fff !important;
+}
+.dark-theme {
+  background-color: #0d0d0d;
+}
+.link-title-dark-theme {
+  color: #fff;
 }
 
 @media only screen and (max-width: 600px) {

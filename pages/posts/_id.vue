@@ -4,8 +4,8 @@
       <div class="post-content">
         <subpage-title-section-component
           :title="attributes.title"
-          :marginTop="titleMarginTop.marginTop"
-          :fontSize="titleMarginTop.fontSize"
+          :margin-top="titleMarginTop.marginTop"
+          :font-size="titleMarginTop.fontSize"
         />
 
         <div class="post" v-html="$md.render(model)"></div>
