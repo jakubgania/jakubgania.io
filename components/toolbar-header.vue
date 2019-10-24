@@ -15,6 +15,7 @@
       <v-spacer />
       <v-app-bar-nav-icon
         class="nav-icon"
+        :class="{ 'nav-icon-dark-theme': darkTheme }"
         @click.native="$emit('switchNavigationDrawer')"
       />
     </v-app-bar>
@@ -48,6 +49,9 @@ export default {
 }
 .nav-icon {
   color: #000;
+}
+.nav-icon-dark-theme {
+  color: #fff !important;
 }
 .dark-theme {
   background-color: #0d0d0d;
