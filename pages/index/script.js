@@ -1,3 +1,5 @@
+import { mapGetters } from 'vuex'
+
 export default {
   data() {
     return {
@@ -9,6 +11,9 @@ export default {
           'software, developer, it, programmer, coder, www, web, website, frontend, backend, full stack, software engineer, fullstack web developer ,vue.js, vuex, vuetify, typescript, nuxt.js, html, css, node.js, php, laravel, symfony, nginx, apache, server, blog, docker, github'
       }
     }
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme'])
   },
   head() {
     return {

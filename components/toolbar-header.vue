@@ -2,7 +2,11 @@
   <div v-if="displayHeader()">
     <v-app-bar app clipped-left flat fixed :class="{ 'dark-theme': darkTheme }">
       <v-toolbar-title>
-        <nuxt-link to="/" class="link-title">
+        <nuxt-link
+          to="/"
+          class="link-title"
+          :class="{ 'link-title-dark-theme': darkTheme }"
+        >
           <div>
             Jakub Gania Software
           </div>
@@ -46,7 +50,10 @@ export default {
   color: #000;
 }
 .dark-theme {
-  background-color: #262626;
+  background-color: #0d0d0d;
+}
+.link-title-dark-theme {
+  color: #fff;
 }
 
 @media only screen and (max-width: 600px) {

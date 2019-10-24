@@ -8,7 +8,10 @@
         data-aos-once="true"
         class="section"
       >
-        <div class="company-name">
+        <div
+          class="company-name"
+          :class="{ 'company-name-dark-theme': darkTheme }"
+        >
           {{ subpageTitle }}
         </div>
         <div class="link-section">

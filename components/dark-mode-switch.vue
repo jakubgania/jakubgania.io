@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .dark-theme {
-  background-color: #262626;
+  background-color: #1a1a1a;
 }
 .switch-label {
   font-size: 12px;

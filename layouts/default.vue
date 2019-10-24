@@ -94,7 +94,7 @@ export default {
   padding: 0;
 }
 .dark-theme {
-  background-color: #262626;
+  background-color: #1a1a1a;
 }
 @media only screen and (max-width: 600px) {
   .container-nuxt {
