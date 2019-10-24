@@ -1,10 +1,24 @@
 <template>
-  <v-row v-if="displayFooter()" class="footer-container">
+  <v-row
+    v-if="displayFooter()"
+    class="footer-container"
+    :class="{ 'dark-theme-text': darkTheme }"
+  >
     <v-col sm="2" lg="6" cols="4">
-      <a :href="links.github.url" target="_blank" class="link">
+      <a
+        :href="links.github.url"
+        target="_blank"
+        class="link"
+        :class="{ 'dark-theme-text': darkTheme }"
+      >
         {{ links.github.title }}
       </a>
-      <a :href="links.linkedin.url" target="_blank" class="link">
+      <a
+        :href="links.linkedin.url"
+        target="_blank"
+        class="link"
+        :class="{ 'dark-theme-text': darkTheme }"
+      >
         {{ links.linkedin.title }}
       </a>
     </v-col>
@@ -19,6 +33,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import DarkModeSwitch from './dark-mode-switch.vue'
 
 export default {
@@ -40,6 +55,9 @@ export default {
       copyrightText: 'Jakub Gania Software &copy; 2018 - 2019'
     }
   },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme'])
+  },
   mounted() {
     this.displayFooter()
   },
@@ -59,15 +77,17 @@ export default {
   letter-spacing: 1px;
   border-top: 1px solid #000;
   margin: auto;
-  /* height: 80px; */
   line-height: 80px;
   margin-bottom: 20px;
 }
 .link {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 .link:hover {
   color: blue;
+}
+.dark-theme-text {
+  color: #fff;
 }
 </style>

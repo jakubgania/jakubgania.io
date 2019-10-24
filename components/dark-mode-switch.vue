@@ -2,7 +2,10 @@
   <div :class="{ 'dark-theme': switchDarkModeModel }">
     <v-switch v-model="switchDarkModeModel" color="#0066ff" flat>
       <template v-slot:label>
-        <span class="switch-label">
+        <span
+          class="switch-label"
+          :class="{ 'dark-theme-text': switchDarkModeModel }"
+        >
           Tryb ciemny
         </span>
       </template>
@@ -33,6 +36,9 @@ export default {
 <style lang="scss" scoped>
 .dark-theme {
   background-color: #1a1a1a;
+}
+.dark-theme-text {
+  color: #fff;
 }
 .switch-label {
   font-size: 12px;
