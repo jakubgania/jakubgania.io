@@ -90,13 +90,15 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-list-item style="margin-top: 0;">
-        <v-list-item-content style="padding-top: 0;">
-          <v-list-item-title class="non-list-element">
-            <dark-mode-switch-component />
-          </v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
+      <template v-if="$store.state.showDarkModeSwitch">
+        <v-list-item style="margin-top: 0;">
+          <v-list-item-content style="padding-top: 0;">
+            <v-list-item-title class="non-list-element">
+              <dark-mode-switch-component />
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </template>
     </v-list>
   </v-navigation-drawer>
 </template>
