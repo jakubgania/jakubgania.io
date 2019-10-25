@@ -6,12 +6,25 @@
 
     <v-col cols="12" style="margin-top: 60px;">
       <v-row>
-        <v-col v-for="n in 12" :key="n" cols="4" style="padding: 1px;">
+        <v-col
+          v-for="item in images"
+          :key="item.id"
+          cols="4"
+          style="padding: 1px;"
+        >
           <v-img
-            :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
+            :src="`https://jakubgania.io/media/image/thumbnail/${item.id}`"
             aspect-ratio="1"
+            @click="setDetailsPhoto(item.id)"
           >
-            <!-- <v-progress-circular indeterminate color="grey lighten-5" /> -->
+            <v-layout
+              slot="placeholder"
+              align-center
+              justify-center
+              fill-height
+            >
+              <v-progress-circular indeterminate color="#0066ff" />
+            </v-layout>
           </v-img>
         </v-col>
       </v-row>
@@ -21,7 +34,7 @@
     </v-col> -->
 
     <v-dialog
-      v-model="dialog"
+      v-model="dialogFullSizeImage"
       fullscreen
       hide-overlay
       transition="dialog-transition"
@@ -29,16 +42,26 @@
       <v-card>
         <v-toolbar flat>
           <div class="flex-grow-1" />
-          <v-btn icon @click="dialog = false">
+          <v-btn icon @click="dialogFullSizeImage = false">
             <v-icon>mdi-close</v-icon>
           </v-btn>
         </v-toolbar>
+
+        <v-img
+          :src="`https://jakubgania.io/media/image/full-size/${fullSizeId}`"
+          style="max-width: 800px;width: auto;height: auto;max-height: 80vh;margin: auto;"
+        >
+          <v-layout slot="placeholder" align-center justify-center fill-height>
+            <v-progress-circular indeterminate color="#0066ff" />
+          </v-layout>
+        </v-img>
       </v-card>
     </v-dialog>
   </v-row>
 </template>
 
 <script>
+import axios from 'axios'
 import SubpageTitleSection from '../components/subpage-title-section'
 import SubpageDescriptionSection from '../components/subpage-description-section'
 
@@ -52,7 +75,28 @@ export default {
       title: 'Galeria',
       description:
         'W galerii będę czasami  umieszczał jakieś zdjęcia lub grafiki. Obecnie ta sekcja jest jeszcze niegotowa dlatego wyświetla zdjęcia zastępcze.',
-      dialog: false
+      dialog: false,
+      dialogFullSizeImage: false,
+      fullSizeId: null
+    }
+  },
+  methods: {
+    setDetailsPhoto(id) {
+      this.fullSizeId = id
+      this.dialogFullSizeImage = true
+    }
+  },
+  async asyncData({ params }) {
+    try {
+      const { data } = await axios.get(
+        `https://jakubgania.io/media/data/list-of-images.json`
+      )
+
+      return {
+        images: data.listOfImages
+      }
+    } catch (error) {
+      //
     }
   },
   head() {
@@ -82,7 +126,7 @@ export default {
 }
 .page-title {
   font-size: 40px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #000;
   margin-top: 80px;
   font-weight: 800;
 }
