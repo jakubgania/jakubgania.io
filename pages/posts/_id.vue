@@ -151,5 +151,8 @@ export default {
     padding-left: 14px;
     padding-right: 14px;
   }
+  .post-content {
+    width: 100%;
+  }
 }
 </style>
