@@ -113,12 +113,12 @@ export default {
   color: #000;
 }
 .post-main-title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 2px;
   display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .post-main-title:hover {
   color: #3399ff;
