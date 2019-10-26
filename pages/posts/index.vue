@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
 
@@ -52,19 +53,7 @@ export default {
     return {
       title: 'Posty',
       description:
-        'Na tej stronie będzie lista postów/wpisów. Obecnie jest tutaj testowo jeden odnośnik. Funkcjonalność nie działa jeszcze w płeni stabilnie i wymaga dopracowania dlatego system postów może działać jeszcze niepoprawnie.',
-      posts: [
-        {
-          title: 'Ciągłe zmiany',
-          url: '/posts/10-10-2019-ciagle-zmiany',
-          creationDate: '23:08 10/10/2019'
-        },
-        {
-          title: 'Start',
-          url: '/posts/29-09-2019-start',
-          creationDate: '23:58 29/09/2019'
-        }
-      ]
+        'Na tej stronie będzie lista postów/wpisów. Obecnie jest tutaj testowo jeden odnośnik. Funkcjonalność nie działa jeszcze w płeni stabilnie i wymaga dopracowania dlatego system postów może działać jeszcze niepoprawnie.'
     }
   },
   computed: {
@@ -75,6 +64,19 @@ export default {
         default:
           return { marginTop: 120, fontSize: 28 }
       }
+    }
+  },
+  async asyncData({ params }) {
+    try {
+      const { data } = await axios.get(
+        `https://jakubgania.io/media/data/list-of-posts.json`
+      )
+
+      return {
+        posts: data.posts
+      }
+    } catch (error) {
+      //
     }
   },
   head() {
