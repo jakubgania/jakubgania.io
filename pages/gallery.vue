@@ -4,13 +4,13 @@
 
     <subpage-description-section-component :description="description" />
 
-    <v-col cols="12" style="margin-top: 60px;">
+    <v-col cols="12" style="margin-top: 60px;margin-bottom: 100px;">
       <v-row>
         <v-col
           v-for="item in images"
           :key="item.id"
           cols="4"
-          style="padding: 1px;"
+          style="padding: 2px;"
         >
           <v-img
             :src="`https://jakubgania.io/media/image/thumbnail/${item.id}`"
@@ -49,7 +49,7 @@
 
         <v-img
           :src="`https://jakubgania.io/media/image/full-size/${fullSizeId}`"
-          style="max-width: 800px;width: auto;height: auto;max-height: 80vh;margin: auto;"
+          style="max-width: 1000px;width: auto;height: auto;max-height: 90vh;margin: auto;"
         >
           <v-layout slot="placeholder" align-center justify-center fill-height>
             <v-progress-circular indeterminate color="#0066ff" />
