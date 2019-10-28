@@ -9,16 +9,16 @@
       "path": "/chrome"
     },
     {
+      "title": "Chrome DevTools",
+      "path": "/chrome-dev-tools"
+    },
+    {
       "title": "Firefox",
       "path": "/firefox"
     },
     {
       "title": "Visual Studio Code",
       "path": "/visual-studio-code"
-    },
-    {
-      "title": "Chrome DevTools",
-      "path": "/chrome-dev-tools"
     },
     {
       "title": "Postman",

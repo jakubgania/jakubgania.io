@@ -62,8 +62,6 @@ export default {
   },
   mounted() {
     this.displayFooter()
-
-    console.log(this.darkTheme)
   },
   methods: {
     displayFooter() {
