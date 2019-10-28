@@ -17,7 +17,7 @@
         xs="12"
         class="post-link-item"
       >
-        <nuxt-link :to="item.url" class="post-link">
+        <nuxt-link :to="`/blog/` + item.id" class="post-link">
           <div class="post-main-title">
             <div class="post-title">
               {{ item.title }}
@@ -81,12 +81,12 @@ export default {
   },
   head() {
     return {
-      title: 'Jakub Gania Software - Posty',
+      title: 'Jakub Gania Software - Blog',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Posty'
+          content: 'Blog'
         },
         {
           name: 'keywords',
