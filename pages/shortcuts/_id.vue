@@ -9,23 +9,52 @@
 
       <subpage-description-section-component :description="description" />
 
+      <div lg="12">
+        <div style="font-size: 14px;font-weight: 600;letter-spacing: 1px;">
+          Source
+        </div>
+        <template v-if="source">
+          <div v-for="item in source" :key="item.id">
+            <a :href="item.url" target="_blank" style="text-decoration: none;">
+              {{ item.url }}
+            </a>
+          </div>
+        </template>
+        <template v-else>
+          <div style="font-size: 12px;letter-spacing: 2px;">
+            No data
+          </div>
+        </template>
+      </div>
+
       <div class="shortcuts-list">
         <v-col v-for="item in data" :key="item.id" lg="12" style="padding: 0;">
           <div class="title-section">
             {{ item.sectionName }}
           </div>
-          <div
-            v-for="xdf in item.data"
-            :key="xdf.id"
-            class="shortcut-item-section"
-          >
-            <div class="shortcut-keys">
-              <v-icon v-if="xdf.icon">mdi-windows</v-icon> {{ xdf.shortcut }}
-            </div>
-            <div class="shortcut-description">
-              {{ xdf.description }}
-            </div>
-          </div>
+          <v-simple-table>
+            <template v-slot:default>
+              <tbody>
+                <tr
+                  v-for="shrt in item.data"
+                  :key="shrt.id"
+                  class="shortcut-item-section"
+                >
+                  <td class="table-shortcut-section">
+                    <div class="shortcut-keys">
+                      <v-icon v-if="shrt.icon">mdi-windows</v-icon>
+                      {{ shrt.shortcut }}
+                    </div>
+                  </td>
+                  <td class="table-description-section">
+                    <div class="shortcut-description">
+                      {{ shrt.description }}
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </template>
+          </v-simple-table>
         </v-col>
       </div>
     </template>
@@ -72,6 +101,7 @@ export default {
           id: params.id,
           name: res.data.name,
           description: res.data.description,
+          source: res.data.source,
           data: res.data.items
         }
       })
@@ -97,35 +127,42 @@ export default {
   margin-bottom: 80px;
 }
 .title-section {
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-size: 18px;
+  letter-spacing: 1px;
   padding-top: 40px;
   padding-bottom: 20px;
-  font-weight: 900;
+  font-weight: 700;
   border-bottom: 1px solid #d9d9d9;
 }
 .shortcuts-list {
   padding: 0;
-  margin-top: 60px;
+  margin-top: 20px;
   width: 100%;
 }
 .shortcut-item-section {
-  display: flex;
   letter-spacing: 1px;
   padding-top: 4px;
   padding-bottom: 4px;
-  border-bottom: 1px solid #d9d9d9;
+}
+table tr {
+  border-bottom: 1px solid black;
 }
 .shortcut-item-section:hover {
   background-color: #f0f0f5;
 }
 .shortcut-keys {
-  width: 40%;
   font-weight: 600;
 }
 .shortcut-description {
-  width: 60%;
   padding-left: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.table-shortcut-section {
+  width: 40%;
+}
+.table-description-section {
+  width: 60%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -133,8 +170,18 @@ export default {
     padding-left: 14px;
     padding-right: 14px;
   }
+  .title-section {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .shortcuts-list {
+    margin-top: 10px;
+  }
   .shortcut-item-section {
     font-size: 12px;
+  }
+  .table-shortcut-section {
+    padding-left: 0;
   }
 }
 </style>
