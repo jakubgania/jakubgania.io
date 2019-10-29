@@ -81,7 +81,10 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span style="color: #cc33ff;">
                 }
-                <span class="comma" :class="{ 'comma-not': index == 10 }">
+                <span
+                  class="comma"
+                  :class="{ 'comma-not': index == items.length - 1 }"
+                >
                   ,
                 </span>
               </span>
@@ -141,11 +144,12 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Menu'
+          content:
+            'Menu - spis stron dostępnych w ramach całej witryny jakubgania.io .'
         },
         {
           name: 'keywords',
-          content: 'menu'
+          content: 'menu, spis stron, podstrony'
         }
       ]
     }
