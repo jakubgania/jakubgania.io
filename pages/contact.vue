@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      title: 'Kontakt',
+      title: '{ kontakt }',
       description: 'E-mail do kontaktu.',
       email: 'contact@jakubgania.io'
     }

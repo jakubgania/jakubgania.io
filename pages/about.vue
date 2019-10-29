@@ -69,9 +69,13 @@
                   mdi-linkedin
                 </v-icon>
               </a>
-            </div>
-            <div class="contact-button-section">
-              <v-btn text small color="blue-grey darken-1">
+              <v-btn
+                text
+                small
+                color="black"
+                class="contact-button"
+                to="/contact"
+              >
                 kontakt
               </v-btn>
             </div>
@@ -186,16 +190,16 @@ export default {
   color: #fff;
 }
 .icons-section {
-  margin-top: 20px;
-}
-.contact-button-section {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .icon-link {
   text-decoration: none;
 }
 .icon:hover {
   color: #000;
+}
+.contact-button {
+  float: right;
 }
 
 @media only screen and (max-width: 600px) {

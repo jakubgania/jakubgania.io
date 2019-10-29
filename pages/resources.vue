@@ -67,7 +67,7 @@ export default {
   },
   data() {
     return {
-      title: 'Zasoby',
+      title: '{ zasoby }',
       description:
         'Na tej stronie zebrane są różne linki do takich stron jak portale technologiczne, blogi, kanały na Youtube, dokumentacje projektów technologicznych. Obecnie materiały są podzielone z grubsza na kategorie ale strona będzie pod tym względem na pewno ciągle modyfikowana. Cały czas znaujduję różne ciekawe artykłu i  ta lista będzie aktualizowana żeby zebrać to wszystko centralnie w jednym miejscu.',
       linksData: linksData.resources_items
@@ -94,7 +94,8 @@ export default {
         },
         {
           name: 'keywords',
-          content: 'Zasoby'
+          content:
+            'programy, strony, portale, portale technologiczne, portale programistyczne, dokumentacje, projekty, blogi, artykuły, kanały youtube'
         }
       ]
     }

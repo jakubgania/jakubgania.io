@@ -76,7 +76,7 @@ export default {
   },
   data() {
     return {
-      title: 'Galeria',
+      title: '{ galeria }',
       description:
         'W galerii będę czasami  umieszczał jakieś zdjęcia lub grafiki. Obecnie ta sekcja jest jeszcze niegotowa dlatego wyświetla zdjęcia zastępcze.',
       dialog: false,

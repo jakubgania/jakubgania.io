@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      title: 'Komendy i polecenia',
+      title: '{ komendy i polecenia }',
       description:
         'Na tej stronie będzie lista programów z odnośnikami do opisów komend i poleceń jakie można zastosować w danym programie.'
     }

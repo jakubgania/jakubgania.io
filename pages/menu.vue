@@ -128,9 +128,9 @@ export default {
     titleMarginTop() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
-          return { marginTop: 30, fontSize: 30 }
+          return { marginTop: 30, fontSize: 22 }
         default:
-          return 120
+          return { marginTop: 120, fontSize: 30 }
       }
     }
   },
