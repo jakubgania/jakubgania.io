@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 @font-face {
   font-family: 'Audiowide';
   font-style: normal;
@@ -95,6 +95,20 @@ export default {
 }
 .dark-theme {
   background-color: #1a1a1a;
+}
+$scrollbar-track-color: #f4f4f4;
+$scrollbar-thumb-color: #b3b3b3;
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: $scrollbar-track-color;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: $scrollbar-thumb-color;
 }
 @media only screen and (max-width: 600px) {
   .container-nuxt {
