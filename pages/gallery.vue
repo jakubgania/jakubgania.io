@@ -1,6 +1,10 @@
 <template>
   <v-row class="content-container">
-    <subpage-title-section-component :title="title" />
+    <subpage-title-section-component
+      :title="title"
+      :margin-top="titleMarginTop.marginTop"
+      :font-size="titleMarginTop.fontSize"
+    />
 
     <subpage-description-section-component :description="description" />
 
@@ -86,6 +90,16 @@ export default {
       this.dialogFullSizeImage = true
     }
   },
+  computed: {
+    titleMarginTop() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return { marginTop: 30, fontSize: 22 }
+        default:
+          return { marginTop: 120, fontSize: 28 }
+      }
+    }
+  },
   async asyncData({ params }) {
     try {
       const { data } = await axios.get(
@@ -129,5 +143,12 @@ export default {
   border-bottom: 2px solid #000;
   margin-top: 80px;
   font-weight: 800;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 </style>
