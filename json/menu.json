@@ -37,6 +37,10 @@
       "path": "/gallery"
     },
     {
+      "title": "Timeline",
+      "path": "/timeline"
+    },
+    {
       "title": "Github",
       "name": "/github",
       "url": "https://github.com/jakubgania"
