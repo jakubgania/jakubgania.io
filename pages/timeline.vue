@@ -41,7 +41,7 @@ export default {
     return {
       title: 'Timeline',
       description:
-        'Mój timeline - różne wydarzenia z mojego życia oznaczone na osi czasu.',
+        'Mój timeline - różne wydarzenia z mojego życia oznaczone na osi czasu. Sekcja w przygotowaniu.',
       posts: [
         {
           date: '00/00/0000',
