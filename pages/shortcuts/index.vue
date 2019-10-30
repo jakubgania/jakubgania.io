@@ -37,7 +37,7 @@ export default {
   },
   data() {
     return {
-      title: 'Skróty klawiaturowe',
+      title: '{ skróty klawiaturowe }',
       description:
         'Lista programów i systemów zebranych w jednym miejscu do których są skróty klawiaturowe w formie wypisanej listy lub odnośników. Skórty klawiaturowe są bardzo pomocne i przydatne, ponieważ przyspieszają pracę i pozwalają zminimalizować odrywanie rąk od klawiatury. Dlatego uważam, że powinno się je opanować w danym programie/systemie do perfekcji.',
       shortcuts: shortcutsListItems.data

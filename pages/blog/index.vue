@@ -1,7 +1,7 @@
 <template>
   <v-row class="content-container">
     <subpage-title-section-component
-      :title="title + ' - ' + posts.length"
+      :title="'{ ' + title + ' - ' + posts.length + ' }'"
       :margin-top="titleMarginTop.marginTop"
       :font-size="titleMarginTop.fontSize"
     />
@@ -51,7 +51,7 @@ export default {
   },
   data() {
     return {
-      title: 'Posty',
+      title: 'posty',
       description:
         'Na tej stronie będzie lista postów/wpisów. Obecnie jest tutaj testowo jeden odnośnik. Funkcjonalność nie działa jeszcze w płeni stabilnie i wymaga dopracowania dlatego system postów może działać jeszcze niepoprawnie.'
     }

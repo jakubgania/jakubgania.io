@@ -81,7 +81,10 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span style="color: #cc33ff;">
                 }
-                <span class="comma" :class="{ 'comma-not': index == 10 }">
+                <span
+                  class="comma"
+                  :class="{ 'comma-not': index == items.length - 1 }"
+                >
                   ,
                 </span>
               </span>
@@ -111,95 +114,11 @@
 </template>
 
 <script>
-import SubpageTitleSection from '../components/subpage-title-section'
-import menuItems from '../json/menu.json'
+import script from './script.js'
 
-export default {
-  components: {
-    'subpage-title-section-component': SubpageTitleSection
-  },
-  data() {
-    return {
-      title: '{ menu }',
-      items: menuItems.menu
-    }
-  },
-  computed: {
-    titleMarginTop() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return { marginTop: 30, fontSize: 30 }
-        default:
-          return 120
-      }
-    }
-  },
-  head() {
-    return {
-      title: 'Jakub Gania Software - Menu',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Menu'
-        },
-        {
-          name: 'keywords',
-          content: 'menu'
-        }
-      ]
-    }
-  }
-}
+export default script
 </script>
 
 <style lang="scss" scoped>
-.content-container {
-  max-width: 800px;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 100px;
-  font-size: 12px;
-}
-.link {
-  text-decoration: none;
-}
-.link-text {
-  color: #000;
-  letter-spacing: 2px;
-  font-size: 12px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-.link-x {
-  padding: 0;
-}
-.link-section:hover {
-  background-color: #e6e6e6;
-  padding-left: 12px;
-  transition: padding-left 0.2s ease;
-}
-.comma {
-  color: #6699ff;
-}
-.comma-not {
-  display: none;
-}
-.top-image {
-  width: 100%;
-  height: 30vw;
-  max-height: 940px;
-  min-height: 200px;
-  background-image: url('../assets/images/background2.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media only screen and (max-width: 600px) {
-  .content-container {
-    margin-left: 18px;
-    margin-bottom: 20px;
-  }
-}
+@import 'style.scss';
 </style>

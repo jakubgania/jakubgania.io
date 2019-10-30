@@ -33,8 +33,12 @@
       "path": "/shortcuts"
     },
     {
-      "title": "Zdjęcia",
+      "title": "Galeria",
       "path": "/gallery"
+    },
+    {
+      "title": "Timeline",
+      "path": "/timeline"
     },
     {
       "title": "Github",

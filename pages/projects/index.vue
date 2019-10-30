@@ -37,7 +37,7 @@ export default {
   },
   data() {
     return {
-      title: 'Projekty',
+      title: '{ projekty }',
       description:
         'Lista moich projektów z odnośnikami do szczegółowych opisów. Obecnie strona w przygotowaniu.',
       projects: [

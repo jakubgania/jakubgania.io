@@ -36,9 +36,9 @@ const data = [
     lastmodISO: '2019-10-11'
   },
   {
-    url: '/posts',
+    url: '/blog',
     changefreq: 'daily',
-    priority: '0.5',
+    priority: '1',
     lastmodISO: '2019-10-11'
   },
   {

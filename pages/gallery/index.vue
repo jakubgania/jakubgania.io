@@ -1,6 +1,10 @@
 <template>
   <v-row class="content-container">
-    <subpage-title-section-component :title="title" />
+    <subpage-title-section-component
+      :title="title"
+      :margin-top="titleMarginTop.marginTop"
+      :font-size="titleMarginTop.fontSize"
+    />
 
     <subpage-description-section-component :description="description" />
 
@@ -61,73 +65,11 @@
 </template>
 
 <script>
-import axios from 'axios'
-import SubpageTitleSection from '../components/subpage-title-section'
-import SubpageDescriptionSection from '../components/subpage-description-section'
+import script from './script.js'
 
-export default {
-  components: {
-    'subpage-title-section-component': SubpageTitleSection,
-    'subpage-description-section-component': SubpageDescriptionSection
-  },
-  data() {
-    return {
-      title: 'Galeria',
-      description:
-        'W galerii będę czasami  umieszczał jakieś zdjęcia lub grafiki. Obecnie ta sekcja jest jeszcze niegotowa dlatego wyświetla zdjęcia zastępcze.',
-      dialog: false,
-      dialogFullSizeImage: false,
-      fullSizeId: null
-    }
-  },
-  methods: {
-    setDetailsPhoto(id) {
-      this.fullSizeId = id
-      this.dialogFullSizeImage = true
-    }
-  },
-  async asyncData({ params }) {
-    try {
-      const { data } = await axios.get(
-        `https://jakubgania.io/media/data/list-of-images.json`
-      )
-
-      return {
-        images: data.listOfImages
-      }
-    } catch (error) {
-      //
-    }
-  },
-  head() {
-    return {
-      title: 'Jakub Gania Software - Galeria',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Galeria'
-        },
-        {
-          name: 'keywords',
-          content: 'Galeria'
-        }
-      ]
-    }
-  }
-}
+export default script
 </script>
 
-<style scoped>
-.content-container {
-  max-width: 800px;
-  width: 100%;
-  margin: auto;
-}
-.page-title {
-  font-size: 40px;
-  border-bottom: 2px solid #000;
-  margin-top: 80px;
-  font-weight: 800;
-}
+<style lang="scss" scoped>
+@import 'style.scss';
 </style>
