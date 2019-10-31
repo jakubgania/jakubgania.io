@@ -13,6 +13,16 @@ export default {
       email: 'contact@jakubgania.io'
     }
   },
+  computed: {
+    titleMarginTop() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return { marginTop: 30, fontSize: 22 }
+        default:
+          return { marginTop: 120, fontSize: 28 }
+      }
+    }
+  },
   head() {
     return {
       title: 'Jakub Gania Software - Kontakt',
