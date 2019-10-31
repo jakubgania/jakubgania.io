@@ -1,6 +1,10 @@
 <template>
   <v-row class="content-container">
-    <subpage-title-section-component :title="title" />
+    <subpage-title-section-component
+      :title="title"
+      :margin-top="titleMarginTop.marginTop"
+      :font-size="titleMarginTop.fontSize"
+    />
 
     <subpage-description-section-component :description="description" />
   </v-row>
@@ -20,6 +24,16 @@ export default {
       title: '{ komendy i polecenia }',
       description:
         'Na tej stronie będzie lista programów z odnośnikami do opisów komend i poleceń jakie można zastosować w danym programie.'
+    }
+  },
+  computed: {
+    titleMarginTop() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return { marginTop: 30, fontSize: 22 }
+        default:
+          return { marginTop: 120, fontSize: 28 }
+      }
     }
   },
   head() {
@@ -46,5 +60,12 @@ export default {
   max-width: 800px;
   width: 100%;
   margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 }
 </style>
