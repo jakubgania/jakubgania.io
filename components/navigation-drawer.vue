@@ -24,8 +24,12 @@
       <v-list-item style="margin-bottom: 0;">
         <v-list-item-content style="padding-bottom: 0;">
           <v-list-item-title class="non-list-element">
-            <span style="color: #ff0066;">switch</span>
-            ($menu) {
+            <span class="text-menu" style="color: #ff0066;">
+              switch
+            </span>
+            <span class="text-menu">
+              ($menu) {
+            </span>
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
@@ -35,14 +39,18 @@
             <v-list-item-title class="list-item-title">
               <span style="display: block;">
                 &nbsp;&nbsp;
-                <span style="color: #ff0066;">case</span>
-                {{ "'" + item.path + "'" }}:
+                <span class="text-menu" style="color: #ff0066;">
+                  case
+                </span>
+                <span class="text-menu">{{ "'" + item.path + "'" }}:</span>
               </span>
               <span class="xdp">
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <span style="color: #005ce6;">echo:</span>
+                <span class="text-menu" style="color: #005ce6;">
+                  echo:
+                </span>
                 <span
-                  class="title-page"
+                  class="title-page text-menu"
                   :class="{ 'dark-theme-text': darkTheme }"
                 >
                   {{ "'" + item.title + "'" }}
@@ -50,7 +58,9 @@
               </span>
               <span style="display: block;">
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <span style="color: #ff0066;">break;</span>
+                <span class="text-menu" style="color: #ff0066;">
+                  break;
+                </span>
               </span>
             </v-list-item-title>
           </v-list-item-content>
@@ -60,14 +70,18 @@
             <v-list-item-title class="list-item-title">
               <span style="display: block;">
                 &nbsp;&nbsp;
-                <span style="color: #ff0066;">case</span>
-                {{ "'" + item.name + "'" }}:
+                <span class="text-menu" style="color: #ff0066;">
+                  case
+                </span>
+                <span class="text-menu">{{ "'" + item.name + "'" }}:</span>
               </span>
               <span class="echo-item">
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <span style="color: #005ce6;">echo:</span>
+                <span class="text-menu" style="color: #005ce6;">
+                  echo:
+                </span>
                 <span
-                  class="title-page"
+                  class="title-page text-menu"
                   :class="{ 'dark-theme-text': darkTheme }"
                 >
                   {{ "'" + item.title + "'" }}
@@ -75,7 +89,9 @@
               </span>
               <span style="display: block;">
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <span style="color: #ff0066;">break;</span>
+                <span class="text-menu" style="color: #ff0066;">
+                  break;
+                </span>
               </span>
             </v-list-item-title>
           </v-list-item-content>
@@ -85,7 +101,9 @@
       <v-list-item style="margin-top: 0;">
         <v-list-item-content style="padding-top: 0;">
           <v-list-item-title class="non-list-element">
-            }
+            <span class="text-menu">
+              }
+            </span>
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
@@ -175,5 +193,15 @@ export default {
 }
 .close-icon-dark-theme {
   color: #bfbfbf !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .close-icon-section {
+    height: 56px;
+    line-height: 56px;
+  }
+  .text-menu {
+    font-size: 11px;
+  }
 }
 </style>
