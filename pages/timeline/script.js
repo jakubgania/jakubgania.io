@@ -29,5 +29,22 @@ export default {
         }
       ]
     }
+  },
+  head() {
+    return {
+      title: 'Jakub Gania Software - Timeline',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Timeline - różne wydarzenia z mojego życia oznaczone na osi czasu.'
+        },
+        {
+          name: 'keywords',
+          content: 'timeline, oś czasu, historia'
+        }
+      ]
+    }
   }
 }
