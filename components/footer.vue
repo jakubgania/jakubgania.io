@@ -84,10 +84,11 @@ export default {
 }
 .link {
   text-decoration: none;
-  color: #000;
+  color: #3385ff;
+  padding-right: 10px;
 }
 .link:hover {
-  color: blue;
+  color: #0000ff;
 }
 .dark-theme-text {
   color: #fff;
