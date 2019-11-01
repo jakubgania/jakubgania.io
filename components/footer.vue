@@ -4,7 +4,7 @@
     class="footer-container"
     :class="{ 'footer-container-dark-theme': darkTheme }"
   >
-    <v-col sm="2" lg="6" cols="4">
+    <v-col sm="2" lg="6" cols="12" class="links-section">
       <a
         :href="links.github.url"
         target="_blank"
@@ -22,7 +22,7 @@
         {{ links.linkedin.title }}
       </a>
     </v-col>
-    <v-col sm="10" lg="6" cols="8" style="text-align: right;">
+    <v-col sm="10" lg="6" cols="12" class="copyright-text">
       <div v-html="copyrightText" :class="{ 'dark-theme-text': darkTheme }" />
     </v-col>
 
@@ -94,5 +94,21 @@ export default {
 }
 .footer-container-dark-theme {
   border-top: 1px solid #bfbfbf;
+}
+.copyright-text {
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-container {
+    padding-top: 20px;
+    line-height: 40px;
+  }
+  .links-section {
+    text-align: center;
+  }
+  .copyright-text {
+    text-align: center;
+  }
 }
 </style>
