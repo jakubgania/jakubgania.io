@@ -77,7 +77,7 @@ export default {
   width: 100%;
   font-size: 12px;
   letter-spacing: 1px;
-  border-top: 1px solid #000;
+  border-top: 1px solid #e6e6e6;
   margin: auto;
   line-height: 80px;
   margin-bottom: 20px;
@@ -95,8 +95,12 @@ export default {
 .footer-container-dark-theme {
   border-top: 1px solid #bfbfbf;
 }
+.links-section {
+  padding: 0;
+}
 .copyright-text {
   text-align: right;
+  padding: 0;
 }
 
 @media only screen and (max-width: 600px) {
