@@ -17,8 +17,8 @@
           {{ errorMessage }}
         </div>
         <div>
-          <nuxt-link to="/posts" class="link">
-            Zobacz inne posty
+          <nuxt-link to="/projects" class="link">
+            Zobacz inne projekty
           </nuxt-link>
         </div>
       </v-col>
@@ -40,7 +40,7 @@ export default {
       title: '',
       error: false,
       pageTitle: 'Jakub Gania Software - Projekty',
-      errorMessage: 'Wystąpił błąd pobierania lub taki post nie istnieje',
+      errorMessage: 'Wystąpił błąd pobierania lub taki projekt nie istnieje',
       marginTop: 0
     }
   },
@@ -68,7 +68,7 @@ export default {
       }
     } catch (error) {
       return {
-        model: 'Taki post nie istnieje',
+        model: 'Taki projekt nie istnieje',
         error: true,
         attributes: {
           title: '',
