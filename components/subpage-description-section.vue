@@ -1,7 +1,9 @@
 <template>
-  <v-col cols="12" lg="12" xs="12" style="padding: 0;">
+  <v-col cols="12" lg="12" xs="12" class="page-description-container">
     <div class="page-description">
-      {{ description }}
+      <p>
+        {{ description }}
+      </p>
     </div>
   </v-col>
 </template>
@@ -18,11 +20,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.page-description-container {
+  padding: 0;
+}
 .page-description {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 </style>
