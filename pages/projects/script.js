@@ -8,9 +8,10 @@ export default {
   },
   data() {
     return {
-      title: '{ projekty }',
+      title: 'projekty',
       description:
         'Lista moich projektów z odnośnikami do szczegółowych opisów. Obecnie strona w przygotowaniu.',
+      githubRepositoriesLink: 'https://github.com/jakubgania?tab=repositories',
       projects: [
         {
           title: 'jakubgania.io',
@@ -121,8 +122,8 @@ export default {
           path: 'prototype-social-portal-backend'
         },
         {
-          title: 'retnal-property',
-          path: 'retnal-property'
+          title: 'rental-property',
+          path: 'rental-property'
         }
       ]
     }

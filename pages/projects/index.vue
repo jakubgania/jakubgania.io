@@ -1,7 +1,7 @@
 <template>
   <v-row class="content-container">
     <subpage-title-section-component
-      :title="title"
+      :title="'{ ' + title + ' - ' + projects.length + ' }'"
       :margin-top="titleMarginTop.marginTop"
       :font-size="titleMarginTop.fontSize"
     />
@@ -9,21 +9,24 @@
     <subpage-description-section-component :description="description" />
 
     <v-col cols="12" style="padding-left: 0px;">
-      <a href="https://github.com/jakubgania?tab=repositories" class="link">
-        Pełna lista projektów na platformie Github
+      <span style="font-size: 14px;letter-spacing: 1px;">
+        Pełna lista projektów na platformie
+      </span>
+      <a :href="githubRepositoriesLink" class="link" style="color: #3385ff;">
+        Github
       </a>
     </v-col>
     <v-col
-      v-for="item in projects"
+      v-for="(item, index) in projects"
       :key="item.id"
       cols="12"
       lg="12"
       xs="12"
       class="sctn"
     >
-      <nuxt-link :to="`project/` + item.path" class="link">
-        <div class="">
-          {{ item.title }}
+      <nuxt-link :to="`projects/` + item.path" class="link">
+        <div class="project-title">
+          {{ index + 1 + '. ' + item.title }}
         </div>
       </nuxt-link>
     </v-col>
