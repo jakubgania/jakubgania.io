@@ -11,7 +11,7 @@ export default {
     return {
       title: 'projekty',
       description:
-        'Lista moich projektów z odnośnikami do szczegółowych opisów. Obecnie strona w przygotowaniu.',
+        'Lista moich projektów z odnośnikami do szczegółowych opisów. Część projektów z poniższej listy nie jest jeszcze rozpoczęta lub jest tylko zaczęta w jakimś niewielkim stopniu. Z czasem będą pojawiać się opisy repozytoriów i projektów. Obecnie strona w przygotowaniu.',
       githubRepositoriesLink: 'https://github.com/jakubgania?tab=repositories'
     }
   },
