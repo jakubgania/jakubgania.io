@@ -6,6 +6,16 @@ export default {
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection
   },
+  computed: {
+    titleMarginTop() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return { marginTop: 30, fontSize: 22 }
+        default:
+          return { marginTop: 120, fontSize: 28 }
+      }
+    }
+  },
   data() {
     return {
       title: 'Timeline',
@@ -16,6 +26,23 @@ export default {
           date: '00/00/0000',
           title: 'example title',
           description: 'example post description'
+        }
+      ]
+    }
+  },
+  head() {
+    return {
+      title: 'Jakub Gania Software - Timeline',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Timeline - różne wydarzenia z mojego życia oznaczone na osi czasu.'
+        },
+        {
+          name: 'keywords',
+          content: 'timeline, oś czasu, historia'
         }
       ]
     }

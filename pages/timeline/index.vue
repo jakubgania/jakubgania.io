@@ -1,6 +1,10 @@
 <template>
   <v-row class="content-container">
-    <subpage-title-section-component :title="title" />
+    <subpage-title-section-component
+      :title="title"
+      :margin-top="titleMarginTop.marginTop"
+      :font-size="titleMarginTop.fontSize"
+    />
 
     <subpage-description-section-component :description="description" />
 
@@ -9,7 +13,7 @@
         v-for="item in posts"
         :key="item.id"
         small
-        fill-dot="true"
+        fill-dot
         right
       >
         <template v-slot:opposite>

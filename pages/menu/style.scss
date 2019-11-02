@@ -34,10 +34,13 @@
   height: 30vw;
   max-height: 940px;
   min-height: 200px;
-  background-image: url('../../assets/images/background2.jpg');
+  background-image: url('../../assets/images/background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.number-line {
+  color: #d9d9d9;
 }
 
 @media only screen and (max-width: 600px) {

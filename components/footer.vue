@@ -4,7 +4,7 @@
     class="footer-container"
     :class="{ 'footer-container-dark-theme': darkTheme }"
   >
-    <v-col sm="2" lg="6" cols="4">
+    <v-col sm="2" lg="6" cols="12" class="links-section">
       <a
         :href="links.github.url"
         target="_blank"
@@ -22,7 +22,7 @@
         {{ links.linkedin.title }}
       </a>
     </v-col>
-    <v-col sm="10" lg="6" cols="8" style="text-align: right;">
+    <v-col sm="10" lg="6" cols="12" class="copyright-text">
       <div v-html="copyrightText" :class="{ 'dark-theme-text': darkTheme }" />
     </v-col>
 
@@ -77,22 +77,43 @@ export default {
   width: 100%;
   font-size: 12px;
   letter-spacing: 1px;
-  border-top: 1px solid #000;
+  border-top: 1px solid #e6e6e6;
   margin: auto;
   line-height: 80px;
   margin-bottom: 20px;
 }
 .link {
   text-decoration: none;
-  color: #000;
+  color: #3385ff;
+  padding-right: 10px;
 }
 .link:hover {
-  color: blue;
+  color: #0000ff;
 }
 .dark-theme-text {
   color: #fff;
 }
 .footer-container-dark-theme {
   border-top: 1px solid #bfbfbf;
+}
+.links-section {
+  padding: 0;
+}
+.copyright-text {
+  text-align: right;
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-container {
+    padding-top: 20px;
+    line-height: 40px;
+  }
+  .links-section {
+    text-align: center;
+  }
+  .copyright-text {
+    text-align: center;
+  }
 }
 </style>

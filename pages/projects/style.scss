@@ -1,0 +1,30 @@
+.content-container {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 80px;
+}
+.sctn {
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.sctn:hover {
+  background-color: #e6e6e6;
+  padding-left: 12px;
+  transition: padding-left 0.2s ease;
+  color: blue;
+}
+.link {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
