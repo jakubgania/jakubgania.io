@@ -10,7 +10,7 @@
 }
 .link-text {
   color: #000;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 12px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -18,10 +18,21 @@
 .link-x {
   padding: 0;
 }
+.number-line {
+  color: #d9d9d9;
+}
 .link-section:hover {
-  background-color: #e6e6e6;
+  background-color: #f2f2f2;
   padding-left: 12px;
-  transition: padding-left 0.2s ease;
+
+  .number-line {
+    margin-left: -12px;
+  }
+
+  .xpo {
+    padding-left: 12px;
+    transition: padding-left 0.2s ease;
+  }
 }
 .comma {
   color: #6699ff;
@@ -39,13 +50,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.number-line {
-  color: #d9d9d9;
-}
 
 @media only screen and (max-width: 600px) {
   .content-container {
-    margin-left: 18px;
+    margin-left: 14px;
+    margin-right: 14px;
     margin-bottom: 20px;
   }
 }
