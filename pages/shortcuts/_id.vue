@@ -80,7 +80,16 @@ export default {
     return {
       pageTitle: 'Jakub Gania Software',
       title: 'Skróty klawiaturowe - ',
-      error: false
+      error: false,
+      items: [
+        {
+          text: 'shortcuts',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/shortcuts'
+        }
+      ]
     }
   },
   computed: {
@@ -92,6 +101,12 @@ export default {
           return { marginTop: 120, fontSize: 28 }
       }
     }
+  },
+  mounted() {
+    this.items.push({
+      text: this.name.toLowerCase(),
+      disabled: true
+    })
   },
   asyncData({ params, error }) {
     return axios
