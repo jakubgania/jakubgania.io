@@ -11,7 +11,7 @@
     <v-col cols="12" style="margin-top: 60px;margin-bottom: 100px;">
       <v-row>
         <v-col
-          v-for="item in images"
+          v-for="(item, index) in images"
           :key="item.id"
           cols="4"
           style="padding: 2px;"
@@ -19,7 +19,7 @@
           <v-img
             :src="`https://jakubgania.io/media/image/thumbnail/${item.id}`"
             aspect-ratio="1"
-            @click="setDetailsPhoto(item.id)"
+            @click="setDetailsPhoto(item.id, index)"
           >
             <v-layout
               slot="placeholder"
@@ -38,6 +38,7 @@
     </v-col> -->
 
     <v-dialog
+      v-if="$vuetify.breakpoint.name != 'xs'"
       v-model="dialogFullSizeImage"
       fullscreen
       hide-overlay
@@ -61,6 +62,45 @@
         </v-img>
       </v-card>
     </v-dialog>
+
+    <v-dialog
+      v-if="$vuetify.breakpoint.name === 'xs'"
+      v-model="dialogFullSizeImage"
+      fullscreen
+      hide-overlay
+      transition="dialog-transition"
+    >
+      <v-card
+        v-touch="{
+          left: () => swipe('left'),
+          right: () => swipe('right'),
+          up: () => swipe('up')
+        }"
+      >
+        <v-toolbar flat>
+          <div class="flex-grow-1" />
+          <v-btn icon @click="dialogFullSizeImage = false">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-toolbar>
+
+        <v-img
+          :src="`https://jakubgania.io/media/image/full-size/${fullSizeId}`"
+          style="max-width: 1000px;width: auto;height: auto;max-height: 90vh;margin: auto;"
+        >
+          <v-layout slot="placeholder" align-center justify-center fill-height>
+            <v-progress-circular indeterminate color="#0066ff" />
+          </v-layout>
+        </v-img>
+      </v-card>
+    </v-dialog>
+
+    <v-snackbar v-model="snackbar" :timeout="timeout">
+      Brak kolejnych zdjęć
+      <v-btn color="pink" text @click="snackbar = false">
+        Zamknij
+      </v-btn>
+    </v-snackbar>
   </v-row>
 </template>
 

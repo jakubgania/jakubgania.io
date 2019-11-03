@@ -14,13 +14,48 @@ export default {
         'W galerii będę czasami  umieszczał jakieś zdjęcia lub grafiki. Obecnie ta sekcja jest jeszcze niegotowa dlatego wyświetla zdjęcia zastępcze.',
       dialog: false,
       dialogFullSizeImage: false,
-      fullSizeId: null
+      fullSizeId: null,
+      index: null,
+      swipeDirection: null,
+      snackbar: false,
+      timeout: 2000
     }
   },
   methods: {
-    setDetailsPhoto(id) {
+    setDetailsPhoto(id, index) {
+      this.index = index
       this.fullSizeId = id
       this.dialogFullSizeImage = true
+    },
+    swipe(direction) {
+      if (direction === 'left') {
+        this.swipeLeft()
+      }
+
+      if (direction === 'right') {
+        this.swipeRight()
+      }
+
+      if (direction === 'up') {
+        this.swipeUp()
+      }
+    },
+    swipeLeft() {
+      if (this.index <= this.images.length) {
+        this.fullSizeId = this.images[this.index++].id
+      } else {
+        this.snackbar = true
+      }
+    },
+    swipeRight() {
+      if (this.index >= 0) {
+        this.fullSizeId = this.images[this.index--].id
+      } else {
+        this.snackbar = true
+      }
+    },
+    swipeUp() {
+      this.dialogFullSizeImage = false
     }
   },
   computed: {
