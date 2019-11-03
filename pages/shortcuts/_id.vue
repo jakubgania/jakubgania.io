@@ -179,9 +179,23 @@ table tr {
   }
   .shortcut-item-section {
     font-size: 12px;
+    letter-spacing: 0.5px;
   }
   .table-shortcut-section {
     padding-left: 0;
+    padding-right: 4px;
+    width: 50%;
+  }
+  .table-description-section {
+    padding-left: 4px;
+    padding-right: 0;
+    width: 50%;
+  }
+  .shortcut-keys {
+    font-size: 11px;
+  }
+  .shortcut-description {
+    font-size: 11px;
   }
 }
 </style>
