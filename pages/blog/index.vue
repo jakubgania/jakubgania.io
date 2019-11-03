@@ -137,8 +137,8 @@ export default {
 
 @media only screen and (max-width: 600px) {
   .content-container {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
   .post-main-title {
     font-size: 16px;
