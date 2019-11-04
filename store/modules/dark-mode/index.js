@@ -1,6 +1,6 @@
-const state = {
+const state = () => ({
   darkTheme: false
-}
+})
 
 const getters = {
   darkTheme: (state) => {
