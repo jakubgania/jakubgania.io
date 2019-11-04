@@ -37,70 +37,86 @@
       paging button
     </v-col> -->
 
-    <v-dialog
-      v-if="$vuetify.breakpoint.name != 'xs'"
-      v-model="dialogFullSizeImage"
-      fullscreen
-      hide-overlay
-      transition="dialog-transition"
-    >
-      <v-card>
-        <v-toolbar flat>
-          <div class="flex-grow-1" />
-          <v-btn icon @click="dialogFullSizeImage = false">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-        </v-toolbar>
-
-        <v-img
-          :src="`https://jakubgania.io/media/image/full-size/${fullSizeId}`"
-          style="max-width: 1000px;width: auto;height: auto;max-height: 90vh;margin: auto;"
-        >
-          <v-layout slot="placeholder" align-center justify-center fill-height>
-            <v-progress-circular indeterminate color="#0066ff" />
-          </v-layout>
-        </v-img>
-      </v-card>
-    </v-dialog>
-
-    <v-dialog
-      v-if="$vuetify.breakpoint.name === 'xs'"
-      v-model="dialogFullSizeImage"
-      fullscreen
-      hide-overlay
-      transition="dialog-transition"
-    >
-      <v-card
-        v-touch="{
-          left: () => swipe('left'),
-          right: () => swipe('right'),
-          up: () => swipe('up')
-        }"
+    <client-only>
+      <v-dialog
+        v-if="$vuetify.breakpoint.name != 'xs'"
+        v-model="dialogFullSizeImage"
+        fullscreen
+        hide-overlay
+        transition="dialog-transition"
       >
-        <v-toolbar flat>
-          <div class="flex-grow-1" />
-          <v-btn icon @click="dialogFullSizeImage = false">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-        </v-toolbar>
+        <v-card>
+          <v-toolbar flat>
+            <div class="flex-grow-1" />
+            <v-btn icon @click="dialogFullSizeImage = false">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+          </v-toolbar>
 
-        <v-img
-          :src="`https://jakubgania.io/media/image/full-size/${fullSizeId}`"
-          style="max-width: 1000px;width: auto;height: auto;max-height: 90vh;margin: auto;"
+          <v-img
+            :src="`https://jakubgania.io/media/image/full-size/${fullSizeId}`"
+            style="max-width: 1000px;width: auto;height: auto;max-height: 90vh;margin: auto;"
+          >
+            <v-layout
+              slot="placeholder"
+              align-center
+              justify-center
+              fill-height
+            >
+              <v-progress-circular indeterminate color="#0066ff" />
+            </v-layout>
+          </v-img>
+        </v-card>
+      </v-dialog>
+    </client-only>
+
+    <client-only>
+      <v-dialog
+        v-if="$vuetify.breakpoint.name === 'xs'"
+        v-model="dialogFullSizeImage"
+        fullscreen
+        hide-overlay
+        transition="dialog-transition"
+      >
+        <v-card
+          v-touch="{
+            left: () => swipe('left'),
+            right: () => swipe('right'),
+            up: () => swipe('up')
+          }"
         >
-          <v-layout slot="placeholder" align-center justify-center fill-height>
-            <v-progress-circular indeterminate color="#0066ff" />
-          </v-layout>
-        </v-img>
-      </v-card>
-    </v-dialog>
+          <v-toolbar flat>
+            <div class="flex-grow-1" />
+            <v-btn icon @click="dialogFullSizeImage = false">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+          </v-toolbar>
 
-    <v-snackbar v-model="snackbar" :timeout="timeout">
-      Brak kolejnych zdjęć
-      <v-btn color="pink" text @click="snackbar = false">
-        Zamknij
-      </v-btn>
-    </v-snackbar>
+          <v-img
+            :src="`https://jakubgania.io/media/image/full-size/${fullSizeId}`"
+            style="max-width: 1000px;width: auto;height: auto;max-height: 90vh;margin: auto;"
+          >
+            <v-layout
+              slot="placeholder"
+              align-center
+              justify-center
+              fill-height
+            >
+              <v-progress-circular indeterminate color="#0066ff" />
+            </v-layout>
+          </v-img>
+        </v-card>
+      </v-dialog>
+    </client-only>
+
+    <client-only>
+      <v-snackbar v-model="snackbar" :timeout="timeout">
+        Brak kolejnych zdjęć
+        <v-btn color="pink" text @click="snackbar = false">
+          Zamknij
+        </v-btn>
+      </v-snackbar>
+    </client-only>
   </v-row>
 </template>
 
