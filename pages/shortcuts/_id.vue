@@ -87,7 +87,7 @@ export default {
       error: false,
       items: [
         {
-          text: 'shortcuts',
+          text: 'skróty klawiaturowe',
           disabled: false,
           exact: true,
           nuxt: true,
