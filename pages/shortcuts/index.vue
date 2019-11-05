@@ -1,5 +1,7 @@
 <template>
   <v-row class="content-container">
+    <breadcrumbs-component :items="items" />
+
     <subpage-title-section-component
       :title="title"
       :margin-top="titleMarginTop.marginTop"
@@ -26,12 +28,14 @@
 </template>
 
 <script>
+import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
 import shortcutsListItems from '../../json/list-of-shortcuts.json'
 
 export default {
   components: {
+    'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection
   },
@@ -40,7 +44,23 @@ export default {
       title: '{ skróty klawiaturowe }',
       description:
         'Lista programów i systemów zebranych w jednym miejscu do których są skróty klawiaturowe w formie wypisanej listy lub odnośników. Skórty klawiaturowe są bardzo pomocne i przydatne, ponieważ przyspieszają pracę i pozwalają zminimalizować odrywanie rąk od klawiatury. Dlatego uważam, że powinno się je opanować w danym programie/systemie do perfekcji.',
-      shortcuts: shortcutsListItems.data
+      shortcuts: shortcutsListItems.data,
+      items: [
+        {
+          text: 'menu',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/menu'
+        },
+        {
+          text: 'skróty klawiaturowe',
+          disabled: true,
+          exact: true,
+          nuxt: true,
+          to: '/shortcuts'
+        }
+      ]
     }
   },
   computed: {
