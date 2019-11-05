@@ -1,8 +1,10 @@
+import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
 
 export default {
   components: {
+    'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection
   },
@@ -26,6 +28,22 @@ export default {
           date: '00/00/0000',
           title: 'example title',
           description: 'example post description'
+        }
+      ],
+      items: [
+        {
+          text: 'menu',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/menu'
+        },
+        {
+          text: 'timeline',
+          disabled: true,
+          exact: true,
+          nuxt: true,
+          to: '/timeline'
         }
       ]
     }
