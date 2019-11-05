@@ -89,6 +89,7 @@ export default {
 .app-content-container {
   min-height: 100vh;
   padding-top: 0;
+  background-color: #fff;
 }
 .container-nuxt {
   padding: 0;

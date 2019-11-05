@@ -105,7 +105,7 @@ export default {
   margin: auto;
 }
 .post-link-item {
-  background-color: #fff;
+  background-color: #fafafa;
   margin-top: 10px;
 }
 .post-link {

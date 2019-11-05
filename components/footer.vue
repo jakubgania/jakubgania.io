@@ -1,37 +1,39 @@
 <template>
-  <v-row
-    v-if="displayFooter()"
-    class="footer-container"
-    :class="{ 'footer-container-dark-theme': darkTheme }"
-  >
-    <v-col sm="2" lg="6" cols="12" class="links-section">
-      <a
-        :href="links.github.url"
-        target="_blank"
-        class="link"
-        :class="{ 'dark-theme-text': darkTheme }"
-      >
-        {{ links.github.title }}
-      </a>
-      <a
-        :href="links.linkedin.url"
-        target="_blank"
-        class="link"
-        :class="{ 'dark-theme-text': darkTheme }"
-      >
-        {{ links.linkedin.title }}
-      </a>
-    </v-col>
-    <v-col sm="10" lg="6" cols="12" class="copyright-text">
-      <div :class="{ 'dark-theme-text': darkTheme }" v-html="copyrightText" />
-    </v-col>
-
-    <template v-if="$store.state.showDarkModeSwitch">
-      <v-col cols="12">
-        <dark-mode-switch-component />
+  <div style="background-color: #fff;">
+    <v-row
+      v-if="displayFooter()"
+      class="footer-container"
+      :class="{ 'footer-container-dark-theme': darkTheme }"
+    >
+      <v-col sm="2" lg="6" cols="12" class="links-section">
+        <a
+          :href="links.github.url"
+          target="_blank"
+          class="link"
+          :class="{ 'dark-theme-text': darkTheme }"
+        >
+          {{ links.github.title }}
+        </a>
+        <a
+          :href="links.linkedin.url"
+          target="_blank"
+          class="link"
+          :class="{ 'dark-theme-text': darkTheme }"
+        >
+          {{ links.linkedin.title }}
+        </a>
       </v-col>
-    </template>
-  </v-row>
+      <v-col sm="10" lg="6" cols="12" class="copyright-text">
+        <div :class="{ 'dark-theme-text': darkTheme }" v-html="copyrightText" />
+      </v-col>
+
+      <template v-if="$store.state.showDarkModeSwitch">
+        <v-col cols="12">
+          <dark-mode-switch-component />
+        </v-col>
+      </template>
+    </v-row>
+  </div>
 </template>
 
 <script>
