@@ -1,9 +1,11 @@
 import axios from 'axios'
+import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
 
 export default {
   components: {
+    'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection
   },
@@ -18,7 +20,23 @@ export default {
       index: null,
       swipeDirection: null,
       snackbar: false,
-      timeout: 2000
+      timeout: 2000,
+      items: [
+        {
+          text: 'menu',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/menu'
+        },
+        {
+          text: 'galeria',
+          disabled: true,
+          exact: true,
+          nuxt: true,
+          to: '/gallery'
+        }
+      ]
     }
   },
   methods: {
