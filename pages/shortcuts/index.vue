@@ -2,11 +2,7 @@
   <v-row class="content-container">
     <breadcrumbs-component :items="items" />
 
-    <subpage-title-section-component
-      :title="title"
-      :margin-top="titleMarginTop.marginTop"
-      :font-size="titleMarginTop.fontSize"
-    />
+    <subpage-title-section-component :title="title" />
 
     <subpage-description-section-component :description="description" />
 
@@ -61,16 +57,6 @@ export default {
           to: '/shortcuts'
         }
       ]
-    }
-  },
-  computed: {
-    titleMarginTop() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return { marginTop: 30, fontSize: 22 }
-        default:
-          return { marginTop: 80, fontSize: 28 }
-      }
     }
   },
   head() {

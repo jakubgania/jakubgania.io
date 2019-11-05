@@ -4,8 +4,6 @@
 
     <subpage-title-section-component
       :title="'{ ' + title + ' - ' + posts.length + ' }'"
-      :margin-top="titleMarginTop.marginTop"
-      :font-size="titleMarginTop.fontSize"
     />
 
     <subpage-description-section-component :description="description" />
@@ -74,16 +72,6 @@ export default {
           to: '/zasoby'
         }
       ]
-    }
-  },
-  computed: {
-    titleMarginTop() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return { marginTop: 30, fontSize: 22 }
-        default:
-          return { marginTop: 80, fontSize: 28 }
-      }
     }
   },
   async asyncData({ params }) {

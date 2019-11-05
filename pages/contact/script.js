@@ -1,8 +1,10 @@
+import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
 
 export default {
   components: {
+    'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection
   },
@@ -10,17 +12,23 @@ export default {
     return {
       title: '{ kontakt }',
       description: 'E-mail do kontaktu.',
-      email: 'contact@jakubgania.io'
-    }
-  },
-  computed: {
-    titleMarginTop() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return { marginTop: 30, fontSize: 22 }
-        default:
-          return { marginTop: 80, fontSize: 28 }
-      }
+      email: 'contact@jakubgania.io',
+      items: [
+        {
+          text: 'menu',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/menu'
+        },
+        {
+          text: 'kontakt',
+          disabled: true,
+          exact: true,
+          nuxt: true,
+          to: '/contact'
+        }
+      ]
     }
   },
   head() {

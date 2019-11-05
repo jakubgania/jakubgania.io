@@ -1,10 +1,8 @@
 <template>
   <v-row class="content-container">
-    <subpage-title-section-component
-      :title="title"
-      :margin-top="titleMarginTop.marginTop"
-      :font-size="titleMarginTop.fontSize"
-    />
+    <breadcrumbs-component :items="items" />
+
+    <subpage-title-section-component :title="title" />
 
     <subpage-description-section-component :description="description" />
 

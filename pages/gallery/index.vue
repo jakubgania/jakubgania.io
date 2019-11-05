@@ -4,8 +4,6 @@
 
     <subpage-title-section-component
       :title="'{ ' + title + ' - ' + images.length + ' }'"
-      :margin-top="titleMarginTop.marginTop"
-      :font-size="titleMarginTop.fontSize"
     />
 
     <subpage-description-section-component :description="description" />

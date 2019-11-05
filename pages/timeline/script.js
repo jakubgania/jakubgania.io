@@ -8,16 +8,6 @@ export default {
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection
   },
-  computed: {
-    titleMarginTop() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return { marginTop: 30, fontSize: 22 }
-        default:
-          return { marginTop: 80, fontSize: 28 }
-      }
-    }
-  },
   data() {
     return {
       title: 'Timeline',

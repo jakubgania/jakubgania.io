@@ -2,11 +2,9 @@
   <v-row class="content-container">
     <template v-if="!error">
       <div class="post-content">
-        <subpage-title-section-component
-          :title="attributes.title"
-          :margin-top="titleMarginTop.marginTop"
-          :font-size="titleMarginTop.fontSize"
-        />
+        <breadcrumbs-component :items="items" />
+
+        <subpage-title-section-component :title="attributes.title" />
 
         <div class="post" v-html="$md.render(model)"></div>
       </div>
@@ -29,10 +27,12 @@
 <script>
 import axios from 'axios'
 import frontmatter from 'front-matter'
+import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 
 export default {
   components: {
+    'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection
   },
   data() {
@@ -41,17 +41,15 @@ export default {
       error: false,
       pageTitle: 'Jakub Gania Software - Projekty',
       errorMessage: 'Wystąpił błąd pobierania lub taki projekt nie istnieje',
-      marginTop: 0
-    }
-  },
-  computed: {
-    titleMarginTop() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return { marginTop: 30, fontSize: 22 }
-        default:
-          return { marginTop: 0, fontSize: 28 }
-      }
+      items: [
+        {
+          text: 'projekty',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/projects'
+        }
+      ]
     }
   },
   async asyncData({ params }) {
@@ -77,6 +75,12 @@ export default {
         }
       }
     }
+  },
+  mounted() {
+    this.items.push({
+      text: this.attributes.title.toLowerCase(),
+      disabled: true
+    })
   },
   head() {
     return {
@@ -115,7 +119,6 @@ export default {
   max-width: 800px;
   width: 100%;
   margin: auto;
-  margin-top: 120px;
 }
 .link {
   text-decoration: none;
