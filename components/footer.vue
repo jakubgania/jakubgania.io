@@ -23,7 +23,7 @@
       </a>
     </v-col>
     <v-col sm="10" lg="6" cols="12" class="copyright-text">
-      <div v-html="copyrightText" :class="{ 'dark-theme-text': darkTheme }" />
+      <div :class="{ 'dark-theme-text': darkTheme }" v-html="copyrightText" />
     </v-col>
 
     <template v-if="$store.state.showDarkModeSwitch">
