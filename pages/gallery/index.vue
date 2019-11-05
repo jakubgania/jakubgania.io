@@ -1,7 +1,7 @@
 <template>
   <v-row class="content-container">
     <subpage-title-section-component
-      :title="title"
+      :title="'{ ' + title + ' - ' + images.length + ' }'"
       :margin-top="titleMarginTop.marginTop"
       :font-size="titleMarginTop.fontSize"
     />
