@@ -1,5 +1,7 @@
 <template>
   <v-row class="content-container">
+    <breadcrumbs-component :items="items" />
+
     <subpage-title-section-component
       :title="title"
       :margin-top="titleMarginTop.marginTop"
@@ -11,11 +13,13 @@
 </template>
 
 <script>
+import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
 
 export default {
   components: {
+    'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection
   },
@@ -23,7 +27,23 @@ export default {
     return {
       title: '{ komendy i polecenia }',
       description:
-        'Na tej stronie będzie lista programów z odnośnikami do opisów komend i poleceń jakie można zastosować w danym programie.'
+        'Na tej stronie będzie lista programów z odnośnikami do opisów komend i poleceń jakie można zastosować w danym programie.',
+      items: [
+        {
+          text: 'menu',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/menu'
+        },
+        {
+          text: 'komendy i polecenia',
+          disabled: true,
+          exact: true,
+          nuxt: true,
+          to: '/commands'
+        }
+      ]
     }
   },
   computed: {
