@@ -102,12 +102,6 @@ export default {
       }
     }
   },
-  mounted() {
-    this.items.push({
-      text: this.name.toLowerCase(),
-      disabled: true
-    })
-  },
   asyncData({ params, error }) {
     return axios
       .get(`https://jakubgania.io/media/data/${params.id}.json`)
@@ -125,6 +119,12 @@ export default {
           error: true
         }
       })
+  },
+  mounted() {
+    this.items.push({
+      text: this.name.toLowerCase(),
+      disabled: true
+    })
   },
   head() {
     return {
