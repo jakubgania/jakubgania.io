@@ -7,3 +7,22 @@
     />
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    items: {
+      type: Array,
+      default: () => {
+        return {
+          text: 'default',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/default'
+        }
+      }
+    }
+  }
+}
+</script>

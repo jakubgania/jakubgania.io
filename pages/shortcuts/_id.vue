@@ -1,6 +1,8 @@
 <template>
   <v-row class="content-container">
     <template v-if="!error">
+      <breadcrumbs-component :items="items" />
+
       <subpage-title-section-component
         :title="title + name"
         :margin-top="titleMarginTop.marginTop"
@@ -68,11 +70,13 @@
 
 <script>
 import axios from 'axios'
+import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
 
 export default {
   components: {
+    'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection
   },
