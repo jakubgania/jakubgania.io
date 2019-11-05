@@ -1,5 +1,7 @@
 <template>
   <v-row class="content-container">
+    <breadcrumbs-component :items="items" />
+
     <subpage-title-section-component
       :title="'{ ' + title + ' - ' + posts.length + ' }'"
       :margin-top="titleMarginTop.marginTop"
@@ -41,11 +43,13 @@
 
 <script>
 import axios from 'axios'
+import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
 
 export default {
   components: {
+    'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection
   },
@@ -53,7 +57,23 @@ export default {
     return {
       title: 'posty',
       description:
-        'Na tej stronie będzie lista postów/wpisów. Obecnie jest tutaj testowo jeden odnośnik. Funkcjonalność nie działa jeszcze w płeni stabilnie i wymaga dopracowania dlatego system postów może działać jeszcze niepoprawnie.'
+        'Na tej stronie będzie lista postów/wpisów. Obecnie jest tutaj testowo jeden odnośnik. Funkcjonalność nie działa jeszcze w płeni stabilnie i wymaga dopracowania dlatego system postów może działać jeszcze niepoprawnie.',
+      items: [
+        {
+          text: 'menu',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/menu'
+        },
+        {
+          text: 'blog',
+          disabled: true,
+          exact: true,
+          nuxt: true,
+          to: '/zasoby'
+        }
+      ]
     }
   },
   computed: {
