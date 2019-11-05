@@ -1,5 +1,7 @@
 <template>
   <v-row class="content-container">
+    <breadcrumbs-component :items="items" />
+
     <subpage-title-section-component
       :title="title"
       :margin-top="titleMarginTop.marginTop"
