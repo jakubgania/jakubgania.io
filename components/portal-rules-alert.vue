@@ -34,14 +34,10 @@ export default {
       localStorageObject: new LocalStorage()
     }
   },
-  created() {
-    if (this.getConfirm() === true) {
-      this.alertDialog = true
-    }
-  },
   mounted() {
-    if (process.browser) {
+    if (process.browser && this.getConfirm() === true) {
       document.getElementsByTagName('html')[0].style.overflow = 'hidden'
+      this.alertDialog = true
     }
   },
   methods: {
