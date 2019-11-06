@@ -1,6 +1,6 @@
 <template>
   <v-col cols="12" lg="12" xs="12" style="padding: 0;">
-    <div
+    <h1
       class="page-title"
       :class="{ 'dark-theme-text': darkTheme }"
       :style="{
@@ -9,7 +9,7 @@
       }"
     >
       {{ title }}
-    </div>
+    </h1>
   </v-col>
 </template>
 
