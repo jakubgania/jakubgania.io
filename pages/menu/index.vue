@@ -3,11 +3,7 @@
     <div class="top-image" />
 
     <v-row class="content-container" no-gutters>
-      <subpage-title-section-component
-        :title="title"
-        :margin-top="titleMarginTop.marginTop"
-        :font-size="titleMarginTop.fontSize"
-      />
+      <subpage-title-section-component :title="title" />
 
       <v-col cols="12" style="margin-top: 20px;letter-spacing: 2px;">
         <span style="color: #4d4dff;font-weight: 600;">
