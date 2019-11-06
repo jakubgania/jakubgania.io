@@ -30,5 +30,6 @@ export default {
 }
 .v-application a {
   color: #0066ff;
+  text-decoration: none;
 }
 </style>
