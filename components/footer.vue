@@ -86,7 +86,7 @@ export default {
 }
 .link {
   text-decoration: none;
-  color: #3385ff;
+  color: #0066ff;
   padding-right: 10px;
 }
 .link:hover {
