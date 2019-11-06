@@ -15,7 +15,7 @@
       class="sctn"
     >
       <nuxt-link :to="`/shortcuts` + item.path" class="link">
-        <div class="dfg">
+        <div class="shortcuts-title">
           {{ item.title }}
         </div>
       </nuxt-link>
@@ -78,7 +78,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .content-container {
   max-width: 800px;
   width: 100%;
@@ -86,20 +86,27 @@ export default {
 }
 .sctn {
   padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 .sctn:hover {
-  background-color: #e6e6e6;
+  background-color: #f2f2f2;
   padding-left: 12px;
   transition: padding-left 0.2s ease;
-  color: blue;
+
+  .shortcuts-title {
+    color: #0066ff;
+  }
 }
 .link {
   text-decoration: none;
-  letter-spacing: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.shortcuts-title {
+  color: #000;
   font-size: 14px;
-  color: black;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 @media only screen and (max-width: 600px) {
