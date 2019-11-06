@@ -6,6 +6,10 @@
 
         <subpage-title-section-component :title="attributes.title" />
 
+        <div class="datetime">
+          {{ attributes.datetime ? attributes.datetime : 'b/d' }}
+        </div>
+
         <div class="post" v-html="$md.render(model)"></div>
       </div>
 
@@ -124,6 +128,10 @@ export default {
   width: 100%;
   margin: auto;
 }
+.datetime {
+  margin-top: 20px;
+  color: #808080;
+}
 .link {
   text-decoration: none;
   color: #b3b3b3;
@@ -139,6 +147,7 @@ export default {
 .post-content {
   max-width: 600px;
   padding: 0;
+  margin-bottom: 80px;
 }
 .post {
   font-family: 'Nunito', sans-serif;
