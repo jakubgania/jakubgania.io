@@ -1,10 +1,10 @@
 <template>
   <v-app :class="{ 'dark-theme': darkTheme }">
-    <v-content class="app-content-container">
-      <client-only>
-        <portal-rules-alert-component />
-      </client-only>
+    <client-only>
+      <portal-rules-alert-component />
+    </client-only>
 
+    <v-content class="app-content-container">
       <navigation-drawer-component
         :drawer="drawer"
         @switchNavigationDrawer="switchNavigationDrawer"
