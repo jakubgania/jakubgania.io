@@ -6,7 +6,7 @@
 
     <subpage-description-section-component :description="description" />
 
-    <v-timeline style="margin-top: 80px;">
+    <v-timeline style="margin-top: 80px;margin-bottom: 80px;">
       <v-timeline-item
         v-for="item in posts"
         :key="item.id"
@@ -21,9 +21,7 @@
           <h2 class="headline font-weight-light mb-6 red--text">
             {{ item.title }}
           </h2>
-          <div>
-            {{ item.description }}
-          </div>
+          <div v-html="item.description" />
         </div>
       </v-timeline-item>
     </v-timeline>

@@ -1,3 +1,4 @@
+import axios from 'axios'
 import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
@@ -13,13 +14,6 @@ export default {
       title: 'Timeline',
       description:
         'Mój timeline - różne wydarzenia z mojego życia oznaczone na osi czasu. Sekcja w przygotowaniu.',
-      posts: [
-        {
-          date: '00/00/0000',
-          title: 'example title',
-          description: 'example post description'
-        }
-      ],
       items: [
         {
           text: 'menu',
@@ -37,6 +31,20 @@ export default {
         }
       ]
     }
+  },
+  asyncData({ params, error }) {
+    return axios
+      .get(`https://jakubgania.io/media/data/list-of-timeline-posts.json`)
+      .then((res) => {
+        return {
+          posts: res.data.posts
+        }
+      })
+      .catch(() => {
+        return {
+          error: true
+        }
+      })
   },
   head() {
     return {
