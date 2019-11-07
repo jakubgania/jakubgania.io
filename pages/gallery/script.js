@@ -91,7 +91,7 @@ export default {
   },
   head() {
     return {
-      title: 'Jakub Gania Software - Galeria',
+      title: 'Jakub Gania Software | Galeria',
       meta: [
         {
           hid: 'description',

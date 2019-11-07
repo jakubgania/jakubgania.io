@@ -118,7 +118,7 @@ export default {
   },
   head() {
     return {
-      title: this.pageTitle + ' - Skróty klawiaturowe - ' + this.name,
+      title: this.pageTitle + ' | Skróty klawiaturowe - ' + this.name,
       meta: [
         {
           hid: 'description',

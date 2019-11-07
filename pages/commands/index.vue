@@ -44,7 +44,7 @@ export default {
   },
   head() {
     return {
-      title: 'Jakub Gania Software - Komendy i polecenia',
+      title: 'Jakub Gania Software | Komendy i polecenia',
       meta: [
         {
           hid: 'description',

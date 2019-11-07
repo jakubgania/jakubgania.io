@@ -40,7 +40,7 @@ export default {
   },
   head() {
     return {
-      title: 'Jakub Gania Software - Timeline',
+      title: 'Jakub Gania Software | Timeline',
       meta: [
         {
           hid: 'description',

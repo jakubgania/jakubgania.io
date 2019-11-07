@@ -20,7 +20,7 @@ export default {
   },
   head() {
     return {
-      title: 'Jakub Gania Software - O mnie',
+      title: 'Jakub Gania Software | O mnie',
       meta: [
         {
           hid: 'description',

@@ -33,7 +33,7 @@ export default {
   },
   head() {
     return {
-      title: 'Jakub Gania Software - Kontakt',
+      title: 'Jakub Gania Software | Kontakt',
       meta: [
         {
           hid: 'description',

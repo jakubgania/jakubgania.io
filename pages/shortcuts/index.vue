@@ -61,7 +61,7 @@ export default {
   },
   head() {
     return {
-      title: 'Jakub Gania Software - Skróty klawiaturowe',
+      title: 'Jakub Gania Software | Skróty klawiaturowe',
       meta: [
         {
           hid: 'description',

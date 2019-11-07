@@ -13,7 +13,7 @@ export default {
   },
   head() {
     return {
-      title: 'Jakub Gania Software - Menu',
+      title: 'Jakub Gania Software | Menu',
       meta: [
         {
           hid: 'description',

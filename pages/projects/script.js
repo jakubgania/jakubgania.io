@@ -48,7 +48,7 @@ export default {
   },
   head() {
     return {
-      title: 'Jakub Gania Software - Projekty',
+      title: 'Jakub Gania Software | Projekty',
       meta: [
         {
           hid: 'description',

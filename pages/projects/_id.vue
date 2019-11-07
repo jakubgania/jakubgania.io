@@ -84,7 +84,7 @@ export default {
   },
   head() {
     return {
-      title: this.pageTitle + ' - ' + this.attributes.title,
+      title: this.pageTitle + ' | ' + this.attributes.title,
       meta: [
         {
           hid: 'description',

@@ -89,7 +89,7 @@ export default {
   },
   head() {
     return {
-      title: 'Jakub Gania Software - Blog',
+      title: 'Jakub Gania Software | Blog',
       meta: [
         {
           hid: 'description',

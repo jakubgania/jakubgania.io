@@ -35,7 +35,7 @@ export default {
   },
   head() {
     return {
-      title: 'Jakub Gania Software - Zasoby',
+      title: 'Jakub Gania Software | Zasoby',
       meta: [
         {
           hid: 'description',
