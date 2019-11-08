@@ -25,7 +25,10 @@
       class="sctn"
     >
       <nuxt-link :to="`projects/` + item.path" class="link">
-        <div class="project-title">
+        <div
+          class="project-title"
+          :class="{ 'project-title-dark-theme': darkThemeFlag }"
+        >
           {{ index + 1 + '. ' + item.title }}
         </div>
       </nuxt-link>

@@ -58,7 +58,10 @@
               <span class="link-text xpo" style="color: #8c8c8c;">
                 page:
               </span>
-              <span class="link-text">
+              <span
+                class="link-text"
+                :class="{ 'link-text-dark-theme': darkThemeFlag }"
+              >
                 {{ "'" + item.title + "'" }}
               </span>
             </div>
@@ -89,7 +92,12 @@
               <span class="link-text xpo" style="color: #8c8c8c;">
                 page:
               </span>
-              <span class="link-text">{{ "'" + item.title + "'" }}</span>
+              <span
+                class="link-text"
+                :class="{ 'link-text-dark-theme': darkThemeFlag }"
+              >
+                {{ "'" + item.title + "'" }}
+              </span>
             </div>
             <div class="link-x">
               <span class="number-line">{{ index * 3 + 3 + 3 }}</span>

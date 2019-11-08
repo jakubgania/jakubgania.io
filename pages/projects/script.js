@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { mapGetters } from 'vuex'
 import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
@@ -30,8 +31,15 @@ export default {
           nuxt: true,
           to: '/projekty'
         }
-      ]
+      ],
+      darkThemeFlag: false
     }
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme'])
+  },
+  mounted() {
+    this.darkThemeFlag = this.darkTheme
   },
   async asyncData({ params }) {
     try {

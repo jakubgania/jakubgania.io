@@ -1,5 +1,5 @@
 <template>
-  <v-app :class="{ 'dark-theme': darkTheme }">
+  <v-app>
     <client-only>
       <portal-rules-alert-component />
     </client-only>
@@ -86,10 +86,12 @@ export default {
   src: local('Nunito Black'),
     url(../assets/fonts/nunito/Nunito-Black.ttf) format('truetype');
 }
+.theme--light.v-application {
+  background-color: #fff;
+}
 .app-content-container {
   min-height: 100vh;
   padding-top: 0;
-  background-color: #fff;
 }
 .container-nuxt {
   padding: 0;

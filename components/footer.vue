@@ -1,10 +1,6 @@
 <template>
-  <div style="background-color: #fff;">
-    <v-row
-      v-if="displayFooter()"
-      class="footer-container"
-      :class="{ 'footer-container-dark-theme': darkTheme }"
-    >
+  <div>
+    <v-row v-if="displayFooter()" class="footer-container">
       <v-col sm="2" lg="6" cols="12" class="links-section">
         <a
           :href="links.github.url"
@@ -64,6 +60,7 @@ export default {
   },
   mounted() {
     this.displayFooter()
+    // console.log(this.darkTheme)
   },
   methods: {
     displayFooter() {
@@ -104,6 +101,12 @@ export default {
 .copyright-text {
   text-align: right;
   padding: 0;
+}
+.fbc {
+  background-color: #fff;
+}
+.dark-theme {
+  background-color: #1a1a1a;
 }
 
 @media only screen and (max-width: 600px) {

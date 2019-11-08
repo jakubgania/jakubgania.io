@@ -15,7 +15,10 @@
       class="sctn"
     >
       <nuxt-link :to="`/shortcuts` + item.path" class="link">
-        <div class="shortcuts-title">
+        <div
+          class="shortcuts-title"
+          :class="{ 'shortcuts-title-dark-theme': darkThemeFlag }"
+        >
           {{ item.title }}
         </div>
       </nuxt-link>
@@ -24,6 +27,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
@@ -56,8 +60,15 @@ export default {
           nuxt: true,
           to: '/shortcuts'
         }
-      ]
+      ],
+      darkThemeFlag: false
     }
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme'])
+  },
+  mounted() {
+    this.darkThemeFlag = this.darkTheme
   },
   head() {
     return {
@@ -107,6 +118,9 @@ export default {
   letter-spacing: 1px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.shortcuts-title-dark-theme {
+  color: #bfbfbf;
 }
 
 @media only screen and (max-width: 600px) {

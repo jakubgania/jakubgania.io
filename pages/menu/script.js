@@ -1,3 +1,4 @@
+import { mapGetters } from 'vuex'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import menuItems from '../../json/menu.json'
 
@@ -8,8 +9,15 @@ export default {
   data() {
     return {
       title: '{ menu }',
-      items: menuItems.menu
+      items: menuItems.menu,
+      darkThemeFlag: false
     }
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme'])
+  },
+  mounted() {
+    this.darkThemeFlag = this.darkTheme
   },
   head() {
     return {

@@ -1,11 +1,8 @@
 <template>
-  <div :class="{ 'dark-theme': switchDarkModeModel }">
+  <div>
     <v-switch v-model="switchDarkModeModel" color="#0066ff" flat>
       <template v-slot:label>
-        <span
-          class="switch-label"
-          :class="{ 'dark-theme-text': switchDarkModeModel }"
-        >
+        <span class="switch-label">
           Tryb ciemny
         </span>
       </template>
@@ -26,20 +23,19 @@ export default {
         return this.$store.state.DarkMode.darkTheme
       },
       set(value) {
+        this.$vuetify.theme.dark = value
         this.$store.dispatch('DarkMode/toogleDarkThemeValue')
       }
     }
+  },
+  created() {
+    console.log(this.switchDarkModeModel)
+    this.$vuetify.theme.dark = this.switchDarkModeModel
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.dark-theme {
-  background-color: #1a1a1a;
-}
-.dark-theme-text {
-  color: #fff;
-}
 .switch-label {
   font-size: 12px;
   letter-spacing: 1px;
