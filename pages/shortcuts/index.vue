@@ -16,9 +16,9 @@
     >
       <nuxt-link :to="`/shortcuts` + item.path" class="link">
         <div
+          :key="counter"
           class="shortcuts-title"
           :class="{ 'shortcuts-title-dark-theme': darkThemeFlag }"
-          :key="counter"
         >
           {{ item.title }}
         </div>
