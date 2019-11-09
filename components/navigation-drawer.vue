@@ -9,6 +9,9 @@
     :class="{ 'dark-theme': darkTheme }"
   >
     <div class="close-icon-section">
+      <dark-mode-switch-component
+        style="width: 140px; display: inline-block;margin-top: 22px;margin-left: 16px;"
+      />
       <v-btn
         large
         icon
@@ -107,16 +110,6 @@
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-
-      <template v-if="$store.state.showDarkModeSwitch">
-        <v-list-item style="margin-top: 0;">
-          <v-list-item-content style="padding-top: 0;">
-            <v-list-item-title class="non-list-element">
-              <dark-mode-switch-component />
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </template>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -142,10 +135,20 @@ export default {
       menuIcon: 'mdi-chevron-right'
     }
   },
+  methods: {
+    toggleScrollbar(drawer) {
+      if (drawer) {
+        document.getElementsByTagName('html')[0].style.overflow = 'hidden'
+      } else {
+        document.getElementsByTagName('html')[0].style.overflow = 'auto'
+      }
+    }
+  },
   computed: {
     ...mapGetters('DarkMode', ['darkTheme']),
     showDrawerFlag: {
       get() {
+        this.toggleScrollbar(this.drawer)
         return this.drawer
       },
       set(value) {
@@ -161,9 +164,13 @@ export default {
   text-align: right;
   height: 64px;
   line-height: 64px;
+  display: inline;
 }
 .close-icon-button {
-  margin-right: 10px;
+  float: right;
+  margin-top: 16px;
+  margin-right: 16px;
+  /* display: inline-block; */
 }
 .list-item-title {
   letter-spacing: 2px;

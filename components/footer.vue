@@ -24,9 +24,7 @@
       </v-col>
 
       <template v-if="$store.state.showDarkModeSwitch">
-        <v-col cols="12">
-          <dark-mode-switch-component />
-        </v-col>
+        <dark-mode-switch-component />
       </template>
     </v-row>
   </div>

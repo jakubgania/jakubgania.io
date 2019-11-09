@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <v-switch v-model="switchDarkModeModel" color="#0066ff" flat>
-      <template v-slot:label>
-        <span class="switch-label">
-          Tryb ciemny
-        </span>
-      </template>
-    </v-switch>
-  </div>
+  <v-switch v-model="switchDarkModeModel" color="#0066ff" flat>
+    <template v-slot:label>
+      <span class="switch-label">
+        Tryb ciemny
+      </span>
+    </template>
+  </v-switch>
 </template>
 
 <script>
