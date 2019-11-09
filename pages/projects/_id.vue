@@ -39,7 +39,7 @@ export default {
     return {
       title: '',
       error: false,
-      pageTitle: 'Jakub Gania Software - Projekty',
+      pageTitle: 'Jakub Gania Software | Projekty',
       errorMessage: 'Wystąpił błąd pobierania lub taki projekt nie istnieje',
       items: [
         {
@@ -84,7 +84,7 @@ export default {
   },
   head() {
     return {
-      title: this.pageTitle + ' | ' + this.attributes.title,
+      title: this.pageTitle + ' - ' + this.attributes.title,
       meta: [
         {
           hid: 'description',

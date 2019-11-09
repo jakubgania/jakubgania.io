@@ -61,6 +61,7 @@
               <span
                 class="link-text"
                 :class="{ 'link-text-dark-theme': darkThemeFlag }"
+                :key="counter"
               >
                 {{ "'" + item.title + "'" }}
               </span>
@@ -95,6 +96,7 @@
               <span
                 class="link-text"
                 :class="{ 'link-text-dark-theme': darkThemeFlag }"
+                :key="counter"
               >
                 {{ "'" + item.title + "'" }}
               </span>

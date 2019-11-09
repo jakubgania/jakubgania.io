@@ -18,6 +18,7 @@
         <div
           class="shortcuts-title"
           :class="{ 'shortcuts-title-dark-theme': darkThemeFlag }"
+          :key="counter"
         >
           {{ item.title }}
         </div>
@@ -61,14 +62,20 @@ export default {
           to: '/shortcuts'
         }
       ],
-      darkThemeFlag: false
+      counter: 0
     }
   },
   computed: {
-    ...mapGetters('DarkMode', ['darkTheme'])
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      this.forceUpdate()
+      return this.darkTheme
+    }
   },
-  mounted() {
-    this.darkThemeFlag = this.darkTheme
+  methods: {
+    forceUpdate() {
+      this.counter += 1
+    }
   },
   head() {
     return {

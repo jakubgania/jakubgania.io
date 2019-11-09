@@ -32,14 +32,15 @@ export default {
           to: '/projekty'
         }
       ],
-      darkThemeFlag: false
+      counter: 0
     }
   },
   computed: {
-    ...mapGetters('DarkMode', ['darkTheme'])
-  },
-  mounted() {
-    this.darkThemeFlag = this.darkTheme
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      this.counter += 1
+      return this.darkTheme
+    }
   },
   async asyncData({ params }) {
     try {
