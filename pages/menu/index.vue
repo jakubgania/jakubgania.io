@@ -59,9 +59,9 @@
                 page:
               </span>
               <span
+                :key="counter"
                 class="link-text"
                 :class="{ 'link-text-dark-theme': darkThemeFlag }"
-                :key="counter"
               >
                 {{ "'" + item.title + "'" }}
               </span>
@@ -94,9 +94,9 @@
                 page:
               </span>
               <span
+                :key="counter"
                 class="link-text"
                 :class="{ 'link-text-dark-theme': darkThemeFlag }"
-                :key="counter"
               >
                 {{ "'" + item.title + "'" }}
               </span>
