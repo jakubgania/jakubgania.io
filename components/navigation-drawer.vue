@@ -135,17 +135,6 @@ export default {
       menuIcon: 'mdi-chevron-right'
     }
   },
-  methods: {
-    toggleScrollbar(drawer) {
-      if (process.browser) {
-        if (drawer) {
-          document.getElementsByTagName('html')[0].style.overflow = 'hidden'
-        } else {
-          document.getElementsByTagName('html')[0].style.overflow = 'auto'
-        }
-      }
-    }
-  },
   computed: {
     ...mapGetters('DarkMode', ['darkTheme']),
     showDrawerFlag: {
@@ -155,6 +144,17 @@ export default {
       },
       set(value) {
         this.$emit('updateNavigationDrawerValue', value)
+      }
+    }
+  },
+  methods: {
+    toggleScrollbar(drawer) {
+      if (process.browser) {
+        if (drawer) {
+          document.getElementsByTagName('html')[0].style.overflow = 'hidden'
+        } else {
+          document.getElementsByTagName('html')[0].style.overflow = 'auto'
+        }
       }
     }
   }
