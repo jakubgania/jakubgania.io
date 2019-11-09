@@ -9,10 +9,10 @@
     <v-col lg="12">
       <div class="email">
         <a
+          :key="counter"
           :href="`mailto:${email}`"
           class="email-link"
           :class="{ 'email-link-dark-theme': darkThemeFlag }"
-          :key="counter"
         >
           {{ email }}
         </a>
