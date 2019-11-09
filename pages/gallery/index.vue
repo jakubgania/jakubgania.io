@@ -20,6 +20,7 @@
             :src="`https://jakubgania.io/media/image/thumbnail/${item.id}`"
             aspect-ratio="1"
             @click="setDetailsPhoto(item.id, index)"
+            class="image-tile"
           >
             <v-layout
               slot="placeholder"
@@ -29,6 +30,9 @@
             >
               <v-progress-circular indeterminate color="#0066ff" />
             </v-layout>
+            <v-icon class="image-icon">
+              mdi-arrow-expand-all
+            </v-icon>
           </v-img>
         </v-col>
       </v-row>

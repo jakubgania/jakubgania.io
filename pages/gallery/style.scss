@@ -9,6 +9,17 @@
   margin-top: 80px;
   font-weight: 800;
 }
+.image-tile:hover {
+  // background-color: rgba(0, 0, 0, 0.4);
+
+  .image-icon {
+    display: block;
+    color: #bfbfbf;
+  }
+}
+.image-icon {
+  display: none;
+}
 
 @media only screen and (max-width: 600px) {
   .content-container {
