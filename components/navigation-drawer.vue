@@ -137,10 +137,12 @@ export default {
   },
   methods: {
     toggleScrollbar(drawer) {
-      if (drawer) {
-        document.getElementsByTagName('html')[0].style.overflow = 'hidden'
-      } else {
-        document.getElementsByTagName('html')[0].style.overflow = 'auto'
+      if (process.browser) {
+        if (drawer) {
+          document.getElementsByTagName('html')[0].style.overflow = 'hidden'
+        } else {
+          document.getElementsByTagName('html')[0].style.overflow = 'auto'
+        }
       }
     }
   },

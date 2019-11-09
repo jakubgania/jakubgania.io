@@ -1,3 +1,4 @@
+import { mapGetters } from 'vuex'
 import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
@@ -28,7 +29,20 @@ export default {
           nuxt: true,
           to: '/contact'
         }
-      ]
+      ],
+      counter: 0
+    }
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      this.forceUpdate()
+      return this.darkTheme
+    }
+  },
+  methods: {
+    forceUpdate() {
+      this.counter += 1
     }
   },
   head() {

@@ -8,7 +8,12 @@
 
     <v-col lg="12">
       <div class="email">
-        <a :href="`mailto:${email}`" class="email-link">
+        <a
+          :href="`mailto:${email}`"
+          class="email-link"
+          :class="{ 'email-link-dark-theme': darkThemeFlag }"
+          :key="counter"
+        >
           {{ email }}
         </a>
       </div>

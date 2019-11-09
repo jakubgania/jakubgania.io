@@ -89,6 +89,9 @@ export default {
 .theme--light.v-application {
   background-color: #fff;
 }
+.theme--dark.v-application {
+  background-color: #1a1a1a;
+}
 .app-content-container {
   min-height: 100vh;
   padding-top: 0;

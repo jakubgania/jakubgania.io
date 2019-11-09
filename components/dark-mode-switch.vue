@@ -27,7 +27,6 @@ export default {
     }
   },
   created() {
-    console.log(this.switchDarkModeModel)
     this.$vuetify.theme.dark = this.switchDarkModeModel
   }
 }

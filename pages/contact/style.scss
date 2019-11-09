@@ -13,10 +13,16 @@
 }
 .email-link {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 .email-link:hover {
   color: #999999;
+}
+.email-link-dark-theme {
+  color: #bfbfbf;
+}
+.email-link-dark-theme:hover {
+  color: #fff;
 }
 
 @media only screen and (max-width: 600px) {

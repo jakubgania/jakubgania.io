@@ -3,6 +3,7 @@
     <div
       class="page-description"
       :class="{ 'page-description-dark-theme': darkTheme }"
+      :key="counter"
     >
       <p>
         {{ description }}
@@ -21,11 +22,22 @@ export default {
       default: ''
     }
   },
-  computed: {
-    ...mapGetters('DarkMode', ['darkTheme'])
+  data() {
+    return {
+      counter: 0
+    }
   },
-  created() {
-    console.log(this.darkTheme)
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      this.forceUpdate()
+      return this.darkTheme
+    }
+  },
+  methods: {
+    forceUpdate() {
+      this.counter += 1
+    }
   }
 }
 </script>
