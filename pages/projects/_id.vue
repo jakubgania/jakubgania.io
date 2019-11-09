@@ -147,7 +147,6 @@ export default {
 @media only screen and (max-width: 600px) {
   .content-container {
     width: 100%;
-    margin-top: 40px;
     padding-left: 14px;
     padding-right: 14px;
   }
