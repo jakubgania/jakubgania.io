@@ -26,9 +26,9 @@
     >
       <nuxt-link :to="`projects/` + item.path" class="link">
         <div
+          :key="counter"
           class="project-title"
           :class="{ 'project-title-dark-theme': darkThemeFlag }"
-          :key="counter"
         >
           {{ index + 1 + '. ' + item.title }}
         </div>
