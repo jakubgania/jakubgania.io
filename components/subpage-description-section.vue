@@ -1,9 +1,9 @@
 <template>
   <v-col cols="12" lg="12" xs="12" class="page-description-container">
     <div
-      class="page-description"
-      :class="{ 'page-description-dark-theme': darkTheme }"
       :key="counter"
+      class="page-description"
+      :class="{ 'page-description-dark-theme': darkThemeFlag }"
     >
       <p>
         {{ description }}
