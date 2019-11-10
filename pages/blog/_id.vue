@@ -13,7 +13,10 @@
         <div class="post" v-html="$md.render(model)"></div>
       </div>
 
-      <posts-sidebar-menu-component />
+      <posts-sidebar-menu-component
+        :key="counter"
+        :dark-theme-flag="darkThemeFlag"
+      />
     </template>
     <template v-else>
       <v-col lg="12">
@@ -32,6 +35,7 @@
 
 <script>
 import axios from 'axios'
+import { mapGetters } from 'vuex'
 import frontmatter from 'front-matter'
 import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
@@ -57,7 +61,15 @@ export default {
           nuxt: true,
           to: '/blog'
         }
-      ]
+      ],
+      counter: 0
+    }
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      this.forceUpdate()
+      return this.darkTheme
     }
   },
   async asyncData({ params }) {
@@ -82,6 +94,11 @@ export default {
           keywords: ''
         }
       }
+    }
+  },
+  methods: {
+    forceUpdate() {
+      this.counter += 1
     }
   },
   mounted() {

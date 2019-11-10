@@ -1,7 +1,10 @@
 <template>
   <div class="sidebar">
     <div class="sidebar-menu">
-      <div class="sidebar-title">
+      <div
+        class="sidebar-title"
+        :class="{ 'sidebar-title-dark-theme': darkThemeFlag }"
+      >
         ostatnie posty
       </div>
       <div class="sidebar-section">
@@ -10,7 +13,10 @@
       <div v-if="$vuetify.breakpoint.name !== 'xs'" class="sidebar-section">
         <div v-for="item in social" :key="item.id">
           <a :href="item.url" class="social-link" target="_blank">
-            <div class="social-link-text">
+            <div
+              class="social-link-text"
+              :class="{ 'social-link-text-dark-theme': darkThemeFlag }"
+            >
               {{ item.title }}
             </div>
           </a>
@@ -22,6 +28,12 @@
 
 <script>
 export default {
+  props: {
+    darkThemeFlag: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
       social: [
@@ -62,11 +74,17 @@ div.sidebar-menu {
   padding-top: 4px;
   padding-bottom: 4px;
 }
+.social-link-text-dark-theme {
+  color: #bfbfbf;
+}
 .social-link-text:hover {
   color: #0066ff;
   padding-left: 12px;
   background-color: #e6e6e6;
   transition: padding-left 0.2s ease;
+}
+.social-link-text-dark-theme:hover {
+  background-color: #404040;
 }
 .sidebar-title {
   border-top: 2px solid #000;
@@ -76,6 +94,9 @@ div.sidebar-menu {
   letter-spacing: 2px;
   font-size: 14px;
   font-weight: 700;
+}
+.sidebar-title-dark-theme {
+  border-top: 2px solid #bfbfbf;
 }
 .sidebar-section {
   padding-top: 10px;
