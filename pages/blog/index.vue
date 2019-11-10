@@ -1,5 +1,5 @@
 <template>
-  <v-row class="content-container">
+  <v-row :key="counter" class="content-container">
     <breadcrumbs-component :items="items" />
 
     <subpage-title-section-component
@@ -16,8 +16,13 @@
         lg="12"
         xs="12"
         class="post-link-item"
+        :class="{ 'post-link-item-dark-theme': darkThemeFlag }"
       >
-        <nuxt-link :to="`/blog/` + item.id" class="post-link">
+        <nuxt-link
+          :to="`/blog/` + item.id"
+          class="post-link"
+          :class="{ 'post-link-dark-theme': darkThemeFlag }"
+        >
           <div class="post-main-title">
             <div class="post-title">
               {{ item.title }}
@@ -41,6 +46,7 @@
 
 <script>
 import axios from 'axios'
+import { mapGetters } from 'vuex'
 import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
@@ -71,7 +77,20 @@ export default {
           nuxt: true,
           to: '/zasoby'
         }
-      ]
+      ],
+      counter: 0
+    }
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      this.forceUpdate()
+      return this.darkTheme
+    }
+  },
+  methods: {
+    forceUpdate() {
+      this.counter += 1
     }
   },
   async asyncData({ params }) {
@@ -116,9 +135,15 @@ export default {
   background-color: #fafafa;
   margin-top: 10px;
 }
+.post-link-item-dark-theme {
+  background-color: #404040;
+}
 .post-link {
   text-decoration: none;
   color: #000;
+}
+.post-link-dark-theme {
+  color: #bfbfbf;
 }
 .post-main-title {
   font-size: 16px;
@@ -129,7 +154,7 @@ export default {
   padding-bottom: 4px;
 }
 .post-main-title:hover {
-  color: #3399ff;
+  color: #0066ff;
 }
 .post-title {
   padding-left: 10px;
