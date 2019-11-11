@@ -94,7 +94,7 @@ export default {
   },
   asyncData({ params, error }) {
     return axios
-      .get(`https://jakubgania.io/media/data/${params.id}.json`)
+      .get(`https://jakubgania.io/data/shortcuts/${params.id}.json`)
       .then((res) => {
         return {
           id: params.id,

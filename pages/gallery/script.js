@@ -79,7 +79,7 @@ export default {
   async asyncData({ params }) {
     try {
       const { data } = await axios.get(
-        `https://jakubgania.io/media/data/list-of-images.json`
+        `https://jakubgania.io/data/gallery/list-of-images.json`
       )
 
       return {

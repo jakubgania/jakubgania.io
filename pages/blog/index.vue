@@ -96,7 +96,7 @@ export default {
   async asyncData({ params }) {
     try {
       const { data } = await axios.get(
-        `https://jakubgania.io/media/data/list-of-posts.json`
+        `https://jakubgania.io/data/blog/list-of-posts.json`
       )
 
       return {

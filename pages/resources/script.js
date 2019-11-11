@@ -1,7 +1,7 @@
+import axios from 'axios'
 import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
-import linksData from '../../json/resources-items.json'
 
 export default {
   components: {
@@ -14,7 +14,6 @@ export default {
       title: '{ zasoby }',
       description:
         'Na tej stronie zebrane są różne linki do takich stron jak portale technologiczne, blogi, kanały na Youtube, dokumentacje projektów technologicznych. Obecnie materiały są podzielone z grubsza na kategorie ale strona będzie pod tym względem na pewno ciągle modyfikowana. Cały czas znaujduję różne ciekawe artykłu i  ta lista będzie aktualizowana żeby zebrać to wszystko centralnie w jednym miejscu.',
-      linksData: linksData.resources_items,
       items: [
         {
           text: 'menu',
@@ -31,6 +30,19 @@ export default {
           to: '/zasoby'
         }
       ]
+    }
+  },
+  async asyncData({ params }) {
+    try {
+      const { data } = await axios.get(
+        `https://jakubgania.io/data/resources/resources-items.json`
+      )
+
+      return {
+        linksData: data.resources_items
+      }
+    } catch (error) {
+      //
     }
   },
   head() {

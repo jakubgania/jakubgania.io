@@ -17,7 +17,7 @@
           style="padding: 2px;"
         >
           <v-img
-            :src="`https://jakubgania.io/media/image/thumbnail/${item.id}`"
+            :src="`https://jakubgania.io/data/gallery/thumbnail/${item.id}`"
             aspect-ratio="1"
             @click="setDetailsPhoto(item.id, index)"
             class="image-tile"
@@ -58,7 +58,7 @@
           </v-toolbar>
 
           <v-img
-            :src="`https://jakubgania.io/media/image/full-size/${fullSizeId}`"
+            :src="`https://jakubgania.io/data/gallery/full-size/${fullSizeId}`"
             style="max-width: 1000px;width: auto;height: auto;max-height: 90vh;margin: auto;"
           >
             <v-layout
@@ -97,7 +97,7 @@
           </v-toolbar>
 
           <v-img
-            :src="`https://jakubgania.io/media/image/full-size/${fullSizeId}`"
+            :src="`https://jakubgania.io/data/gallery/full-size/${fullSizeId}`"
             style="max-width: 1000px;width: auto;height: auto;max-height: 90vh;margin: auto;"
           >
             <v-layout

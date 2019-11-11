@@ -55,7 +55,7 @@ export default {
   async asyncData({ params }) {
     try {
       const { data } = await axios.get(
-        `https://jakubgania.io/media/projects/${params.id}.md`
+        `https://jakubgania.io/data/projects/${params.id}.md`
       )
 
       const frontmatterData = frontmatter(data)

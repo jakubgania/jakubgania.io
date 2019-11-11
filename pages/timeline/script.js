@@ -34,7 +34,7 @@ export default {
   },
   asyncData({ params, error }) {
     return axios
-      .get(`https://jakubgania.io/media/data/list-of-timeline-posts.json`)
+      .get(`https://jakubgania.io/data/timeline/list-of-timeline-posts.json`)
       .then((res) => {
         return {
           posts: res.data.posts
