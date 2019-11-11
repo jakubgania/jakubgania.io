@@ -169,9 +169,11 @@ export default {
 .post {
   font-family: 'Nunito', sans-serif;
   letter-spacing: 0.5px;
-  line-height: 1.8;
+  line-height: 2;
   font-size: 16.8px;
   padding-top: 20px;
+  /* color: #4d4d4d; */
+  /* color: #000; */
 }
 @media only screen and (max-width: 600px) {
   .content-container {
