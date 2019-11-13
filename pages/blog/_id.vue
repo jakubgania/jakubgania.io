@@ -75,7 +75,7 @@ export default {
   async asyncData({ params }) {
     try {
       const { data } = await axios.get(
-        `https://jakubgania.io/data/blog/posts/${params.id}.md`
+        `https://jakubgania.io/data/blog/posts/${params.id}/index.md`
       )
 
       const frontmatterData = frontmatter(data)
@@ -137,11 +137,14 @@ export default {
   font-size: initial;
   font-weight: initial;
 }
+.post-content p img {
+  width: 100%;
+}
 </style>
 
-<style scoped>
+<style lang="scss" scoped>
 .content-container {
-  max-width: 1020px;
+  max-width: 1040px;
   width: 100%;
   margin: auto;
 }
@@ -162,7 +165,7 @@ export default {
   font-weight: 800;
 }
 .post-content {
-  max-width: 600px;
+  max-width: 620px;
   padding: 0;
   margin-bottom: 80px;
 }
