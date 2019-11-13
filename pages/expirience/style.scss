@@ -1,0 +1,155 @@
+.content-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 140px;
+}
+.expirience-container {
+  width: 100%;
+}
+.top-section-container {
+  background-color: #f2f2f2;
+}
+.top-section {
+  display: flex;
+}
+.personal-data-section {
+  width: 70%;
+}
+.personal-data-title-section {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.personal-data-link {
+  text-decoration: none;
+}
+.full-name {
+  font-size: 44px;
+  text-align: left;
+  margin-top: 20px;
+}
+.two-column {
+  display: flex;
+  margin-top: 25px;
+}
+.left-column {
+  width: 50%;
+}
+.right-column {
+  width: 50%;
+}
+.img-section {
+  width: 30%;
+  margin-bottom: -6px;
+}
+.profile-image {
+  width: 90%;
+}
+.main-description {
+  margin-top: 40px;
+}
+.head-section {
+  margin-top: 40px;
+}
+.color-line {
+  height: 2px;
+  background-image: linear-gradient(to right, #6a11cb, #2575fc, #ee609c);
+}
+.section {
+  margin-top: 20px;
+  display: flex;
+}
+.title-section {
+  width: 30%;
+}
+.title-text {
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 4px;
+}
+.title-description-section {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+.description-section {
+  width: 70%;
+}
+.subtitle-description-section {
+  font-style: italic;
+}
+.main-description {
+  line-height: 2;
+  letter-spacing: 0.5px;
+}
+.description {
+  line-height: 2;
+  letter-spacing: 0.5px;
+}
+.item-section {
+  letter-spacing: 0.5px;
+  padding-bottom: 8px;
+}
+.head-title {
+  letter-spacing: 1px;
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+.border-bottom {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+@media only screen and (max-width: 600px) {
+  .top-section-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .information-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .img-section {
+    width: 34%;
+  }
+  .profile-image {
+    width: 100%;
+  }
+  .full-name {
+    width: 66%;
+    font-size: 8vw;
+    padding-left: 12px;
+    text-align: center;
+  }
+  .section {
+    display: block;
+  }
+  .title-section {
+    width: 100%;
+  }
+  .description-section {
+    width: 100%;
+  }
+  .two-column {
+    padding-bottom: 14px;
+  }
+  .item-section {
+    padding-bottom: 4px;
+    font-size: 14px;
+  }
+  .main-description {
+    font-size: 14px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .head-title {
+    font-size: 20px;
+  }
+  .title-text {
+    font-size: 16px;
+  }
+  .title-description-section {
+    font-size: 16px;
+  }
+}
