@@ -6,9 +6,25 @@
 }
 .expirience-container {
   width: 100%;
+  margin-top: 60px;
+}
+.x11 {
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  font-size: 6vw;
+  font-weight: 500;
+  letter-spacing: 10px;
+  color: #f2f2f2;
+}
+.bracket {
+  color: #000;
 }
 .top-section-container {
   background-color: #f2f2f2;
+  margin-top: 80px;
+  position: relative;
+  z-index: 0;
 }
 .top-section {
   display: flex;
@@ -98,6 +114,44 @@
 .border-bottom {
   padding-bottom: 14px;
   border-bottom: 1px solid #f2f2f2;
+}
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+$image-tile-max-height: 180px;
+
+.image-tile {
+  width: $image-tile-max-height;
+  min-height: $image-tile-max-height;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  // background-color: #ee609c;
+}
+.image-section {
+  position: relative;
+  width: $image-tile-max-height;
+  height: $image-tile-max-height;
+  // background-color: aqua;
+}
+.xghp {
+  max-width: $image-tile-max-height;
+  max-height: $image-tile-max-height;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.image-description {
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 8px;
 }
 
 @media only screen and (max-width: 600px) {
