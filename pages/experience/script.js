@@ -7,14 +7,10 @@ export default {
       profileImage
     }
   },
-  mounted() {
-    // console.log(this.data)
-  },
   asyncData({ params, error }) {
     return axios
       .get(`https://jakubgania.io/data/expirience/data.json`)
       .then((res) => {
-        console.log(res)
         return {
           personalData: res.data.expirience.sectionPersonalData,
           fullName: res.data.expirience.sectionPersonalData.fullName,
@@ -35,7 +31,8 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Doświadczenie, Umiejętności, Edukacja, Certyfikaty'
+          content:
+            'Moje doświadczenie, umiejętności oraz certyfikaty. Zbiór informacji o moich osiągnięciach zawodowych, naukowych i używanych przezemnie technologiach.'
         },
         {
           name: 'keywords',
