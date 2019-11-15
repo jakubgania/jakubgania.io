@@ -8,6 +8,9 @@
   width: 100%;
   margin-top: 60px;
 }
+.top-section-container, .information-section {
+  font-family: 'Nunito', sans-serif;
+}
 .x11 {
   text-align: center;
   position: relative;
@@ -16,6 +19,8 @@
   font-weight: 500;
   letter-spacing: 10px;
   color: #f2f2f2;
+  padding-left: 20px;
+  // padding-right: 12px;
 }
 .bracket {
   color: #000;
@@ -23,6 +28,7 @@
 .top-section-container {
   background-color: #f2f2f2;
   margin-top: 80px;
+  margin-bottom: 80px;
   position: relative;
   z-index: 0;
 }
@@ -60,6 +66,7 @@
 }
 .profile-image {
   width: 90%;
+  // border-right: 4px solid white;
 }
 .main-description {
   margin-top: 40px;
@@ -104,7 +111,7 @@
 }
 .item-section {
   letter-spacing: 0.5px;
-  padding-bottom: 8px;
+  padding-bottom: 14px;
 }
 .head-title {
   letter-spacing: 1px;
@@ -120,23 +127,23 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
-$image-tile-max-height: 180px;
+$image-tile-max-height: 160px;
 
 .image-tile {
   width: $image-tile-max-height;
   min-height: $image-tile-max-height;
   height: auto;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  // background-color: #ee609c;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  transition: transform .2s;
 }
 .image-section {
   position: relative;
   width: $image-tile-max-height;
   height: $image-tile-max-height;
-  // background-color: aqua;
 }
 .xghp {
   max-width: $image-tile-max-height;
@@ -148,10 +155,31 @@ $image-tile-max-height: 180px;
   bottom: 0;
   margin: auto;
 }
+.image-tile:hover {
+  transform: scale(1.1);
+}
 .image-description {
   font-size: 12px;
   font-weight: 600;
   padding-top: 8px;
+  text-align: center;
+}
+.tags-container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.tag-item {
+  margin-right: 10px;
+  letter-spacing: 1.4px;
+  font-size: 12px;
+  padding: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.personal-data-icon {
+  font-size: 20px;
+  margin-top: -4px;
+  padding-right: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -188,7 +216,7 @@ $image-tile-max-height: 180px;
     padding-bottom: 14px;
   }
   .item-section {
-    padding-bottom: 4px;
+    padding-bottom: 14px;
     font-size: 14px;
   }
   .main-description {
@@ -205,5 +233,45 @@ $image-tile-max-height: 180px;
   }
   .title-description-section {
     font-size: 16px;
+  }
+
+  $image-tile-max-height: 100px;
+
+  .image-tile {
+    width: $image-tile-max-height;
+    min-height: $image-tile-max-height;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .image-section {
+    width: $image-tile-max-height;
+    height: $image-tile-max-height;
+  }
+  .xghp {
+    max-width: $image-tile-max-height;
+    max-height: $image-tile-max-height;
+  }
+  .tag-item {
+    margin-bottom: 10px;
+  }
+  .expirience-container {
+    margin-top: 40px;
+  }
+  .x11 {
+    font-size: 8vw;
+    padding-left: 20px;
+    padding-right: 12px;
+    letter-spacing: 8px;
+  }
+  .top-section-container {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  .content-container {
+    margin-bottom: 60px;
+  }
+  .dash {
+    display: none;
   }
 }

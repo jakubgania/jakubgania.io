@@ -17,7 +17,7 @@
           data-aos-once="true"
           style="width: 100%;"
         >
-          Expirience
+          Experience
         </div>
         <div
           data-aos="fade-left"
@@ -47,7 +47,11 @@
                   class="item-section"
                 >
                   <span class="personal-data-title-section">
-                    {{ item.keyName + ' - ' }} <br />
+                    <v-icon class="personal-data-icon">
+                      {{ item.icon }}
+                    </v-icon>
+                    {{ item.keyName }}
+                    <span class="dash">{{ ' - ' }}</span> <br />
                   </span>
                   <template v-if="item.href">
                     <a
@@ -70,7 +74,11 @@
                   class="item-section"
                 >
                   <span class="personal-data-title-section">
-                    {{ item.keyName + ' - ' }} <br />
+                    <v-icon class="personal-data-icon">
+                      {{ item.icon }}
+                    </v-icon>
+                    {{ item.keyName }}
+                    <span class="dash">{{ ' - ' }}</span> <br />
                   </span>
                   <template v-if="item.href">
                     <a
@@ -105,6 +113,9 @@
                     class="item-section"
                   >
                     <span class="personal-data-title-section">
+                      <v-icon class="personal-data-icon">
+                        {{ item.icon }}
+                      </v-icon>
                       {{ item.keyName + ' - ' }}
                     </span>
                     <template v-if="item.href">
@@ -129,6 +140,9 @@
                     class="item-section"
                   >
                     <span class="personal-data-title-section">
+                      <v-icon class="personal-data-icon">
+                        {{ item.icon }}
+                      </v-icon>
                       {{ item.keyName + ' - ' }}
                     </span>
                     <template v-if="item.href">
@@ -175,13 +189,24 @@
                 </div>
               </div>
               <div class="description-section">
-                <div class="title-description-section">
-                  {{ itemSection.title }}
-                </div>
-                <div class="subtitle-description-section">
-                  {{ itemSection.subtitle }}
+                <div style="margin-bottom: 10px;">
+                  <div class="title-description-section">
+                    {{ itemSection.title }}
+                  </div>
+                  <div class="subtitle-description-section">
+                    {{ itemSection.subtitle }}
+                  </div>
                 </div>
                 <div class="description" v-html="itemSection.description" />
+                <div v-if="itemSection.tags" class="tags-container">
+                  <v-chip
+                    v-for="tagItem in itemSection.tags"
+                    :key="tagItem.id"
+                    class="tag-item"
+                  >
+                    {{ tagItem.title }}
+                  </v-chip>
+                </div>
                 <div v-if="itemSection.icons" class="images-container">
                   <div
                     v-for="imageItem in itemSection.icons"
@@ -193,7 +218,7 @@
                         :src="
                           `https://jakubgania.io/data/expirience/technology-icons/${imageItem.path}`
                         "
-                        alt=""
+                        :alt="imageItem.alt"
                         class="xghp"
                       />
                     </div>
