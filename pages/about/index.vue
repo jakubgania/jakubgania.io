@@ -37,9 +37,9 @@
         data-aos-once="true"
       >
         <div>
-          <div class="full-name" :class="{ 'full-name-dark-theme': darkTheme }">
+          <h1 class="full-name" :class="{ 'full-name-dark-theme': darkTheme }">
             {{ fullname }}
-          </div>
+          </h1>
           <div
             class="vertical-section"
             :class="{ 'vertical-section-dark-theme': darkThemeFlag }"
@@ -53,7 +53,9 @@
               class="description"
               :class="{ 'description-dark-theme': darkTheme }"
             >
-              {{ description }}
+              <p>
+                {{ description }}
+              </p>
             </div>
             <div class="icons-section">
               <a :href="link.github" target="_blank" class="icon-link">
