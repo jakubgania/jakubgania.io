@@ -8,10 +8,10 @@
   width: 100%;
   margin-top: 60px;
 }
-.top-section-container, .information-section {
+.information-section {
   font-family: 'Nunito', sans-serif;
 }
-.x11 {
+.top-experionce-text {
   text-align: center;
   position: relative;
   z-index: 0;
@@ -20,6 +20,7 @@
   letter-spacing: 10px;
   color: #f2f2f2;
   padding-left: 20px;
+  display: flex;
 }
 .bracket {
   color: #000;
@@ -30,41 +31,6 @@
   margin-bottom: 80px;
   position: relative;
   z-index: 0;
-}
-.top-section {
-  display: flex;
-}
-.personal-data-section {
-  width: 70%;
-}
-.personal-data-title-section {
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-.personal-data-link {
-  text-decoration: none;
-}
-.full-name {
-  font-size: 44px;
-  text-align: left;
-  margin-top: 20px;
-}
-.two-column {
-  display: flex;
-  margin-top: 25px;
-}
-.left-column {
-  width: 50%;
-}
-.right-column {
-  width: 50%;
-}
-.img-section {
-  width: 30%;
-  margin-bottom: -6px;
-}
-.profile-image {
-  width: 90%;
 }
 .main-description {
   margin-top: 40px;
@@ -174,32 +140,11 @@ $image-tile-max-height: 160px;
   padding-left: 14px;
   padding-right: 14px;
 }
-.personal-data-icon {
-  font-size: 20px;
-  margin-top: -4px;
-  padding-right: 10px;
-}
 
 @media only screen and (max-width: 600px) {
-  .top-section-container {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
   .information-section {
     padding-left: 14px;
     padding-right: 14px;
-  }
-  .img-section {
-    width: 34%;
-  }
-  .profile-image {
-    width: 100%;
-  }
-  .full-name {
-    width: 66%;
-    font-size: 8vw;
-    padding-left: 12px;
-    text-align: center;
   }
   .section {
     display: block;
@@ -209,13 +154,6 @@ $image-tile-max-height: 160px;
   }
   .description-section {
     width: 100%;
-  }
-  .two-column {
-    padding-bottom: 14px;
-  }
-  .item-section {
-    padding-bottom: 14px;
-    font-size: 14px;
   }
   .main-description {
     font-size: 14px;
@@ -256,20 +194,13 @@ $image-tile-max-height: 160px;
   .expirience-container {
     margin-top: 40px;
   }
-  .x11 {
+  .top-experionce-text {
     font-size: 8vw;
     padding-left: 20px;
     padding-right: 12px;
     letter-spacing: 8px;
   }
-  .top-section-container {
-    margin-top: 60px;
-    margin-bottom: 40px;
-  }
   .content-container {
     margin-bottom: 60px;
-  }
-  .dash {
-    display: none;
   }
 }

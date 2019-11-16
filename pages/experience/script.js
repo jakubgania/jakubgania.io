@@ -1,11 +1,9 @@
 import axios from 'axios'
-import profileImage from '../../assets/images/profile.jpg'
+import TopSectionContainer from './top-section-container.vue'
 
 export default {
-  data() {
-    return {
-      profileImage
-    }
+  components: {
+    'top-section-container-component': TopSectionContainer
   },
   asyncData({ params, error }) {
     return axios

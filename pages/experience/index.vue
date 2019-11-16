@@ -1,7 +1,7 @@
 <template>
   <v-row class="content-container">
     <div class="expirience-container">
-      <div class="x11" style="display: flex;">
+      <div class="top-experionce-text">
         <div
           data-aos="fade-right"
           data-aos-dealy="800"
@@ -28,142 +28,12 @@
           <span class="bracket">]</span>
         </div>
       </div>
-      <div class="top-section-container">
-        <client-only>
-          <div v-if="$vuetify.breakpoint.name == 'xs'">
-            <div style="display: flex;">
-              <div class="img-section">
-                <img :src="profileImage" alt="" class="profile-image" />
-              </div>
-              <div class="full-name">
-                {{ fullName }}
-              </div>
-            </div>
-            <div class="two-column">
-              <div class="left-column">
-                <div
-                  v-for="item in personalData.additionalInformation.leftColumn"
-                  :key="item.id"
-                  class="item-section"
-                >
-                  <span class="personal-data-title-section">
-                    <v-icon class="personal-data-icon">
-                      {{ item.icon }}
-                    </v-icon>
-                    {{ item.keyName }}
-                    <span class="dash">{{ ' - ' }}</span> <br />
-                  </span>
-                  <template v-if="item.href">
-                    <a
-                      :href="item.href"
-                      target="_blank"
-                      class="personal-data-link"
-                    >
-                      {{ item.keyValue }}
-                    </a>
-                  </template>
-                  <template v-else>
-                    {{ item.keyValue }}
-                  </template>
-                </div>
-              </div>
-              <div class="right-column">
-                <div
-                  v-for="item in personalData.additionalInformation.rightColumn"
-                  :key="item.id"
-                  class="item-section"
-                >
-                  <span class="personal-data-title-section">
-                    <v-icon class="personal-data-icon">
-                      {{ item.icon }}
-                    </v-icon>
-                    {{ item.keyName }}
-                    <span class="dash">{{ ' - ' }}</span> <br />
-                  </span>
-                  <template v-if="item.href">
-                    <a
-                      :href="item.href"
-                      target="_blank"
-                      class="personal-data-link"
-                    >
-                      {{ item.keyValue }}
-                    </a>
-                  </template>
-                  <template v-else>
-                    {{ item.keyValue }}
-                  </template>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div v-if="$vuetify.breakpoint.name !== 'xs'" class="top-section">
-            <div class="img-section">
-              <img :src="profileImage" alt="" class="profile-image" />
-            </div>
-            <div class="personal-data-section">
-              <div class="full-name">
-                {{ fullName }}
-              </div>
-              <div class="two-column">
-                <div class="left-column">
-                  <div
-                    v-for="item in personalData.additionalInformation
-                      .leftColumn"
-                    :key="item.id"
-                    class="item-section"
-                  >
-                    <span class="personal-data-title-section">
-                      <v-icon class="personal-data-icon">
-                        {{ item.icon }}
-                      </v-icon>
-                      {{ item.keyName + ' - ' }}
-                    </span>
-                    <template v-if="item.href">
-                      <a
-                        :href="item.href"
-                        target="_blank"
-                        class="personal-data-link"
-                      >
-                        {{ item.keyValue }}
-                      </a>
-                    </template>
-                    <template v-else>
-                      {{ item.keyValue }}
-                    </template>
-                  </div>
-                </div>
-                <div class="right-column">
-                  <div
-                    v-for="item in personalData.additionalInformation
-                      .rightColumn"
-                    :key="item.id"
-                    class="item-section"
-                  >
-                    <span class="personal-data-title-section">
-                      <v-icon class="personal-data-icon">
-                        {{ item.icon }}
-                      </v-icon>
-                      {{ item.keyName + ' - ' }}
-                    </span>
-                    <template v-if="item.href">
-                      <a
-                        :href="item.href"
-                        target="_blank"
-                        class="personal-data-link"
-                      >
-                        {{ item.keyValue }}
-                      </a>
-                    </template>
-                    <template v-else>
-                      {{ item.keyValue }}
-                    </template>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </client-only>
-      </div>
+
+      <top-section-container-component
+        :full-name="fullName"
+        :personal-data="personalData"
+      />
+
       <div class="information-section">
         <div class="main-description">
           <div>
