@@ -62,7 +62,7 @@ div.sidebar-menu {
   position: sticky;
   height: auto;
   margin-left: 40px;
-  margin-top: 138px;
+  margin-top: 152px;
 }
 .social-link {
   text-decoration: none;

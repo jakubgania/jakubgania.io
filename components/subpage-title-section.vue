@@ -49,6 +49,7 @@ export default {
 .page-title {
   font-weight: 800;
   border-bottom: 2px solid #000;
+  padding-bottom: 14px;
 }
 .dark-theme-text {
   color: #bfbfbf;
