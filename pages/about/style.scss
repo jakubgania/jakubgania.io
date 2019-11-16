@@ -41,7 +41,7 @@
   top: 200px;
 }
 .vertical-section span {
-  background-color: #fafafa;
+  background-color: #fff;
   padding: 0 10px;
   text-transform: uppercase;
 }
@@ -61,13 +61,14 @@
 }
 .description {
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 2;
+  letter-spacing: 0.6px;
 }
 .description-dark-theme {
   color: #fff;
 }
 .icons-section {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .icon-link {
   text-decoration: none;

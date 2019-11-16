@@ -30,11 +30,11 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'O mnie'
+          content: 'Kilka zdań o mnie.'
         },
         {
           name: 'keywords',
-          content: 'O mnie'
+          content: 'o mnie, opis'
         }
       ]
     }
