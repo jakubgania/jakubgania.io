@@ -40,7 +40,10 @@
           <div class="full-name" :class="{ 'full-name-dark-theme': darkTheme }">
             {{ fullname }}
           </div>
-          <div class="vertical-section">
+          <div
+            class="vertical-section"
+            :class="{ 'vertical-section-dark-theme': darkThemeFlag }"
+          >
             <span>
               {{ aboutText }}
             </span>
@@ -72,11 +75,20 @@
               <v-btn
                 text
                 small
-                color="black"
-                class="contact-button"
-                to="/contact"
+                :color="darkThmeFlag ? black : white"
+                class="link-button"
+                to="/contac"
               >
                 kontakt
+              </v-btn>
+              <v-btn
+                text
+                small
+                :color="darkThmeFlag ? black : white"
+                class="link-button"
+                to="/experience"
+              >
+                doświadczenie
               </v-btn>
             </div>
           </div>

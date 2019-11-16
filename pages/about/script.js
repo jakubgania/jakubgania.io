@@ -12,11 +12,16 @@ export default {
       link: {
         github: 'https://github.com/jakubgania',
         linkedin: 'https://pl.linkedin.com/in/jakubgania'
-      }
+      },
+      counter: 0
     }
   },
   computed: {
-    ...mapGetters('DarkMode', ['darkTheme'])
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      this.counter += 1
+      return this.darkTheme
+    }
   },
   head() {
     return {

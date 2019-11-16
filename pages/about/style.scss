@@ -45,6 +45,12 @@
   padding: 0 10px;
   text-transform: uppercase;
 }
+.vertical-section-dark-theme {
+  border-bottom: 2px solid #fff;
+}
+.vertical-section-dark-theme span {
+  background-color: #1a1a1a;
+}
 .full-name {
   font-size: 60px;
   font-weight: 800;
@@ -69,7 +75,7 @@
 .icon:hover {
   color: #000;
 }
-.contact-button {
+.link-button {
   float: right;
 }
 
