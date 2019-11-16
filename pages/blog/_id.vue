@@ -6,7 +6,7 @@
 
         <subpage-title-section-component :title="attributes.title" />
 
-        <div class="datetime">
+        <div class="datetime" :class="{ 'datetime-dark-theme': darkThemeFlag }">
           {{ attributes.datetime ? attributes.datetime : 'b/d' }}
         </div>
 
@@ -149,8 +149,14 @@ export default {
   margin: auto;
 }
 .datetime {
-  margin-top: 20px;
-  color: #808080;
+  margin-top: 14px;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+.datetime-dark-theme {
+  color: #b3b3b3;
 }
 .link {
   text-decoration: none;
@@ -175,8 +181,6 @@ export default {
   line-height: 2;
   font-size: 16.8px;
   padding-top: 20px;
-  /* color: #4d4d4d; */
-  /* color: #000; */
 }
 @media only screen and (max-width: 600px) {
   .content-container {
