@@ -3,20 +3,28 @@
     <div class="top-image-section">
       <div class="top-image">
         <div class="content-section">
-          <div class="projects-text">
-            projects
+          <div
+            data-aos="fade-in"
+            data-aos-dealy="100"
+            data-aos-duration="1200"
+            data-aos-once="true"
+            class="projects-text"
+          >
+            [ projekty ]
           </div>
         </div>
-        <div class="scroll-down-container">
-          <div class="chevron"></div>
-          <div class="chevron"></div>
-          <div class="chevron"></div>
-          <span class="text">Scroll down</span>
-        </div>
+        <a href="#contentContainer">
+          <div class="scroll-down-container">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <!-- <span class="text">Scroll down</span> -->
+          </div>
+        </a>
       </div>
     </div>
 
-    <div class="content-container">
+    <div class="content-container" id="contentContainer">
       <breadcrumbs-component :items="items" />
 
       <subpage-title-section-component

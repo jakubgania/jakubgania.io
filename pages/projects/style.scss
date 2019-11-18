@@ -48,7 +48,7 @@
 // }
 .top-image {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 56px);
   background-color: #000;
 }
 .top-image::after {
@@ -61,7 +61,7 @@
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 56px);
   opacity: 0.5;
 }
 .content-section {
@@ -86,11 +86,14 @@
 .top-image-section {
   margin-left: -8px;
   margin-right: -14px;
+  margin-bottom: 40px;
 }
 
 
 .scroll-down-container {
   position: absolute;
+  left: 50%;
+  bottom: calc(0px + 56px);
   width: 24px;
   height: 24px;
 }
