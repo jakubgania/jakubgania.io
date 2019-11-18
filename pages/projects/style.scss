@@ -83,6 +83,10 @@
   width: 24px;
   height: 24px;
 }
+.scroll-down-anchor {
+  position: absolute;
+  z-index: 99;
+}
 .chevron {
   position: absolute;
   width: 28px;

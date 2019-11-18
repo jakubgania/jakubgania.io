@@ -86,6 +86,9 @@ export default {
   src: local('Nunito Black'),
     url(../assets/fonts/nunito/Nunito-Black.ttf) format('truetype');
 }
+html {
+  scroll-behavior: smooth;
+}
 .theme--light.v-application {
   background-color: #fff;
 }

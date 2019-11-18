@@ -13,14 +13,13 @@
             [ projekty ]
           </div>
         </div>
-        <a href="#contentContainer">
-          <div class="scroll-down-container">
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-            <!-- <span class="text">Scroll down</span> -->
-          </div>
-        </a>
+        <div class="scroll-down-container">
+          <a href="#contentContainer" class="scroll-down-anchor">
+            <div class="chevron" />
+            <div class="chevron" />
+            <div class="chevron" />
+          </a>
+        </div>
       </div>
     </div>
 
