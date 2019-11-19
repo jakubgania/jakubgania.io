@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="scroll-down-container">
-          <a href="#contentContainer" class="scroll-down-anchor">
+          <a href="#list-projects" class="scroll-down-anchor">
             <div class="chevron" />
             <div class="chevron" />
             <div class="chevron" />
@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div class="content-container" id="contentContainer">
+    <div class="content-container" id="list-projects">
       <breadcrumbs-component :items="items" />
 
       <subpage-title-section-component
@@ -46,13 +46,13 @@
         cols="12"
         lg="12"
         xs="12"
-        class="sctn"
+        class="list-projects"
       >
-        <nuxt-link :to="`projects/` + item.path" class="link">
+        <nuxt-link :to="`projects/` + item.path" class="list-projects__link">
           <div
             :key="counter"
-            class="project-title"
-            :class="{ 'project-title-dark-theme': darkThemeFlag }"
+            class="list-projects__title"
+            :class="{ 'list-projects__title--dark-theme': darkThemeFlag }"
           >
             {{ index + 1 + '. ' + item.title }}
           </div>

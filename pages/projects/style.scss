@@ -5,32 +5,36 @@
   margin-bottom: 80px;
   position: relative;
 }
-.sctn {
+.list-projects {
   padding: 0;
-}
-.sctn:hover {
-  background-color: #f2f2f2;
-  padding-left: 12px;
-  transition: padding-left 0.2s ease;
-  
-  .project-title {
-    color: #0066ff;
+
+  &__title {
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &--dark-theme {
+      color: #bfbfbf;
+    }
+
+    &:hover {
+      color: #0066ff;
+    }
   }
-}
-.link {
-  text-decoration: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.project-title {
-  color: #000;
-  font-size: 14px;
-  letter-spacing: 1px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.project-title-dark-theme {
-  color: #bfbfbf;
+
+  &__link {
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &:hover {
+    background-color: #f2f2f2;
+    padding-left: 12px;
+    transition: padding-left 0.2s ease;
+  }
 }
 .top-image-section {
   position: relative;
