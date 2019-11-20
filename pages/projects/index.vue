@@ -1,29 +1,32 @@
 <template>
-  <v-row style="width: 100%;margin: 0;">
-    <div class="top-image-section">
-      <div class="top-image">
-        <div class="content-section">
+  <v-row class="content-container">
+    <div class="top-image-container">
+      <div class="top-image-container__section">
+        <div class="top-image-container__content-section">
           <div
             data-aos="fade-in"
             data-aos-dealy="100"
             data-aos-duration="1200"
             data-aos-once="true"
-            class="projects-text"
+            class="top-image-container__title"
           >
             [ projekty ]
           </div>
         </div>
-        <div class="scroll-down-container">
-          <a href="#list-projects" class="scroll-down-anchor">
-            <div class="chevron" />
-            <div class="chevron" />
-            <div class="chevron" />
+        <div class="top-image-container__scroll-down-container">
+          <a
+            href="#list-projects"
+            class="top-image-container__scroll-down-anchor"
+          >
+            <div class="top-image-container__cheveron" />
+            <div class="top-image-container__cheveron" />
+            <div class="top-image-container__cheveron" />
           </a>
         </div>
       </div>
     </div>
 
-    <div class="content-container" id="list-projects">
+    <div class="list-projects-container" id="list-projects">
       <breadcrumbs-component :items="items" />
 
       <subpage-title-section-component
