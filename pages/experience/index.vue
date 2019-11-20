@@ -44,6 +44,12 @@
           <div :key="item.id" class="head-section">
             <h2 class="head-title">
               {{ item.titleSection }}
+              <v-icon
+                v-if="item.titleSectionIcon"
+                style="margin-top: -4px;font-size: 30px;color: #000;margin-left: 10px;"
+              >
+                {{ 'mdi-' + item.titleSectionIcon }}
+              </v-icon>
             </h2>
           </div>
           <div :key="item.id" class="color-line" />
