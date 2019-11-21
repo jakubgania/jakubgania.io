@@ -7,6 +7,7 @@
         'margin-top': titleMarginTop.marginTop + 'px',
         'font-size': titleMarginTop.fontSize + 'px'
       }"
+      id="subpage-title-component"
     >
       {{ title }}
     </h1>

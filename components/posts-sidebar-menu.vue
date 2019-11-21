@@ -1,6 +1,9 @@
 <template>
   <div class="sidebar">
-    <div class="sidebar-menu">
+    <div
+      class="sidebar-menu"
+      :style="{ 'margin-top': sidebarMenuMarginTop + 'px' }"
+    >
       <div
         class="sidebar-title"
         :class="{ 'sidebar-title-dark-theme': darkThemeFlag }"
@@ -45,8 +48,17 @@ export default {
           title: 'linkedin',
           url: 'https://linkedin.com/in/jakubgania/'
         }
-      ]
+      ],
+      sidebarMenuMarginTop: 0,
+      sidebarMenuOffsetTop: 100
     }
+  },
+  mounted() {
+    this.sidebarMenuMarginTop = document.getElementById(
+      'subpage-title-component'
+    ).clientHeight
+
+    this.sidebarMenuMarginTop += this.sidebarMenuOffsetTop
   }
 }
 </script>
@@ -62,7 +74,7 @@ div.sidebar-menu {
   position: sticky;
   height: auto;
   margin-left: 40px;
-  margin-top: 152px;
+  margin-top: 104px;
 }
 .social-link {
   text-decoration: none;
@@ -87,8 +99,6 @@ div.sidebar-menu {
   background-color: #404040;
 }
 .sidebar-title {
-  border-top: 2px solid #000;
-  padding-top: 20px;
   padding-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
