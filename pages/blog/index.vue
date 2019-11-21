@@ -61,7 +61,7 @@ export default {
     return {
       title: 'posty',
       description:
-        'Na tej stronie będzie lista postów/wpisów. Obecnie jest tutaj testowo jeden odnośnik. Funkcjonalność nie działa jeszcze w płeni stabilnie i wymaga dopracowania dlatego system postów może działać jeszcze niepoprawnie.',
+        'Zapraszam do czytania postów w ramach mojego bloga. Będę tutaj opisywał tematy techniczne jak i różne przemyślenia. Blog jest jeszcze we wczesnej fazie rozwoju także staram się eliminować wszelkie błędy a posty pisać systematycznie. Jest to dla mnie nowe doświadczenie dlatego mogę popełniać błędy, których nie widzę od razu lub nie jestem świadomy. W przypadku wątpliwości lub pytań skontaktuj się ze mną.',
       items: [
         {
           text: 'menu',
@@ -130,6 +130,7 @@ export default {
   max-width: 800px;
   width: 100%;
   margin: auto;
+  margin-bottom: 80px;
 }
 .post-link-item {
   background-color: #fafafa;
