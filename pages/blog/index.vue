@@ -147,9 +147,9 @@ export default {
   color: #bfbfbf;
 }
 .post-main-title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 1.4px;
   display: flex;
   padding-top: 2px;
   padding-bottom: 4px;
