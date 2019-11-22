@@ -86,6 +86,13 @@ export default {
   src: local('Nunito Black'),
     url(../assets/fonts/nunito/Nunito-Black.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: local('RobotoMono Regular'),
+    url(../assets/fonts/roboto_mono/RobotoMono-Regular.ttf) format('truetype');
+}
 html {
   scroll-behavior: smooth;
 }
