@@ -1,8 +1,15 @@
 <template>
-  <footer v-if="displayFooter()" class="footer-container">
+  <footer
+    v-if="displayFooter()"
+    class="footer-container"
+    :class="{ 'footer-container--dark-theme': darkThemeFlag }"
+  >
     <div class="footer-container__sitemap-section">
       <div class="footer-container__logo-section">
-        <div class="footer-container__logo">
+        <div
+          class="footer-container__logo"
+          :class="{ 'footer-container__logo--dark-theme': darkThemeFlag }"
+        >
           Jakub Gania Software
         </div>
       </div>
@@ -25,12 +32,25 @@
                   style="font-size: 12px;letter-spacing: 0.6px;margin-bottom: 10px;"
                 >
                   <template v-if="element.link">
-                    <nuxt-link :to="element.link">
+                    <nuxt-link
+                      :to="element.link"
+                      class="footer-container__site-column-link"
+                      :class="{
+                        'footer-container__site-column-link--dark-theme': darkTheme
+                      }"
+                    >
                       {{ element.name }}
                     </nuxt-link>
                   </template>
                   <template v-if="element.href">
-                    <a :href="element.href" target="_blank">
+                    <a
+                      :href="element.href"
+                      target="_blank"
+                      class="footer-container__site-column-link"
+                      :class="{
+                        'footer-container__site-column-link--dark-theme': darkTheme
+                      }"
+                    >
                       {{ element.name }}
                     </a>
                   </template>
@@ -39,10 +59,22 @@
             </div>
           </div>
         </div>
-        <div>
-          <template v-if="$store.state.showDarkModeSwitch">
-            <dark-mode-switch-component />
-          </template>
+        <div class="footer-container__other-elements">
+          <div class="footer-container__dark-theme-switch-section">
+            <template v-if="$store.state.showDarkModeSwitch">
+              <dark-mode-switch-component />
+            </template>
+          </div>
+          <div class="footer-container__github-button-section">
+            <github-button
+              href="https://github.com/jakubgania"
+              data-size="large"
+              data-show-count="true"
+              aria-label="Follow @jakubgania on GitHub"
+            >
+              Follow @jakubgania
+            </github-button>
+          </div>
         </div>
       </div>
     </div>
@@ -58,11 +90,13 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import GithubButton from '../node_modules/vue-github-button'
 import DarkModeSwitch from './dark-mode-switch.vue'
 
 export default {
   components: {
-    'dark-mode-switch-component': DarkModeSwitch
+    'dark-mode-switch-component': DarkModeSwitch,
+    'github-button': GithubButton
   },
   data() {
     return {
@@ -106,6 +140,10 @@ export default {
             {
               name: 'Timeline',
               link: '/timeline'
+            },
+            {
+              name: 'Doświadczenie',
+              link: '/experience'
             }
           ]
         },
@@ -134,7 +172,16 @@ export default {
         },
         {
           titleColumn: 'Projekty',
-          elements: []
+          elements: [
+            {
+              name: 'jakubgania.io',
+              href: 'https://github.com/jakubgania/jakubgania.io'
+            },
+            {
+              name: 'yourcity-frontend',
+              href: 'https://github.com/jakubgania/yourcity-frontend'
+            }
+          ]
         },
         {
           titleColumn: 'Social',
@@ -149,11 +196,15 @@ export default {
             }
           ]
         }
-      ]
+      ],
+      counter: 0
     }
   },
   computed: {
-    ...mapGetters('DarkMode', ['darkTheme'])
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      return this.darkTheme
+    }
   },
   mounted() {
     this.displayFooter()
@@ -169,6 +220,11 @@ export default {
 <style lang="scss" scoped>
 .footer-container {
   background-color: #fafbfc;
+  margin-top: 80px;
+
+  &--dark-theme {
+    background-color: #171717;
+  }
 
   &__logo-section {
     width: 40%;
@@ -178,6 +234,10 @@ export default {
     font-family: 'Audiowide', cursive;
     color: #000;
     font-size: 24px;
+
+    &--dark-theme {
+      color: #fff;
+    }
   }
 
   &__x {
@@ -213,6 +273,38 @@ export default {
     color: #808080;
   }
 
+  &__site-column-link {
+    color: #8a929c;
+
+    &:hover {
+      color: #000;
+      transition: color 0.2s ease;
+    }
+
+    &--dark-theme {
+      &:hover {
+        color: #b3b3b3;
+      }
+    }
+  }
+
+  &__other-elements {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__github-button-section {
+    width: 50%;
+    text-align: right;
+    margin-top: 18px;
+    order: 2;
+  }
+
+  &__dark-theme-switch-section {
+    width: 50%;
+    order: 1;
+  }
+
   &__copyright-wrapper {
     border-top: 1px solid #e6e6e6;
   }
@@ -233,7 +325,21 @@ export default {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1264px) {
+  .footer-container {
+    &__sitemap-section {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__copyright-section {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
   .footer-container {
     &__logo-section {
       width: 100%;
@@ -241,10 +347,47 @@ export default {
 
     &__x {
       width: 100%;
+      padding-left: 0;
     }
 
     &__sitemap-section {
       display: block;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__site-column-section {
+      padding-left: 0;
+      padding-right: 10px;
+    }
+
+    &__copyright-section {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-container {
+    &__logo-section {
+      width: 100%;
+    }
+
+    &__logo {
+      padding-bottom: 20px;
+      font-size: 12px;
+    }
+
+    &__x {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    &__sitemap-section {
+      display: block;
+      padding-left: 14px;
+      padding-right: 14px;
     }
 
     &__sites-section {
@@ -252,59 +395,36 @@ export default {
     }
 
     &__site-column-section {
-      // display: inline-block;
+      padding-left: 0;
       width: 50%;
+    }
+
+    &__site-column-title {
+      font-size: 14px;
+    }
+
+    &__other-elements {
+      display: inline-block;
+    }
+
+    &__copyright-section {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
+    &__copyright-text {
+      letter-spacing: 1px;
+    }
+
+    &__github-button-section {
+      width: 100%;
+      text-align: left;
+      margin-top: 18px;
+    }
+
+    &__dark-theme-switch-section {
+      width: 100%;
     }
   }
 }
-/* .footer-container {
-  max-width: 1400px;
-  width: 100%;
-  font-size: 12px;
-  letter-spacing: 1px;
-  border-top: 1px solid #e6e6e6;
-  margin: auto;
-  line-height: 80px;
-  margin-bottom: 20px;
-}
-.link {
-  text-decoration: none;
-  color: #0066ff;
-  padding-right: 10px;
-}
-.link:hover {
-  color: #0000ff;
-}
-.dark-theme-text {
-  color: #fff;
-}
-.footer-container-dark-theme {
-  border-top: 1px solid #bfbfbf;
-}
-.links-section {
-  padding: 0;
-}
-.copyright-text {
-  text-align: right;
-  padding: 0;
-}
-.fbc {
-  background-color: #fff;
-}
-.dark-theme {
-  background-color: #1a1a1a;
-}
-
-@media only screen and (max-width: 600px) {
-  .footer-container {
-    padding-top: 20px;
-    line-height: 40px;
-  }
-  .links-section {
-    text-align: center;
-  }
-  .copyright-text {
-    text-align: center;
-  }
-} */
 </style>
