@@ -4,10 +4,7 @@
       class="sidebar-menu"
       :style="{ 'margin-top': sidebarMenuMarginTop + 'px' }"
     >
-      <div
-        class="sidebar-title"
-        :class="{ 'sidebar-title-dark-theme': darkThemeFlag }"
-      >
+      <div class="sidebar-title">
         ostatnie posty
       </div>
       <div class="sidebar-section">
@@ -104,9 +101,6 @@ div.sidebar-menu {
   letter-spacing: 2px;
   font-size: 14px;
   font-weight: 700;
-}
-.sidebar-title-dark-theme {
-  border-top: 2px solid #bfbfbf;
 }
 .sidebar-section {
   padding-top: 10px;
