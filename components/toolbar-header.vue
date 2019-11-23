@@ -54,7 +54,7 @@ export default {
   color: #fff !important;
 }
 .dark-theme {
-  background-color: #1a1a1a;
+  background-color: #1b1f23;
 }
 .link-title-dark-theme {
   color: #fff;

@@ -100,7 +100,7 @@ html {
   background-color: #fff;
 }
 .theme--dark.v-application {
-  background-color: #1a1a1a;
+  background-color: #1b1f23;
 }
 .app-content-container {
   min-height: 100vh;

@@ -223,7 +223,7 @@ export default {
   margin-top: 80px;
 
   &--dark-theme {
-    background-color: #171717;
+    background-color: #101214;
   }
 
   &__logo-section {
