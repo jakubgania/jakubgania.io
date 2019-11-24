@@ -108,6 +108,38 @@
   margin-bottom: 80px;
   position: relative;
 }
+.categories-section {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  &__item {
+    width: 33.33%;
+    border-right: 1px solid gray;
+    cursor: default;
+
+    &--text {
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-align: center;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      background-color: #ff9966;
+      transition: background-color 0.2s ease;
+      margin-bottom: -0.2px;
+    }
+  }
+}
 .list-projects {
   padding: 0;
 

@@ -43,6 +43,35 @@
           Github
         </a>
       </v-col>
+      <v-col cols="12" style="padding-left: 0;">
+        <github-button
+          href="https://github.com/jakubgania"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Follow @jakubgania on GitHub"
+        >
+          Follow @jakubgania
+        </github-button>
+      </v-col>
+
+      <div class="categories-section">
+        <div class="categories-section__item">
+          <div class="categories-section__item--text">
+            projekty ogólne
+          </div>
+        </div>
+        <div class="categories-section__item">
+          <div class="categories-section__item--text">
+            komponenty
+          </div>
+        </div>
+        <div class="categories-section__item">
+          <div class="categories-section__item--text">
+            design
+          </div>
+        </div>
+      </div>
+
       <v-col
         v-for="(item, index) in projects"
         :key="item.id"

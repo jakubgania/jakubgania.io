@@ -3,12 +3,14 @@ import { mapGetters } from 'vuex'
 import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
+import GithubButton from '../../node_modules/vue-github-button'
 
 export default {
   components: {
     'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
-    'subpage-description-section-component': SubpageDescriptionSection
+    'subpage-description-section-component': SubpageDescriptionSection,
+    GithubButton
   },
   data() {
     return {
