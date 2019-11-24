@@ -1,5 +1,8 @@
 <template>
-  <div class="top-section-container">
+  <div
+    class="top-section-container"
+    :class="{ 'top-section-container-dark-theme': darkTheme }"
+  >
     <div class="top-section">
       <div class="mobile-version">
         <div style="display: flex;">
@@ -85,11 +88,16 @@ export default {
       default: () => {
         return {}
       }
+    },
+    darkTheme: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
     return {
-      profileImage
+      profileImage,
+      counter: 0
     }
   }
 }
@@ -98,6 +106,14 @@ export default {
 <style lang="scss" scoped>
 .top-section-container {
   font-family: 'Nunito', sans-serif;
+  background-color: #f2f2f2;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 0;
+}
+.top-section-container-dark-theme {
+  background-color: #343b42;
 }
 .img-section {
   width: 30%;

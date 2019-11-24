@@ -32,6 +32,7 @@
       <top-section-container-component
         :full-name="fullName"
         :personal-data="personalData"
+        :dark-theme="darkTheme"
       />
 
       <div class="information-section">

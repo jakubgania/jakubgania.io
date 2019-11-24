@@ -1,9 +1,17 @@
 import axios from 'axios'
+import { mapGetters } from 'vuex'
 import TopSectionContainer from './top-section-container.vue'
 
 export default {
   components: {
     'top-section-container-component': TopSectionContainer
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      this.counter += 1
+      return this.darkTheme
+    }
   },
   asyncData({ params, error }) {
     return axios
