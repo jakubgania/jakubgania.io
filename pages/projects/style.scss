@@ -120,6 +120,7 @@
     width: 33.33%;
     border-right: 1px solid gray;
     cursor: default;
+    margin-bottom: -0.2px;
 
     &--text {
       font-size: 12px;
@@ -136,7 +137,6 @@
     &:hover {
       background-color: #ff9966;
       transition: background-color 0.2s ease;
-      margin-bottom: -0.2px;
     }
   }
 }
