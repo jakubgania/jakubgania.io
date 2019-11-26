@@ -1,11 +1,11 @@
 <template>
   <div v-if="displayHeader()">
-    <v-app-bar app clipped-left flat fixed :class="{ 'dark-theme': darkTheme }">
+    <v-app-bar :class="{ 'dark-theme': darkTheme }" app clipped-left flat fixed>
       <v-toolbar-title>
         <nuxt-link
+          :class="{ 'link-title-dark-theme': darkTheme }"
           to="/"
           class="link-title"
-          :class="{ 'link-title-dark-theme': darkTheme }"
         >
           <div>
             Jakub Gania Software
@@ -14,9 +14,9 @@
       </v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon
-        class="nav-icon"
-        :class="{ 'nav-icon-dark-theme': darkTheme }"
         @click.native="$emit('switchNavigationDrawer')"
+        :class="{ 'nav-icon-dark-theme': darkTheme }"
+        class="nav-icon"
       />
     </v-app-bar>
   </div>
