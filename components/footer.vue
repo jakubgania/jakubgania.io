@@ -1,14 +1,14 @@
 <template>
   <footer
     v-if="displayFooter()"
-    class="footer-container"
     :class="{ 'footer-container--dark-theme': darkThemeFlag }"
+    class="footer-container"
   >
     <div class="footer-container__sitemap-section">
       <div class="footer-container__logo-section">
         <div
-          class="footer-container__logo"
           :class="{ 'footer-container__logo--dark-theme': darkThemeFlag }"
+          class="footer-container__logo"
         >
           Jakub Gania Software
         </div>
@@ -34,10 +34,10 @@
                   <template v-if="element.link">
                     <nuxt-link
                       :to="element.link"
-                      class="footer-container__site-column-link"
                       :class="{
                         'footer-container__site-column-link--dark-theme': darkTheme
                       }"
+                      class="footer-container__site-column-link"
                     >
                       {{ element.name }}
                     </nuxt-link>
@@ -45,11 +45,11 @@
                   <template v-if="element.href">
                     <a
                       :href="element.href"
-                      target="_blank"
-                      class="footer-container__site-column-link"
                       :class="{
                         'footer-container__site-column-link--dark-theme': darkTheme
                       }"
+                      class="footer-container__site-column-link"
+                      target="_blank"
                     >
                       {{ element.name }}
                     </a>
