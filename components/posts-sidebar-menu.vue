@@ -1,8 +1,8 @@
 <template>
   <div class="sidebar">
     <div
-      class="sidebar-menu"
       :style="{ 'margin-top': sidebarMenuMarginTop + 'px' }"
+      class="sidebar-menu"
     >
       <div class="sidebar-title">
         ostatnie posty
@@ -14,8 +14,8 @@
         <div v-for="item in social" :key="item.id">
           <a :href="item.url" class="social-link" target="_blank">
             <div
-              class="social-link-text"
               :class="{ 'social-link-text-dark-theme': darkThemeFlag }"
+              class="social-link-text"
             >
               {{ item.title }}
             </div>
