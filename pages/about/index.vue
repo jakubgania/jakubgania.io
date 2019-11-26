@@ -1,11 +1,11 @@
 <template>
   <v-row class="content-container">
     <v-col
+      :class="{ 'title-text-dark-theme': darkTheme }"
       cols="12"
       lg="12"
       xs="12"
       class="title-text"
-      :class="{ 'title-text-dark-theme': darkTheme }"
       data-aos="fade-down"
       data-aos-dealy="400"
       data-aos-duration="1200"
@@ -37,12 +37,12 @@
         data-aos-once="true"
       >
         <div>
-          <h1 class="full-name" :class="{ 'full-name-dark-theme': darkTheme }">
+          <h1 :class="{ 'full-name-dark-theme': darkTheme }" class="full-name">
             {{ fullname }}
           </h1>
           <div
-            class="vertical-section"
             :class="{ 'vertical-section-dark-theme': darkThemeFlag }"
+            class="vertical-section"
           >
             <span>
               {{ aboutText }}
@@ -50,8 +50,8 @@
           </div>
           <div style="padding-left: 50px;">
             <div
-              class="description"
               :class="{ 'description-dark-theme': darkTheme }"
+              class="description"
             >
               <p>
                 {{ description }}
@@ -60,33 +60,33 @@
             <div class="icons-section">
               <a :href="link.github" target="_blank" class="icon-link">
                 <v-icon
-                  class="icon"
                   :class="{ 'icon-link-dark-theme': darkTheme }"
+                  class="icon"
                 >
                   mdi-github-circle
                 </v-icon>
               </a>
               <a :href="link.linkedin" target="_blank" class="icon-link">
                 <v-icon
-                  class="icon"
                   :class="{ 'icon-link-dark-theme': darkTheme }"
+                  class="icon"
                 >
                   mdi-linkedin
                 </v-icon>
               </a>
               <v-btn
+                :color="darkThmeFlag ? black : white"
                 text
                 small
-                :color="darkThmeFlag ? black : white"
                 class="link-button"
                 to="/contac"
               >
                 kontakt
               </v-btn>
               <v-btn
+                :color="darkThmeFlag ? black : white"
                 text
                 small
-                :color="darkThmeFlag ? black : white"
                 class="link-button"
                 to="/experience"
               >
