@@ -1,36 +1,43 @@
 <template>
-  <v-row class="content-container">
-    <template v-if="!error">
-      <div class="post-content">
-        <breadcrumbs-component :items="items" />
+  <div>
+    <v-row class="content-container">
+      <template v-if="!error">
+        <div class="post-content">
+          <breadcrumbs-component :items="items" />
 
-        <subpage-title-section-component :title="attributes.title" />
+          <subpage-title-section-component :title="attributes.title" />
 
-        <div class="datetime" :class="{ 'datetime-dark-theme': darkThemeFlag }">
-          {{ attributes.datetime ? attributes.datetime : 'b/d' }}
+          <div
+            class="datetime"
+            :class="{ 'datetime-dark-theme': darkThemeFlag }"
+          >
+            {{ attributes.datetime ? attributes.datetime : 'b/d' }}
+          </div>
+
+          <div class="post" v-html="$md.render(model)" />
         </div>
 
-        <div class="post" v-html="$md.render(model)"></div>
-      </div>
+        <posts-sidebar-menu-component
+          :key="counter"
+          :dark-theme-flag="darkThemeFlag"
+        />
+      </template>
+      <template v-else>
+        <v-col lg="12">
+          <div class="error-message">
+            {{ errorMessage }}
+          </div>
+          <div>
+            <nuxt-link to="/posts" class="link">
+              Zobacz inne posty
+            </nuxt-link>
+          </div>
+        </v-col>
+      </template>
+    </v-row>
 
-      <posts-sidebar-menu-component
-        :key="counter"
-        :dark-theme-flag="darkThemeFlag"
-      />
-    </template>
-    <template v-else>
-      <v-col lg="12">
-        <div class="error-message">
-          {{ errorMessage }}
-        </div>
-        <div>
-          <nuxt-link to="/posts" class="link">
-            Zobacz inne posty
-          </nuxt-link>
-        </div>
-      </v-col>
-    </template>
-  </v-row>
+    <other-posts-component :other-posts="otherPosts" />
+  </div>
 </template>
 
 <script>
@@ -40,12 +47,14 @@ import frontmatter from 'front-matter'
 import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import PostsSidebarMenu from '../../components/posts-sidebar-menu'
+import OtherPosts from './other-posts-component'
 
 export default {
   components: {
     'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
-    'posts-sidebar-menu-component': PostsSidebarMenu
+    'posts-sidebar-menu-component': PostsSidebarMenu,
+    'other-posts-component': OtherPosts
   },
   data() {
     return {
@@ -78,11 +87,16 @@ export default {
         `https://jakubgania.io/data/blog/posts/${params.id}/index.md`
       )
 
+      const otherPostsData = await axios.get(
+        `https://jakubgania.io/data/blog/list-of-posts.json`
+      )
+
       const frontmatterData = frontmatter(data)
 
       return {
         model: data,
-        attributes: frontmatterData.attributes
+        attributes: frontmatterData.attributes,
+        otherPosts: otherPostsData.data.posts.slice(0, 3)
       }
     } catch (error) {
       return {
