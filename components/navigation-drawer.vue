@@ -1,22 +1,22 @@
 <template>
   <v-navigation-drawer
     v-model="showDrawerFlag"
+    :class="{ 'dark-theme': darkTheme }"
     fixed
     app
     right
     temporary
     width="320"
-    :class="{ 'dark-theme': darkTheme }"
   >
     <div class="close-icon-section">
       <dark-mode-switch-component
         style="width: 140px; display: inline-block;margin-top: 22px;margin-left: 16px;"
       />
       <v-btn
+        @click.native="$emit('switchNavigationDrawer')"
         large
         icon
         class="close-icon-button"
-        @click.native="$emit('switchNavigationDrawer')"
       >
         <v-icon :class="{ 'close-icon-dark-theme': darkTheme }">
           mdi-close
@@ -53,8 +53,8 @@
                   echo:
                 </span>
                 <span
-                  class="title-page text-menu"
                   :class="{ 'dark-theme-text': darkTheme }"
+                  class="title-page text-menu"
                 >
                   {{ "'" + item.title + "'" }}
                 </span>
@@ -84,8 +84,8 @@
                   echo:
                 </span>
                 <span
-                  class="title-page text-menu"
                   :class="{ 'dark-theme-text': darkTheme }"
+                  class="title-page text-menu"
                 >
                   {{ "'" + item.title + "'" }}
                 </span>
