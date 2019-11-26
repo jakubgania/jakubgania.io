@@ -1,13 +1,13 @@
 <template>
   <v-col cols="12" lg="12" xs="12" style="padding: 0;">
     <h1
-      class="page-title"
+      id="subpage-title-component"
       :class="{ 'dark-theme-text': darkTheme }"
       :style="{
         'margin-top': titleMarginTop.marginTop + 'px',
         'font-size': titleMarginTop.fontSize + 'px'
       }"
-      id="subpage-title-component"
+      class="page-title"
     >
       {{ title }}
     </h1>
