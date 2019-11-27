@@ -135,6 +135,27 @@ $image-tile-max-height: 160px;
   padding-right: 14px;
 }
 
+@media only screen and (max-width: 960px) {
+  .content-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  $image-tile-max-height: 120px;
+
+  .image-tile {
+    width: $image-tile-max-height;
+    min-height: $image-tile-max-height;
+  }
+  .image-section {
+    width: $image-tile-max-height;
+    height: $image-tile-max-height;
+  }
+  .xghp {
+    max-width: $image-tile-max-height;
+    max-height: $image-tile-max-height;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .information-section {
     padding-left: 14px;

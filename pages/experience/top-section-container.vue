@@ -173,6 +173,20 @@ export default {
   font-size: 14px;
 }
 
+@media only screen and (max-width: 960px) {
+  .full-name {
+    font-size: 36px;
+  }
+  .personal-data-title-section {
+    br {
+      display: inline;
+    }
+  }
+  .dash {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .top-section-container {
     padding-left: 14px;
