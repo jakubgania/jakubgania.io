@@ -78,7 +78,7 @@
                 </v-icon>
               </a>
               <v-btn
-                :color="darkTheme ? black : white"
+                :color="darkTheme ? 'white' : 'black'"
                 text
                 small
                 class="link-button"
@@ -87,7 +87,7 @@
                 kontakt
               </v-btn>
               <v-btn
-                :color="darkTheme ? black : white"
+                :color="darkTheme ? 'white' : 'black'"
                 text
                 small
                 class="link-button"
