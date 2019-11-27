@@ -130,6 +130,13 @@ export default {
   color: #bfbfbf;
 }
 
+@media only screen and (max-width: 960px) {
+  .content-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .content-container {
     padding-left: 14px;
