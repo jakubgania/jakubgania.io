@@ -57,8 +57,8 @@
           <template v-for="(itemSection, index2) in item.sectionData">
             <div
               :key="itemSection.id"
-              class="section"
               :class="{ 'border-bottom': index2 < item.sectionData.length - 1 }"
+              class="section"
             >
               <div class="title-section">
                 <div class="title-text">
@@ -74,7 +74,7 @@
                     {{ itemSection.subtitle }}
                   </div>
                 </div>
-                <div class="description" v-html="itemSection.description" />
+                <div v-html="itemSection.description" class="description" />
                 <div v-if="itemSection.tags" class="tags-container">
                   <v-chip
                     v-for="tagItem in itemSection.tags"
