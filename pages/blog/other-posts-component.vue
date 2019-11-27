@@ -10,7 +10,7 @@
           :key="post.id"
           class="other-posts-section__grid-item"
         >
-          <div style="margin-bottom: 16px;">
+          <div class="other-posts-section__datetime-section">
             <span class="other-posts-section__datetime-text">
               {{ post.creationDate }}
             </span>
@@ -91,11 +91,40 @@ export default {
     }
   }
 
+  &__datetime-section {
+    margin-bottom: 16px;
+  }
+
   &__datetime-text {
     font-family: 'Roboto Mono', monospace;
     font-size: 12px;
     font-weight: normal;
     color: #b3b3b3;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .other-posts-section {
+    padding-left: 14px;
+    padding-right: 14px;
+
+    &__container {
+      max-width: 620px;
+    }
+
+    &__grid {
+      display: inline;
+    }
+
+    &__grid-item {
+      width: 100%;
+      padding-right: 0;
+      margin-top: 24px;
+    }
+
+    &__datetime-section {
+      margin-bottom: 6px;
+    }
   }
 }
 </style>
