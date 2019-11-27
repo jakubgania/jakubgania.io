@@ -11,8 +11,8 @@
         <a
           :key="counter"
           :href="`mailto:${email}`"
-          class="email-link"
           :class="{ 'email-link-dark-theme': darkThemeFlag }"
+          class="email-link"
         >
           {{ email }}
         </a>
