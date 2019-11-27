@@ -9,8 +9,8 @@
         class="section"
       >
         <div
-          class="company-name"
           :class="{ 'company-name-dark-theme': darkTheme }"
+          class="company-name"
         >
           {{ subpageTitle }}
         </div>
