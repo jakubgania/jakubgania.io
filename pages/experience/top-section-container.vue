@@ -1,7 +1,7 @@
 <template>
   <div
-    class="top-section-container"
     :class="{ 'top-section-container-dark-theme': darkTheme }"
+    class="top-section-container"
   >
     <div class="top-section">
       <div class="mobile-version">
