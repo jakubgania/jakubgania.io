@@ -60,8 +60,8 @@
               </span>
               <span
                 :key="counter"
-                class="link-text"
                 :class="{ 'link-text-dark-theme': darkThemeFlag }"
+                class="link-text"
               >
                 {{ "'" + item.title + "'" }}
               </span>
@@ -95,8 +95,8 @@
               </span>
               <span
                 :key="counter"
-                class="link-text"
                 :class="{ 'link-text-dark-theme': darkThemeFlag }"
+                class="link-text"
               >
                 {{ "'" + item.title + "'" }}
               </span>
@@ -107,8 +107,8 @@
               <span class="xpo" style="color: #cc33ff;">
                 }
                 <span
-                  class="comma"
                   :class="{ 'comma-not': index == items.length - 1 }"
+                  class="comma"
                 >
                   ,
                 </span>
