@@ -12,16 +12,16 @@
       <v-col
         v-for="item in posts"
         :key="item.id"
+        :class="{ 'post-link-item-dark-theme': darkThemeFlag }"
+        class="post-link-item"
         cols="12"
         lg="12"
         xs="12"
-        class="post-link-item"
-        :class="{ 'post-link-item-dark-theme': darkThemeFlag }"
       >
         <nuxt-link
           :to="`/blog/` + item.id"
-          class="post-link"
           :class="{ 'post-link-dark-theme': darkThemeFlag }"
+          class="post-link"
         >
           <div class="post-main-title">
             <div class="post-title">
@@ -88,11 +88,6 @@ export default {
       return this.darkTheme
     }
   },
-  methods: {
-    forceUpdate() {
-      this.counter += 1
-    }
-  },
   async asyncData({ params }) {
     try {
       const { data } = await axios.get(
@@ -104,6 +99,11 @@ export default {
       }
     } catch (error) {
       //
+    }
+  },
+  methods: {
+    forceUpdate() {
+      this.counter += 1
     }
   },
   head() {
