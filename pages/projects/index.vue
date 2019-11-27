@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    <div class="list-projects-container" id="list-projects">
+    <div id="list-projects" class="list-projects-container">
       <breadcrumbs-component :items="items" />
 
       <subpage-title-section-component
@@ -83,8 +83,8 @@
         <nuxt-link :to="`projects/` + item.path" class="list-projects__link">
           <div
             :key="counter"
-            class="list-projects__title"
             :class="{ 'list-projects__title--dark-theme': darkThemeFlag }"
+            class="list-projects__title"
           >
             {{ index + 1 + '. ' + item.title }}
           </div>
