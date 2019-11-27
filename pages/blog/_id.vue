@@ -8,13 +8,13 @@
           <subpage-title-section-component :title="attributes.title" />
 
           <div
-            class="datetime"
             :class="{ 'datetime-dark-theme': darkThemeFlag }"
+            class="datetime"
           >
             {{ attributes.datetime ? attributes.datetime : 'b/d' }}
           </div>
 
-          <div class="post" v-html="$md.render(model)" />
+          <div v-html="$md.render(model)" class="post" />
         </div>
 
         <posts-sidebar-menu-component
@@ -110,16 +110,16 @@ export default {
       }
     }
   },
-  methods: {
-    forceUpdate() {
-      this.counter += 1
-    }
-  },
   mounted() {
     this.items.push({
       text: this.attributes.title.toLowerCase(),
       disabled: true
     })
+  },
+  methods: {
+    forceUpdate() {
+      this.counter += 1
+    }
   },
   head() {
     return {
@@ -190,8 +190,9 @@ export default {
   margin-bottom: 80px;
 }
 .post {
-  font-family: 'Nunito', sans-serif;
-  letter-spacing: 0.5px;
+  // font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0.4px;
   line-height: 2;
   font-size: 16.8px;
   padding-top: 20px;
