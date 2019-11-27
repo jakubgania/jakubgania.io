@@ -6,7 +6,7 @@
 
         <subpage-title-section-component :title="attributes.title" />
 
-        <div class="post" v-html="$md.render(model)"></div>
+        <div v-html="$md.render(model)" class="post" />
       </div>
     </template>
     <template v-else>
