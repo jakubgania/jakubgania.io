@@ -4,6 +4,7 @@
       :class="{ 'title-text-dark-theme': darkTheme }"
       cols="12"
       lg="12"
+      sm="12"
       xs="12"
       class="title-text"
       data-aos="fade-down"
@@ -17,6 +18,7 @@
       <v-col
         cols="12"
         lg="6"
+        sm="12"
         xs="12"
         class="image-section"
         data-aos="fade-right"
@@ -29,6 +31,7 @@
       <v-col
         cols="12"
         lg="6"
+        sm="10 offset-sm-1"
         xs="12"
         class="information-section"
         data-aos="fade-up"
@@ -41,7 +44,7 @@
             {{ fullname }}
           </h1>
           <div
-            :class="{ 'vertical-section-dark-theme': darkThemeFlag }"
+            :class="{ 'vertical-section-dark-theme': darkTheme }"
             class="vertical-section"
           >
             <span>
@@ -75,7 +78,7 @@
                 </v-icon>
               </a>
               <v-btn
-                :color="darkThmeFlag ? black : white"
+                :color="darkTheme ? black : white"
                 text
                 small
                 class="link-button"
@@ -84,7 +87,7 @@
                 kontakt
               </v-btn>
               <v-btn
-                :color="darkThmeFlag ? black : white"
+                :color="darkTheme ? black : white"
                 text
                 small
                 class="link-button"

@@ -1,5 +1,6 @@
 .content-container {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   margin: auto;
   position: relative;
   z-index: 0;
@@ -78,6 +79,30 @@
 }
 .link-button {
   float: right;
+}
+
+@media only screen and (max-width: 960px) {
+  .section-bottom-title {
+    margin-top: -160px;
+  }
+  .content-container {
+    .title-text {
+      font-size: 26vw;
+    }
+  }
+  .profile-image {
+    width: 100%;
+  }
+  .information-section {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .full-name {
+    font-size: 44px;
+  }
+  .description {
+    padding-top: 20px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
