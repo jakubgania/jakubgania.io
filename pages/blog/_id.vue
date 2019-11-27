@@ -18,6 +18,7 @@
         </div>
 
         <posts-sidebar-menu-component
+          v-if="$vuetify.breakpoint.mdAndUp"
           :key="counter"
           :dark-theme-flag="darkThemeFlag"
         />
@@ -197,6 +198,18 @@ export default {
   font-size: 16.8px;
   padding-top: 20px;
 }
+
+@media only screen and (max-width: 960px) {
+  .content-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .post-content {
+    margin: auto;
+    margin-bottom: 60px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .content-container {
     width: 100%;
