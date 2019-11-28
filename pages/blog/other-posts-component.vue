@@ -98,7 +98,7 @@ export default {
   &__datetime-text {
     font-family: 'Roboto Mono', monospace;
     font-size: 12px;
-    font-weight: normal;
+    font-weight: bold;
     color: #b3b3b3;
   }
 }

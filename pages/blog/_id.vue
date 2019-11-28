@@ -11,10 +11,9 @@
         </div>
 
         <div class="post-content">
-          <breadcrumbs-component
-            :items="items"
-            style="max-width: 600px;margin: auto;"
-          />
+          <div style="max-width: 600px;margin: auto;">
+            <breadcrumbs-component :items="items" />
+          </div>
 
           <!-- <subpage-title-section-component :title="attributes.title" /> -->
 
@@ -185,6 +184,11 @@ export default {
   margin-bottom: 20px;
 }
 .v-application .post h2 {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.v-application ul {
   max-width: 600px;
   margin: auto;
   margin-bottom: 10px;

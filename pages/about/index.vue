@@ -2,10 +2,10 @@
   <v-row class="content-container">
     <v-col
       :class="{ 'title-text-dark-theme': darkTheme }"
-      cols="12"
-      lg="12"
-      sm="12"
       xs="12"
+      sm="12"
+      lg="12"
+      cols="12"
       class="title-text"
       data-aos="fade-down"
       data-aos-dealy="400"
@@ -14,12 +14,14 @@
     >
       {{ aboutText }}
     </v-col>
-    <v-row class="section-bottom-title">
+    <v-row class="section-bottom-title" no-gutters>
       <v-col
-        cols="12"
         lg="6"
+        offset-lg="0"
+        md="8"
+        offset-md="2"
         sm="12"
-        xs="12"
+        cols="12"
         class="image-section"
         data-aos="fade-right"
         data-aos-dealy="800"
@@ -29,11 +31,13 @@
         <img :src="profileImage" alt="" class="profile-image" />
       </v-col>
       <v-col
-        cols="12"
         lg="6"
+        offset-lg="0"
+        md="6"
+        offset-md="3"
         sm="10"
         offset-sm="1"
-        xs="12"
+        cols="12"
         class="information-section"
         data-aos="fade-up"
         data-aos-dealy="1200"

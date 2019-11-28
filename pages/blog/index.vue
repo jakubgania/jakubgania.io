@@ -61,7 +61,7 @@ export default {
     return {
       title: 'posty',
       description:
-        'Zapraszam do czytania postów w ramach mojego bloga. Będę tutaj opisywał tematy techniczne jak i różne przemyślenia. Blog jest jeszcze we wczesnej fazie rozwoju także staram się eliminować wszelkie błędy a posty pisać systematycznie. Jest to dla mnie nowe doświadczenie dlatego mogę popełniać błędy, których nie widzę od razu lub nie jestem świadomy. W przypadku wątpliwości lub pytań skontaktuj się ze mną.',
+        'Zapraszam do czytania postów w ramach mojego bloga. Będę tutaj opisywał tematy techniczne jak i różne przemyślenia. Blog jest jeszcze we wczesnej fazie rozwoju także staram się eliminować wszelkie błędy a posty pisać systematycznie. Jest to dla mnie nowe doświadczenie dlatego mogę popełniać błędy, których nie widzę od razu lub nie jestem świadomy. W przypadku wątpliwości lub pytań proszę o kontakt ze mną.',
       items: [
         {
           text: 'menu',
