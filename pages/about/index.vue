@@ -31,7 +31,8 @@
       <v-col
         cols="12"
         lg="6"
-        sm="10 offset-sm-1"
+        sm="10"
+        offset-sm="1"
         xs="12"
         class="information-section"
         data-aos="fade-up"
