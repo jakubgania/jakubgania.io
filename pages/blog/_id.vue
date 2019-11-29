@@ -1,7 +1,16 @@
 <template>
   <div>
-    <div v-if="false">
-      <img :src="topImageSrc" :alt="topImageAlt" class="top-image" />
+    <div v-if="attributes.topImageSrc">
+      <img
+        :src="
+          'https://jakubgania.io/data/blog/posts/' +
+            $route.params.id +
+            '/' +
+            attributes.topImageSrc
+        "
+        :alt="'topImageAlt'"
+        class="top-image"
+      />
     </div>
 
     <v-row class="content-container">
@@ -11,7 +20,7 @@
         </div>
 
         <div class="post-content">
-          <div style="max-width: 600px;margin: auto;">
+          <div style="max-width: 640px;margin: auto;">
             <breadcrumbs-component :items="items" />
           </div>
 
@@ -179,17 +188,17 @@ export default {
   border-bottom-right-radius: 6px;
 }
 .v-application .post p {
-  max-width: 600px;
+  max-width: 640px;
   margin: auto;
   margin-bottom: 20px;
 }
 .v-application .post h2 {
-  max-width: 600px;
+  max-width: 640px;
   margin: auto;
   margin-bottom: 10px;
 }
 .v-application ul {
-  max-width: 600px;
+  max-width: 640px;
   margin: auto;
   margin-bottom: 10px;
 }
@@ -207,7 +216,7 @@ export default {
 .top-image {
   display: block;
   width: 100%;
-  height: 500px;
+  height: 600px;
   object-fit: cover;
 }
 .content-container {
@@ -228,7 +237,7 @@ export default {
   font-size: 12px;
   letter-spacing: 0.4px;
   font-weight: 600;
-  max-width: 600px;
+  max-width: 640px;
   margin: auto;
 }
 .datetime-dark-theme {
@@ -251,7 +260,7 @@ export default {
   width: 100%;
   padding: 0;
   margin: auto;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 .post {
   font-family: 'Roboto Mono', monospace;
