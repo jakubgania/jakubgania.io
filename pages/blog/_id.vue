@@ -264,7 +264,7 @@ export default {
 }
 .post {
   font-family: 'Roboto Mono', monospace;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
   line-height: 2;
   font-size: 16.8px;
   padding-top: 20px;
