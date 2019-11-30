@@ -127,4 +127,18 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .other-posts-section {
+    &__title-section {
+      font-size: 16px;
+    }
+
+    &__grid-item {
+      &--title {
+        font-size: 14px;
+      }
+    }
+  }
+}
 </style>
