@@ -209,6 +209,9 @@ export default {
   .v-application .post h2 {
     font-size: 18px;
   }
+  .v-application code {
+    font-size: 14px;
+  }
 }
 </style>
 
@@ -216,7 +219,7 @@ export default {
 .top-image {
   display: block;
   width: 100%;
-  height: 600px;
+  max-height: 720px;
   object-fit: cover;
 }
 .content-container {
@@ -283,6 +286,9 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
+  .top-image {
+    min-height: 160px;
+  }
   .content-container {
     width: 100%;
     margin-top: 40px;
@@ -291,10 +297,13 @@ export default {
   }
   .post-title {
     margin-top: 0;
-    font-size: 32px;
+    font-size: 30px;
   }
   .post-content {
     width: 100%;
+  }
+  .post {
+    font-size: 14px;
   }
 }
 </style>
