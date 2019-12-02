@@ -13,7 +13,7 @@ export default {
     return {
       title: 'galeria',
       description:
-        'W galerii będę czasami  umieszczał jakieś zdjęcia lub grafiki. Obecnie ta sekcja jest jeszcze niegotowa dlatego wyświetla zdjęcia zastępcze.',
+        'W galerii będę czasami  umieszczał jakieś zdjęcia lub grafiki.',
       dialog: false,
       dialogFullSizeImage: false,
       fullSizeId: null,
