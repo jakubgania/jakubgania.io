@@ -1,0 +1,55 @@
+.v-application div pre {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding-top: 3rem;
+  border-radius: 6px;
+  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fillRule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="%23FF5F56" stroke="%23E0443E" strokeWidth=".5" /><circle cx="26" cy="6" r="6" fill="%23FFBD2E" stroke="%23DEA123" strokeWidth=".5" /><circle cx="46" cy="6" r="6" fill="%2327C93F" stroke="%231AAB29" strokeWidth=".5" /></g></svg>');
+  background-repeat: no-repeat;
+  background-position: 16px 16px;
+  box-shadow: 5px 5px 15px 0 rgba(50, 50, 50, 0.75);
+  background-color: #1d262f;
+}
+.v-application code::before {
+  content: "";
+}
+.v-application code {
+  background-color: #1d262f;
+  color: #abb2bf;
+  display: block;
+  box-shadow: none;
+  white-space: unset;
+  border-radius: 0;
+  font-size: initial;
+  font-weight: initial;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.v-application .post p {
+  max-width: 640px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.v-application .post h2 {
+  max-width: 640px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.v-application ul {
+  max-width: 640px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.post-content p img {
+  width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .v-application .post h2 {
+    font-size: 18px;
+  }
+  .v-application code {
+    font-size: 14px;
+  }
+}

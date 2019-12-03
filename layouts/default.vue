@@ -93,6 +93,11 @@ export default {
   src: local('RobotoMono Regular'),
     url(../assets/fonts/roboto_mono/RobotoMono-Regular.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'MaisonNeueExtended';
+  font-style: normal;
+  src: url(../assets/fonts/MaisonNeueExtended-Bold.woff2) format('woff2');
+}
 html {
   scroll-behavior: smooth;
 }
