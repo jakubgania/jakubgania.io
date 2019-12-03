@@ -31,7 +31,7 @@
             {{ attributes.datetime ? attributes.datetime : 'b/d' }}
           </div>
 
-          <div v-html="$md.render(model)" class="post" />
+          <div v-html="$md.render(model)" id="blog-post" class="post" />
         </div>
       </template>
       <template v-else>
