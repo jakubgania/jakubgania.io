@@ -123,6 +123,25 @@ export default {
       text: this.attributes.title.toLowerCase(),
       disabled: true
     })
+
+    // if (process.browser) {
+    //   const post = document.getElementById('blog-post')
+    //   const images = post.getElementsByTagName('img')
+    //   // console.log(images)
+    //   console.log(this.$route)
+    //   Object.keys(images).map((key, index) => {
+    //     const item = images[key].src
+    //     const fileNameIndex = item.lastIndexOf('/') + 1
+    //     const filename = item.substr(fileNameIndex)
+    //     console.log(filename)
+    //     images[key].src =
+    //       'https://jakubgania.io/' +
+    //       'data/blog/posts/' +
+    //       this.$route.params.id +
+    //       '/' +
+    //       filename
+    //   })
+    // }
   },
   methods: {
     forceUpdate() {

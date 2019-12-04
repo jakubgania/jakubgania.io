@@ -37,12 +37,12 @@
   margin: auto;
   margin-bottom: 10px;
 }
-#blog-post .v-application ul {
-  max-width: 640px;
-}
 .v-application ul {
   margin: auto;
   margin-bottom: 10px;
+}
+.v-application #blog-post ul {
+  max-width: 640px !important;
 }
 .post-content p img {
   width: 100%;
