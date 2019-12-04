@@ -59,13 +59,6 @@ export default {
 
 <style lang="scss">
 @font-face {
-  font-family: 'Audiowide';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Audiowide Regular'),
-    url(../assets/fonts/audiowide/Audiowide-Regular.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
