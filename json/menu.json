@@ -9,6 +9,10 @@
       "path": "/about"
     },
     {
+      "title": "Blog",
+      "path": "/blog"
+    },
+    {
       "title": "Projekty",
       "path": "/projects"
     },
@@ -19,10 +23,6 @@
     {
       "title": "Zasoby",
       "path": "/resources"
-    },
-    {
-      "title": "Blog",
-      "path": "/blog"
     },
     {
       "title": "Komendy i polecenia",
