@@ -6,12 +6,7 @@
   >
     <div class="footer-container__sitemap-section">
       <div class="footer-container__logo-section">
-        <div
-          :class="{ 'footer-container__logo--dark-theme': darkThemeFlag }"
-          class="footer-container__logo"
-        >
-          Jakub Gania Software
-        </div>
+        <logo-component :normal-font-size="true" :dark-theme="darkTheme" />
       </div>
       <div class="footer-container__x">
         <div class="footer-container__sites-section">
@@ -90,11 +85,13 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import Logo from '../components/logo'
 import GithubButton from '../node_modules/vue-github-button'
 import DarkModeSwitch from './dark-mode-switch.vue'
 
 export default {
   components: {
+    'logo-component': Logo,
     'dark-mode-switch-component': DarkModeSwitch,
     'github-button': GithubButton
   },
@@ -193,6 +190,10 @@ export default {
             {
               name: 'LinkedIn',
               href: 'https://www.linkedin.com/in/jakubgania'
+            },
+            {
+              name: 'Twitter',
+              href: 'https://twitter.com/jakubgania'
             }
           ]
         }
@@ -228,16 +229,6 @@ export default {
 
   &__logo-section {
     width: 40%;
-  }
-
-  &__logo {
-    font-family: 'Audiowide', cursive;
-    color: #000;
-    font-size: 24px;
-
-    &--dark-theme {
-      color: #fff;
-    }
   }
 
   &__x {
@@ -372,11 +363,6 @@ export default {
   .footer-container {
     &__logo-section {
       width: 100%;
-    }
-
-    &__logo {
-      padding-bottom: 20px;
-      font-size: 12px;
     }
 
     &__x {

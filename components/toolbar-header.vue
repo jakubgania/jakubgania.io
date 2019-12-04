@@ -7,9 +7,7 @@
           to="/"
           class="link-title"
         >
-          <div>
-            Jakub Gania Software
-          </div>
+          <logo-component :normal-font-size="true" :dark-theme="darkTheme" />
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer />
@@ -24,8 +22,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import Logo from '../components/logo'
 
 export default {
+  components: {
+    'logo-component': Logo
+  },
   computed: {
     ...mapGetters('DarkMode', ['darkTheme'])
   },
@@ -43,9 +45,7 @@ export default {
 <style scoped>
 .link-title {
   text-decoration: none;
-  font-family: 'Audiowide', cursive;
   color: #000;
-  font-size: 24px;
 }
 .nav-icon {
   color: #000;
@@ -58,11 +58,5 @@ export default {
 }
 .link-title-dark-theme {
   color: #fff;
-}
-
-@media only screen and (max-width: 600px) {
-  .link-title {
-    font-size: 12px;
-  }
 }
 </style>

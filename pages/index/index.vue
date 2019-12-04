@@ -8,11 +8,8 @@
         data-aos-once="true"
         class="section"
       >
-        <div
-          :class="{ 'company-name-dark-theme': darkTheme }"
-          class="company-name"
-        >
-          {{ subpageTitle }}
+        <div class="company-name-section">
+          <logo-component :big-font-size="true" :dark-theme="darkTheme" />
         </div>
         <div class="link-section">
           <nuxt-link to="/menu" class="link">

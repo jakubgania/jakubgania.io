@@ -1,6 +1,10 @@
 import { mapGetters } from 'vuex'
+import Logo from '../../components/logo'
 
 export default {
+  components: {
+    'logo-component': Logo
+  },
   data() {
     return {
       subpageTitle: 'Jakub Gania Software',
