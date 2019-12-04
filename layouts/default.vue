@@ -58,39 +58,8 @@ export default {
 </script>
 
 <style lang="scss">
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Nunito Regular'),
-    url(../assets/fonts/nunito/Nunito-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Nunito Bold'),
-    url(../assets/fonts/nunito/Nunito-Bold.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 900;
-  src: local('Nunito Black'),
-    url(../assets/fonts/nunito/Nunito-Black.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 500;
-  src: local('RobotoMono Regular'),
-    url(../assets/fonts/roboto_mono/RobotoMono-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'MaisonNeueExtended';
-  font-style: normal;
-  src: url(../assets/fonts/MaisonNeueExtended-Bold.woff2) format('woff2');
-}
+@import '../assets/styles/fonts.scss';
+
 html {
   scroll-behavior: smooth;
 }
