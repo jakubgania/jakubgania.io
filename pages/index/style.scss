@@ -30,12 +30,10 @@
   border-bottom: 2px solid #0066ff;
   padding-top: 80px;
   padding-bottom: 80px;
-}
-.company-name-section {
+  min-height: 100px;
   text-align: center;
 }
 .link-section {
-  text-align: center;
   margin-top: 10px;
 }
 .link {
@@ -53,8 +51,5 @@
   .section {
     padding-top: 40px;
     padding-bottom: 40px;
-  }
-  .company-name {
-    font-size: 36px;
   }
 }
