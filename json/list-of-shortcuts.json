@@ -27,6 +27,10 @@
     {
       "title": "Linux terminal",
       "path": "/linux-terminal"
+    },
+    {
+      "title": "PhpStorm",
+      "path": "/phpstorm"
     }
   ]
 }
