@@ -6,7 +6,7 @@
     app
     right
     temporary
-    width="320"
+    :width="$vuetify.breakpoint.name !== 'xs' ? '320px' : '100%'"
   >
     <div class="close-icon-section">
       <dark-mode-switch-component
@@ -24,46 +24,15 @@
       </v-btn>
     </div>
     <v-list dense nav>
-      <v-list-item style="margin-bottom: 0;">
-        <v-list-item-content style="padding-bottom: 0;">
-          <v-list-item-title class="non-list-element">
-            <span class="text-menu" style="color: #ff0066;">
-              switch
-            </span>
-            <span class="text-menu">
-              ($menu) {
-            </span>
-          </v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
       <template v-for="item in items">
         <v-list-item v-if="item.path" :key="item.title" :to="item.path">
           <v-list-item-content>
             <v-list-item-title class="list-item-title">
-              <span style="display: block;">
-                &nbsp;&nbsp;
-                <span class="text-menu" style="color: #ff0066;">
-                  case
-                </span>
-                <span class="text-menu">{{ "'" + item.path + "'" }}:</span>
-              </span>
-              <span class="xdp">
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="text-menu" style="color: #005ce6;">
-                  echo:
-                </span>
-                <span
-                  :class="{ 'dark-theme-text': darkTheme }"
-                  class="title-page text-menu"
-                >
-                  {{ "'" + item.title + "'" }}
-                </span>
-              </span>
-              <span style="display: block;">
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="text-menu" style="color: #ff0066;">
-                  break;
-                </span>
+              <span
+                :class="{ 'dark-theme-text': darkTheme }"
+                class="title-page text-menu"
+              >
+                {{ item.title }}
               </span>
             </v-list-item-title>
           </v-list-item-content>
@@ -71,45 +40,16 @@
         <v-list-item v-if="item.url" :key="item.title" :href="item.url">
           <v-list-item-content>
             <v-list-item-title class="list-item-title">
-              <span style="display: block;">
-                &nbsp;&nbsp;
-                <span class="text-menu" style="color: #ff0066;">
-                  case
-                </span>
-                <span class="text-menu">{{ "'" + item.name + "'" }}:</span>
-              </span>
-              <span class="echo-item">
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="text-menu" style="color: #005ce6;">
-                  echo:
-                </span>
-                <span
-                  :class="{ 'dark-theme-text': darkTheme }"
-                  class="title-page text-menu"
-                >
-                  {{ "'" + item.title + "'" }}
-                </span>
-              </span>
-              <span style="display: block;">
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="text-menu" style="color: #ff0066;">
-                  break;
-                </span>
+              <span
+                :class="{ 'dark-theme-text': darkTheme }"
+                class="title-page text-menu"
+              >
+                {{ item.title }}
               </span>
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </template>
-
-      <v-list-item style="margin-top: 0;">
-        <v-list-item-content style="padding-top: 0;">
-          <v-list-item-title class="non-list-element">
-            <span class="text-menu">
-              }
-            </span>
-          </v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -161,6 +101,22 @@ export default {
 }
 </script>
 
+<style>
+.v-list--nav {
+  padding-left: 0;
+  padding-right: 0;
+}
+.v-list--nav .v-list-item {
+  border-radius: 0;
+}
+.v-list--nav.v-list--dense .v-list-item:not(:last-child):not(:only-child) {
+  margin-bottom: 0;
+}
+.v-list--nav .v-list-item:before {
+  border-radius: 0;
+}
+</style>
+
 <style scoped>
 .close-icon-section {
   text-align: right;
@@ -172,20 +128,15 @@ export default {
   float: right;
   margin-top: 16px;
   margin-right: 16px;
-  /* display: inline-block; */
 }
 .list-item-title {
-  letter-spacing: 2px;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 1px;
   color: #8c8c8c;
+  padding-left: 10px;
 }
 .list-item-icon {
   color: #8c8c8c;
-}
-.echo-item {
-  display: block;
-  color: black;
-  padding-top: 4px;
-  padding-bottom: 4px;
 }
 .non-list-element {
   letter-spacing: 2px;
@@ -193,15 +144,20 @@ export default {
 }
 .title-page {
   color: #000;
+  font-size: 12px;
 }
 .dark-theme {
-  background-color: #262626;
+  background-color: #1b1f23;
 }
 .dark-theme-text {
   color: #bfbfbf;
 }
 .close-icon-dark-theme {
   color: #bfbfbf !important;
+}
+.navigation-drawer-item {
+  width: 100%;
+  max-width: 320px;
 }
 
 @media only screen and (max-width: 600px) {
