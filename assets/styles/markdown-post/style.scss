@@ -32,7 +32,12 @@
   margin: auto;
   margin-bottom: 20px;
 }
-.v-application .post h1, h2, h3, h4, h5, h6 {
+.v-application .post h1,
+.v-application .post h2,
+.v-application .post h3,
+.v-application .post h4,
+.v-application .post h5,
+.v-application .post h6 {
   max-width: 640px;
   margin: auto;
   margin-bottom: 10px;
