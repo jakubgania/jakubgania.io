@@ -47,7 +47,8 @@
               {{ item.titleSection }}
               <v-icon
                 v-if="item.titleSectionIcon"
-                style="margin-top: -4px;font-size: 30px;color: #000;margin-left: 10px;"
+                style="margin-top: -4px;font-size: 30px;margin-left: 10px;"
+                :style="darkTheme ? 'color: #fff;' : 'color: #bfbfbf;'"
               >
                 {{ 'mdi-' + item.titleSectionIcon }}
               </v-icon>
