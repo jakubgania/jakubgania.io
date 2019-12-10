@@ -62,6 +62,7 @@
                 :key="counter"
                 :class="{ 'link-text-dark-theme': darkThemeFlag }"
                 class="link-text"
+                style="font-family: 'Roboto Mono', monospace;"
               >
                 {{ "'" + item.title + "'" }}
               </span>

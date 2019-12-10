@@ -50,8 +50,8 @@ export default {
   font-size: 16px;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
 }
 .page-description-dark-theme {
   color: #bfbfbf;

@@ -37,7 +37,7 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item v-if="item.url" :key="item.title" :href="item.url">
+        <!-- <v-list-item v-if="item.url" :key="item.title" :href="item.url">
           <v-list-item-content>
             <v-list-item-title class="list-item-title">
               <span
@@ -48,9 +48,43 @@
               </span>
             </v-list-item-title>
           </v-list-item-content>
-        </v-list-item>
+        </v-list-item> -->
       </template>
     </v-list>
+    <div class="social-icons-xb">
+      <div class="social-links">
+        <a
+          href="https://github.com/jakubgania"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link-item"
+        >
+          <v-icon>
+            mdi-github-circle
+          </v-icon>
+        </a>
+        <a
+          href="https://pl.linkedin.com/in/jakubgania"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link-item"
+        >
+          <v-icon>
+            mdi-linkedin
+          </v-icon>
+        </a>
+        <a
+          href="https://twitter.com/jakubgania"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link-item"
+        >
+          <v-icon>
+            mdi-twitter
+          </v-icon>
+        </a>
+      </div>
+    </div>
   </v-navigation-drawer>
 </template>
 
@@ -115,9 +149,12 @@ export default {
 .v-list--nav .v-list-item:before {
   border-radius: 0;
 }
+.v-navigation-drawer--temporary:not(.navigation-drawer-close) {
+  box-shadow: none;
+}
 </style>
 
-<style scoped>
+<style lang="scss" scoped>
 .close-icon-section {
   text-align: right;
   height: 64px;
@@ -158,6 +195,26 @@ export default {
 .navigation-drawer-item {
   width: 100%;
   max-width: 320px;
+}
+.social-icons-xb {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #2f363d;
+}
+.social-links {
+  display: flex;
+
+  a + a {
+    border-left: 1px solid #2f363d;
+  }
+}
+.social-link-item {
+  width: 33.333%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 48px;
 }
 
 @media only screen and (max-width: 600px) {

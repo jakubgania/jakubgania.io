@@ -20,8 +20,11 @@
               <span style="color: #0066ff;">
                 showMenu
               </span>
-              <span style="color: #cc33ff;">
+              <span class="hkk" style="color: #cc33ff;">
                 ()
+              </span>
+              <span class="bgg" style="color: #cc33ff;">
+                (click!)
               </span>
               <span>;</span>
             </nuxt-link>

@@ -133,8 +133,10 @@ export default {
   margin-bottom: 80px;
 }
 .post-link-item {
-  background-color: #fafafa;
   margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
 }
 .post-link-item-dark-theme {
   background-color: #404040;
@@ -149,7 +151,7 @@ export default {
 .post-main-title {
   font-size: 20px;
   font-weight: 400;
-  letter-spacing: 1.4px;
+  letter-spacing: 0.4px;
   display: flex;
   padding-top: 2px;
   padding-bottom: 4px;
@@ -158,7 +160,7 @@ export default {
   color: #0066ff;
 }
 .post-title {
-  padding-left: 10px;
+  font-size: 20px;
 }
 .creation-date {
   text-align: left;
@@ -166,7 +168,6 @@ export default {
   letter-spacing: 1px;
   color: #8c8c8c;
   padding-top: 4px;
-  padding-left: 10px;
 }
 
 @media only screen and (max-width: 960px) {
@@ -182,11 +183,11 @@ export default {
     padding-right: 14px;
   }
   .post-main-title {
-    font-size: 16px;
     padding-top: 4px;
     padding-bottom: 4px;
   }
   .post-title {
+    font-size: 16px;
     padding-left: 0px;
   }
   .creation-date {

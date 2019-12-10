@@ -11,7 +11,7 @@ export default {
   },
   data() {
     return {
-      title: 'Timeline',
+      title: '{ timeline }',
       description:
         'Mój timeline - różne wydarzenia z mojego życia oznaczone na osi czasu. Sekcja w przygotowaniu.',
       items: [
