@@ -7,23 +7,25 @@
     right
     temporary
     :width="$vuetify.breakpoint.name !== 'xs' ? '320px' : '100%'"
+    style="flex-direction: column;display: flex;"
   >
     <div class="close-icon-section">
-      <dark-mode-switch-component
-        style="width: 140px; display: inline-block;margin-top: 22px;margin-left: 16px;"
-      />
+      <dark-mode-switch-component style="margin-top: 22px;margin-left: 4px;" />
       <v-btn
         @click.native="$emit('switchNavigationDrawer')"
         large
         icon
         class="close-icon-button"
       >
-        <v-icon :class="{ 'close-icon-dark-theme': darkTheme }">
+        <v-icon
+          :class="{ 'close-icon-dark-theme': darkTheme }"
+          style="font-size: 36px;"
+        >
           mdi-close
         </v-icon>
       </v-btn>
     </div>
-    <v-list dense nav>
+    <v-list dense nav style="flex-grow: 1;display: block;">
       <template v-for="item in items">
         <v-list-item v-if="item.path" :key="item.title" :to="item.path">
           <v-list-item-content>
@@ -37,18 +39,6 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <!-- <v-list-item v-if="item.url" :key="item.title" :href="item.url">
-          <v-list-item-content>
-            <v-list-item-title class="list-item-title">
-              <span
-                :class="{ 'dark-theme-text': darkTheme }"
-                class="title-page text-menu"
-              >
-                {{ item.title }}
-              </span>
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item> -->
       </template>
     </v-list>
     <div class="social-icons-xb">
@@ -152,18 +142,22 @@ export default {
 .v-navigation-drawer--temporary:not(.navigation-drawer-close) {
   box-shadow: none;
 }
+.v-navigation-drawer__content {
+  flex-direction: column;
+  display: flex;
+}
 </style>
 
 <style lang="scss" scoped>
 .close-icon-section {
-  text-align: right;
+  display: flex;
+  align-items: center;
   height: 64px;
-  line-height: 64px;
-  display: inline;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
 }
 .close-icon-button {
-  float: right;
-  margin-top: 16px;
+  font-size: 40px;
   margin-right: 16px;
 }
 .list-item-title {
@@ -198,8 +192,7 @@ export default {
 }
 .social-icons-xb {
   width: 100%;
-  position: fixed;
-  bottom: 0;
+  display: block;
   border-top: 1px solid #2f363d;
 }
 .social-links {
@@ -215,6 +208,12 @@ export default {
   justify-content: center;
   display: flex;
   height: 48px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #f2f2f2;
+    transition: background-color 0.2s ease;
+  }
 }
 
 @media only screen and (max-width: 600px) {
