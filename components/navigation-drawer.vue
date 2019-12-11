@@ -9,21 +9,18 @@
     :width="$vuetify.breakpoint.name !== 'xs' ? '320px' : '100%'"
     style="flex-direction: column;display: flex;"
   >
-    <div class="close-icon-section">
+    <div
+      class="close-icon-section"
+      :class="{ 'close-icon-section--dark-theme': darkTheme }"
+    >
       <dark-mode-switch-component style="margin-top: 22px;margin-left: 4px;" />
-      <v-btn
-        @click.native="$emit('switchNavigationDrawer')"
+      <div
+        @click="$emit('switchNavigationDrawer')"
         large
         icon
         class="close-icon-button"
-      >
-        <v-icon
-          :class="{ 'close-icon-dark-theme': darkTheme }"
-          style="font-size: 36px;"
-        >
-          mdi-close
-        </v-icon>
-      </v-btn>
+        :class="{ 'close-icon-button--dark-theme': darkTheme }"
+      />
     </div>
     <v-list dense nav style="flex-grow: 1;display: block;">
       <template v-for="item in items">
@@ -41,36 +38,25 @@
         </v-list-item>
       </template>
     </v-list>
-    <div class="social-icons-xb">
-      <div class="social-links">
+    <div
+      class="social-icons-xb"
+      :class="{ 'social-icons-xb--dark-theme': darkTheme }"
+    >
+      <div
+        class="social-links"
+        :class="{ 'social-links--dark-theme': darkTheme }"
+      >
         <a
-          href="https://github.com/jakubgania"
+          v-for="item in socialLinks"
+          :key="item.id"
+          :href="item.url"
           target="_blank"
           rel="noopener noreferrer"
           class="social-link-item"
+          :class="{ 'social-link-item--dark-theme': darkTheme }"
         >
           <v-icon>
-            mdi-github-circle
-          </v-icon>
-        </a>
-        <a
-          href="https://pl.linkedin.com/in/jakubgania"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="social-link-item"
-        >
-          <v-icon>
-            mdi-linkedin
-          </v-icon>
-        </a>
-        <a
-          href="https://twitter.com/jakubgania"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="social-link-item"
-        >
-          <v-icon>
-            mdi-twitter
+            {{ item.icon }}
           </v-icon>
         </a>
       </div>
@@ -96,7 +82,21 @@ export default {
   data() {
     return {
       items: menuItems.menu,
-      menuIcon: 'mdi-chevron-right'
+      menuIcon: 'mdi-chevron-right',
+      socialLinks: [
+        {
+          url: 'https://github.com/jakubgania',
+          icon: 'mdi-github-circle'
+        },
+        {
+          url: 'https://pl.linkedin.com/in/jakubgania',
+          icon: 'mdi-linkedin'
+        },
+        {
+          url: 'https://twitter.com/jakubgania',
+          icon: 'mdi-twitter'
+        }
+      ]
     }
   },
   computed: {
@@ -153,12 +153,11 @@ export default {
   display: flex;
   align-items: center;
   height: 64px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #f2f2f2;
   justify-content: space-between;
 }
-.close-icon-button {
-  font-size: 40px;
-  margin-right: 16px;
+.close-icon-section--dark-theme {
+  border-bottom: 1px solid #2f363d;
 }
 .list-item-title {
   font-family: 'Roboto Mono', monospace;
@@ -193,13 +192,22 @@ export default {
 .social-icons-xb {
   width: 100%;
   display: block;
+  border-top: 1px solid #f2f2f2;
+}
+.social-icons-xb--dark-theme {
   border-top: 1px solid #2f363d;
 }
 .social-links {
   display: flex;
 
   a + a {
-    border-left: 1px solid #2f363d;
+    border-left: 1px solid #f2f2f2;
+  }
+
+  &--dark-theme {
+    a + a {
+      border-left: 1px solid #2f363d;
+    }
   }
 }
 .social-link-item {
@@ -214,6 +222,49 @@ export default {
     background-color: #f2f2f2;
     transition: background-color 0.2s ease;
   }
+
+  &--dark-theme {
+    &:hover {
+      background-color: #424b54;
+    }
+  }
+}
+
+.close-icon-button {
+  position: absolute;
+  right: 22px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+
+  &--dark-theme {
+    &.close-icon-button:before,
+    &.close-icon-button:after {
+      background-color: #bfbfbf;
+    }
+  }
+}
+.close-icon-button:hover {
+  &:after,
+  &:before {
+    background-color: #8c8c8c;
+    transition: background-color 0.2s ease;
+  }
+}
+.close-icon-button:before,
+.close-icon-button:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #000;
+}
+.close-icon-button:before {
+  transform: rotate(45deg);
+}
+.close-icon-button:after {
+  transform: rotate(-45deg);
 }
 
 @media only screen and (max-width: 600px) {

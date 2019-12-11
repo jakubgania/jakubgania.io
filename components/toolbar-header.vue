@@ -11,11 +11,15 @@
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer />
-      <v-app-bar-nav-icon
-        @click.native="$emit('switchNavigationDrawer')"
-        :class="{ 'nav-icon-dark-theme': darkTheme }"
+      <div
+        @click="$emit('switchNavigationDrawer')"
+        :class="{ 'nav-icon--dark-theme': darkTheme }"
         class="nav-icon"
-      />
+      >
+        <div class="menu-icon-hamburger" />
+        <div class="menu-icon-hamburger" />
+        <div class="menu-icon-hamburger" />
+      </div>
     </v-app-bar>
   </div>
 </template>
@@ -42,21 +46,49 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .link-title {
   text-decoration: none;
   color: #000;
 }
 .nav-icon {
-  color: #000;
+  &:hover {
+    .menu-icon-hamburger {
+      background-color: #8c8c8c;
+      transition: background-color 0.2s ease;
+    }
+  }
 }
-.nav-icon-dark-theme {
-  color: #fff !important;
+.menu-icon-hamburger {
+  width: 34px;
+  height: 2px;
+  background-color: #000;
+  transition: background-color 0.2s ease;
+  margin: 6px 0;
+}
+.nav-icon--dark-theme {
+  .menu-icon-hamburger {
+    background-color: #b3b3b3;
+  }
+
+  &:hover {
+    .menu-icon-hamburger {
+      background-color: #8c8c8c;
+    }
+  }
 }
 .dark-theme {
   background-color: #1b1f23;
 }
 .link-title-dark-theme {
   color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-icon-hamburger {
+    width: 28px;
+    height: 2px;
+    margin: 6px 0;
+  }
 }
 </style>
