@@ -52,11 +52,24 @@
 .post-content p img {
   width: 100%;
 }
+.embed-responsive {
+  margin: auto;
+  width: 100%;
+  max-width: 640px;
+}
+iframe {
+  width: 100%;
+}
+
 @media only screen and (max-width: 600px) {
   .v-application .post h2 {
     font-size: 18px;
   }
   .v-application code {
     font-size: 14px;
+  }
+  iframe {
+    width: 100% !important;
+    height: 32vh !important;
   }
 }

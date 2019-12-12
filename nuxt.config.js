@@ -121,7 +121,8 @@ export default {
     injected: true,
     use: [
       'markdown-it-meta',
-      'markdown-it-highlightjs'
+      'markdown-it-highlightjs',
+      'markdown-it-video'
     ]
   },
 
