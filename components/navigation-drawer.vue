@@ -174,7 +174,8 @@ export default {
 }
 .title-page {
   color: #000;
-  font-size: 12px;
+  font-size: 12.8px;
+  font-weight: 500;
 }
 .dark-theme {
   background-color: #1b1f23;
