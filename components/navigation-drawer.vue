@@ -161,6 +161,7 @@ export default {
 }
 .list-item-title {
   font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
   letter-spacing: 1px;
   color: #8c8c8c;
   padding-left: 10px;
@@ -274,7 +275,7 @@ export default {
     line-height: 56px;
   }
   .text-menu {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 </style>
