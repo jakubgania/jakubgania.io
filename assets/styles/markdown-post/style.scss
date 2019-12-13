@@ -49,6 +49,9 @@
 .v-application #blog-post ul {
   max-width: 640px !important;
 }
+.v-application #blog-post ul li a {
+  overflow-wrap: break-word;
+}
 .post-content p img {
   width: 100%;
 }
