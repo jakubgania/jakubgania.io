@@ -12,7 +12,6 @@
       <v-col
         v-for="item in posts"
         :key="item.id"
-        :class="{ 'post-link-item-dark-theme': darkThemeFlag }"
         class="post-link-item"
         cols="12"
         lg="12"
@@ -137,9 +136,6 @@ export default {
   margin-bottom: 20px;
   padding: 0;
   font-family: 'Roboto Mono', monospace;
-}
-.post-link-item-dark-theme {
-  background-color: #404040;
 }
 .post-link {
   text-decoration: none;
