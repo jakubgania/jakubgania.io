@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="button-section">
-        <button @click="accept()" type="button" class="accept-rules-button">
+        <button type="button" class="accept-rules-button" @click="accept()">
           akceptuję
         </button>
       </div>
