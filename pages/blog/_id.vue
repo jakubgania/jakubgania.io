@@ -31,7 +31,7 @@
             {{ attributes.datetime ? attributes.datetime : 'b/d' }}
           </div>
 
-          <div v-html="$md.render(model)" id="blog-post" class="post" />
+          <div id="blog-post" class="post" v-html="$md.render(model)" />
         </div>
       </template>
       <template v-else>
@@ -64,31 +64,6 @@ export default {
     'breadcrumbs-component': Breadcrumbs,
     'other-posts-component': OtherPosts
   },
-  data() {
-    return {
-      title: '',
-      error: false,
-      pageTitle: 'Jakub Gania Software',
-      errorMessage: 'Wystąpił błąd pobierania lub taki post nie istnieje',
-      items: [
-        {
-          text: 'blog',
-          disabled: false,
-          exact: true,
-          nuxt: true,
-          to: '/blog'
-        }
-      ],
-      counter: 0
-    }
-  },
-  computed: {
-    ...mapGetters('DarkMode', ['darkTheme']),
-    darkThemeFlag() {
-      this.forceUpdate()
-      return this.darkTheme
-    }
-  },
   async asyncData({ params }) {
     try {
       const { data } = await axios.get(
@@ -116,6 +91,31 @@ export default {
           keywords: ''
         }
       }
+    }
+  },
+  data() {
+    return {
+      title: '',
+      error: false,
+      pageTitle: 'Jakub Gania Software',
+      errorMessage: 'Wystąpił błąd pobierania lub taki post nie istnieje',
+      items: [
+        {
+          text: 'blog',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/blog'
+        }
+      ],
+      counter: 0
+    }
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      this.forceUpdate()
+      return this.darkTheme
     }
   },
   mounted() {
