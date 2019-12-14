@@ -8,7 +8,7 @@
           <subpage-title-section-component :title="attributes.title" />
         </div>
 
-        <div v-html="$md.render(model)" class="post" />
+        <div class="post" v-html="$md.render(model)" />
       </div>
     </template>
     <template v-else>
@@ -37,23 +37,6 @@ export default {
     'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection
   },
-  data() {
-    return {
-      title: '',
-      error: false,
-      pageTitle: 'Jakub Gania Software | Projekty',
-      errorMessage: 'Wystąpił błąd pobierania lub taki projekt nie istnieje',
-      items: [
-        {
-          text: 'projekty',
-          disabled: false,
-          exact: true,
-          nuxt: true,
-          to: '/projects'
-        }
-      ]
-    }
-  },
   async asyncData({ params }) {
     try {
       const { data } = await axios.get(
@@ -76,6 +59,23 @@ export default {
           keywords: ''
         }
       }
+    }
+  },
+  data() {
+    return {
+      title: '',
+      error: false,
+      pageTitle: 'Jakub Gania Software | Projekty',
+      errorMessage: 'Wystąpił błąd pobierania lub taki projekt nie istnieje',
+      items: [
+        {
+          text: 'projekty',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/projects'
+        }
+      ]
     }
   },
   mounted() {
