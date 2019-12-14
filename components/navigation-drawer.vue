@@ -15,11 +15,11 @@
     >
       <dark-mode-switch-component style="margin-top: 22px;margin-left: 4px;" />
       <div
-        @click="$emit('switchNavigationDrawer')"
         large
         icon
         class="close-icon-button"
         :class="{ 'close-icon-button--dark-theme': darkTheme }"
+        @click="$emit('switchNavigationDrawer')"
       />
     </div>
     <v-list dense nav style="flex-grow: 1;display: block;">
