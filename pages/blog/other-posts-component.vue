@@ -55,7 +55,6 @@ export default {
   &__title-section {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
-    // color: #586069;
     color: #f2f2f2;
     font-size: 20px;
     background-image: linear-gradient(
