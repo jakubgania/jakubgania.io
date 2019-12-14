@@ -76,22 +76,6 @@ export default {
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection
   },
-  data() {
-    return {
-      pageTitle: 'Jakub Gania Software',
-      title: 'Skróty klawiaturowe - ',
-      error: false,
-      items: [
-        {
-          text: 'skróty klawiaturowe',
-          disabled: false,
-          exact: true,
-          nuxt: true,
-          to: '/shortcuts'
-        }
-      ]
-    }
-  },
   asyncData({ params, error }) {
     return axios
       .get(`https://jakubgania.io/data/shortcuts/${params.id}.json`)
@@ -109,6 +93,22 @@ export default {
           error: true
         }
       })
+  },
+  data() {
+    return {
+      pageTitle: 'Jakub Gania Software',
+      title: 'Skróty klawiaturowe - ',
+      error: false,
+      items: [
+        {
+          text: 'skróty klawiaturowe',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/shortcuts'
+        }
+      ]
+    }
   },
   mounted() {
     this.items.push({
