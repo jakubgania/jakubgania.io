@@ -18,9 +18,9 @@
         >
           <v-img
             :src="`https://jakubgania.io/data/gallery/thumbnail/${item.id}`"
-            @click="setDetailsPhoto(item.id, index)"
             aspect-ratio="1"
             class="image-tile"
+            @click="setDetailsPhoto(item.id, index)"
           >
             <v-layout
               slot="placeholder"
@@ -52,7 +52,7 @@
         <v-card>
           <v-toolbar flat>
             <div class="flex-grow-1" />
-            <v-btn @click="dialogFullSizeImage = false" icon>
+            <v-btn icon @click="dialogFullSizeImage = false">
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </v-toolbar>
@@ -91,7 +91,7 @@
         >
           <v-toolbar flat>
             <div class="flex-grow-1" />
-            <v-btn @click="dialogFullSizeImage = false" icon>
+            <v-btn icon @click="dialogFullSizeImage = false">
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </v-toolbar>
@@ -116,7 +116,7 @@
     <client-only>
       <v-snackbar v-model="snackbar" :timeout="timeout">
         Brak kolejnych zdjęć
-        <v-btn @click="snackbar = false" color="pink" text>
+        <v-btn color="pink" text @click="snackbar = false">
           Zamknij
         </v-btn>
       </v-snackbar>
