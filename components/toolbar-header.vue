@@ -12,9 +12,9 @@
       </v-toolbar-title>
       <v-spacer />
       <div
-        @click="$emit('switchNavigationDrawer')"
         :class="{ 'nav-icon--dark-theme': darkTheme }"
         class="nav-icon"
+        @click="$emit('switchNavigationDrawer')"
       >
         <div class="menu-icon-hamburger" />
         <div class="menu-icon-hamburger" />
