@@ -126,6 +126,14 @@ export default {
     ]
   },
 
+  pwa: {
+    meta: {
+      twitterCard: 'summary_large_image',
+      twitterSite: '@jakubgania',
+      twitterCreator: '@jakubgania'
+    }
+  },
+
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
