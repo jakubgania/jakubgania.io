@@ -26,6 +26,7 @@
     "aos": "^2.3.4",
     "dotenv": "^8.2.0",
     "front-matter": "^3.0.2",
+    "markdown-it-emoji": "^1.4.0",
     "markdown-it-highlightjs": "^3.0.0",
     "markdown-it-meta": "0.0.1",
     "markdown-it-video": "^0.6.3",

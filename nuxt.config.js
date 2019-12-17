@@ -128,7 +128,8 @@ export default {
     use: [
       'markdown-it-meta',
       'markdown-it-highlightjs',
-      'markdown-it-video'
+      'markdown-it-video',
+      'markdown-it-emoji'
     ]
   },
 
