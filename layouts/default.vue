@@ -3,15 +3,15 @@
     <div class="pre-loader-fullscreen" :class="{ 'pre-loader': loader }">
       <div class="loader-section">
         <div class="loader">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
         </div>
       </div>
     </div>
