@@ -135,7 +135,7 @@ export default {
 
   pwa: {
     meta: {
-      twitterCard: 'summary',
+      twitterCard: 'summary_large_image',
       twitterSite: '@jakubgania',
       twitterCreator: '@jakubgania'
     }
