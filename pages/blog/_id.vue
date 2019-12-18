@@ -141,6 +141,16 @@ export default {
         {
           name: 'keywords',
           content: this.attributes.keywords
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.attributes.title + ' | ' + this.pageTitle
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://jakubgania.io' + this.$route.path
         }
       ]
     }
