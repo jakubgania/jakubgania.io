@@ -53,10 +53,9 @@ export default {
         content: 'pCgwKh6Bl0udfAQC8PP37yLs6Rs26hwU19gmuDgpnZs'
       },
       {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        property: 'twitter:description',
-        content: 'Jakub Gania Software - Full Stack Web Developer. Vue.js, Vuex, Vuetify, TypeScript, NUXT, HTML, CSS, Node.js, PHP, Laravel, Symfony, Nginx, Docker.'
+        hid: 'og:image',
+        property: 'og:image',
+        conent: 'https://jakubgania.io/jakub-gania-software-logo-img.png'
       }
     ],
     link: [

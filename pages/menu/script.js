@@ -33,6 +33,22 @@ export default {
         {
           name: 'keywords',
           content: 'menu, spis stron, podstrony'
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Jakub Gania Software | Menu'
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://jakubgania.io/menu'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            'Menu - spis stron dostępnych w ramach całej witryny jakubgania.io .'
         }
       ]
     }
