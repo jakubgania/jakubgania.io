@@ -31,6 +31,26 @@ export default {
         {
           name: 'keywords',
           content: this.head.keywords
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.subpageTitle
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          conent: 'https://jakubgania.io'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.head.description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          conent: 'https://jakubgania.io/jakub-gania-software-logo-img.png'
         }
       ]
     }

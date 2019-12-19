@@ -2,12 +2,7 @@
   <div>
     <div v-if="attributes.topImageSrc">
       <img
-        :src="
-          'https://jakubgania.io/data/blog/posts/' +
-            $route.params.id +
-            '/' +
-            attributes.topImageSrc
-        "
+        :src="getTopImageFullPath(attributes.topImageSrc)"
         :alt="'topImageAlt'"
         class="top-image"
       />
@@ -127,6 +122,15 @@ export default {
   methods: {
     forceUpdate() {
       this.counter += 1
+    },
+    getTopImageFullPath(imagesSrc) {
+      return (
+        'https://jakubgania.io/' +
+        'data/blog/posts/' +
+        this.$route.params.id +
+        '/' +
+        imagesSrc
+      )
     }
   },
   head() {
@@ -151,6 +155,18 @@ export default {
           hid: 'og:url',
           property: 'og:url',
           content: 'https://jakubgania.io' + this.$route.path
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.attributes.description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.attributes.topImageSrc
+            ? this.getTopImageFullPath(this.attributes.topImageSrc)
+            : 'https://jakubgania.io/jakub-gania-software-logo-img.png'
         }
       ]
     }
