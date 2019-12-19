@@ -51,6 +51,11 @@ export default {
           hid: 'og:image',
           property: 'og:image',
           conent: 'https://jakubgania.io/jakub-gania-software-logo-img.png'
+        },
+        {
+          hid: 'twitter:image',
+          property: 'twitter:image',
+          content: 'https://jakubgania.io/jakub-gania-software-logo-img.png'
         }
       ]
     }
