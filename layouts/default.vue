@@ -37,10 +37,10 @@ import PortalRulesAlertComponent from '../components/portal-rules-alert'
 export default {
   components: {
     PreloaderComponent,
-    'toolbar-header-component': ToolbarHeaderComponent,
-    'navigation-drawer-component': NavigationDrawerComponent,
-    'footer-component': FooterComponent,
-    'portal-rules-alert-component': PortalRulesAlertComponent
+    ToolbarHeaderComponent,
+    NavigationDrawerComponent,
+    FooterComponent,
+    PortalRulesAlertComponent
   },
   data() {
     return {
