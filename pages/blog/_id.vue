@@ -52,7 +52,7 @@ import axios from 'axios'
 import { mapGetters } from 'vuex'
 import frontmatter from 'front-matter'
 import Breadcrumbs from '../../components/breadcrumbs'
-import OtherPosts from './other-posts-component'
+import OtherPosts from '../../components/other-posts-component'
 
 export default {
   components: {
