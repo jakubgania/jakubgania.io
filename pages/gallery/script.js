@@ -1,13 +1,13 @@
 import axios from 'axios'
-import Breadcrumbs from '../../components/breadcrumbs'
-import SubpageTitleSection from '../../components/subpage-title-section'
-import SubpageDescriptionSection from '../../components/subpage-description-section'
+import BreadcrumbsComponent from '@/components/breadcrumbs'
+import SubpageTitleSectionComponent from '@/components/subpage-title-section'
+import SubpageDescriptionSectionComponent from '@/components/subpage-description-section'
 
 export default {
   components: {
-    'breadcrumbs-component': Breadcrumbs,
-    'subpage-title-section-component': SubpageTitleSection,
-    'subpage-description-section-component': SubpageDescriptionSection
+    BreadcrumbsComponent,
+    SubpageTitleSectionComponent,
+    SubpageDescriptionSectionComponent
   },
   data() {
     return {
