@@ -51,13 +51,13 @@
 import axios from 'axios'
 import { mapGetters } from 'vuex'
 import frontmatter from 'front-matter'
-import Breadcrumbs from '../../components/breadcrumbs'
-import OtherPosts from '../../components/other-posts-component'
+import BreadcrumbsComponent from '@/components/breadcrumbs'
+import OtherPostsComponent from '@/components/other-posts-component'
 
 export default {
   components: {
-    'breadcrumbs-component': Breadcrumbs,
-    'other-posts-component': OtherPosts
+    BreadcrumbsComponent,
+    OtherPostsComponent
   },
   async asyncData({ params }) {
     try {
