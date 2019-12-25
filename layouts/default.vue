@@ -28,11 +28,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import PreloaderComponent from '../components/preloader'
-import ToolbarHeaderComponent from '../components/toolbar-header'
-import NavigationDrawerComponent from '../components/navigation-drawer'
-import FooterComponent from '../components/footer'
-import PortalRulesAlertComponent from '../components/portal-rules-alert'
+import PreloaderComponent from '@/components/preloader'
+import ToolbarHeaderComponent from '@/components/toolbar-header'
+import NavigationDrawerComponent from '@/components/navigation-drawer'
+import FooterComponent from '@/components/footer'
+import PortalRulesAlertComponent from '@/components/portal-rules-alert'
 
 export default {
   components: {
