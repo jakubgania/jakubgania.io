@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { mapGetters } from 'vuex'
-import TopSectionContainerComponent from '../../components/top-section-container.vue'
+import TopSectionContainerComponent from '@/components/top-section-container.vue'
 
 export default {
   components: {
