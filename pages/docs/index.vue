@@ -1,79 +1,97 @@
 <template>
-  <v-row>
-    <!-- <breadcrumbs-component /> -->
+  <v-row class="content-container">
+    <breadcrumbs-component :items="items" />
 
-    <!-- <subpage-title-section-component/> -->
+    <subpage-title-section-component :title="title" />
+
+    <subpage-description-section-component :description="description" />
+
+    <div>
+      Tutaj lista postów
+    </div>
   </v-row>
 </template>
 
 <script>
 // import axios from 'axios'
-import Breadcrumbs from '@/components/breadcrumbs'
-import SubpageTileSection from '@/components/subpage-title-section'
-import SubpageDescriptionSection from '@/components/subpage-description-section'
+import BreadcrumbsComponent from '@/components/breadcrumbs'
+import SubpageTitleSectionComponent from '@/components/subpage-title-section'
+import SubpageDescriptionSectionComponent from '@/components/subpage-description-section'
 
 export default {
   components: {
-    Breadcrumbs,
-    SubpageTileSection,
-    SubpageDescriptionSection
+    BreadcrumbsComponent,
+    SubpageTitleSectionComponent,
+    SubpageDescriptionSectionComponent
   },
   data() {
     return {
-      title: '',
+      title: '{ artykuły }',
+      description:
+        'Z czasem będą pojawiać się tutaj różne artykuły powiązane głównie z programowaniem i developmentem. Poza tematami czysto technicznymi chciałbym tutaj poruszać kwestie związane z oprogramowaniem pomocnym w procesie tworzenia aplikacji czyli jakieś narzędzia i środowiska. Będę tutaj również opisywał w formie arytkułów pytania i odpowiedzi jakie sobie stawiam lub zagadnienia i problemy z jakimi się spotkałem programując coś nowego. Mam nadzieję, że z czasem wykształtuje się z tego pewnego rodzaju baza wiedzy z różnorodnymi i wartościowymi opisanymi zagadnieniami, które będą pomocne lub ciekawe dla innych osób.',
       items: [
         {
-          text: '',
+          text: 'menu',
           disabled: false,
           exact: true,
           nuxt: true,
-          to: ''
+          to: '/menu'
         },
         {
-          text: '',
+          text: 'docs',
           disabled: true,
           exact: true,
           nuxt: true,
-          to: ''
+          to: '/artykuły'
         }
       ]
     }
   },
   head() {
     return {
-      title: '',
+      title: 'Jakub Gania Software | Artykuły',
       meta: [
         {
-          hid: '',
-          name: '',
-          content: ''
+          hid: 'description',
+          name: 'description',
+          content: 'Artykuły'
         },
         {
           name: 'keywords',
-          content: ''
+          content:
+            'artykły, posty, programowanie, development, it, software, komputery, framework, technologie, informatyka, frontend, backend'
         },
         {
-          hid: '',
-          property: '',
-          content: ''
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Jakub Gania Software | Artykuły'
         },
         {
-          hid: '',
-          property: '',
-          content: ''
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://jakubgania.io/docs'
         },
         {
-          hid: '',
-          property: '',
-          content: ''
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'Artykuły na tematy programistyczne.'
         },
         {
-          hid: '',
-          property: '',
-          content: ''
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://jakubgania.io/jakub-gania-software-logo-img.png'
         }
       ]
     }
   }
 }
 </script>
+
+<style lang="scss">
+.content-container {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 80px;
+}
+</style>
