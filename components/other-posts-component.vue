@@ -36,6 +36,11 @@ export default {
         return []
       }
     }
+  },
+  head() {
+    return {
+      title: 'extreme test'
+    }
   }
 }
 </script>
