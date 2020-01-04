@@ -107,6 +107,10 @@ export default {
               link: '/about'
             },
             {
+              name: 'Artykuły',
+              link: '/docs'
+            },
+            {
               name: 'Projekty',
               link: '/projects'
             },
