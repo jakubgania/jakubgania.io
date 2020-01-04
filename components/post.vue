@@ -56,23 +56,57 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import BreadcrumbsComponent from '@/components/breadcrumbs'
+
 export default {
   props: {
     postObject: {
-      type: Array,
+      type: Object,
       default: () => {
-        return {
-          test: 2
-        }
+        return {}
       }
     }
   },
+  components: {
+    BreadcrumbsComponent
+  },
+  data() {
+    return {
+      error: false,
+      items: [
+        {
+          text: 'artykuły',
+          disabled: false,
+          exact: true,
+          nuxt: true,
+          to: '/docs'
+        }
+      ]
+    }
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      this.forceUpdate()
+      return this.darkTheme
+    }
+  },
+  mounted() {
+    this.items.push({
+      text: this.postObject.attributes.title.toLowerCase(),
+      disabled: true
+    })
+  },
   methods: {
+    forceUpdate() {
+      this.counter += 1
+    },
     getTopImageFullPath(imagesSrc) {
       return (
         'https://jakubgania.io/' +
         'data/blog/posts/' +
-        this.$route.params.id +
+        this.$route.params.article +
         '/' +
         imagesSrc
       )
@@ -80,3 +114,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import '../assets/styles/markdown-post/style.scss';
+</style>
+
+<style lang="scss" scoped>
+@import '../assets/styles/markdown-post/style-scoped.scss';
+</style>
