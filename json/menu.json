@@ -13,6 +13,10 @@
       "path": "/blog"
     },
     {
+      "title": "Artykuły",
+      "path": "/docs"
+    },
+    {
       "title": "Projekty",
       "path": "/projects"
     },
