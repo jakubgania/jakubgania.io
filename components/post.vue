@@ -73,6 +73,7 @@ export default {
   },
   data() {
     return {
+      pageTitle: 'Jakub Gania Software',
       error: false,
       items: [
         {
@@ -110,6 +111,44 @@ export default {
         '/' +
         imagesSrc
       )
+    }
+  },
+  head() {
+    return {
+      title: this.postObject.attributes.title + ' | ' + this.pageTitle,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.postObject.attributes.description
+        },
+        {
+          name: 'keywords',
+          content: this.postObject.attributes.keywords
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.postObject.attributes.title + ' | ' + this.pageTitle
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://jakubgania.io' + this.$route.path
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.postObject.attributes.description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.postObject.attributes.topImageSrc
+            ? this.getTopImageFullPath(this.postObject.attributes.topImageSrc)
+            : 'https://jakubgania.io/jakub-gania-software-logo-img.png'
+        }
+      ]
     }
   }
 }
