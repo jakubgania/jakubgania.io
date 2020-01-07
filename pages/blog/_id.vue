@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="attributes.topImageSrc">
+    <!-- <div v-if="attributes.topImageSrc">
       <img
         :src="getTopImageFullPath(attributes.topImageSrc)"
         :alt="'topImageAlt'"
@@ -43,7 +43,15 @@
       </template>
     </v-row>
 
-    <other-posts-component :other-posts="otherPosts" />
+    <other-posts-component :other-posts="otherPosts" /> -->
+
+    <post-component
+      :post-object="postObject"
+      :other-posts="true"
+      :top-image-param-value="'id'"
+      :top-image-path="'blog/posts'"
+      :breadCrumbsItems="items"
+    />
   </div>
 </template>
 
@@ -51,13 +59,15 @@
 import axios from 'axios'
 import { mapGetters } from 'vuex'
 import frontmatter from 'front-matter'
-import BreadcrumbsComponent from '@/components/breadcrumbs'
-import OtherPostsComponent from '@/components/other-posts-component'
+// import BreadcrumbsComponent from '@/components/breadcrumbs'
+// import OtherPostsComponent from '@/components/other-posts-component'
+import postComponent from '@/components/post'
 
 export default {
   components: {
-    BreadcrumbsComponent,
-    OtherPostsComponent
+    // BreadcrumbsComponent,
+    // OtherPostsComponent
+    postComponent
   },
   async asyncData({ params }) {
     try {
@@ -71,10 +81,18 @@ export default {
 
       const frontmatterData = frontmatter(data)
 
+      // return {
+      //   model: data,
+      //   attributes: frontmatterData.attributes,
+      //   otherPosts: otherPostsData.data.posts.slice(0, 3)
+      // }
+
       return {
-        model: data,
-        attributes: frontmatterData.attributes,
-        otherPosts: otherPostsData.data.posts.slice(0, 3)
+        postObject: {
+          model: data,
+          attributes: frontmatterData.attributes,
+          otherPosts: otherPostsData.data.posts.slice(0, 3)
+        }
       }
     } catch (error) {
       return {
@@ -103,7 +121,8 @@ export default {
           to: '/blog'
         }
       ],
-      counter: 0
+      counter: 0,
+      postObject: {}
     }
   },
   computed: {
@@ -113,12 +132,12 @@ export default {
       return this.darkTheme
     }
   },
-  mounted() {
-    this.items.push({
-      text: this.attributes.title.toLowerCase(),
-      disabled: true
-    })
-  },
+  // mounted() {
+  //   this.items.push({
+  //     text: this.attributes.title.toLowerCase(),
+  //     disabled: true
+  //   })
+  // },
   methods: {
     forceUpdate() {
       this.counter += 1
@@ -132,45 +151,45 @@ export default {
         imagesSrc
       )
     }
-  },
-  head() {
-    return {
-      title: this.attributes.title + ' | ' + this.pageTitle,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.attributes.description
-        },
-        {
-          name: 'keywords',
-          content: this.attributes.keywords
-        },
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: this.attributes.title + ' | ' + this.pageTitle
-        },
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: 'https://jakubgania.io' + this.$route.path
-        },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.attributes.description
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: this.attributes.topImageSrc
-            ? this.getTopImageFullPath(this.attributes.topImageSrc)
-            : 'https://jakubgania.io/jakub-gania-software-logo-img.png'
-        }
-      ]
-    }
   }
+  // head() {
+  //   return {
+  //     title: this.attributes.title + ' | ' + this.pageTitle,
+  //     meta: [
+  //       {
+  //         hid: 'description',
+  //         name: 'description',
+  //         content: this.attributes.description
+  //       },
+  //       {
+  //         name: 'keywords',
+  //         content: this.attributes.keywords
+  //       },
+  //       {
+  //         hid: 'og:title',
+  //         property: 'og:title',
+  //         content: this.attributes.title + ' | ' + this.pageTitle
+  //       },
+  //       {
+  //         hid: 'og:url',
+  //         property: 'og:url',
+  //         content: 'https://jakubgania.io' + this.$route.path
+  //       },
+  //       {
+  //         hid: 'og:description',
+  //         property: 'og:description',
+  //         content: this.attributes.description
+  //       },
+  //       {
+  //         hid: 'og:image',
+  //         property: 'og:image',
+  //         content: this.attributes.topImageSrc
+  //           ? this.getTopImageFullPath(this.attributes.topImageSrc)
+  //           : 'https://jakubgania.io/jakub-gania-software-logo-img.png'
+  //       }
+  //     ]
+  //   }
+  // }
 }
 </script>
 

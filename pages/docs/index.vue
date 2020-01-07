@@ -34,7 +34,7 @@
     <template v-else>
       <v-col lg="12">
         <v-alert dense type="info">
-          Brak postów
+          Sekcja w przygotowaniu
         </v-alert>
       </v-col>
     </template>
@@ -74,13 +74,7 @@ export default {
           to: '/artykuły'
         }
       ],
-      posts: [
-        {
-          id: 'example',
-          title: 'example title',
-          creationDate: 'example date'
-        }
-      ]
+      posts: []
     }
   },
   head() {

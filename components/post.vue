@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="postObject">
     <div v-if="postObject.attributes.topImageSrc">
       <img
         :src="getTopImageFullPath(postObject.attributes.topImageSrc)"
@@ -16,7 +16,7 @@
 
         <div class="post-content">
           <div style="max-width: 640px;margin: auto;">
-            <breadcrumbs-component :items="items" />
+            <breadcrumbs-component :items="breadCrumbsItems" />
           </div>
 
           <div
@@ -52,6 +52,7 @@
     </v-row>
 
     <!-- <other-posts-component :other-posts="otherPosts" /> -->
+    <component :is="otherPostsComponent" :other-posts="postObject.otherPosts" />
   </div>
 </template>
 
@@ -66,6 +67,24 @@ export default {
       default: () => {
         return {}
       }
+    },
+    otherPosts: {
+      type: Boolean,
+      default: false
+    },
+    topImageParamValue: {
+      type: String,
+      default: ''
+    },
+    topImagePath: {
+      type: String,
+      default: ''
+    },
+    breadCrumbsItems: {
+      type: Array,
+      default: () => {
+        return {}
+      }
     }
   },
   components: {
@@ -75,15 +94,7 @@ export default {
     return {
       pageTitle: 'Jakub Gania Software',
       error: false,
-      items: [
-        {
-          text: 'artykuły',
-          disabled: false,
-          exact: true,
-          nuxt: true,
-          to: '/docs'
-        }
-      ]
+      errorMessage: 'Error'
     }
   },
   computed: {
@@ -91,10 +102,17 @@ export default {
     darkThemeFlag() {
       this.forceUpdate()
       return this.darkTheme
+    },
+    otherPostsComponent() {
+      if (this.otherPosts) {
+        return () => import('@/components/other-posts-component')
+      }
+
+      return false
     }
   },
   mounted() {
-    this.items.push({
+    this.breadCrumbsItems.push({
       text: this.postObject.attributes.title.toLowerCase(),
       disabled: true
     })
@@ -106,8 +124,10 @@ export default {
     getTopImageFullPath(imagesSrc) {
       return (
         'https://jakubgania.io/' +
-        'data/blog/posts/' +
-        this.$route.params.article +
+        'data/' +
+        this.topImagePath +
+        '/' +
+        this.$route.params[this.topImageParamValue] +
         '/' +
         imagesSrc
       )
