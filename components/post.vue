@@ -51,7 +51,6 @@
       </template>
     </v-row>
 
-    <!-- <other-posts-component :other-posts="otherPosts" /> -->
     <component :is="otherPostsComponent" :other-posts="postObject.otherPosts" />
   </div>
 </template>
