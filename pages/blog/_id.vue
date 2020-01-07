@@ -12,7 +12,6 @@
 
 <script>
 import axios from 'axios'
-import { mapGetters } from 'vuex'
 import frontmatter from 'front-matter'
 import postComponent from '@/components/post'
 
@@ -66,21 +65,10 @@ export default {
           to: '/blog'
         }
       ],
-      counter: 0,
       postObject: {}
     }
   },
-  computed: {
-    ...mapGetters('DarkMode', ['darkTheme']),
-    darkThemeFlag() {
-      this.forceUpdate()
-      return this.darkTheme
-    }
-  },
   methods: {
-    forceUpdate() {
-      this.counter += 1
-    },
     getTopImageFullPath(imagesSrc) {
       return (
         'https://jakubgania.io/' +
