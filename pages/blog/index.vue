@@ -1,49 +1,87 @@
 <template>
-  <v-row :key="counter" class="content-container">
-    <breadcrumbs-component :items="items" />
-
-    <subpage-title-section-component
-      :title="'{ ' + title + ' - ' + posts.length + ' }'"
-    />
-
-    <subpage-description-section-component :description="description" />
-
-    <template v-if="posts.length">
-      <v-col
-        v-for="item in posts"
-        :key="item.id"
-        class="post-link-item"
-        cols="12"
-        lg="12"
-        xs="12"
+  <div>
+    <div
+      v-if="!darkThemeFlag"
+      class="top-image--light"
+      style="margin-top: -6px;"
+    >
+      <div
+        data-aos="fade-in"
+        data-aos-dealy="100"
+        data-aos-duration="1200"
+        data-aos-once="true"
+        class="x1"
       >
-        <nuxt-link
-          :to="`/blog/` + item.id"
-          :class="{ 'post-link-dark-theme': darkThemeFlag }"
-          class="post-link"
+        <div class="x2">
+          <div class="x3">
+            Blog
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="darkThemeFlag" class="top-image--dark" style="margin-top: -6px;">
+      <div
+        data-aos="fade-in"
+        data-aos-dealy="100"
+        data-aos-duration="1200"
+        data-aos-once="true"
+        class="x1"
+      >
+        <div class="x2">
+          <div class="x3" style="color: #fff;">
+            Blog
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <v-row :key="counter" class="content-container">
+      <breadcrumbs-component :items="items" />
+
+      <subpage-title-section-component
+        :title="'{ ' + title + ' - ' + posts.length + ' }'"
+      />
+
+      <subpage-description-section-component :description="description" />
+
+      <template v-if="posts.length">
+        <v-col
+          v-for="item in posts"
+          :key="item.id"
+          class="post-link-item"
+          cols="12"
+          lg="12"
+          xs="12"
         >
-          <div class="post-main-title">
-            <div class="post-title">
-              {{ item.title }}
+          <nuxt-link
+            :to="`/blog/` + item.id"
+            :class="{ 'post-link-dark-theme': darkThemeFlag }"
+            class="post-link"
+          >
+            <div class="post-main-title">
+              <div class="post-title">
+                {{ item.title }}
+              </div>
             </div>
-          </div>
-          <div class="description-section">
-            {{ item.description }}
-          </div>
-          <div class="creation-date">
-            {{ item.creationDate }}
-          </div>
-        </nuxt-link>
-      </v-col>
-    </template>
-    <template v-else>
-      <v-col lg="12">
-        <v-alert dense type="info">
-          Brak postów
-        </v-alert>
-      </v-col>
-    </template>
-  </v-row>
+            <div class="description-section">
+              {{ item.description }}
+            </div>
+            <div class="creation-date">
+              {{ item.creationDate }}
+            </div>
+          </nuxt-link>
+        </v-col>
+      </template>
+      <template v-else>
+        <v-col lg="12">
+          <v-alert dense type="info">
+            Brak postów
+          </v-alert>
+        </v-col>
+      </template>
+    </v-row>
+  </div>
 </template>
 
 <script>
@@ -153,6 +191,50 @@ export default {
   width: 100%;
   margin: auto;
   margin-bottom: 80px;
+}
+.top-image {
+  width: 100%;
+  height: 40vw;
+  min-height: 200px;
+  margin-top: -6px;
+  margin-bottom: 80px;
+  position: relative;
+
+  &--dark {
+    background-image: url('../../assets/images/dotted-wawes-dark.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--light {
+    background-image: url('../../assets/images/dotted-wawes-light.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.x1 {
+  width: 100%;
+  height: 40vw;
+}
+.x2 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.x3 {
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 10vw;
+  font-weight: 900;
+  letter-spacing: 8px;
+  -webkit-font-smoothing: antialiased;
 }
 .post-link-item {
   margin-top: 10px;
