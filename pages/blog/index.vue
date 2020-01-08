@@ -27,6 +27,9 @@
               {{ item.title }}
             </div>
           </div>
+          <div class="description-section">
+            {{ item.description }}
+          </div>
           <div class="creation-date">
             {{ item.creationDate }}
           </div>
@@ -144,7 +147,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .content-container {
   max-width: 800px;
   width: 100%;
@@ -160,6 +163,12 @@ export default {
 .post-link {
   text-decoration: none;
   color: #000;
+
+  &:hover {
+    .post-main-title {
+      color: #0066ff;
+    }
+  }
 }
 .post-link-dark-theme {
   color: #bfbfbf;
@@ -172,11 +181,14 @@ export default {
   padding-top: 2px;
   padding-bottom: 4px;
 }
-.post-main-title:hover {
-  color: #0066ff;
-}
 .post-title {
   font-size: 20px;
+}
+.description-section {
+  font-size: 14px;
+  padding-top: 4px;
+  letter-spacing: 0.4px;
+  padding-bottom: 10px;
 }
 .creation-date {
   text-align: left;
