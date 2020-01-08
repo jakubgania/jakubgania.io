@@ -3,7 +3,7 @@
     <div
       v-if="!darkThemeFlag"
       class="top-image--light"
-      style="margin-top: -6px;"
+      style="margin-top: -6px;margin-bottom: 40px;"
     >
       <div
         data-aos="fade-in"
@@ -20,7 +20,11 @@
       </div>
     </div>
 
-    <div v-if="darkThemeFlag" class="top-image--dark" style="margin-top: -6px;">
+    <div
+      v-if="darkThemeFlag"
+      class="top-image--dark"
+      style="margin-top: -6px;margin-bottom: 40px;"
+    >
       <div
         data-aos="fade-in"
         data-aos-dealy="100"
