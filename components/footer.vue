@@ -97,7 +97,7 @@ export default {
   },
   data() {
     return {
-      copyrightText: '&copy; 2018 - 2019 Jakub Gania Software',
+      copyrightText: '&copy; 2018 - 2020 Jakub Gania Software',
       sites: [
         {
           titleColumn: 'Strony',
@@ -105,6 +105,10 @@ export default {
             {
               name: 'O mnie',
               link: '/about'
+            },
+            {
+              name: 'Artykuły',
+              link: '/docs'
             },
             {
               name: 'Projekty',

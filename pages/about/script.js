@@ -35,6 +35,26 @@ export default {
         {
           name: 'keywords',
           content: 'o mnie, opis'
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Jakub Gania Software | O mnie'
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://jakubgania.io/about'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'Kilka zdań o mnie'
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://jakubgania.io/jakub-gania-software-logo-img.png'
         }
       ]
     }
