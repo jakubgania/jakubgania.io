@@ -151,6 +151,11 @@ export default {
           content: this.postObject.attributes.title + ' | ' + this.pageTitle
         },
         {
+          hid: 'og:site_name',
+          property: 'og:site_name',
+          content: 'Jakub Gania Software'
+        },
+        {
           hid: 'og:type',
           property: 'og:type',
           content: 'article'
