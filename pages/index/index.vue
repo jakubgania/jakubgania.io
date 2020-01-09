@@ -1,12 +1,7 @@
 <template>
   <v-row class="container-index">
     <div class="content-section">
-      <div
-        data-aos="zoom-in"
-        data-aos-dealy="200"
-        data-aos-duration="1200"
-        data-aos-once="true"
-      >
+      <div>
         <div class="section">
           <logo-component :big-font-size="true" :dark-theme="darkTheme" />
           <div class="link-section">
