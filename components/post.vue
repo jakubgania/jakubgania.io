@@ -151,6 +151,11 @@ export default {
           content: this.postObject.attributes.title + ' | ' + this.pageTitle
         },
         {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'article'
+        },
+        {
           hid: 'og:url',
           property: 'og:url',
           content: 'https://jakubgania.io' + this.$route.path
