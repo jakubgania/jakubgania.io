@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo renders properly 1`] = `
+<div class="logo">
+  Jakub Gania Software Example Test
+</div>
+`;
