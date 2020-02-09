@@ -60,6 +60,9 @@ import { mapGetters } from 'vuex'
 import BreadcrumbsComponent from '@/components/breadcrumbs'
 
 export default {
+  components: {
+    BreadcrumbsComponent
+  },
   props: {
     postObject: {
       type: Object,
@@ -85,9 +88,6 @@ export default {
         return {}
       }
     }
-  },
-  components: {
-    BreadcrumbsComponent
   },
   data() {
     return {

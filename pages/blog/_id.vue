@@ -5,7 +5,7 @@
       :other-posts="true"
       :top-image-param-value="'id'"
       :top-image-path="'blog/posts'"
-      :breadCrumbsItems="items"
+      :bread-crumbs-items="items"
     />
   </div>
 </template>

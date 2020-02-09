@@ -75,7 +75,7 @@
                     {{ itemSection.subtitle }}
                   </div>
                 </div>
-                <div v-html="itemSection.description" class="description" />
+                <div class="description" v-html="itemSection.description" />
                 <div v-if="itemSection.tags" class="tags-container">
                   <v-chip
                     v-for="tagItem in itemSection.tags"
