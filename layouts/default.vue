@@ -67,7 +67,7 @@ export default {
 html {
   scroll-behavior: smooth;
 }
-.theme--light.v-application {
+.theme--light.v-app-bar.v-toolbar.v-sheet {
   background-color: #fff;
 }
 .theme--dark.v-application {
