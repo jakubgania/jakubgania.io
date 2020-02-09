@@ -21,9 +21,7 @@
           <h2 class="headline font-weight-light mb-6 red--text">
             {{ item.title }}
           </h2>
-          <div>
-            {{ item.description }}
-          </div>
+          <div v-html="item.description" />
         </div>
       </v-timeline-item>
     </v-timeline>
