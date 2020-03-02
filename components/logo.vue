@@ -52,6 +52,13 @@ export default {
     color: #fff;
   }
 }
+@media only screen and (max-width: 960px) {
+  .logo {
+    &--normal-font {
+      font-size: 20px;
+    }
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .logo {
