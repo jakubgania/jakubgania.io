@@ -68,7 +68,6 @@ html {
   scroll-behavior: smooth;
 }
 .theme--light.v-app-bar.v-toolbar.v-sheet {
-  // background-color: #fff;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: saturate(180%) blur(20px);
 }
