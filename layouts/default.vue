@@ -89,7 +89,7 @@ html {
   background-color: #1a1a1a;
 }
 $scrollbar-track-color: #f4f4f4;
-$scrollbar-thumb-color: #b3b3b3;
+$scrollbar-thumb-color: #262626;
 
 ::-webkit-scrollbar-track {
   border-radius: 0;
