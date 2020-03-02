@@ -18,7 +18,7 @@
   font-weight: 500;
 }
 .link-text-dark-theme {
-  color: #ffcc66;
+  color: #00ffcc;
 }
 .link-x {
   padding: 0;
@@ -37,6 +37,10 @@
   .xpo {
     padding-left: 12px;
     transition: padding-left 0.2s ease;
+  }
+
+  .link-text-dark-theme {
+    color: #000;
   }
 }
 .comma {
