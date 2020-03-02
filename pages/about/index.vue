@@ -87,7 +87,7 @@
                 text
                 small
                 class="link-button"
-                to="/contac"
+                to="/contact"
               >
                 kontakt
               </v-btn>
