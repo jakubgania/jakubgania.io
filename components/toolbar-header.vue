@@ -28,6 +28,14 @@
             blog
           </span>
         </nuxt-link>
+        <nuxt-link to="/contact">
+          <span
+            :class="{ 'link-text--dark-theme': darkTheme }"
+            class="link-text"
+          >
+            kontakt
+          </span>
+        </nuxt-link>
         <a
           v-for="item in socialLinks"
           :key="item.id"
