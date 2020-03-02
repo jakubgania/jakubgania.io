@@ -261,7 +261,7 @@ export default {
 }
 .post-main-title {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.4px;
   display: flex;
   padding-top: 2px;
