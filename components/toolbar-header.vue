@@ -148,7 +148,7 @@ export default {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
-  margin-right: 10px;
+  margin-right: 20px;
   letter-spacing: 2px;
   transition: color 0.2s ease;
 
@@ -163,6 +163,7 @@ export default {
 }
 .social-icon {
   margin-right: 10px;
+  text-decoration: none;
 }
 .icon {
   color: #000;
