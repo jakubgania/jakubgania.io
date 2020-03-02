@@ -38,14 +38,14 @@ export default {
 <style lang="scss" scoped>
 .logo {
   font-family: 'MaisonNeueExtended';
-  letter-spacing: 0.4px;
+  letter-spacing: 0.6px;
 
   &--big-font {
     font-size: 60px;
   }
 
   &--normal-font {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   &--dark-theme {
