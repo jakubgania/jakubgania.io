@@ -142,6 +142,12 @@ export default {
   font-size: 12px;
   margin-right: 10px;
   letter-spacing: 2px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #0066ff;
+    transition: color 0.2s ease;
+  }
 
   &--dark-theme {
     color: #fff;
