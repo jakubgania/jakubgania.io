@@ -13,7 +13,7 @@
       class="close-icon-section"
       :class="{ 'close-icon-section--dark-theme': darkTheme }"
     >
-      <dark-mode-switch-component style="margin-top: 22px;margin-left: 4px;" />
+      <dark-mode-switch-component style="margin-top: 22px;margin-left: 14px;" />
       <div
         large
         icon
@@ -95,6 +95,10 @@ export default {
         {
           url: 'https://twitter.com/jakubgania',
           icon: 'mdi-twitter'
+        },
+        {
+          url: 'https://www.youtube.com/channel/UCpRXjQ_FgRfAqP6uIsA7UEQ',
+          icon: 'mdi-youtube'
         }
       ]
     }
@@ -234,7 +238,7 @@ export default {
 
 .close-icon-button {
   position: absolute;
-  right: 22px;
+  right: 14px;
   top: 15px;
   width: 32px;
   height: 32px;
