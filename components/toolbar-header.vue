@@ -36,7 +36,7 @@
           rel="noopener noreferrer"
           class="social-icon"
         >
-          <v-icon :class="{ 'icon-link-dark-theme': darkTheme }" class="icon">
+          <v-icon :class="{ 'icon-dark-theme': darkTheme }" class="icon">
             {{ item.icon }}
           </v-icon>
         </a>
@@ -152,6 +152,9 @@ export default {
 }
 .icon {
   color: #000;
+}
+.icon-dark-theme {
+  color: #fff;
 }
 @media only screen and (max-width: 960px) {
   .social-icon {
