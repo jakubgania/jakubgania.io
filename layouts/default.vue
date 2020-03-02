@@ -68,8 +68,12 @@ html {
   scroll-behavior: smooth;
 }
 .theme--light.v-app-bar.v-toolbar.v-sheet {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: saturate(180%) blur(14px);
+}
+.theme--dark.v-app-bar.v-toolbar.v-sheet {
+  background: rgba(27, 31, 35, 0.6);
+  backdrop-filter: saturate(180%) blur(14px);
 }
 .theme--dark.v-application {
   background-color: #1b1f23;
