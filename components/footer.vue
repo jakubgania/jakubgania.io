@@ -152,22 +152,22 @@ export default {
           titleColumn: 'Posty',
           elements: [
             {
-              name:
-                'Optymalizacja i refaktoryzacja kodu, nowa podstrona, metodologia BEM',
+              name: 'Tylko logo a jednak komponent',
+              link: '/blog/06-12-2019-tylko-logo-a-jednak-komponent'
+            },
+            {
+              name: 'Listopad - podsumowanie',
+              link: '/blog/03-12-2019-listopad-podsumowanie'
+            },
+            {
+              name: 'ITCorner Tech Meetup #5 Jak zostać dobrym seniorem w IT ?',
               link:
-                '/blog/21-11-2019-optymalizacja-i-refaktoryzacja-kodu-nowa-podstrona-metodologia-bem'
+                '/blog/30-11-2019-itcorner-tech-meetup-5-jak-zostac-dobrym-seniorem-w-it'
             },
             {
-              name: 'Przemyślenia',
-              link: '/blog/13-11-2019-przemyslenia'
-            },
-            {
-              name: 'Timeline, Dark Theme',
-              link: '/blog/12-11-2019-timeline-dark-theme'
-            },
-            {
-              name: 'Miesiąc',
-              link: '/blog/05-11-2019-miesiac'
+              name: 'Nieskończone możliwości eksperymentowania i tworzenia',
+              link:
+                '/blog/25-11-2019-nieskonczone-mozliwosci-eksperymentowania-i-tworzenia'
             }
           ]
         },
@@ -198,6 +198,10 @@ export default {
             {
               name: 'Twitter',
               href: 'https://twitter.com/jakubgania'
+            },
+            {
+              name: 'Youtube',
+              href: 'https://www.youtube.com/channel/UCpRXjQ_FgRfAqP6uIsA7UEQ'
             }
           ]
         }
