@@ -26,11 +26,12 @@
   padding: 14px;
 }
 .section {
-  border-top: 2px solid #0066ff;
-  border-bottom: 2px solid #0066ff;
+  // border-top: 2px solid #0066ff;
+  // border-bottom: 2px solid #0066ff;
   padding-top: 80px;
   padding-bottom: 80px;
   min-height: 100px;
+  min-width: 300px;
   text-align: center;
 }
 .link-section {
@@ -43,6 +44,14 @@
   transition: letter-spacing 0.2s ease;
   font-size: 14px;
   font-weight: bold;
+  background-color: white;
+  padding-left: 44px;
+  padding-right: 44px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba( 0, 0, 0, 0.19) !important;
+  // margin-top: 28px;
 
   .hkk {
     display: inline;
@@ -70,5 +79,114 @@
   .section {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  // background-color: #111;
+}
+
+.right {
+  right: 0;
+  // background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.rightty {
+  left: 70%;
+}
+
+.leftt {
+  left: 30%;
+}
+
+.xdgh {
+  font-family: 'MaisonNeueExtended';
+  font-size: 2vw;
+  letter-spacing: 0.4px;
+}
+
+.logox {
+  font-family: 'MaisonNeueExtended';
+  font-size: 2vw;
+  letter-spacing: 0.4px;
+  margin-bottom: 28px;
+}
+
+.dfgko {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 4px;
+  z-index: 20;
+  pointer-events: auto;
+}
+.social-icon {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.icon {
+  color: #000;
+  font-size: 40px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.icon-dark-theme {
+  color: #fff;
+}
+
+@media only screen and (max-width: 960px) {
+  .xdgh {
+    font-size: 4vw;
+  }
+  .logox {
+    font-size: 4vw;
+  }
+  .rightty {
+    left: 60%;
+  }
+  
+  .leftt {
+    left: 40%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .split {
+    height: 40%;
+    width: 100%;
+  }
+  .rightty {
+    left: 50%;
+  }
+  .right {
+    top: 30%;
+    left: 14%;
+  }
+  .icon {
+    color: #000;
+    font-size: 32px;
   }
 }
