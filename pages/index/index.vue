@@ -1,9 +1,9 @@
 <template>
   <v-row class="container-index">
     <div class="split left">
-      <div class="centered rightty">
+      <div class="centered left-part">
         <div class="section">
-          <div class="logox">
+          <div class="fullname">
             Jakub Gania
           </div>
           <div class="link-section">
@@ -31,7 +31,7 @@
     </div>
 
     <div class="split right">
-      <div class="centered leftt">
+      <div class="centered right-part">
         <div class="words-section">
           <div
             data-aos="fade-up"
@@ -39,7 +39,9 @@
             data-aos-duration="400"
             data-aos-once="true"
           >
-            <span class="xdgh">Software</span>
+            <span class="technical-word">
+              Software
+            </span>
           </div>
           <div
             data-aos="fade-up"
@@ -47,7 +49,9 @@
             data-aos-duration="600"
             data-aos-once="true"
           >
-            <span class="xdgh">Engineering</span>
+            <span class="technical-word">
+              Engineering
+            </span>
           </div>
           <div
             data-aos="fade-up"
@@ -55,7 +59,9 @@
             data-aos-duration="800"
             data-aos-once="true"
           >
-            <span class="xdgh">Code</span>
+            <span class="technical-word">
+              Code
+            </span>
           </div>
           <div
             data-aos="fade-up"
@@ -63,7 +69,9 @@
             data-aos-duration="1200"
             data-aos-once="true"
           >
-            <span class="xdgh">Development</span>
+            <span class="technical-word">
+              Development
+            </span>
           </div>
           <div
             data-aos="fade-up"
@@ -71,7 +79,9 @@
             data-aos-duration="1600"
             data-aos-once="true"
           >
-            <span class="xdgh">Web</span>
+            <span class="technical-word">
+              Web
+            </span>
           </div>
           <div
             data-aos="fade-up"
@@ -79,13 +89,15 @@
             data-aos-duration="2000"
             data-aos-once="true"
           >
-            <span class="xdgh">Apps</span>
+            <span class="technical-word">
+              Apps
+            </span>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="dfgko">
+    <div class="social-icons-section">
       <div>
         <a
           v-for="item in socialLinks"
@@ -101,44 +113,13 @@
         </a>
       </div>
     </div>
-    <!-- <div class="content-section">
-      <div>
-        <div class="section">
-          <logo-component :big-font-size="true" :dark-theme="darkTheme" />
-          <div class="link-section">
-            <nuxt-link to="/menu" class="link">
-              <span style="color: #ff0000;">
-                this
-              </span>
-              <span style="color: #000000;">
-                .
-              </span>
-              <span style="color: #0066ff;">
-                showMenu
-              </span>
-              <span class="hkk" style="color: #cc33ff;">
-                ()
-              </span>
-              <span class="bgg" style="color: #cc33ff;">
-                (click!)
-              </span>
-              <span>;</span>
-            </nuxt-link>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </v-row>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-// import Logo from '../../components/logo'
 
 export default {
-  components: {
-    // 'logo-component': Logo
-  },
   data() {
     return {
       subpageTitle: 'Jakub Gania Software',

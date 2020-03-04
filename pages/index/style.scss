@@ -51,7 +51,6 @@
   padding-bottom: 14px;
   border-radius: 20px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba( 0, 0, 0, 0.19) !important;
-  // margin-top: 28px;
 
   .hkk {
     display: inline;
@@ -91,17 +90,12 @@
   overflow-x: hidden;
   padding-top: 20px;
 }
-
 .left {
   left: 0;
-  // background-color: #111;
 }
-
 .right {
   right: 0;
-  // background-color: red;
 }
-
 .centered {
   position: absolute;
   top: 50%;
@@ -109,22 +103,18 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
-.rightty {
+.left-part {
   left: 70%;
 }
-
-.leftt {
+.right-part {
   left: 30%;
 }
-
-.xdgh {
+.technical-word {
   font-family: 'MaisonNeueExtended';
   font-size: 2vw;
   letter-spacing: 0.4px;
 }
-
-.logox {
+.fullname {
   font-family: 'MaisonNeueExtended';
   font-size: 2vw;
   letter-spacing: 0.4px;
@@ -134,7 +124,7 @@
   display: grid;
   text-align: left;
 }
-.dfgko {
+.social-icons-section {
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -161,17 +151,16 @@
 }
 
 @media only screen and (max-width: 960px) {
-  .xdgh {
+  .technical-word {
     font-size: 4vw;
   }
-  .logox {
+  .fullname {
     font-size: 4vw;
   }
-  .rightty {
+  .left-part {
     left: 60%;
   }
-  
-  .leftt {
+  .right-part {
     left: 40%;
   }
 }
@@ -180,32 +169,31 @@
   .words-section {
     text-align: center;
   }
-  .dfgko {
+  .social-icons-section {
     width: 100%;
     left: 75%;
   }
-  .xdgh {
+  .technical-word {
     font-size: 5.6vw;
   }
-  .logox {
+  .fullname {
     font-size: 5.6vw;
   }
   .split {
     height: 40%;
     width: 100%;
   }
-  .rightty {
+  .left-part {
     left: 50%;
   }
   .right {
     top: 30%;
-    // left: 14%;
   }
   .icon {
     color: #000;
     font-size: 32px;
   }
-  .leftt {
+  .right-part {
     left: 50%;
   }
 }
