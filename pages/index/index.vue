@@ -1,6 +1,6 @@
 <template>
   <v-row class="container-index">
-    <div class="split left">
+    <div class="split split--left">
       <div class="centered left-part">
         <div class="section">
           <div class="fullname">
@@ -17,10 +17,10 @@
               <span style="color: #0066ff;">
                 showMenu
               </span>
-              <span class="hkk" style="color: #cc33ff;">
+              <span class="parenthesis_empty">
                 ()
               </span>
-              <span class="bgg" style="color: #cc33ff;">
+              <span class="parenthesis_with_text">
                 (click!)
               </span>
               <span>;</span>
@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <div class="split right">
+    <div class="split split--right">
       <div class="centered right-part">
         <div class="words-section">
           <div

@@ -44,7 +44,7 @@
   transition: letter-spacing 0.2s ease;
   font-size: 14px;
   font-weight: bold;
-  background-color: white;
+  background-color: #fff;
   padding-left: 44px;
   padding-right: 44px;
   padding-top: 14px;
@@ -52,12 +52,14 @@
   border-radius: 20px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba( 0, 0, 0, 0.19) !important;
 
-  .hkk {
+  .parenthesis_empty {
     display: inline;
+    color: #cc33ff;
   }
 
-  .bgg {
+  .parenthesis_with_text {
     display: none;
+    color: #cc33ff;
   }
 }
 .link:hover {
@@ -65,11 +67,11 @@
   letter-spacing: 1.2px;
   transition: letter-spacing 0.2s ease;
 
-  .hkk {
+  .parenthesis_empty {
     display: none;
   }
 
-  .bgg {
+  .parenthesis_with_text {
     display: inline;
   }
 }
@@ -89,12 +91,14 @@
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
-}
-.left {
-  left: 0;
-}
-.right {
-  right: 0;
+
+  &--left {
+    left: 0;
+  }
+
+  &--right {
+    right: 0;
+  }
 }
 .centered {
   position: absolute;
@@ -182,12 +186,13 @@
   .split {
     height: 40%;
     width: 100%;
+
+    &--right {
+      top: 40%;
+    }
   }
   .left-part {
     left: 50%;
-  }
-  .right {
-    top: 30%;
   }
   .icon {
     color: #000;
