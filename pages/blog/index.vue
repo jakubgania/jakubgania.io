@@ -101,6 +101,19 @@ export default {
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection
   },
+  async asyncData({ params }) {
+    try {
+      const { data } = await axios.get(
+        `https://jakubgania.io/data/blog/list-of-posts.json`
+      )
+
+      return {
+        posts: data.posts
+      }
+    } catch (error) {
+      //
+    }
+  },
   data() {
     return {
       title: 'posty',
@@ -130,19 +143,6 @@ export default {
     darkThemeFlag() {
       this.forceUpdate()
       return this.darkTheme
-    }
-  },
-  async asyncData({ params }) {
-    try {
-      const { data } = await axios.get(
-        `https://jakubgania.io/data/blog/list-of-posts.json`
-      )
-
-      return {
-        posts: data.posts
-      }
-    } catch (error) {
-      //
     }
   },
   methods: {
@@ -261,7 +261,7 @@ export default {
 }
 .post-main-title {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.4px;
   display: flex;
   padding-top: 2px;

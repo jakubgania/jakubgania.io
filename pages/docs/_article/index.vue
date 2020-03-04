@@ -4,7 +4,7 @@
     :other-posts="false"
     :top-image-param-value="'article'"
     :top-image-path="'docs/articles'"
-    :breadCrumbsItems="items"
+    :bread-crumbs-items="items"
   />
 </template>
 

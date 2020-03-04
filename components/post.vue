@@ -60,6 +60,9 @@ import { mapGetters } from 'vuex'
 import BreadcrumbsComponent from '@/components/breadcrumbs'
 
 export default {
+  components: {
+    BreadcrumbsComponent
+  },
   props: {
     postObject: {
       type: Object,
@@ -85,9 +88,6 @@ export default {
         return {}
       }
     }
-  },
-  components: {
-    BreadcrumbsComponent
   },
   data() {
     return {
@@ -149,6 +149,16 @@ export default {
           hid: 'og:title',
           property: 'og:title',
           content: this.postObject.attributes.title + ' | ' + this.pageTitle
+        },
+        {
+          hid: 'og:site_name',
+          property: 'og:site_name',
+          content: 'Jakub Gania Software'
+        },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'article'
         },
         {
           hid: 'og:url',

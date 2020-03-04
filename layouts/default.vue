@@ -67,8 +67,13 @@ export default {
 html {
   scroll-behavior: smooth;
 }
-.theme--light.v-application {
-  background-color: #fff;
+.theme--light.v-app-bar.v-toolbar.v-sheet {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: saturate(180%) blur(14px);
+}
+.theme--dark.v-app-bar.v-toolbar.v-sheet {
+  background: rgba(27, 31, 35, 0.6);
+  backdrop-filter: saturate(180%) blur(14px);
 }
 .theme--dark.v-application {
   background-color: #1b1f23;
@@ -84,7 +89,7 @@ html {
   background-color: #1a1a1a;
 }
 $scrollbar-track-color: #f4f4f4;
-$scrollbar-thumb-color: #b3b3b3;
+$scrollbar-thumb-color: #262626;
 
 ::-webkit-scrollbar-track {
   border-radius: 0;
