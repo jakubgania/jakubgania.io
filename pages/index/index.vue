@@ -32,7 +32,7 @@
 
     <div class="split right">
       <div class="centered leftt">
-        <div style="display: grid; text-align: left;">
+        <div class="words-section">
           <div
             data-aos="fade-up"
             data-aos-dealy="200"

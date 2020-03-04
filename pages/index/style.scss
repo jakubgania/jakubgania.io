@@ -130,7 +130,10 @@
   letter-spacing: 0.4px;
   margin-bottom: 28px;
 }
-
+.words-section {
+  display: grid;
+  text-align: left;
+}
 .dfgko {
   position: fixed;
   bottom: 0;
@@ -174,6 +177,19 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .words-section {
+    text-align: center;
+  }
+  .dfgko {
+    width: 100%;
+    left: 75%;
+  }
+  .xdgh {
+    font-size: 5.6vw;
+  }
+  .logox {
+    font-size: 5.6vw;
+  }
   .split {
     height: 40%;
     width: 100%;
@@ -183,10 +199,13 @@
   }
   .right {
     top: 30%;
-    left: 14%;
+    // left: 14%;
   }
   .icon {
     color: #000;
     font-size: 32px;
+  }
+  .leftt {
+    left: 50%;
   }
 }
