@@ -182,9 +182,13 @@ export default {
   .other-posts-section {
     &__title-section {
       font-size: 16px;
+      margin-left: 0;
     }
 
     &__grid-item {
+      padding-left: 0;
+      padding-right: 0;
+
       &--title {
         font-size: 14px;
       }
