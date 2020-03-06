@@ -11,7 +11,7 @@
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer />
-      <div class="d-none d-sm-flex" style="margin-right: 20px;">
+      <div class="d-none d-sm-none d-md-flex" style="margin-right: 20px;">
         <nuxt-link to="/menu">
           <span
             :class="{ 'link-text--dark-theme': darkTheme }"
