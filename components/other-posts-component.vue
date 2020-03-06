@@ -149,6 +149,14 @@ export default {
       padding-left: 20px;
       padding-right: 20px;
       width: 50%;
+
+      &:nth-child(3) {
+        margin-top: 28px;
+      }
+
+      &:nth-child(4) {
+        margin-top: 28px;
+      }
     }
   }
 }
