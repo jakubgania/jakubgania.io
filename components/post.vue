@@ -51,6 +51,8 @@
       </template>
     </v-row>
 
+    <about-creator />
+
     <component
       :is="otherPostsComponent"
       :other-posts="postObject.otherPosts"
@@ -62,10 +64,12 @@
 <script>
 import { mapGetters } from 'vuex'
 import BreadcrumbsComponent from '@/components/breadcrumbs'
+import AboutCreator from '@/components/about-creator'
 
 export default {
   components: {
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    AboutCreator
   },
   props: {
     postObject: {
