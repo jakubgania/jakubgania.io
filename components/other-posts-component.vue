@@ -23,6 +23,11 @@
           </nuxt-link>
         </div>
       </div>
+      <div class="other-posts-section__button-section">
+        <nuxt-link to="/blog" class="other-posts-section__button-link">
+          wszystkie posty - {{ numberOfPosts }}
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -35,6 +40,10 @@ export default {
       default: () => {
         return []
       }
+    },
+    numberOfPosts: {
+      type: Number,
+      default: 0
     }
   }
 }
@@ -71,11 +80,12 @@ export default {
 
   &__grid {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 40px;
   }
 
   &__grid-item {
-    width: 33.33%;
+    width: 25%;
     padding-right: 20px;
 
     &--title {
@@ -99,6 +109,47 @@ export default {
     font-size: 12px;
     font-weight: bold;
     color: #b3b3b3;
+  }
+
+  &__button-section {
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  &__button-link {
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 1px;
+    transition: letter-spacing 0.2s ease;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #fff;
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+
+    &:hover {
+      letter-spacing: 1.2px;
+      transition: letter-spacing 0.2s ease;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .other-posts-section {
+    &__title-section {
+      margin-left: 20px;
+    }
+
+    &__grid-item {
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 50%;
+    }
   }
 }
 

@@ -51,7 +51,11 @@
       </template>
     </v-row>
 
-    <component :is="otherPostsComponent" :other-posts="postObject.otherPosts" />
+    <component
+      :is="otherPostsComponent"
+      :other-posts="postObject.otherPosts"
+      :number-of-posts="postObject.numberOfPosts"
+    />
   </div>
 </template>
 
