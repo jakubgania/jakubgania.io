@@ -98,28 +98,19 @@
     </div>
 
     <div class="social-icons-section">
-      <div>
-        <a
-          v-for="item in socialLinks"
-          :key="item.id"
-          :href="item.link"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="social-icon"
-        >
-          <v-icon :class="{ 'icon-dark-theme': darkTheme }" class="icon">
-            {{ item.icon }}
-          </v-icon>
-        </a>
-      </div>
+      <social-icons-component />
     </div>
   </v-row>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import SocialIcons from '../../components/social-icons'
 
 export default {
+  components: {
+    'social-icons-component': SocialIcons
+  },
   data() {
     return {
       subpageTitle: 'Jakub Gania Software',
@@ -128,25 +119,7 @@ export default {
           'Jakub Gania Software - Full Stack Web Developer. Vue.js, Vuex, Vuetify, TypeScript, NUXT, HTML, CSS, Node.js, PHP, Laravel, Symfony, Nginx, Docker.',
         keywords:
           'software, developer, it, programmer, coder, www, web, website, frontend, backend, full stack, software engineer, fullstack web developer ,vue.js, vuex, vuetify, typescript, nuxt.js, html, css, node.js, php, laravel, symfony, nginx, apache, server, blog, docker, github'
-      },
-      socialLinks: [
-        {
-          link: 'https://github.com/jakubgania',
-          icon: 'mdi-github-circle'
-        },
-        {
-          link: 'https://www.linkedin.com/in/jakubgania/',
-          icon: 'mdi-linkedin'
-        },
-        {
-          link: 'https://twitter.com/jakubgania',
-          icon: 'mdi-twitter'
-        },
-        {
-          link: 'https://www.youtube.com/channel/UCpRXjQ_FgRfAqP6uIsA7UEQ',
-          icon: 'mdi-youtube'
-        }
-      ]
+      }
     }
   },
   computed: {
