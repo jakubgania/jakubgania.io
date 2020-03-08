@@ -54,6 +54,10 @@ export default {
 }
 .icon {
   color: #000;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 .icon-dark-theme {
   color: #fff;
