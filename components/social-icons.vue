@@ -53,4 +53,11 @@ export default {
 .icon-dark-theme {
   color: #fff;
 }
+
+// for toolbar header
+// @media only screen and (max-width: 960px) {
+//   .social-icon {
+//     margin-right: 6px;
+//   }
+// }
 </style>
