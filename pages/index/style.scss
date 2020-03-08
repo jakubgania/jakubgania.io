@@ -137,22 +137,6 @@
   z-index: 20;
   pointer-events: auto;
 }
-.social-icon {
-  margin-right: 10px;
-  margin-left: 10px;
-  text-decoration: none;
-}
-.icon {
-  color: #000;
-  font-size: 40px;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-.icon-dark-theme {
-  color: #fff;
-}
 
 @media only screen and (max-width: 960px) {
   .technical-word {
@@ -193,10 +177,6 @@
   }
   .left-part {
     left: 50%;
-  }
-  .icon {
-    color: #000;
-    font-size: 32px;
   }
   .right-part {
     left: 50%;
