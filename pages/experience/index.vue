@@ -47,8 +47,8 @@
               {{ item.titleSection }}
               <v-icon
                 v-if="item.titleSectionIcon"
-                style="margin-top: -4px;font-size: 30px;margin-left: 10px;"
-                :style="darkTheme ? 'color: #fff;' : 'color: #bfbfbf;'"
+                style="margin-top: -4px;font-size: 36px;margin-left: 10px;"
+                :style="darkTheme ? 'color: #fff;' : 'color: #000;'"
               >
                 {{ 'mdi-' + item.titleSectionIcon }}
               </v-icon>
@@ -115,9 +115,62 @@
 </template>
 
 <script>
-import script from './script.js'
+import axios from 'axios'
+import { mapGetters } from 'vuex'
+import TopSectionContainerComponent from '@/components/top-section-container.vue'
 
-export default script
+export default {
+  components: {
+    TopSectionContainerComponent
+  },
+  computed: {
+    ...mapGetters('DarkMode', ['darkTheme']),
+    darkThemeFlag() {
+      this.refresh()
+      return this.darkTheme
+    }
+  },
+  methods: {
+    refresh() {
+      this.counter += 1
+    }
+  },
+  asyncData({ params, error }) {
+    return axios
+      .get(`https://jakubgania.io/data/expirience/data.json`)
+      .then((res) => {
+        return {
+          personalData: res.data.expirience.sectionPersonalData,
+          fullName: res.data.expirience.sectionPersonalData.fullName,
+          description: res.data.expirience.sectionPersonalData.description,
+          information: res.data.expirience.information
+        }
+      })
+      .catch(() => {
+        return {
+          error: true
+        }
+      })
+  },
+  head() {
+    return {
+      title: 'Jakub Gania Software | Doświadczenie',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Moje doświadczenie, umiejętności oraz certyfikaty. Zbiór informacji o moich osiągnięciach zawodowych, naukowych i używanych przezemnie technologiach.'
+        },
+        {
+          name: 'keywords',
+          content:
+            'doświadczenie, umiejętności, edukacja, certyfikaty, języki obce, cv'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style>

@@ -35,7 +35,8 @@ export default {
         postObject: {
           model: data,
           attributes: frontmatterData.attributes,
-          otherPosts: otherPostsData.data.posts.slice(0, 3)
+          otherPosts: otherPostsData.data.posts.slice(0, 4),
+          numberOfPosts: otherPostsData.data.posts.length
         }
       }
     } catch (error) {

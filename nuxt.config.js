@@ -123,6 +123,7 @@ export default {
   },
 
   markdownit: {
+    html: true,
     injected: true,
     use: [
       'markdown-it-meta',
