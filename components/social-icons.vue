@@ -17,28 +17,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import socialLinksItems from '../json/social-links.json'
 
 export default {
   data() {
     return {
-      socialLinks: [
-        {
-          link: 'https://github.com/jakubgania',
-          icon: 'mdi-github'
-        },
-        {
-          link: 'https://www.linkedin.com/in/jakubgania/',
-          icon: 'mdi-linkedin'
-        },
-        {
-          link: 'https://twitter.com/jakubgania',
-          icon: 'mdi-twitter'
-        },
-        {
-          link: 'https://www.youtube.com/channel/UCpRXjQ_FgRfAqP6uIsA7UEQ',
-          icon: 'mdi-youtube'
-        }
-      ]
+      socialLinks: socialLinksItems.data
     }
   },
   computed: {
