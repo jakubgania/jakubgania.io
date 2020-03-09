@@ -24,7 +24,7 @@ export default {
       socialLinks: [
         {
           link: 'https://github.com/jakubgania',
-          icon: 'mdi-github-circle'
+          icon: 'mdi-github'
         },
         {
           link: 'https://www.linkedin.com/in/jakubgania/',
