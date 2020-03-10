@@ -49,7 +49,7 @@
         <a
           v-for="item in socialLinks"
           :key="item.id"
-          :href="item.url"
+          :href="item.link"
           target="_blank"
           rel="noopener noreferrer"
           class="social-link-item"
@@ -67,6 +67,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import menuItems from '../json/menu.json'
+import socialLinksItems from '../json/social-links.json'
 import DarkModeSwitch from './dark-mode-switch.vue'
 
 export default {
@@ -83,24 +84,7 @@ export default {
     return {
       items: menuItems.menu,
       menuIcon: 'mdi-chevron-right',
-      socialLinks: [
-        {
-          url: 'https://github.com/jakubgania',
-          icon: 'mdi-github-circle'
-        },
-        {
-          url: 'https://pl.linkedin.com/in/jakubgania',
-          icon: 'mdi-linkedin'
-        },
-        {
-          url: 'https://twitter.com/jakubgania',
-          icon: 'mdi-twitter'
-        },
-        {
-          url: 'https://www.youtube.com/channel/UCpRXjQ_FgRfAqP6uIsA7UEQ',
-          icon: 'mdi-youtube'
-        }
-      ]
+      socialLinks: socialLinksItems.data
     }
   },
   computed: {
