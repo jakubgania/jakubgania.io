@@ -16,7 +16,7 @@ export default {
     }
   },
   mounted() {
-    this.loader = true
+    this.loader = false
   }
 }
 </script>
@@ -41,7 +41,6 @@ export default {
 }
 .loader-section {
   font-size: 16px;
-  font-smooth: auto;
   position: relative;
   display: flex;
   align-items: center;

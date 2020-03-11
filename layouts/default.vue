@@ -1,28 +1,31 @@
 <template>
   <v-app>
-    <preloader-component />
+    <template v-if="loader">
+      <preloader-component />
+    </template>
+    <template v-else>
+      <client-only>
+        <portal-rules-alert-component />
+      </client-only>
 
-    <client-only>
-      <portal-rules-alert-component />
-    </client-only>
+      <v-content class="app-content-container">
+        <navigation-drawer-component
+          :drawer="drawer"
+          @switchNavigationDrawer="switchNavigationDrawer"
+          @updateNavigationDrawerValue="updateNavigationDrawerValue"
+        />
 
-    <v-content class="app-content-container">
-      <navigation-drawer-component
-        :drawer="drawer"
-        @switchNavigationDrawer="switchNavigationDrawer"
-        @updateNavigationDrawerValue="updateNavigationDrawerValue"
-      />
+        <toolbar-header-component
+          @switchNavigationDrawer="switchNavigationDrawer"
+        />
 
-      <toolbar-header-component
-        @switchNavigationDrawer="switchNavigationDrawer"
-      />
+        <v-container fluid class="container-nuxt">
+          <nuxt />
+        </v-container>
+      </v-content>
 
-      <v-container fluid class="container-nuxt">
-        <nuxt />
-      </v-container>
-    </v-content>
-
-    <footer-component />
+      <footer-component />
+    </template>
   </v-app>
 </template>
 
@@ -44,7 +47,8 @@ export default {
   },
   data() {
     return {
-      drawer: false
+      drawer: false,
+      loader: true
     }
   },
   computed: {
@@ -57,6 +61,9 @@ export default {
     updateNavigationDrawerValue(value) {
       this.drawer = value
     }
+  },
+  mounted() {
+    this.loader = false
   }
 }
 </script>
