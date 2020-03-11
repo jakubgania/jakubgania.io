@@ -66,22 +66,6 @@
               </p>
             </div>
             <div class="icons-section">
-              <a :href="link.github" target="_blank" class="icon-link">
-                <v-icon
-                  :class="{ 'icon-link-dark-theme': darkTheme }"
-                  class="icon"
-                >
-                  mdi-github-circle
-                </v-icon>
-              </a>
-              <a :href="link.linkedin" target="_blank" class="icon-link">
-                <v-icon
-                  :class="{ 'icon-link-dark-theme': darkTheme }"
-                  class="icon"
-                >
-                  mdi-linkedin
-                </v-icon>
-              </a>
               <v-btn
                 :color="darkTheme ? 'white' : 'black'"
                 text
