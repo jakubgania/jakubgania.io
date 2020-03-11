@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="12" lg="12" xs="12" style="padding: 0;">
+  <v-col cols="12" lg="12" xs="12" class="subpage-title-section-wrapper">
     <h1
       id="subpage-title-component"
       :class="{ 'dark-theme-text': darkTheme }"
@@ -47,6 +47,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.subpage-title-section-wrapper {
+  padding: 0;
+}
 .page-title {
   font-weight: 800;
   border-bottom: 2px solid #000;
