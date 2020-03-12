@@ -1,31 +1,28 @@
 <template>
   <v-app>
-    <template v-if="loader">
-      <preloader-component />
-    </template>
-    <template v-else>
-      <client-only>
-        <portal-rules-alert-component />
-      </client-only>
+    <preloader-component />
 
-      <v-content class="app-content-container">
-        <navigation-drawer-component
-          :drawer="drawer"
-          @switchNavigationDrawer="switchNavigationDrawer"
-          @updateNavigationDrawerValue="updateNavigationDrawerValue"
-        />
+    <client-only>
+      <portal-rules-alert-component />
+    </client-only>
 
-        <toolbar-header-component
-          @switchNavigationDrawer="switchNavigationDrawer"
-        />
+    <v-content class="app-content-container">
+      <navigation-drawer-component
+        :drawer="drawer"
+        @switchNavigationDrawer="switchNavigationDrawer"
+        @updateNavigationDrawerValue="updateNavigationDrawerValue"
+      />
 
-        <v-container fluid class="container-nuxt">
-          <nuxt />
-        </v-container>
-      </v-content>
+      <toolbar-header-component
+        @switchNavigationDrawer="switchNavigationDrawer"
+      />
 
-      <footer-component />
-    </template>
+      <v-container fluid class="container-nuxt">
+        <nuxt />
+      </v-container>
+    </v-content>
+
+    <footer-component />
   </v-app>
 </template>
 
@@ -47,8 +44,7 @@ export default {
   },
   data() {
     return {
-      drawer: false,
-      loader: true
+      drawer: false
     }
   },
   computed: {
@@ -73,6 +69,10 @@ export default {
 
 html {
   scroll-behavior: smooth;
+}
+body {
+  overflow: hidden;
+  height: 100vh;
 }
 .theme--light.v-app-bar.v-toolbar.v-sheet {
   background: rgba(255, 255, 255, 0.6);
