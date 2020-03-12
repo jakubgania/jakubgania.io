@@ -16,7 +16,12 @@ export default {
     }
   },
   mounted() {
-    this.loader = false
+    this.loader = true
+
+    if (process.browser) {
+      document.getElementsByTagName('body')[0].style.overflow = 'auto'
+      document.getElementsByTagName('body')[0].style.overflow = 'unset'
+    }
   }
 }
 </script>
