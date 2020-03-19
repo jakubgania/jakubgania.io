@@ -42,7 +42,7 @@
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 import BreadcrumbsComponent from '@/components/breadcrumbs'
 import SubpageTitleSectionComponent from '@/components/subpage-title-section'
 import SubpageDescriptionSectionComponent from '@/components/subpage-description-section'
@@ -52,6 +52,19 @@ export default {
     BreadcrumbsComponent,
     SubpageTitleSectionComponent,
     SubpageDescriptionSectionComponent
+  },
+  async asyncData() {
+    try {
+      const { data } = await axios.get(
+        'https://jakubgania.io/data/docs/list-of-docs.json'
+      )
+
+      return {
+        posts: data.posts
+      }
+    } catch (error) {
+      //
+    }
   },
   data() {
     return {
@@ -73,8 +86,7 @@ export default {
           nuxt: true,
           to: '/artykuły'
         }
-      ],
-      posts: []
+      ]
     }
   },
   head() {
