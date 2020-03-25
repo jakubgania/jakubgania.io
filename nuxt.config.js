@@ -3,13 +3,13 @@ import sitemapRoutes from './store/sitemap-routes'
 
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       routes.push({
         name: 'home',
         path: '',
-        component: resolve(__dirname, 'pages/index/index.vue')
+        component: resolve(__dirname, 'pages/index/index.vue'),
       })
-    }
+    },
   },
 
   mode: 'universal',
@@ -20,18 +20,18 @@ export default {
     description: '',
     icons: [
       {
-        src: "/android-chrome-192x192.png",
-        sizes: "192x192",
-        type: "image/png"
+        src: '/android-chrome-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
       },
       {
-        src: "/android-chrome-512x512.png",
-        sizes: "512x512",
-        type: "image/png"
-      }
+        src: '/android-chrome-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
     ],
-    theme_color: "#000000",
-    background_color: "#000000"
+    theme_color: '#000000',
+    background_color: '#000000',
   },
 
   /*
@@ -46,29 +46,37 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.npm_package_description || '',
       },
       {
         name: 'google-site-verification',
-        content: 'pCgwKh6Bl0udfAQC8PP37yLs6Rs26hwU19gmuDgpnZs'
+        content: 'pCgwKh6Bl0udfAQC8PP37yLs6Rs26hwU19gmuDgpnZs',
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        conent: 'https://jakubgania.io/jakub-gania-software-logo-img.png'
-      }
+        conent: 'https://jakubgania.io/jakub-gania-software-logo-img.png',
+      },
     ],
     link: [
       {
-        rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32'
+        rel: 'icon',
+        type: 'image/png',
+        href: '/favicon-32x32.png',
+        sizes: '32x32',
       },
       {
-        rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16'
+        rel: 'icon',
+        type: 'image/png',
+        href: '/favicon-16x16.png',
+        sizes: '16x16',
       },
       {
-        rel: 'icon', type: 'image/png', href: '/favicon.png'
-      }
-    ]
+        rel: 'icon',
+        type: 'image/png',
+        href: '/favicon.png',
+      },
+    ],
   },
 
   /*
@@ -82,15 +90,18 @@ export default {
   css: [
     'aos/dist/aos.css',
     '~/node_modules/highlight.js/styles/atom-one-dark.css',
-    { src: '~/node_modules/highlight.js/styles/atom-one-dark.css', lang: 'css' }
+    {
+      src: '~/node_modules/highlight.js/styles/atom-one-dark.css',
+      lang: 'css',
+    },
   ],
 
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src:"~/plugins/aos", ssr: false },
-    { src: '~plugins/ga.js', ssr: false }
+    { src: '~/plugins/aos', ssr: false },
+    { src: '~plugins/ga.js', ssr: false },
   ],
 
   /*
@@ -99,7 +110,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
   ],
 
   /*
@@ -111,7 +122,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/markdownit',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
   ],
 
   sitemap: {
@@ -119,7 +130,7 @@ export default {
     hostname: 'https://jakubgania.io',
     cacheTime: 1000 * 60 * 15,
     gzip: true,
-    routes: sitemapRoutes
+    routes: sitemapRoutes,
   },
 
   markdownit: {
@@ -129,16 +140,16 @@ export default {
       'markdown-it-meta',
       'markdown-it-highlightjs',
       'markdown-it-video',
-      'markdown-it-emoji'
-    ]
+      'markdown-it-emoji',
+    ],
   },
 
   pwa: {
     meta: {
       twitterCard: 'summary_large_image',
       twitterSite: '@jakubgania',
-      twitterCreator: '@jakubgania'
-    }
+      twitterCreator: '@jakubgania',
+    },
   },
 
   /*
@@ -163,10 +174,10 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+          success: colors.green.accent3,
+        },
+      },
+    },
   },
 
   /*
@@ -176,6 +187,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
-  }
+    extend(config, ctx) {},
+  },
 }

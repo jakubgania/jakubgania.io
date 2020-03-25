@@ -28,19 +28,19 @@ import SocialIcons from './../components/social-icons'
 
 export default {
   components: {
-    'social-icons-component': SocialIcons
+    'social-icons-component': SocialIcons,
   },
   data() {
     return {
       profileImage,
       fullname: 'Jakub Gania',
       description:
-        'Kiedy tylko przyjdzie mi jakiś temat do głowy to staram się to opisać w formie postu na moim blogu. Zapraszam do zapoznania się z innymi postami oraz całą moją stroną. Staram się być również aktywny na Githubie i tworzyć różne projekty.'
+        'Kiedy tylko przyjdzie mi jakiś temat do głowy to staram się to opisać w formie postu na moim blogu. Zapraszam do zapoznania się z innymi postami oraz całą moją stroną. Staram się być również aktywny na Githubie i tworzyć różne projekty.',
     }
   },
   computed: {
-    ...mapGetters('DarkMode', ['darkTheme'])
-  }
+    ...mapGetters('DarkMode', ['darkTheme']),
+  },
 }
 </script>
 

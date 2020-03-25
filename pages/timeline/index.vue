@@ -6,7 +6,7 @@
 
     <subpage-description-section-component :description="description" />
 
-    <v-timeline style="margin-top: 80px;margin-bottom: 80px;">
+    <v-timeline style="margin-top: 80px; margin-bottom: 80px;">
       <v-timeline-item
         v-for="item in posts"
         :key="item.id"
@@ -38,7 +38,21 @@ export default {
   components: {
     BreadcrumbsComponent,
     'subpage-title-section-component': SubpageTitleSection,
-    'subpage-description-section-component': SubpageDescriptionSection
+    'subpage-description-section-component': SubpageDescriptionSection,
+  },
+  asyncData({ params, error }) {
+    return axios
+      .get(`https://jakubgania.io/data/timeline/list-of-timeline-posts.json`)
+      .then((res) => {
+        return {
+          posts: res.data.posts,
+        }
+      })
+      .catch(() => {
+        return {
+          error: true,
+        }
+      })
   },
   data() {
     return {
@@ -51,31 +65,17 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/menu'
+          to: '/menu',
         },
         {
           text: 'timeline',
           disabled: true,
           exact: true,
           nuxt: true,
-          to: '/timeline'
-        }
-      ]
+          to: '/timeline',
+        },
+      ],
     }
-  },
-  asyncData({ params, error }) {
-    return axios
-      .get(`https://jakubgania.io/data/timeline/list-of-timeline-posts.json`)
-      .then((res) => {
-        return {
-          posts: res.data.posts
-        }
-      })
-      .catch(() => {
-        return {
-          error: true
-        }
-      })
   },
   head() {
     return {
@@ -85,15 +85,15 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Timeline - różne wydarzenia z mojego życia oznaczone na osi czasu.'
+            'Timeline - różne wydarzenia z mojego życia oznaczone na osi czasu.',
         },
         {
           name: 'keywords',
-          content: 'timeline, oś czasu, historia'
-        }
-      ]
+          content: 'timeline, oś czasu, historia',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

@@ -15,7 +15,7 @@ import postComponent from '@/components/post'
 
 export default {
   components: {
-    postComponent
+    postComponent,
   },
   async asyncData({ params }) {
     try {
@@ -28,12 +28,12 @@ export default {
       return {
         postObject: {
           model: data,
-          attributes: frontmatterData.attributes
-        }
+          attributes: frontmatterData.attributes,
+        },
       }
     } catch (error) {
       return {
-        postObject: null
+        postObject: null,
       }
     }
   },
@@ -46,10 +46,10 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/docs'
-        }
-      ]
+          to: '/docs',
+        },
+      ],
     }
-  }
+  },
 }
 </script>

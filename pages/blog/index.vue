@@ -3,7 +3,7 @@
     <div
       v-if="!darkThemeFlag"
       class="top-image--light"
-      style="margin-top: -6px;margin-bottom: 40px;"
+      style="margin-top: -6px; margin-bottom: 40px;"
     >
       <div
         data-aos="fade-in"
@@ -23,7 +23,7 @@
     <div
       v-if="darkThemeFlag"
       class="top-image--dark"
-      style="margin-top: -6px;margin-bottom: 40px;"
+      style="margin-top: -6px; margin-bottom: 40px;"
     >
       <div
         data-aos="fade-in"
@@ -99,7 +99,7 @@ export default {
   components: {
     'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
-    'subpage-description-section-component': SubpageDescriptionSection
+    'subpage-description-section-component': SubpageDescriptionSection,
   },
   async asyncData({ params }) {
     try {
@@ -108,7 +108,7 @@ export default {
       )
 
       return {
-        posts: data.posts
+        posts: data.posts,
       }
     } catch (error) {
       //
@@ -125,17 +125,17 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/menu'
+          to: '/menu',
         },
         {
           text: 'blog',
           disabled: true,
           exact: true,
           nuxt: true,
-          to: '/zasoby'
-        }
+          to: '/zasoby',
+        },
       ],
-      counter: 0
+      counter: 0,
     }
   },
   computed: {
@@ -143,12 +143,12 @@ export default {
     darkThemeFlag() {
       this.forceUpdate()
       return this.darkTheme
-    }
+    },
   },
   methods: {
     forceUpdate() {
       this.counter += 1
-    }
+    },
   },
   head() {
     return {
@@ -157,35 +157,35 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Blog'
+          content: 'Blog',
         },
         {
           name: 'keywords',
-          content: 'posty, wpisy, notatki, blog'
+          content: 'posty, wpisy, notatki, blog',
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: 'Jakub Gania Software | Blog'
+          content: 'Jakub Gania Software | Blog',
         },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://jakubgania.io/blog'
+          content: 'https://jakubgania.io/blog',
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: 'Zapraszam do czytania postów w ramach mojego bloga.'
+          content: 'Zapraszam do czytania postów w ramach mojego bloga.',
         },
         {
           hid: 'og:image',
           property: 'og:image',
-          content: 'https://jakubgania.io/jakub-gania-software-logo-img.png'
-        }
-      ]
+          content: 'https://jakubgania.io/jakub-gania-software-logo-img.png',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

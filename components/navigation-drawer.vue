@@ -7,13 +7,15 @@
     right
     temporary
     :width="$vuetify.breakpoint.name !== 'xs' ? '320px' : '100%'"
-    style="flex-direction: column;display: flex;"
+    style="flex-direction: column; display: flex;"
   >
     <div
       class="close-icon-section"
       :class="{ 'close-icon-section--dark-theme': darkTheme }"
     >
-      <dark-mode-switch-component style="margin-top: 22px;margin-left: 14px;" />
+      <dark-mode-switch-component
+        style="margin-top: 22px; margin-left: 14px;"
+      />
       <div
         large
         icon
@@ -22,7 +24,7 @@
         @click="$emit('switchNavigationDrawer')"
       />
     </div>
-    <v-list dense nav style="flex-grow: 1;display: block;">
+    <v-list dense nav style="flex-grow: 1; display: block;">
       <template v-for="item in items">
         <v-list-item v-if="item.path" :key="item.title" :to="item.path">
           <v-list-item-content>
@@ -72,19 +74,19 @@ import DarkModeSwitch from './dark-mode-switch.vue'
 
 export default {
   components: {
-    'dark-mode-switch-component': DarkModeSwitch
+    'dark-mode-switch-component': DarkModeSwitch,
   },
   props: {
     drawer: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
       items: menuItems.menu,
       menuIcon: 'mdi-chevron-right',
-      socialLinks: socialLinksItems.data
+      socialLinks: socialLinksItems.data,
     }
   },
   computed: {
@@ -96,8 +98,8 @@ export default {
       },
       set(value) {
         this.$emit('updateNavigationDrawerValue', value)
-      }
-    }
+      },
+    },
   },
   methods: {
     toggleScrollbar(drawer) {
@@ -108,8 +110,8 @@ export default {
           document.getElementsByTagName('html')[0].style.overflow = 'auto'
         }
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

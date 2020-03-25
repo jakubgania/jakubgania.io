@@ -17,7 +17,7 @@ export default {
   components: {
     'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
-    'subpage-description-section-component': SubpageDescriptionSection
+    'subpage-description-section-component': SubpageDescriptionSection,
   },
   data() {
     return {
@@ -30,16 +30,16 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/menu'
+          to: '/menu',
         },
         {
           text: 'komendy i polecenia',
           disabled: true,
           exact: true,
           nuxt: true,
-          to: '/commands'
-        }
-      ]
+          to: '/commands',
+        },
+      ],
     }
   },
   head() {
@@ -49,15 +49,15 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Komendy i polecenia'
+          content: 'Komendy i polecenia',
         },
         {
           name: 'keywords',
-          content: 'Komendy i polecenia'
-        }
-      ]
+          content: 'Komendy i polecenia',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

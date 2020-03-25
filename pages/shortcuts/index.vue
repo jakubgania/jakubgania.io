@@ -38,7 +38,7 @@ export default {
   components: {
     'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
-    'subpage-description-section-component': SubpageDescriptionSection
+    'subpage-description-section-component': SubpageDescriptionSection,
   },
   data() {
     return {
@@ -52,17 +52,17 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/menu'
+          to: '/menu',
         },
         {
           text: 'skróty klawiaturowe',
           disabled: true,
           exact: true,
           nuxt: true,
-          to: '/shortcuts'
-        }
+          to: '/shortcuts',
+        },
       ],
-      counter: 0
+      counter: 0,
     }
   },
   computed: {
@@ -70,12 +70,12 @@ export default {
     darkThemeFlag() {
       this.forceUpdate()
       return this.darkTheme
-    }
+    },
   },
   methods: {
     forceUpdate() {
       this.counter += 1
-    }
+    },
   },
   head() {
     return {
@@ -84,15 +84,15 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Skróty klawiaturowe'
+          content: 'Skróty klawiaturowe',
         },
         {
           name: 'keywords',
-          content: 'Skróty klawiaturowe'
-        }
-      ]
+          content: 'Skróty klawiaturowe',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

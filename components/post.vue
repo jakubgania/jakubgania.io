@@ -15,7 +15,7 @@
         </div>
 
         <div class="post-content">
-          <div style="max-width: 640px;margin: auto;">
+          <div style="max-width: 640px; margin: auto;">
             <breadcrumbs-component :items="breadCrumbsItems" />
           </div>
 
@@ -69,39 +69,39 @@ import AboutCreator from '@/components/about-creator'
 export default {
   components: {
     BreadcrumbsComponent,
-    AboutCreator
+    AboutCreator,
   },
   props: {
     postObject: {
       type: Object,
       default: () => {
         return {}
-      }
+      },
     },
     otherPosts: {
       type: Boolean,
-      default: false
+      default: false,
     },
     topImageParamValue: {
       type: String,
-      default: ''
+      default: '',
     },
     topImagePath: {
       type: String,
-      default: ''
+      default: '',
     },
     breadCrumbsItems: {
       type: Array,
       default: () => {
         return {}
-      }
-    }
+      },
+    },
   },
   data() {
     return {
       pageTitle: 'Jakub Gania Software',
       error: false,
-      errorMessage: 'Error'
+      errorMessage: 'Error',
     }
   },
   computed: {
@@ -116,12 +116,12 @@ export default {
       }
 
       return false
-    }
+    },
   },
   mounted() {
     this.breadCrumbsItems.push({
       text: this.postObject.attributes.title.toLowerCase(),
-      disabled: true
+      disabled: true,
     })
   },
   methods: {
@@ -138,7 +138,7 @@ export default {
         '/' +
         imagesSrc
       )
-    }
+    },
   },
   head() {
     return {
@@ -147,47 +147,47 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.postObject.attributes.description
+          content: this.postObject.attributes.description,
         },
         {
           name: 'keywords',
-          content: this.postObject.attributes.keywords
+          content: this.postObject.attributes.keywords,
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.postObject.attributes.title + ' | ' + this.pageTitle
+          content: this.postObject.attributes.title + ' | ' + this.pageTitle,
         },
         {
           hid: 'og:site_name',
           property: 'og:site_name',
-          content: 'Jakub Gania Software'
+          content: 'Jakub Gania Software',
         },
         {
           hid: 'og:type',
           property: 'og:type',
-          content: 'article'
+          content: 'article',
         },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://jakubgania.io' + this.$route.path
+          content: 'https://jakubgania.io' + this.$route.path,
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.postObject.attributes.description
+          content: this.postObject.attributes.description,
         },
         {
           hid: 'og:image',
           property: 'og:image',
           content: this.postObject.attributes.topImageSrc
             ? this.getTopImageFullPath(this.postObject.attributes.topImageSrc)
-            : 'https://jakubgania.io/jakub-gania-software-logo-img.png'
-        }
-      ]
+            : 'https://jakubgania.io/jakub-gania-software-logo-img.png',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

@@ -17,7 +17,7 @@ import postComponent from '@/components/post'
 
 export default {
   components: {
-    postComponent
+    postComponent,
   },
   async asyncData({ params }) {
     try {
@@ -36,8 +36,8 @@ export default {
           model: data,
           attributes: frontmatterData.attributes,
           otherPosts: otherPostsData.data.posts.slice(0, 4),
-          numberOfPosts: otherPostsData.data.posts.length
-        }
+          numberOfPosts: otherPostsData.data.posts.length,
+        },
       }
     } catch (error) {
       return {
@@ -46,8 +46,8 @@ export default {
         attributes: {
           title: '',
           description: '',
-          keywords: ''
-        }
+          keywords: '',
+        },
       }
     }
   },
@@ -63,10 +63,10 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/blog'
-        }
+          to: '/blog',
+        },
       ],
-      postObject: {}
+      postObject: {},
     }
   },
   methods: {
@@ -78,8 +78,8 @@ export default {
         '/' +
         imagesSrc
       )
-    }
-  }
+    },
+  },
 }
 </script>
 

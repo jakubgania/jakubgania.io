@@ -7,7 +7,7 @@ export default {
   components: {
     'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
-    'subpage-description-section-component': SubpageDescriptionSection
+    'subpage-description-section-component': SubpageDescriptionSection,
   },
   data() {
     return {
@@ -20,16 +20,16 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/menu'
+          to: '/menu',
         },
         {
           text: 'zasoby',
           disabled: true,
           exact: true,
           nuxt: true,
-          to: '/zasoby'
-        }
-      ]
+          to: '/zasoby',
+        },
+      ],
     }
   },
   async asyncData({ params }) {
@@ -39,7 +39,7 @@ export default {
       )
 
       return {
-        linksData: data.resources_items
+        linksData: data.resources_items,
       }
     } catch (error) {
       //
@@ -52,14 +52,14 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Zasoby'
+          content: 'Zasoby',
         },
         {
           name: 'keywords',
           content:
-            'programy, strony, portale, portale technologiczne, portale programistyczne, dokumentacje, projekty, blogi, artykuły, kanały youtube'
-        }
-      ]
+            'programy, strony, portale, portale technologiczne, portale programistyczne, dokumentacje, projekty, blogi, artykuły, kanały youtube',
+        },
+      ],
     }
-  }
+  },
 }

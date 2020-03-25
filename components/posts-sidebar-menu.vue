@@ -31,23 +31,23 @@ export default {
   props: {
     darkThemeFlag: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
       social: [
         {
           title: 'github',
-          url: 'https://github.com/jakubgania'
+          url: 'https://github.com/jakubgania',
         },
         {
           title: 'linkedin',
-          url: 'https://linkedin.com/in/jakubgania/'
-        }
+          url: 'https://linkedin.com/in/jakubgania/',
+        },
       ],
       sidebarMenuMarginTop: 0,
-      sidebarMenuOffsetTop: 100
+      sidebarMenuOffsetTop: 100,
     }
   },
   mounted() {
@@ -56,7 +56,7 @@ export default {
     ).clientHeight
 
     this.sidebarMenuMarginTop += this.sidebarMenuOffsetTop
-  }
+  },
 }
 </script>
 

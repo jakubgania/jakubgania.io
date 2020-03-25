@@ -19,12 +19,12 @@ export default {
   props: {
     description: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
   data() {
     return {
-      counter: 0
+      counter: 0,
     }
   },
   computed: {
@@ -32,13 +32,13 @@ export default {
     darkThemeFlag() {
       this.forceUpdate()
       return this.darkTheme
-    }
+    },
   },
   methods: {
     forceUpdate() {
       this.counter += 1
-    }
-  }
+    },
+  },
 }
 </script>
 

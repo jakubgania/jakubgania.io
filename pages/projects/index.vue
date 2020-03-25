@@ -36,7 +36,7 @@
       <subpage-description-section-component :description="description" />
 
       <v-col cols="12" style="padding-left: 0px;">
-        <span style="font-size: 14px;letter-spacing: 1px;">
+        <span style="font-size: 14px; letter-spacing: 1px;">
           Pełna lista projektów na platformie
         </span>
         <a :href="githubRepositoriesLink" class="link" style="color: #3385ff;">

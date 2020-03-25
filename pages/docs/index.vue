@@ -51,7 +51,7 @@ export default {
   components: {
     BreadcrumbsComponent,
     SubpageTitleSectionComponent,
-    SubpageDescriptionSectionComponent
+    SubpageDescriptionSectionComponent,
   },
   async asyncData() {
     try {
@@ -60,7 +60,7 @@ export default {
       )
 
       return {
-        posts: data.posts
+        posts: data.posts,
       }
     } catch (error) {
       //
@@ -77,16 +77,16 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/menu'
+          to: '/menu',
         },
         {
           text: 'docs',
           disabled: true,
           exact: true,
           nuxt: true,
-          to: '/artykuły'
-        }
-      ]
+          to: '/artykuły',
+        },
+      ],
     }
   },
   head() {
@@ -96,36 +96,36 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Artykuły'
+          content: 'Artykuły',
         },
         {
           name: 'keywords',
           content:
-            'artykły, posty, programowanie, development, it, software, komputery, framework, technologie, informatyka, frontend, backend'
+            'artykły, posty, programowanie, development, it, software, komputery, framework, technologie, informatyka, frontend, backend',
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: 'Jakub Gania Software | Artykuły'
+          content: 'Jakub Gania Software | Artykuły',
         },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://jakubgania.io/docs'
+          content: 'https://jakubgania.io/docs',
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: 'Artykuły na tematy programistyczne.'
+          content: 'Artykuły na tematy programistyczne.',
         },
         {
           hid: 'og:image',
           property: 'og:image',
-          content: 'https://jakubgania.io/jakub-gania-software-logo-img.png'
-        }
-      ]
+          content: 'https://jakubgania.io/jakub-gania-software-logo-img.png',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

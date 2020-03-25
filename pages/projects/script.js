@@ -10,7 +10,7 @@ export default {
     'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
     'subpage-description-section-component': SubpageDescriptionSection,
-    GithubButton
+    GithubButton,
   },
   data() {
     return {
@@ -24,17 +24,17 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/menu'
+          to: '/menu',
         },
         {
           text: 'projekty',
           disabled: true,
           exact: true,
           nuxt: true,
-          to: '/projekty'
-        }
+          to: '/projekty',
+        },
       ],
-      counter: 0
+      counter: 0,
     }
   },
   computed: {
@@ -42,7 +42,7 @@ export default {
     darkThemeFlag() {
       this.counter += 1
       return this.darkTheme
-    }
+    },
   },
   async asyncData({ params }) {
     try {
@@ -51,7 +51,7 @@ export default {
       )
 
       return {
-        projects: data.projects
+        projects: data.projects,
       }
     } catch (error) {
       //
@@ -64,13 +64,13 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Projekty'
+          content: 'Projekty',
         },
         {
           name: 'keywords',
-          content: 'Projekty'
-        }
-      ]
+          content: 'Projekty',
+        },
+      ],
     }
-  }
+  },
 }

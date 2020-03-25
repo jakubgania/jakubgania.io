@@ -8,7 +8,7 @@
       <subpage-description-section-component :description="description" />
 
       <div lg="12">
-        <div style="font-size: 14px;font-weight: 600;letter-spacing: 1px;">
+        <div style="font-size: 14px; font-weight: 600; letter-spacing: 1px;">
           Source
         </div>
         <template v-if="source">
@@ -19,7 +19,7 @@
           </div>
         </template>
         <template v-else>
-          <div style="font-size: 12px;letter-spacing: 2px;">
+          <div style="font-size: 12px; letter-spacing: 2px;">
             No data
           </div>
         </template>
@@ -74,7 +74,7 @@ export default {
   components: {
     'breadcrumbs-component': Breadcrumbs,
     'subpage-title-section-component': SubpageTitleSection,
-    'subpage-description-section-component': SubpageDescriptionSection
+    'subpage-description-section-component': SubpageDescriptionSection,
   },
   asyncData({ params, error }) {
     return axios
@@ -85,12 +85,12 @@ export default {
           name: res.data.name,
           description: res.data.description,
           source: res.data.source,
-          data: res.data.items
+          data: res.data.items,
         }
       })
       .catch(() => {
         return {
-          error: true
+          error: true,
         }
       })
   },
@@ -105,15 +105,15 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/shortcuts'
-        }
-      ]
+          to: '/shortcuts',
+        },
+      ],
     }
   },
   mounted() {
     this.items.push({
       text: this.name.toLowerCase(),
-      disabled: true
+      disabled: true,
     })
   },
   head() {
@@ -123,15 +123,15 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.description
+          content: this.description,
         },
         {
           name: 'keywords',
-          content: 'shortcuts'
-        }
-      ]
+          content: 'shortcuts',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

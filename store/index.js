@@ -18,11 +18,11 @@ AxiosDefaultUrl.setBaseUrl()
 const createStore = () => {
   return new Vuex.Store({
     state: () => ({
-      showDarkModeSwitch: true // if true => show dark mode toggle / if false => hide dark mode toggle
+      showDarkModeSwitch: true, // if true => show dark mode toggle / if false => hide dark mode toggle
     }),
     modules: {
-      DarkMode
-    }
+      DarkMode,
+    },
   })
 }
 

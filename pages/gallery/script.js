@@ -7,7 +7,7 @@ export default {
   components: {
     BreadcrumbsComponent,
     SubpageTitleSectionComponent,
-    SubpageDescriptionSectionComponent
+    SubpageDescriptionSectionComponent,
   },
   data() {
     return {
@@ -27,16 +27,16 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/menu'
+          to: '/menu',
         },
         {
           text: 'galeria',
           disabled: true,
           exact: true,
           nuxt: true,
-          to: '/gallery'
-        }
-      ]
+          to: '/gallery',
+        },
+      ],
     }
   },
   methods: {
@@ -74,7 +74,7 @@ export default {
     },
     swipeUp() {
       this.dialogFullSizeImage = false
-    }
+    },
   },
   async asyncData({ params }) {
     try {
@@ -83,7 +83,7 @@ export default {
       )
 
       return {
-        images: data.listOfImages
+        images: data.listOfImages,
       }
     } catch (error) {
       //
@@ -96,13 +96,13 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Galeria'
+          content: 'Galeria',
         },
         {
           name: 'keywords',
-          content: 'Galeria'
-        }
-      ]
+          content: 'Galeria',
+        },
+      ],
     }
-  }
+  },
 }

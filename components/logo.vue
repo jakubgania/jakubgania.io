@@ -3,7 +3,7 @@
     :class="{
       'logo--big-font': bigFontSize,
       'logo--normal-font': normalFontSize,
-      'logo--dark-theme': darkTheme
+      'logo--dark-theme': darkTheme,
     }"
     class="logo"
   >
@@ -16,22 +16,22 @@ export default {
   props: {
     darkTheme: {
       type: Boolean,
-      default: false
+      default: false,
     },
     bigFontSize: {
       type: Boolean,
-      default: false
+      default: false,
     },
     normalFontSize: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
-      logo: 'Jakub Gania Software'
+      logo: 'Jakub Gania Software',
     }
-  }
+  },
 }
 </script>
 
