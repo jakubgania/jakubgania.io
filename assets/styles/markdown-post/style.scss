@@ -54,6 +54,20 @@
 .v-application #blog-post ul {
   max-width: 640px !important;
 }
+.v-application #blog-post li {
+  position: relative;
+
+  &:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #0066ff;
+    position: absolute;
+    top: 13px;
+    left: -18px;
+  }
+}
 .v-application #blog-post ul li a {
   overflow-wrap: break-word;
 }
