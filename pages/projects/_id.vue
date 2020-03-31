@@ -8,7 +8,7 @@
           <subpage-title-section-component :title="attributes.title" />
         </div>
 
-        <div class="post" v-html="$md.render(model)" />
+        <div id="blog-post" class="post" v-html="$md.render(model)" />
       </div>
     </template>
     <template v-else>
