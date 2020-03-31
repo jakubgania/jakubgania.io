@@ -97,7 +97,19 @@
       </div>
     </div>
 
-    <div class="social-icons-section">
+    <div v-if="false" class="terminal">
+      <div style="display: flex; font-weight: 900;">
+        <span style="color: #ccc; padding-left: 10px;">
+          $ &nbsp;
+        </span>
+        <span style="color: 4d4d4d;">
+          select social icon &nbsp;
+        </span>
+        <social-icons-component />
+      </div>
+    </div>
+
+    <div v-else class="social-icons-section">
       <social-icons-component />
     </div>
   </v-row>
