@@ -23,12 +23,7 @@
                 <li
                   v-for="element in item.elements"
                   :key="element.id"
-                  class=""
-                  style="
-                    font-size: 12px;
-                    letter-spacing: 0.6px;
-                    margin-bottom: 10px;
-                  "
+                  class="list-li"
                 >
                   <template v-if="element.link">
                     <nuxt-link
@@ -326,6 +321,11 @@ export default {
     font-weight: 800;
     font-size: 12px;
   }
+}
+.list-li {
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1264px) {
