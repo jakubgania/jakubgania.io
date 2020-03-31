@@ -4,6 +4,7 @@ import Breadcrumbs from '../../components/breadcrumbs'
 import SubpageTitleSection from '../../components/subpage-title-section'
 import SubpageDescriptionSection from '../../components/subpage-description-section'
 import GithubButton from '../../node_modules/vue-github-button'
+import GithubContributionsImage from '../../assets/images/github-contributions.PNG'
 
 export default {
   components: {
@@ -18,6 +19,7 @@ export default {
       description:
         'Lista moich projektów z odnośnikami do szczegółowych opisów. Część projektów z poniższej listy nie jest jeszcze rozpoczęta lub jest tylko zaczęta w jakimś niewielkim stopniu. Z czasem będą pojawiać się opisy repozytoriów i projektów. Obecnie strona w przygotowaniu.',
       githubRepositoriesLink: 'https://github.com/jakubgania?tab=repositories',
+      GithubContributionsImage,
       items: [
         {
           text: 'menu',

@@ -36,6 +36,14 @@
       <subpage-description-section-component :description="description" />
 
       <v-col cols="12" style="padding-left: 0px;">
+        <img
+          :src="GithubContributionsImage"
+          style="width: 100%;"
+          alt="Jakub Gania - Github contributions"
+        />
+      </v-col>
+
+      <v-col cols="12" style="padding-left: 0px;">
         <span style="font-size: 14px; letter-spacing: 1px;">
           Pełna lista projektów na platformie
         </span>
