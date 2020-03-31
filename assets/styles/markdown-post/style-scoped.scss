@@ -42,7 +42,7 @@
   font-weight: 800;
 }
 .post-content {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   padding: 0;
   margin: auto;
@@ -52,10 +52,11 @@
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   letter-spacing: 0.2px;
-  line-height: 2;
+  line-height: 1.8;
   font-size: 16.8px;
   padding-top: 20px;
-  max-width: 800px;
+  max-width: 1000px;
+  color: #607d8b;
 }
 
 @media only screen and (max-width: 960px) {

@@ -1,6 +1,6 @@
 .v-application div pre {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 2rem auto;
   padding-top: 3rem;
   border-radius: 6px;
@@ -9,6 +9,20 @@
   background-position: 16px 16px;
   box-shadow: 5px 5px 15px 0 rgba(50, 50, 50, 0.75);
   background-color: #1d262f;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar {
+    height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #808080;
+    border-radius: 8px;
+  }
 }
 .v-application code::before {
   content: "";
@@ -22,8 +36,8 @@
   border-radius: 0;
   font-size: initial;
   font-weight: initial;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -64,7 +78,7 @@
     border-radius: 100%;
     background: #0066ff;
     position: absolute;
-    top: 13px;
+    top: 12px;
     left: -18px;
   }
 }
