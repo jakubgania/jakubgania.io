@@ -67,6 +67,7 @@
 }
 .v-application #blog-post ul {
   max-width: 640px !important;
+  list-style: none;
 }
 .v-application #blog-post li {
   position: relative;
@@ -98,6 +99,12 @@ iframe {
 }
 
 @media only screen and (max-width: 600px) {
+  .v-application #blog-post li {
+    &:before {
+      top: 11px;
+      left: -17px;
+    }
+  }
   .v-application .post h2 {
     font-size: 18px;
   }
