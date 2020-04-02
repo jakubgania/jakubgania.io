@@ -4,7 +4,7 @@
       <div class="rules-description-section">
         <div class="title-section">
           {{ title }} <br />
-          <span style="color: #f2f2f2">
+          <span style="color: #f2f2f2;">
             !important;
           </span>
         </div>
@@ -31,7 +31,7 @@ export default {
       title: 'Polityka prywatności',
       message:
         'Klikając przycisk „Akceptuję” lub zamykając okno przez kliknięcie w znaczek X, zgadzasz się na poniższe warunki. Strona wykorzystuje pliki cookie oraz usługę Google Analytics jedynie w celach statystycznych do analizowania ruchu sieciowego. Wykorzystywany jest również mechanizm local storage do poprawnego działania aplikacji. ',
-      localStorageObject: new LocalStorage()
+      localStorageObject: new LocalStorage(),
     }
   },
   mounted() {
@@ -52,8 +52,8 @@ export default {
         this.alertDialog = false
         document.getElementsByTagName('html')[0].style.overflow = 'auto'
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

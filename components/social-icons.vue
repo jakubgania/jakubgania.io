@@ -22,12 +22,12 @@ import socialLinksItems from '../json/social-links.json'
 export default {
   data() {
     return {
-      socialLinks: socialLinksItems.data
+      socialLinks: socialLinksItems.data,
     }
   },
   computed: {
-    ...mapGetters('DarkMode', ['darkTheme'])
-  }
+    ...mapGetters('DarkMode', ['darkTheme']),
+  },
 }
 </script>
 

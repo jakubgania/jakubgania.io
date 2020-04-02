@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      loader: false
+      loader: false,
     }
   },
   mounted() {
@@ -22,7 +22,7 @@ export default {
       document.getElementsByTagName('body')[0].style.overflow = 'auto'
       document.getElementsByTagName('body')[0].style.overflow = 'unset'
     }
-  }
+  },
 }
 </script>
 

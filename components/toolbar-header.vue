@@ -59,10 +59,10 @@ import SocialIcons from '../components/social-icons'
 export default {
   components: {
     'logo-component': Logo,
-    'social-icons-component': SocialIcons
+    'social-icons-component': SocialIcons,
   },
   computed: {
-    ...mapGetters('DarkMode', ['darkTheme'])
+    ...mapGetters('DarkMode', ['darkTheme']),
   },
   mounted() {
     this.displayHeader()
@@ -70,8 +70,8 @@ export default {
   methods: {
     displayHeader() {
       return this.$route.name !== 'home'
-    }
-  }
+    },
+  },
 }
 </script>
 

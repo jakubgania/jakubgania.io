@@ -39,13 +39,13 @@ export default {
       type: Array,
       default: () => {
         return []
-      }
+      },
     },
     numberOfPosts: {
       type: Number,
-      default: 0
-    }
-  }
+      default: 0,
+    },
+  },
 }
 </script>
 

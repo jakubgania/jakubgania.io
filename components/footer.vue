@@ -19,18 +19,17 @@
               {{ item.titleColumn }}
             </div>
             <div class="footer-container__site-column-list-section">
-              <ul style="list-style-type:none;padding-left: 0;">
+              <ul style="list-style-type: none; padding-left: 0;">
                 <li
                   v-for="element in item.elements"
                   :key="element.id"
-                  class=""
-                  style="font-size: 12px;letter-spacing: 0.6px;margin-bottom: 10px;"
+                  class="list-li"
                 >
                   <template v-if="element.link">
                     <nuxt-link
                       :to="element.link"
                       :class="{
-                        'footer-container__site-column-link--dark-theme': darkTheme
+                        'footer-container__site-column-link--dark-theme': darkTheme,
                       }"
                       class="footer-container__site-column-link"
                     >
@@ -41,7 +40,7 @@
                     <a
                       :href="element.href"
                       :class="{
-                        'footer-container__site-column-link--dark-theme': darkTheme
+                        'footer-container__site-column-link--dark-theme': darkTheme,
                       }"
                       class="footer-container__site-column-link"
                       target="_blank"
@@ -93,7 +92,7 @@ export default {
   components: {
     'logo-component': Logo,
     'dark-mode-switch-component': DarkModeSwitch,
-    'github-button': GithubButton
+    'github-button': GithubButton,
   },
   data() {
     return {
@@ -104,116 +103,116 @@ export default {
           elements: [
             {
               name: 'O mnie',
-              link: '/about'
+              link: '/about',
             },
             {
               name: 'Artykuły',
-              link: '/docs'
+              link: '/docs',
             },
             {
               name: 'Projekty',
-              link: '/projects'
+              link: '/projects',
             },
             {
               name: 'Kontakt',
-              link: '/contact'
+              link: '/contact',
             },
             {
               name: 'Zasoby',
-              link: '/resources'
+              link: '/resources',
             },
             {
               name: 'Blog',
-              link: '/blog'
+              link: '/blog',
             },
             {
               name: 'Komendy i polecenia',
-              link: '/commands'
+              link: '/commands',
             },
             {
               name: 'Skróty klawiaturowe',
-              link: '/shortcuts'
+              link: '/shortcuts',
             },
             {
               name: 'Galeria',
-              link: '/gallery'
+              link: '/gallery',
             },
             {
               name: 'Timeline',
-              link: '/timeline'
+              link: '/timeline',
             },
             {
               name: 'Doświadczenie',
-              link: '/experience'
-            }
-          ]
+              link: '/experience',
+            },
+          ],
         },
         {
           titleColumn: 'Posty',
           elements: [
             {
               name: 'Tylko logo a jednak komponent',
-              link: '/blog/06-12-2019-tylko-logo-a-jednak-komponent'
+              link: '/blog/06-12-2019-tylko-logo-a-jednak-komponent',
             },
             {
               name: 'Listopad - podsumowanie',
-              link: '/blog/03-12-2019-listopad-podsumowanie'
+              link: '/blog/03-12-2019-listopad-podsumowanie',
             },
             {
               name: 'ITCorner Tech Meetup #5 Jak zostać dobrym seniorem w IT ?',
               link:
-                '/blog/30-11-2019-itcorner-tech-meetup-5-jak-zostac-dobrym-seniorem-w-it'
+                '/blog/30-11-2019-itcorner-tech-meetup-5-jak-zostac-dobrym-seniorem-w-it',
             },
             {
               name: 'Nieskończone możliwości eksperymentowania i tworzenia',
               link:
-                '/blog/25-11-2019-nieskonczone-mozliwosci-eksperymentowania-i-tworzenia'
-            }
-          ]
+                '/blog/25-11-2019-nieskonczone-mozliwosci-eksperymentowania-i-tworzenia',
+            },
+          ],
         },
         {
           titleColumn: 'Projekty',
           elements: [
             {
               name: 'jakubgania.io',
-              href: 'https://github.com/jakubgania/jakubgania.io'
+              href: 'https://github.com/jakubgania/jakubgania.io',
             },
             {
               name: 'yourcity-frontend',
-              href: 'https://github.com/jakubgania/yourcity-frontend'
-            }
-          ]
+              href: 'https://github.com/jakubgania/yourcity-frontend',
+            },
+          ],
         },
         {
           titleColumn: 'Social',
           elements: [
             {
               name: 'GitHub',
-              href: 'https://github.com/jakubgania'
+              href: 'https://github.com/jakubgania',
             },
             {
               name: 'LinkedIn',
-              href: 'https://www.linkedin.com/in/jakubgania'
+              href: 'https://www.linkedin.com/in/jakubgania',
             },
             {
               name: 'Twitter',
-              href: 'https://twitter.com/jakubgania'
+              href: 'https://twitter.com/jakubgania',
             },
             {
               name: 'Youtube',
-              href: 'https://www.youtube.com/channel/UCpRXjQ_FgRfAqP6uIsA7UEQ'
-            }
-          ]
-        }
+              href: 'https://www.youtube.com/channel/UCpRXjQ_FgRfAqP6uIsA7UEQ',
+            },
+          ],
+        },
       ],
-      counter: 0
+      counter: 0,
     }
   },
   computed: {
     ...mapGetters('DarkMode', ['darkTheme']),
     darkThemeFlag() {
       return this.darkTheme
-    }
+    },
   },
   mounted() {
     this.displayFooter()
@@ -221,8 +220,8 @@ export default {
   methods: {
     displayFooter() {
       return this.$route.name !== 'home'
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -322,6 +321,11 @@ export default {
     font-weight: 800;
     font-size: 12px;
   }
+}
+.list-li {
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1264px) {

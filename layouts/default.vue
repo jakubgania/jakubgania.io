@@ -40,15 +40,18 @@ export default {
     ToolbarHeaderComponent,
     NavigationDrawerComponent,
     FooterComponent,
-    PortalRulesAlertComponent
+    PortalRulesAlertComponent,
   },
   data() {
     return {
-      drawer: false
+      drawer: false,
     }
   },
   computed: {
-    ...mapGetters('DarkMode', ['darkTheme'])
+    ...mapGetters('DarkMode', ['darkTheme']),
+  },
+  mounted() {
+    this.loader = false
   },
   methods: {
     switchNavigationDrawer() {
@@ -56,11 +59,8 @@ export default {
     },
     updateNavigationDrawerValue(value) {
       this.drawer = value
-    }
+    },
   },
-  mounted() {
-    this.loader = false
-  }
 }
 </script>
 

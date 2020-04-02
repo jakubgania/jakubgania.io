@@ -15,11 +15,11 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/default'
+          to: '/default',
         }
-      }
-    }
-  }
+      },
+    },
+  },
 }
 </script>
 

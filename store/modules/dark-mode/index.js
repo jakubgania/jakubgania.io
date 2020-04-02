@@ -1,5 +1,5 @@
 const state = () => ({
-  darkTheme: false
+  darkTheme: false,
 })
 
 const getters = {
@@ -12,13 +12,13 @@ const getters = {
     }
 
     return state.darkTheme
-  }
+  },
 }
 
 const actions = {
   toogleDarkThemeValue({ commit }) {
     commit('darkTheme')
-  }
+  },
 }
 
 const mutations = {
@@ -33,7 +33,7 @@ const mutations = {
       }
     }
     // state.darkTheme = !state.darkTheme
-  }
+  },
 }
 
 export default {
@@ -41,5 +41,5 @@ export default {
   state,
   getters,
   mutations,
-  actions
+  actions,
 }

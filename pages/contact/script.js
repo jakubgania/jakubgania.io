@@ -7,7 +7,7 @@ export default {
   components: {
     BreadcrumbsComponent,
     SubpageTitleSectionComponent,
-    SubpageDescriptionSectionComponent
+    SubpageDescriptionSectionComponent,
   },
   data() {
     return {
@@ -20,17 +20,17 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/menu'
+          to: '/menu',
         },
         {
           text: 'kontakt',
           disabled: true,
           exact: true,
           nuxt: true,
-          to: '/contact'
-        }
+          to: '/contact',
+        },
       ],
-      counter: 0
+      counter: 0,
     }
   },
   computed: {
@@ -38,12 +38,12 @@ export default {
     darkThemeFlag() {
       this.forceUpdate()
       return this.darkTheme
-    }
+    },
   },
   methods: {
     forceUpdate() {
       this.counter += 1
-    }
+    },
   },
   head() {
     return {
@@ -52,13 +52,13 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Kontakt'
+          content: 'Kontakt',
         },
         {
           name: 'keywords',
-          content: 'Kontakt'
-        }
-      ]
+          content: 'Kontakt',
+        },
+      ],
     }
-  }
+  },
 }

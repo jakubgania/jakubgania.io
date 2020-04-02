@@ -47,7 +47,7 @@
               {{ item.titleSection }}
               <v-icon
                 v-if="item.titleSectionIcon"
-                style="margin-top: -4px;font-size: 36px;margin-left: 10px;"
+                style="margin-top: -4px; font-size: 36px; margin-left: 10px;"
                 :style="darkTheme ? 'color: #fff;' : 'color: #000;'"
               >
                 {{ 'mdi-' + item.titleSectionIcon }}
@@ -93,9 +93,7 @@
                   >
                     <div class="image-section">
                       <img
-                        :src="
-                          `https://jakubgania.io/data/expirience/technology-icons/${imageItem.path}`
-                        "
+                        :src="`https://jakubgania.io/data/expirience/technology-icons/${imageItem.path}`"
                         :alt="imageItem.alt"
                         class="xghp"
                       />
@@ -121,19 +119,19 @@ import TopSectionContainerComponent from '@/components/top-section-container.vue
 
 export default {
   components: {
-    TopSectionContainerComponent
+    TopSectionContainerComponent,
   },
   computed: {
     ...mapGetters('DarkMode', ['darkTheme']),
     darkThemeFlag() {
       this.refresh()
       return this.darkTheme
-    }
+    },
   },
   methods: {
     refresh() {
       this.counter += 1
-    }
+    },
   },
   asyncData({ params, error }) {
     return axios
@@ -143,12 +141,12 @@ export default {
           personalData: res.data.expirience.sectionPersonalData,
           fullName: res.data.expirience.sectionPersonalData.fullName,
           description: res.data.expirience.sectionPersonalData.description,
-          information: res.data.expirience.information
+          information: res.data.expirience.information,
         }
       })
       .catch(() => {
         return {
-          error: true
+          error: true,
         }
       })
   },
@@ -160,16 +158,16 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Moje doświadczenie, umiejętności oraz certyfikaty. Zbiór informacji o moich osiągnięciach zawodowych, naukowych i używanych przezemnie technologiach.'
+            'Moje doświadczenie, umiejętności oraz certyfikaty. Zbiór informacji o moich osiągnięciach zawodowych, naukowych i używanych przezemnie technologiach.',
         },
         {
           name: 'keywords',
           content:
-            'doświadczenie, umiejętności, edukacja, certyfikaty, języki obce, cv'
-        }
-      ]
+            'doświadczenie, umiejętności, edukacja, certyfikaty, języki obce, cv',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

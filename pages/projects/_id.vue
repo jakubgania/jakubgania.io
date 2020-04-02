@@ -2,13 +2,13 @@
   <v-row class="content-container">
     <template v-if="!error">
       <div class="post-content">
-        <div style="max-width: 640px;margin: auto;">
+        <div style="max-width: 640px; margin: auto;">
           <breadcrumbs-component :items="items" />
 
           <subpage-title-section-component :title="attributes.title" />
         </div>
 
-        <div class="post" v-html="$md.render(model)" />
+        <div id="blog-post" class="post" v-html="$md.render(model)" />
       </div>
     </template>
     <template v-else>
@@ -35,7 +35,7 @@ import SubpageTitleSection from '../../components/subpage-title-section'
 export default {
   components: {
     'breadcrumbs-component': Breadcrumbs,
-    'subpage-title-section-component': SubpageTitleSection
+    'subpage-title-section-component': SubpageTitleSection,
   },
   async asyncData({ params }) {
     try {
@@ -47,7 +47,7 @@ export default {
 
       return {
         model: data,
-        attributes: frontmatterData.attributes
+        attributes: frontmatterData.attributes,
       }
     } catch (error) {
       return {
@@ -56,8 +56,8 @@ export default {
         attributes: {
           title: '',
           description: '',
-          keywords: ''
-        }
+          keywords: '',
+        },
       }
     }
   },
@@ -73,15 +73,15 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/projects'
-        }
-      ]
+          to: '/projects',
+        },
+      ],
     }
   },
   mounted() {
     this.items.push({
       text: this.attributes.title.toLowerCase(),
-      disabled: true
+      disabled: true,
     })
   },
   head() {
@@ -91,15 +91,15 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.attributes.description
+          content: this.attributes.description,
         },
         {
           name: 'keywords',
-          content: this.attributes.keywords
-        }
-      ]
+          content: this.attributes.keywords,
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

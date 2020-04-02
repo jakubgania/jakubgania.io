@@ -36,7 +36,15 @@
       <subpage-description-section-component :description="description" />
 
       <v-col cols="12" style="padding-left: 0px;">
-        <span style="font-size: 14px;letter-spacing: 1px;">
+        <img
+          :src="GithubContributionsImage"
+          style="width: 100%;"
+          alt="Jakub Gania - Github contributions"
+        />
+      </v-col>
+
+      <v-col cols="12" style="padding-left: 0px;">
+        <span style="font-size: 14px; letter-spacing: 1px;">
           Pełna lista projektów na platformie
         </span>
         <a :href="githubRepositoriesLink" class="link" style="color: #3385ff;">
@@ -54,26 +62,8 @@
         </github-button>
       </v-col>
 
-      <div class="categories-section">
-        <div class="categories-section__item">
-          <div class="categories-section__item--text">
-            projekty ogólne
-          </div>
-        </div>
-        <div class="categories-section__item">
-          <div class="categories-section__item--text">
-            komponenty
-          </div>
-        </div>
-        <div class="categories-section__item">
-          <div class="categories-section__item--text">
-            design
-          </div>
-        </div>
-      </div>
-
       <v-col
-        v-for="(item, index) in projects"
+        v-for="item in projects"
         :key="item.id"
         cols="12"
         lg="12"
@@ -86,7 +76,7 @@
             :class="{ 'list-projects__title--dark-theme': darkThemeFlag }"
             class="list-projects__title"
           >
-            {{ index + 1 + '. ' + item.title }}
+            {{ item.title }}
           </div>
         </nuxt-link>
       </v-col>

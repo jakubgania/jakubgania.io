@@ -129,6 +129,28 @@
   z-index: 20;
   pointer-events: auto;
 }
+.terminal {
+  width: 100%;
+  max-width: 600px;
+  height: 140px;
+  padding-top: 3rem;
+  border-radius: 6px;
+  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fillRule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="%23FF5F56" stroke="%23E0443E" strokeWidth=".5" /><circle cx="26" cy="6" r="6" fill="%23FFBD2E" stroke="%23DEA123" strokeWidth=".5" /><circle cx="46" cy="6" r="6" fill="%2327C93F" stroke="%231AAB29" strokeWidth=".5" /></g></svg>');
+  background-repeat: no-repeat;
+  background-position: 16px 16px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  background-color: #fff;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  position: fixed;
+  bottom: -130px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 4px;
+  z-index: 20;
+  pointer-events: auto;
+}
 
 @media only screen and (max-width: 960px) {
   .technical-word {

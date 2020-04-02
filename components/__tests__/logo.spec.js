@@ -1,51 +1,51 @@
-import { shallowMount } from "@vue/test-utils";
-import logo from "../logo";
+import { shallowMount } from '@vue/test-utils'
+import logo from '../logo'
 
 const factory = (propsData) => {
   return shallowMount(logo, {
     propsData: {
-      ...propsData
-    }
-  });
-};
+      ...propsData,
+    },
+  })
+}
 
-describe("Logo", () => {
-test("mounts properly", () => {
-    const wrapper = factory();
-    expect(wrapper.isVueInstance()).toBeTruthy();
-  });
+describe('Logo', () => {
+  test('mounts properly', () => {
+    const wrapper = factory()
+    expect(wrapper.isVueInstance()).toBeTruthy()
+  })
 
-test("example", () => {
+  test('example', () => {
     const wrapper = factory({
       darkTheme: true,
       bigFontSize: true,
-      normalFontSize: true
-    });
+      normalFontSize: true,
+    })
 
-    console.log(wrapper.vm.$props.darkTheme);
+    console.log(wrapper.vm.$props.darkTheme)
 
-    expect(wrapper.isVueInstance()).toBeTruthy();
-  });
+    expect(wrapper.isVueInstance()).toBeTruthy()
+  })
 
-  test("example 2", () => {
+  test('example 2', () => {
     const wrapper = factory({
       darkTheme: false,
       bigFontSize: false,
-      normalFontSize: false
-    });
+      normalFontSize: false,
+    })
 
-    console.log(wrapper.vm.$props.darkTheme);
+    console.log(wrapper.vm.$props.darkTheme)
 
-    expect(wrapper.isVueInstance()).toBeTruthy();
-  });
-  
-// it('render', () => {
-//     const wrapper = factory({
-//       darkTheme: true,
-//       bigFontSize: true,
-//       normalFontSize: true
-//     });
+    expect(wrapper.isVueInstance()).toBeTruthy()
+  })
 
-//     expect(wrapper.html()).to.equal('<div class="logo logo--normal-font">Jakub Gania Software</div>')
-//   });
-});
+  // it('render', () => {
+  //     const wrapper = factory({
+  //       darkTheme: true,
+  //       bigFontSize: true,
+  //       normalFontSize: true
+  //     });
+
+  //     expect(wrapper.html()).to.equal('<div class="logo logo--normal-font">Jakub Gania Software</div>')
+  //   });
+})

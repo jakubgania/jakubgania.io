@@ -42,7 +42,7 @@
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 import BreadcrumbsComponent from '@/components/breadcrumbs'
 import SubpageTitleSectionComponent from '@/components/subpage-title-section'
 import SubpageDescriptionSectionComponent from '@/components/subpage-description-section'
@@ -51,7 +51,20 @@ export default {
   components: {
     BreadcrumbsComponent,
     SubpageTitleSectionComponent,
-    SubpageDescriptionSectionComponent
+    SubpageDescriptionSectionComponent,
+  },
+  async asyncData() {
+    try {
+      const { data } = await axios.get(
+        'https://jakubgania.io/data/docs/list-of-docs.json'
+      )
+
+      return {
+        posts: data.posts,
+      }
+    } catch (error) {
+      //
+    }
   },
   data() {
     return {
@@ -64,17 +77,16 @@ export default {
           disabled: false,
           exact: true,
           nuxt: true,
-          to: '/menu'
+          to: '/menu',
         },
         {
           text: 'docs',
           disabled: true,
           exact: true,
           nuxt: true,
-          to: '/artykuły'
-        }
+          to: '/artykuły',
+        },
       ],
-      posts: []
     }
   },
   head() {
@@ -84,36 +96,36 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Artykuły'
+          content: 'Artykuły',
         },
         {
           name: 'keywords',
           content:
-            'artykły, posty, programowanie, development, it, software, komputery, framework, technologie, informatyka, frontend, backend'
+            'artykły, posty, programowanie, development, it, software, komputery, framework, technologie, informatyka, frontend, backend',
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: 'Jakub Gania Software | Artykuły'
+          content: 'Jakub Gania Software | Artykuły',
         },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://jakubgania.io/docs'
+          content: 'https://jakubgania.io/docs',
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: 'Artykuły na tematy programistyczne.'
+          content: 'Artykuły na tematy programistyczne.',
         },
         {
           hid: 'og:image',
           property: 'og:image',
-          content: 'https://jakubgania.io/jakub-gania-software-logo-img.png'
-        }
-      ]
+          content: 'https://jakubgania.io/jakub-gania-software-logo-img.png',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

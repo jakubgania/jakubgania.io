@@ -5,7 +5,7 @@
       :class="{ 'dark-theme-text': darkTheme }"
       :style="{
         'margin-top': titleMarginTop.marginTop + 'px',
-        'font-size': titleMarginTop.fontSize + 'px'
+        'font-size': titleMarginTop.fontSize + 'px',
       }"
       class="page-title"
     >
@@ -21,16 +21,16 @@ export default {
   props: {
     title: {
       type: String,
-      default: ''
+      default: '',
     },
     marginTop: {
       type: Number,
-      default: 120
+      default: 120,
     },
     fontSize: {
       type: Number,
-      default: 40
-    }
+      default: 40,
+    },
   },
   computed: {
     ...mapGetters('DarkMode', ['darkTheme']),
@@ -41,8 +41,8 @@ export default {
         default:
           return { marginTop: 40, fontSize: 28 }
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

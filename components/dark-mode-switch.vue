@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      switchLabel: 'Ciemny motyw'
+      switchLabel: 'Ciemny motyw',
     }
   },
   computed: {
@@ -23,12 +23,12 @@ export default {
       set(value) {
         this.$vuetify.theme.dark = value
         this.$store.dispatch('DarkMode/toogleDarkThemeValue')
-      }
-    }
+      },
+    },
   },
   created() {
     this.$vuetify.theme.dark = this.switchDarkModeModel
-  }
+  },
 }
 </script>
 

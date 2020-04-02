@@ -8,7 +8,7 @@
 
     <subpage-description-section-component :description="description" />
 
-    <v-col cols="12" style="margin-top: 60px;margin-bottom: 100px;">
+    <v-col cols="12" style="margin-top: 60px; margin-bottom: 100px;">
       <v-row>
         <v-col
           v-for="(item, index) in images"
@@ -59,7 +59,13 @@
 
           <v-img
             :src="`https://jakubgania.io/data/gallery/full-size/${fullSizeId}`"
-            style="max-width: 1000px;width: auto;height: auto;max-height: 90vh;margin: auto;"
+            style="
+              max-width: 1000px;
+              width: auto;
+              height: auto;
+              max-height: 90vh;
+              margin: auto;
+            "
           >
             <v-layout
               slot="placeholder"
@@ -86,7 +92,7 @@
           v-touch="{
             left: () => swipe('left'),
             right: () => swipe('right'),
-            up: () => swipe('up')
+            up: () => swipe('up'),
           }"
         >
           <v-toolbar flat>
@@ -98,7 +104,13 @@
 
           <v-img
             :src="`https://jakubgania.io/data/gallery/full-size/${fullSizeId}`"
-            style="max-width: 1000px;width: auto;height: auto;max-height: 90vh;margin: auto;"
+            style="
+              max-width: 1000px;
+              width: auto;
+              height: auto;
+              max-height: 90vh;
+              margin: auto;
+            "
           >
             <v-layout
               slot="placeholder"

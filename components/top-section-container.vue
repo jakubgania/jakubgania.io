@@ -81,25 +81,25 @@ export default {
   props: {
     fullName: {
       type: String,
-      default: ''
+      default: '',
     },
     personalData: {
       type: Object,
       default: () => {
         return {}
-      }
+      },
     },
     darkTheme: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
       profileImage,
-      counter: 0
+      counter: 0,
     }
-  }
+  },
 }
 </script>
 

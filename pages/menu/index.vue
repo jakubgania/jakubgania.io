@@ -1,31 +1,31 @@
 <template>
-  <v-row style="width: 100%;margin: 0;">
+  <v-row style="width: 100%; margin: 0;">
     <div class="top-image" />
 
     <v-row class="content-container" no-gutters>
       <subpage-title-section-component :title="title" />
 
-      <v-col cols="12" style="margin-top: 20px;letter-spacing: 2px;">
-        <span style="color: #4d4dff;font-weight: 600;">
+      <v-col cols="12" style="margin-top: 20px; letter-spacing: 2px;">
+        <span style="color: #4d4dff; font-weight: 600;">
           &nbsp;<span class="number-line">1</span>&nbsp;&nbsp;data
         </span>
-        <span style="color: #cc33ff;font-weight: 600;">
+        <span style="color: #cc33ff; font-weight: 600;">
           ()
         </span>
-        <span style="color: #cc33ff;font-weight: 600;">
+        <span style="color: #cc33ff; font-weight: 600;">
           {
         </span>
       </v-col>
       <v-col cols="12" style="letter-spacing: 2px;">
-        <span style="color: #6699ff;font-weight: 600;">
+        <span style="color: #6699ff; font-weight: 600;">
           &nbsp;<span class="number-line">2</span>&nbsp;&nbsp;&nbsp;&nbsp;return
         </span>
-        <span style="color: #6699ff;font-weight: 600;">
+        <span style="color: #6699ff; font-weight: 600;">
           {
         </span>
       </v-col>
       <v-col cols="12">
-        <div style="letter-spacing: 2px;font-weight: 600;">
+        <div style="letter-spacing: 2px; font-weight: 600;">
           &nbsp;<span class="number-line">3</span>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items:
           <span style="color: orange;">[</span>
@@ -124,7 +124,7 @@
           43
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span style="color: orange;font-weight: 600;">
+        <span style="color: orange; font-weight: 600;">
           ]
         </span>
       </v-col>
@@ -133,7 +133,7 @@
           44
         </span>
         &nbsp;&nbsp;
-        <span style="color: #6699ff;font-weight: 600;">
+        <span style="color: #6699ff; font-weight: 600;">
           &nbsp;&nbsp;&nbsp;}
         </span>
       </v-col>
@@ -142,7 +142,7 @@
           45
         </span>
         &nbsp;
-        <span style="color: #cc33ff;font-weight: 600;">
+        <span style="color: #cc33ff; font-weight: 600;">
           }
         </span>
       </v-col>
@@ -157,13 +157,13 @@ import menuItems from '../../json/menu.json'
 
 export default {
   components: {
-    'subpage-title-section-component': SubpageTitleSection
+    'subpage-title-section-component': SubpageTitleSection,
   },
   data() {
     return {
       title: '{ menu }',
       items: menuItems.menu,
-      counter: 0
+      counter: 0,
     }
   },
   computed: {
@@ -171,12 +171,12 @@ export default {
     darkThemeFlag() {
       this.refresh()
       return this.darkTheme
-    }
+    },
   },
   methods: {
     refresh() {
       this.counter++
-    }
+    },
   },
   head() {
     return {
@@ -186,31 +186,31 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Menu - spis stron dostępnych w ramach całej witryny jakubgania.io .'
+            'Menu - spis stron dostępnych w ramach całej witryny jakubgania.io .',
         },
         {
           name: 'keywords',
-          content: 'menu, spis stron, podstrony'
+          content: 'menu, spis stron, podstrony',
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: 'Jakub Gania Software | Menu'
+          content: 'Jakub Gania Software | Menu',
         },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://jakubgania.io/menu'
+          content: 'https://jakubgania.io/menu',
         },
         {
           hid: 'og:description',
           property: 'og:description',
           content:
-            'Menu - spis stron dostępnych w ramach całej witryny jakubgania.io .'
-        }
-      ]
+            'Menu - spis stron dostępnych w ramach całej witryny jakubgania.io .',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 
