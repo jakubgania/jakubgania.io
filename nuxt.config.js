@@ -1,6 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
 import sitemapRoutes from './store/sitemap-routes'
 
+const webpack = require('webpack')
+
 export default {
   router: {
     extendRoutes(routes, resolve) {
@@ -101,7 +103,7 @@ export default {
    */
   plugins: [
     { src: '~/plugins/aos', ssr: false },
-    { src: '~plugins/ga.js', ssr: false },
+    { src: '~plugins/ga.js', ssr: false }
   ],
 
   /*
@@ -188,5 +190,6 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {},
+    analyze: false
   },
 }

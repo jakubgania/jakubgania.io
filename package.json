@@ -11,7 +11,7 @@
     }
   },
   "scripts": {
-    "dev": "start chrome --new-window --incognito http://192.168.0.13:4000 && nuxt",
+    "dev": "start chrome --new-window --incognito http://192.168.2.109:4000 && nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -31,7 +31,7 @@
     "markdown-it-highlightjs": "^3.1.0",
     "markdown-it-meta": "0.0.1",
     "markdown-it-video": "^0.6.3",
-    "nuxt": "^2.12.1",
+    "nuxt": "^2.14.3",
     "vue-github-button": "^1.1.2"
   },
   "devDependencies": {
