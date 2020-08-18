@@ -14,8 +14,8 @@ export default {
     },
   },
 
-  // mode: 'universal',
-  target: 'static',
+  mode: 'universal',
+  // target: 'static',
 
   manifest: {
     lang: 'pl',
