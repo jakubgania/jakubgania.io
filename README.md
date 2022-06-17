@@ -12,4 +12,4 @@
 
 - Implementation of new functionalities
 
-- Constant changes in the pursuit of perfection ...
+- Constant changes in the pursuit of perfection ..
