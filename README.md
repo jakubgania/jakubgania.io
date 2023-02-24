@@ -1,7 +1,5 @@
 # jakubgania.io
 
-- Project preview - [jakubgania.io](https://jakubgania.io)
-
 - My new personal website with information about me and my programming activities
 
 - Implementation of the new structure
